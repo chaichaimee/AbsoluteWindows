@@ -1,0 +1,50 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: AbsoluteWindows 2026.4\n"
+"Language: uk\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: utils.py:556
+msgid "Automatic"
+msgstr "Автоматично"
+
+#: __init__.py:81
+msgid "Check Disk Status"
+msgstr "Перевірити стан диска"
+
+#: __init__.py:64
+msgid "Clean Prefetch & Recent"
+msgstr "Очистити Prefetch та нещодавні файли"
+
+#: __init__.py:69
+msgid "Clear Ram"
+msgstr "Очистити ОЗП"
+
+#: menu.py:121 menu.py:198 menu.py:263
+msgid "Close"
+msgstr "Закрити"
+
+#: menu.py:120 menu.py:260
+msgid "Disable Selected"
+msgstr "Вимкнути вибране"
+
+#: menu.py:172 utils.py:552
+msgid "Disabled"
+msgstr "Вимкнено"
+
+#: __init__.py:68
+msgid "Empty Recycle Bin"
+msgstr "Очистити кошик"
+
+#: menu.py:119 menu.py:261
+msgid "Enable Selected"
+msgstr "Увімкнути вибране"
+
+#: menu.py:157 utils.py:407 utils.py:424 utils.py:441 utils.py:454
+msgid "Enabled"
+msgstr "Увімкнено"
+
+#: __init__.py:79
+msgid "Run Disk Cleanup"
+msgstr "Очищення диска"
