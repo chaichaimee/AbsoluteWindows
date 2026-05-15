@@ -1,0 +1,506 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: AbsoluteWindows 2026.5.3\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2026-05-15 12:37+0700\n"
+"PO-Revision-Date: 2026-05-15 15:45+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Danish\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: DevOn Addon\n"
+
+#: kill_dialog.py:76
+msgid "&Kill Process of Selected Window"
+msgstr "&Afslut proces for valgt vindue"
+
+#: menu.py:21
+msgid "AbsoluteWindows"
+msgstr "AbsoluteWindows"
+
+#: utils.py:600
+msgid "Automatic"
+msgstr "Automatisk"
+
+#: __init__.py:210
+msgid "Battery report will open in your browser."
+msgstr "Batterirapport vil blive åbnet i din browser."
+
+#: kill_dialog.py:156
+msgid "Cannot kill system process: {}"
+msgstr "Kan ikke afslutte systemproces: {}"
+
+#: kill_dialog.py:176
+msgid "Cannot open process. Access denied."
+msgstr "Kan ikke åbne proces. Adgang nægtet."
+
+#: __init__.py:89
+msgid "Check Disk Status"
+msgstr "Tjek diskstatus"
+
+#: __init__.py:192
+msgid "Chkdsk report will open when complete."
+msgstr "Chkdsk-rapport åbnes, når den er færdig."
+
+#: __init__.py:74
+msgid "Clean Prefetch & Recent"
+msgstr "Rens Prefetch og seneste filer"
+
+#: __init__.py:75
+msgid "Clean System files"
+msgstr "Rens systemfiler"
+
+#: __init__.py:76
+msgid "Clean Temp"
+msgstr "Rens midlertidige filer"
+
+#: __init__.py:77
+msgid "Clean Windows Run History"
+msgstr "Rens historik for Windows Kør"
+
+#: __init__.py:79
+msgid "Clear Ram"
+msgstr "Frigør RAM"
+
+#: __init__.py:265
+msgid "Cleared {:.1f} MB of RAM cache."
+msgstr "Rensede {:.1f} MB RAM-cache."
+
+#: kill_dialog.py:77
+#: menu.py:121
+#: menu.py:198
+#: menu.py:263
+msgid "Close"
+msgstr "Luk"
+
+#: __init__.py:55
+msgid "Connect Internet"
+msgstr "Opret forbindelse til internettet"
+
+#: __init__.py:366
+msgid "Could not open Disk Cleanup."
+msgstr "Kunne ikke åbne Diskoprydning."
+
+#: __init__.py:318
+msgid "Could not open Environment Variables."
+msgstr "Kunne ikke åbne Miljøvariabler."
+
+#: __init__.py:334
+msgid "Could not open Malicious Software Removal Tool."
+msgstr "Kunne ikke åbne værktøjet til fjernelse af ondsindet software."
+
+#: __init__.py:290
+msgid "Could not open Optimize Drives."
+msgstr "Kunne ikke åbne Optimer drev."
+
+#: __init__.py:376
+msgid "Could not open Registry Editor."
+msgstr "Kunne ikke åbne Registreringseditor."
+
+#: __init__.py:397
+msgid "Could not open Windows Defender."
+msgstr "Kunne ikke åbne Windows Defender."
+
+#: kill_dialog.py:225
+msgid "Could not open kill dialog. See log for details."
+msgstr "Kunne ikke åbne afslutningsdialogen. Se loggen for detaljer."
+
+#: __init__.py:183
+msgid "DISM report will open when complete."
+msgstr "DISM-rapport åbnes, når den er færdig."
+
+#: menu.py:120
+#: menu.py:260
+msgid "Disable Selected"
+msgstr "Deaktiver valgte"
+
+#: __init__.py:59
+msgid "Disable User Account Control"
+msgstr "Deaktiver brugerkontostyring (UAC)"
+
+#: menu.py:172
+#: utils.py:596
+msgid "Disabled"
+msgstr "Deaktiveret"
+
+#: __init__.py:53
+msgid "Disconnect Internet"
+msgstr "Afbryd forbindelsen til internettet"
+
+#: __init__.py:73
+msgid "Disk Cleanup"
+msgstr "Diskoprydning"
+
+#: __init__.py:201
+msgid "Disk Cleanup report will open when complete."
+msgstr "Diskoprydningsrapport åbnes, når den er færdig."
+
+#: __init__.py:219
+msgid "Disk status report will open when complete."
+msgstr "Diskstatusrapport åbnes, når den er færdig."
+
+#: menu.py:254
+msgid "Display Name"
+msgstr "Visningsnavn"
+
+#: menu.py:186
+msgid "Drive Optimize"
+msgstr "Drevoptimering"
+
+#: __init__.py:78
+msgid "Empty Recycle Bin"
+msgstr "Tøm papirkurv"
+
+#: menu.py:119
+#: menu.py:261
+msgid "Enable Selected"
+msgstr "Aktiver valgte"
+
+#: __init__.py:61
+msgid "Enable User Account Control"
+msgstr "Aktiver brugerkontostyring (UAC)"
+
+#: menu.py:157
+#: utils.py:451
+#: utils.py:468
+#: utils.py:485
+#: utils.py:498
+msgid "Enabled"
+msgstr "Aktiveret"
+
+#: __init__.py:67
+msgid "Environment Variables"
+msgstr "Miljøvariabler"
+
+#: menu.py:154
+#: menu.py:164
+#: menu.py:169
+#: menu.py:179
+#: menu.py:222
+#: menu.py:237
+#: menu.py:298
+#: menu.py:305
+#: menu.py:310
+#: menu.py:317
+msgid "Error"
+msgstr "Fejl"
+
+#: cmd_tools.py:46
+msgid "Exception occurred: {error}"
+msgstr "Der opstod en undtagelse: {error}"
+
+#: __init__.py:240
+msgid "Failed to clean temporary files."
+msgstr "Kunne ikke rense midlertidige filer."
+
+#: __init__.py:308
+msgid "Failed to clean: {}"
+msgstr "Kunne ikke rense: {}"
+
+#: __init__.py:271
+msgid "Failed to clear RAM cache."
+msgstr "Kunne ikke frigøre RAM-cache."
+
+#: __init__.py:249
+msgid "Failed to clear Run history."
+msgstr "Kunne ikke rense Kør-historik."
+
+#: kill_dialog.py:170
+msgid "Failed to close window."
+msgstr "Kunne ikke lukke vinduet."
+
+#: __init__.py:127
+msgid "Failed to connect internet."
+msgstr "Kunne ikke oprette forbindelse til internettet."
+
+#: menu.py:179
+msgid "Failed to disable item."
+msgstr "Kunne ikke deaktivere element."
+
+#: menu.py:305
+msgid "Failed to disable service: {}"
+msgstr "Kunne ikke deaktivere tjeneste: {}"
+
+#: __init__.py:111
+msgid "Failed to disconnect internet."
+msgstr "Kunne ikke afbryde forbindelsen til internettet."
+
+#: utils.py:386
+#: utils.py:389
+msgid "Failed to empty recycle bin."
+msgstr "Kunne ikke tømme papirkurven."
+
+#: menu.py:164
+msgid "Failed to enable item."
+msgstr "Kunne ikke aktivere element."
+
+#: menu.py:317
+msgid "Failed to enable service: {}"
+msgstr "Kunne ikke aktivere tjeneste: {}"
+
+#: __init__.py:168
+msgid "Failed to restart Windows Explorer."
+msgstr "Kunne ikke genstarte Windows Stifinder."
+
+#: __init__.py:231
+msgid "Failed to start system cleanup."
+msgstr "Kunne ikke starte systemoprydning."
+
+#: kill_dialog.py:193
+msgid "Failed to terminate process. Insufficient privileges."
+msgstr "Kunne ikke afslutte proces. Utilstrækkelige rettigheder."
+
+#: __init__.py:141
+msgid "Failed to toggle UAC."
+msgstr "Kunne ikke skifte UAC."
+
+#: menu.py:158
+#: menu.py:173
+#: menu.py:230
+msgid "Info"
+msgstr "Info"
+
+#: __init__.py:124
+msgid "Internet connected."
+msgstr "Forbundet til internettet."
+
+#: __init__.py:108
+msgid "Internet disconnected."
+msgstr "Forbindelse til internettet afbrudt."
+
+#: menu.py:173
+msgid "Item already disabled."
+msgstr "Elementet er allerede deaktiveret."
+
+#: menu.py:158
+msgid "Item already enabled."
+msgstr "Elementet er allerede aktiveret."
+
+#: __init__.py:62
+#: __init__.py:408
+#: kill_dialog.py:56
+msgid "Kill Not Responding Apps"
+msgstr "Afslut apps, der ikke svarer"
+
+#: kill_dialog.py:215
+msgid "Kill Process"
+msgstr "Afslut proces"
+
+#: menu.py:115
+msgid "Location"
+msgstr "Placering"
+
+#: __init__.py:66
+#: menu.py:244
+msgid "Manage Services"
+msgstr "Administrer tjenester"
+
+#: utils.py:598
+msgid "Manual"
+msgstr "Manuel"
+
+#: __init__.py:71
+msgid "Microsoft Windows Malicious Software Removal Tool"
+msgstr "Værktøj til fjernelse af ondsindet software til Microsoft Windows"
+
+#: menu.py:112
+msgid "Name"
+msgstr "Navn"
+
+#: __init__.py:155
+msgid "No Wi-Fi network is currently connected."
+msgstr "Ingen Wi-Fi-netværk er i øjeblikket forbundet."
+
+#: __init__.py:101
+msgid "No active network adapter found."
+msgstr "Ingen aktiv netværksadapter fundet."
+
+#: __init__.py:118
+msgid "No disabled network adapter found."
+msgstr "Ingen deaktiveret netværksadapter fundet."
+
+#: menu.py:154
+#: menu.py:169
+msgid "No item selected."
+msgstr "Intet element valgt."
+
+#: kill_dialog.py:149
+msgid "No window selected."
+msgstr "Intet vindue valgt."
+
+#: __init__.py:65
+msgid "Open Services"
+msgstr "Åbn Tjenester"
+
+#: menu.py:235
+msgid "Optimization completed."
+msgstr "Optimering gennemført."
+
+#: menu.py:237
+msgid "Optimization failed: {}"
+msgstr "Optimering mislykkedes: {}"
+
+#: menu.py:197
+msgid "Optimize Selected"
+msgstr "Optimer valgte"
+
+#: __init__.py:72
+msgid "Optimize and defragment drive"
+msgstr "Optimer og defragmenter drev"
+
+#: menu.py:230
+msgid "Optimizing drive, please wait..."
+msgstr "Optimerer drev, vent venligst..."
+
+#: __init__.py:88
+msgid "Power Diagnostic (Battery Report)"
+msgstr "Strømdiagnosticering (Batterirapport)"
+
+#: __init__.py:305
+msgid "Prefetch and recent files cleaned."
+msgstr "Prefetch og seneste filer er renset."
+
+#: kill_dialog.py:186
+msgid "Process terminated."
+msgstr "Proces afsluttet."
+
+#: __init__.py:268
+msgid "RAM cache cleared."
+msgstr "RAM-cache er frigjort."
+
+#: utils.py:383
+msgid "Recycle bin emptied."
+msgstr "Papirkurven er tømt."
+
+#: utils.py:380
+msgid "Recycle bin is already empty."
+msgstr "Papirkurven er allerede tom."
+
+#: menu.py:262
+msgid "Refresh"
+msgstr "Opdater"
+
+#: __init__.py:69
+msgid "Regedit"
+msgstr "Registreringseditor"
+
+#: __init__.py:64
+msgid "Restart Windows Explorer"
+msgstr "Genstart Windows Stifinder"
+
+#: __init__.py:86
+msgid "Run Chkdsk on C:"
+msgstr "Kør Chkdsk på C:"
+
+#: __init__.py:68
+msgid "Run Cmd"
+msgstr "Kør Cmd"
+
+#: __init__.py:84
+msgid "Run DISM"
+msgstr "Kør DISM"
+
+#: __init__.py:87
+msgid "Run Disk Cleanup"
+msgstr "Kør Diskoprydning"
+
+#: __init__.py:85
+msgid "Run SFC Scannow"
+msgstr "Kør SFC Scannow"
+
+#: utils.py:603
+msgid "Running"
+msgstr "Kører"
+
+#: __init__.py:174
+msgid "SFC Scannow report will open when complete."
+msgstr "SFC Scannow-rapport åbnes, når den er færdig."
+
+#: menu.py:222
+msgid "Select a drive first."
+msgstr "Vælg et drev først."
+
+#: menu.py:298
+#: menu.py:310
+msgid "Select a service first."
+msgstr "Vælg en tjeneste først."
+
+#: menu.py:253
+msgid "Service Name"
+msgstr "Tjenestenavn"
+
+#: __init__.py:400
+msgid "Show Absolute Windows menu"
+msgstr "Vis Absolute Windows-menu"
+
+#: __init__.py:56
+msgid "Show Wi-Fi Password"
+msgstr "Vis Wi-Fi-adgangskode"
+
+#: __init__.py:63
+#: menu.py:101
+msgid "Startup Manager"
+msgstr "Startstyring"
+
+#: menu.py:255
+msgid "Startup Type"
+msgstr "Starttype"
+
+#: menu.py:114
+#: menu.py:256
+msgid "Status"
+msgstr "Status"
+
+#: utils.py:605
+msgid "Stopped"
+msgstr "Stoppet"
+
+#: menu.py:235
+msgid "Success"
+msgstr "Succes"
+
+#: __init__.py:228
+msgid "System cleanup started."
+msgstr "Systemoprydning startet."
+
+#: __init__.py:237
+msgid "Temporary files cleaned."
+msgstr "Midlertidige filer er renset."
+
+#: __init__.py:152
+msgid "The Wi-Fi network '{ssid}' is open (no password)."
+msgstr "Wi-Fi-netværket '{ssid}' er åbent (ingen adgangskode)."
+
+#: menu.py:113
+msgid "Type"
+msgstr "Type"
+
+#: __init__.py:138
+msgid "User Account Control toggled."
+msgstr "Brugerkontostyring (UAC) er ændret."
+
+#: cmd_tools.py:41
+msgid "User cancelled the UAC elevation prompt."
+msgstr "Brugeren annullerede UAC-anmodningen om administratorrettigheder."
+
+#: __init__.py:149
+msgid "Wi-Fi password for {ssid} copied to clipboard."
+msgstr "Wi-Fi-adgangskode for {ssid} er kopieret til udklipsholderen."
+
+#: kill_dialog.py:164
+msgid "Window closed."
+msgstr "Vindue lukket."
+
+#: __init__.py:70
+msgid "Windows Defender"
+msgstr "Windows Defender"
+
+#: __init__.py:165
+msgid "Windows Explorer has been restarted."
+msgstr "Windows Stifinder er blevet genstartet."
+
+#: __init__.py:246
+msgid "Windows Run history cleared."
+msgstr "Historik for Windows Kør er renset."

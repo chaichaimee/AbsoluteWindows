@@ -1,0 +1,506 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: AbsoluteWindows 2026.5.3\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2026-05-15 12:37+0700\n"
+"PO-Revision-Date: 2026-05-15 15:45+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Bulgarian\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: DevOn Addon\n"
+
+#: kill_dialog.py:76
+msgid "&Kill Process of Selected Window"
+msgstr "&Прекратяване процеса на избрания прозорец"
+
+#: menu.py:21
+msgid "AbsoluteWindows"
+msgstr "AbsoluteWindows"
+
+#: utils.py:600
+msgid "Automatic"
+msgstr "Автоматично"
+
+#: __init__.py:210
+msgid "Battery report will open in your browser."
+msgstr "Отчетът за батерията ще се отвори в браузъра ви."
+
+#: kill_dialog.py:156
+msgid "Cannot kill system process: {}"
+msgstr "Системният процес не може да бъде прекратен: {}"
+
+#: kill_dialog.py:176
+msgid "Cannot open process. Access denied."
+msgstr "Процесът не може да бъде отворен. Достъпът е отказан."
+
+#: __init__.py:89
+msgid "Check Disk Status"
+msgstr "Проверка състоянието на диска"
+
+#: __init__.py:192
+msgid "Chkdsk report will open when complete."
+msgstr "Отчетът от Chkdsk ще се отвори при завършване."
+
+#: __init__.py:74
+msgid "Clean Prefetch & Recent"
+msgstr "Изчистване на Prefetch и скорошни файлове"
+
+#: __init__.py:75
+msgid "Clean System files"
+msgstr "Изчистване на системни файлове"
+
+#: __init__.py:76
+msgid "Clean Temp"
+msgstr "Изчистване на временни файлове (Temp)"
+
+#: __init__.py:77
+msgid "Clean Windows Run History"
+msgstr "Изчистване на историята на Windows Run"
+
+#: __init__.py:79
+msgid "Clear Ram"
+msgstr "Изчистване на оперативната памет (RAM)"
+
+#: __init__.py:265
+msgid "Cleared {:.1f} MB of RAM cache."
+msgstr "Изчистени са {:.1f} MB от кеша на RAM паметта."
+
+#: kill_dialog.py:77
+#: menu.py:121
+#: menu.py:198
+#: menu.py:263
+msgid "Close"
+msgstr "Затваряне"
+
+#: __init__.py:55
+msgid "Connect Internet"
+msgstr "Свързване към интернет"
+
+#: __init__.py:366
+msgid "Could not open Disk Cleanup."
+msgstr "Инструментът за почистване на диска не може да бъде отворен."
+
+#: __init__.py:318
+msgid "Could not open Environment Variables."
+msgstr "Променливите на обкръжението не могат да бъдат отворени."
+
+#: __init__.py:334
+msgid "Could not open Malicious Software Removal Tool."
+msgstr "Инструментът за премахване на зловреден софтуер не може да бъде отворен."
+
+#: __init__.py:290
+msgid "Could not open Optimize Drives."
+msgstr "Оптимизирането на дискове не може да бъде отворено."
+
+#: __init__.py:376
+msgid "Could not open Registry Editor."
+msgstr "Редакторът на системния регистър не може да бъде отворен."
+
+#: __init__.py:397
+msgid "Could not open Windows Defender."
+msgstr "Windows Defender не може да бъде отворен."
+
+#: kill_dialog.py:225
+msgid "Could not open kill dialog. See log for details."
+msgstr "Диалогът за прекратяване не може да бъде отворен. Вижте лог файла за подробности."
+
+#: __init__.py:183
+msgid "DISM report will open when complete."
+msgstr "Отчетът от DISM ще се отвори при завършване."
+
+#: menu.py:120
+#: menu.py:260
+msgid "Disable Selected"
+msgstr "Деактивиране на избраното"
+
+#: __init__.py:59
+msgid "Disable User Account Control"
+msgstr "Деактивиране на управлението на потребителските акаунти (UAC)"
+
+#: menu.py:172
+#: utils.py:596
+msgid "Disabled"
+msgstr "Деактивирано"
+
+#: __init__.py:53
+msgid "Disconnect Internet"
+msgstr "Прекъсване на интернет връзката"
+
+#: __init__.py:73
+msgid "Disk Cleanup"
+msgstr "Почистване на диска"
+
+#: __init__.py:201
+msgid "Disk Cleanup report will open when complete."
+msgstr "Отчетът от почистването на диска ще се отвори при завършване."
+
+#: __init__.py:219
+msgid "Disk status report will open when complete."
+msgstr "Отчетът за състоянието на диска ще се отвори при завършване."
+
+#: menu.py:254
+msgid "Display Name"
+msgstr "Екранно име"
+
+#: menu.py:186
+msgid "Drive Optimize"
+msgstr "Оптимизиране на диска"
+
+#: __init__.py:78
+msgid "Empty Recycle Bin"
+msgstr "Изпразване на кошчето"
+
+#: menu.py:119
+#: menu.py:261
+msgid "Enable Selected"
+msgstr "Активиране на избраното"
+
+#: __init__.py:61
+msgid "Enable User Account Control"
+msgstr "Активиране на управлението на потребителските акаунти (UAC)"
+
+#: menu.py:157
+#: utils.py:451
+#: utils.py:468
+#: utils.py:485
+#: utils.py:498
+msgid "Enabled"
+msgstr "Активирано"
+
+#: __init__.py:67
+msgid "Environment Variables"
+msgstr "Променливи на обкръжението"
+
+#: menu.py:154
+#: menu.py:164
+#: menu.py:169
+#: menu.py:179
+#: menu.py:222
+#: menu.py:237
+#: menu.py:298
+#: menu.py:305
+#: menu.py:310
+#: menu.py:317
+msgid "Error"
+msgstr "Грешка"
+
+#: cmd_tools.py:46
+msgid "Exception occurred: {error}"
+msgstr "Възникна изключение: {error}"
+
+#: __init__.py:240
+msgid "Failed to clean temporary files."
+msgstr "Неуспешно почистване на временните файлове."
+
+#: __init__.py:308
+msgid "Failed to clean: {}"
+msgstr "Неуспешно почистване: {}"
+
+#: __init__.py:271
+msgid "Failed to clear RAM cache."
+msgstr "Неуспешно изчистване на кеша на RAM паметта."
+
+#: __init__.py:249
+msgid "Failed to clear Run history."
+msgstr "Неуспешно изчистване на историята на Run."
+
+#: kill_dialog.py:170
+msgid "Failed to close window."
+msgstr "Неуспешно затваряне на прозореца."
+
+#: __init__.py:127
+msgid "Failed to connect internet."
+msgstr "Неуспешно свързване към интернет."
+
+#: menu.py:179
+msgid "Failed to disable item."
+msgstr "Неуспешно деактивиране на елемента."
+
+#: menu.py:305
+msgid "Failed to disable service: {}"
+msgstr "Неуспешно деактивиране на услугата: {}"
+
+#: __init__.py:111
+msgid "Failed to disconnect internet."
+msgstr "Неуспешно прекъсване на интернет връзката."
+
+#: utils.py:386
+#: utils.py:389
+msgid "Failed to empty recycle bin."
+msgstr "Неуспешно изпразване на кошчето."
+
+#: menu.py:164
+msgid "Failed to enable item."
+msgstr "Неуспешно активиране на елемента."
+
+#: menu.py:317
+msgid "Failed to enable service: {}"
+msgstr "Неуспешно активиране на услугата: {}"
+
+#: __init__.py:168
+msgid "Failed to restart Windows Explorer."
+msgstr "Неуспешно рестартиране на Windows Explorer."
+
+#: __init__.py:231
+msgid "Failed to start system cleanup."
+msgstr "Неуспешно стартиране на системното почистване."
+
+#: kill_dialog.py:193
+msgid "Failed to terminate process. Insufficient privileges."
+msgstr "Неуспешно прекратяване на процеса. Недостатъчни привилегии."
+
+#: __init__.py:141
+msgid "Failed to toggle UAC."
+msgstr "Неуспешно превключване на UAC."
+
+#: menu.py:158
+#: menu.py:173
+#: menu.py:230
+msgid "Info"
+msgstr "Информация"
+
+#: __init__.py:124
+msgid "Internet connected."
+msgstr "Интернет връзката е установена."
+
+#: __init__.py:108
+msgid "Internet disconnected."
+msgstr "Интернет връзката е прекъсната."
+
+#: menu.py:173
+msgid "Item already disabled."
+msgstr "Елементът вече е деактивиран."
+
+#: menu.py:158
+msgid "Item already enabled."
+msgstr "Елементът вече е активиран."
+
+#: __init__.py:62
+#: __init__.py:408
+#: kill_dialog.py:56
+msgid "Kill Not Responding Apps"
+msgstr "Прекратяване на блокирали приложения"
+
+#: kill_dialog.py:215
+msgid "Kill Process"
+msgstr "Прекратяване на процеса"
+
+#: menu.py:115
+msgid "Location"
+msgstr "Местоположение"
+
+#: __init__.py:66
+#: menu.py:244
+msgid "Manage Services"
+msgstr "Управление на услуги"
+
+#: utils.py:598
+msgid "Manual"
+msgstr "Ръчно"
+
+#: __init__.py:71
+msgid "Microsoft Windows Malicious Software Removal Tool"
+msgstr "Инструмент на Microsoft Windows за премахване на зловреден софтуер"
+
+#: menu.py:112
+msgid "Name"
+msgstr "Име"
+
+#: __init__.py:155
+msgid "No Wi-Fi network is currently connected."
+msgstr "В момента няма свързана Wi-Fi мрежа."
+
+#: __init__.py:101
+msgid "No active network adapter found."
+msgstr "Не е намерен активен мрежов адаптер."
+
+#: __init__.py:118
+msgid "No disabled network adapter found."
+msgstr "Не е намерен деактивиран мрежов адаптер."
+
+#: menu.py:154
+#: menu.py:169
+msgid "No item selected."
+msgstr "Няма избран елемент."
+
+#: kill_dialog.py:149
+msgid "No window selected."
+msgstr "Няма избран прозорец."
+
+#: __init__.py:65
+msgid "Open Services"
+msgstr "Отваряне на услугите"
+
+#: menu.py:235
+msgid "Optimization completed."
+msgstr "Оптимизацията завърши."
+
+#: menu.py:237
+msgid "Optimization failed: {}"
+msgstr "Оптимизацията не бе успешна: {}"
+
+#: menu.py:197
+msgid "Optimize Selected"
+msgstr "Оптимизиране на избраното"
+
+#: __init__.py:72
+msgid "Optimize and defragment drive"
+msgstr "Оптимизиране и дефрагментиране на диска"
+
+#: menu.py:230
+msgid "Optimizing drive, please wait..."
+msgstr "Дискът се оптимизира, моля изчакайте..."
+
+#: __init__.py:88
+msgid "Power Diagnostic (Battery Report)"
+msgstr "Диагностика на захранването (Отчет за батерията)"
+
+#: __init__.py:305
+msgid "Prefetch and recent files cleaned."
+msgstr "Prefetch и скорошните файлове са изчистени."
+
+#: kill_dialog.py:186
+msgid "Process terminated."
+msgstr "Процесът е прекратен."
+
+#: __init__.py:268
+msgid "RAM cache cleared."
+msgstr "Кешът на оперативната памет е изчистен."
+
+#: utils.py:383
+msgid "Recycle bin emptied."
+msgstr "Кошчето е изпразнено."
+
+#: utils.py:380
+msgid "Recycle bin is already empty."
+msgstr "Кошчето вече е празно."
+
+#: menu.py:262
+msgid "Refresh"
+msgstr "Опресняване"
+
+#: __init__.py:69
+msgid "Regedit"
+msgstr "Regedit"
+
+#: __init__.py:64
+msgid "Restart Windows Explorer"
+msgstr "Рестартиране на Windows Explorer"
+
+#: __init__.py:86
+msgid "Run Chkdsk on C:"
+msgstr "Изпълнение на Chkdsk на C:"
+
+#: __init__.py:68
+msgid "Run Cmd"
+msgstr "Изпълнение на Cmd"
+
+#: __init__.py:84
+msgid "Run DISM"
+msgstr "Изпълнение на DISM"
+
+#: __init__.py:87
+msgid "Run Disk Cleanup"
+msgstr "Изпълнение на почистване на диска"
+
+#: __init__.py:85
+msgid "Run SFC Scannow"
+msgstr "Изпълнение на SFC Scannow"
+
+#: utils.py:603
+msgid "Running"
+msgstr "Изпълнява се"
+
+#: __init__.py:174
+msgid "SFC Scannow report will open when complete."
+msgstr "Отчетът от SFC Scannow ще се отвори при завършване."
+
+#: menu.py:222
+msgid "Select a drive first."
+msgstr "Първо изберете диск."
+
+#: menu.py:298
+#: menu.py:310
+msgid "Select a service first."
+msgstr "Първо изберете услуга."
+
+#: menu.py:253
+msgid "Service Name"
+msgstr "Име на услугата"
+
+#: __init__.py:400
+msgid "Show Absolute Windows menu"
+msgstr "Показване на менюто на Absolute Windows"
+
+#: __init__.py:56
+msgid "Show Wi-Fi Password"
+msgstr "Показване на паролата за Wi-Fi"
+
+#: __init__.py:63
+#: menu.py:101
+msgid "Startup Manager"
+msgstr "Мениджър на автозареждането"
+
+#: menu.py:255
+msgid "Startup Type"
+msgstr "Тип стартиране"
+
+#: menu.py:114
+#: menu.py:256
+msgid "Status"
+msgstr "Статус"
+
+#: utils.py:605
+msgid "Stopped"
+msgstr "Спряно"
+
+#: menu.py:235
+msgid "Success"
+msgstr "Успех"
+
+#: __init__.py:228
+msgid "System cleanup started."
+msgstr "Системното почистване започна."
+
+#: __init__.py:237
+msgid "Temporary files cleaned."
+msgstr "Временните файлове са изчистени."
+
+#: __init__.py:152
+msgid "The Wi-Fi network '{ssid}' is open (no password)."
+msgstr "Wi-Fi мрежата '{ssid}' е отворена (без парола)."
+
+#: menu.py:113
+msgid "Type"
+msgstr "Тип"
+
+#: __init__.py:138
+msgid "User Account Control toggled."
+msgstr "Управлението на потребителските акаунти (UAC) бе превключено."
+
+#: cmd_tools.py:41
+msgid "User cancelled the UAC elevation prompt."
+msgstr "Потребителят отказа заявката за административни права (UAC)."
+
+#: __init__.py:149
+msgid "Wi-Fi password for {ssid} copied to clipboard."
+msgstr "Паролата за Wi-Fi за {ssid} е копирана в клипборда."
+
+#: kill_dialog.py:164
+msgid "Window closed."
+msgstr "Прозорецът е затворен."
+
+#: __init__.py:70
+msgid "Windows Defender"
+msgstr "Windows Defender"
+
+#: __init__.py:165
+msgid "Windows Explorer has been restarted."
+msgstr "Windows Explorer бе рестартиран."
+
+#: __init__.py:246
+msgid "Windows Run history cleared."
+msgstr "Историята на Windows Run е изчистена."

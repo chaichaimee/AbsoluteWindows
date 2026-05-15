@@ -1,50 +1,506 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AbsoluteWindows 2026.4\n"
+"Project-Id-Version: AbsoluteWindows 2026.5.3\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2026-05-15 12:37+0700\n"
+"PO-Revision-Date: 2026-05-15 15:45+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: French\n"
 "Language: fr\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: DevOn Addon\n"
 
-#: utils.py:556
+#: kill_dialog.py:76
+msgid "&Kill Process of Selected Window"
+msgstr "&Tuer le processus de la fenêtre sélectionnée"
+
+#: menu.py:21
+msgid "AbsoluteWindows"
+msgstr "AbsoluteWindows"
+
+#: utils.py:600
 msgid "Automatic"
 msgstr "Automatique"
 
-#: __init__.py:81
+#: __init__.py:210
+msgid "Battery report will open in your browser."
+msgstr "Le rapport de batterie s'ouvrira dans votre navigateur."
+
+#: kill_dialog.py:156
+msgid "Cannot kill system process: {}"
+msgstr "Impossible de tuer le processus système : {}"
+
+#: kill_dialog.py:176
+msgid "Cannot open process. Access denied."
+msgstr "Impossible d'ouvrir le processus. Accès refusé."
+
+#: __init__.py:89
 msgid "Check Disk Status"
 msgstr "Vérifier l'état du disque"
 
-#: __init__.py:64
-msgid "Clean Prefetch & Recent"
-msgstr "Nettoyer Prefetch et Récents"
+#: __init__.py:192
+msgid "Chkdsk report will open when complete."
+msgstr "Le rapport Chkdsk s'ouvrira une fois terminé."
 
-#: __init__.py:69
+#: __init__.py:74
+msgid "Clean Prefetch & Recent"
+msgstr "Nettoyer Prefetch et fichiers récents"
+
+#: __init__.py:75
+msgid "Clean System files"
+msgstr "Nettoyer les fichiers système"
+
+#: __init__.py:76
+msgid "Clean Temp"
+msgstr "Nettoyer les fichiers temporaires"
+
+#: __init__.py:77
+msgid "Clean Windows Run History"
+msgstr "Nettoyer l'historique d'exécution de Windows"
+
+#: __init__.py:79
 msgid "Clear Ram"
 msgstr "Libérer la RAM"
 
-#: menu.py:121 menu.py:198 menu.py:263
+#: __init__.py:265
+msgid "Cleared {:.1f} MB of RAM cache."
+msgstr "Nettoyage de {:.1f} Mo de cache RAM effectué."
+
+#: kill_dialog.py:77
+#: menu.py:121
+#: menu.py:198
+#: menu.py:263
 msgid "Close"
 msgstr "Fermer"
 
-#: menu.py:120 menu.py:260
+#: __init__.py:55
+msgid "Connect Internet"
+msgstr "Se connecter à Internet"
+
+#: __init__.py:366
+msgid "Could not open Disk Cleanup."
+msgstr "Impossible d'ouvrir le Nettoyage de disque."
+
+#: __init__.py:318
+msgid "Could not open Environment Variables."
+msgstr "Impossible d'ouvrir les Variables d'environnement."
+
+#: __init__.py:334
+msgid "Could not open Malicious Software Removal Tool."
+msgstr "Impossible d'ouvrir l'outil de suppression de logiciels malveillants."
+
+#: __init__.py:290
+msgid "Could not open Optimize Drives."
+msgstr "Impossible d'ouvrir l'optimisation des disques."
+
+#: __init__.py:376
+msgid "Could not open Registry Editor."
+msgstr "Impossible d'ouvrir l'Éditeur du Registre."
+
+#: __init__.py:397
+msgid "Could not open Windows Defender."
+msgstr "Impossible d'ouvrir Windows Defender."
+
+#: kill_dialog.py:225
+msgid "Could not open kill dialog. See log for details."
+msgstr "Impossible d'ouvrir le dialogue de fin de processus. Voir le journal pour plus de détails."
+
+#: __init__.py:183
+msgid "DISM report will open when complete."
+msgstr "Le rapport DISM s'ouvrira une fois terminé."
+
+#: menu.py:120
+#: menu.py:260
 msgid "Disable Selected"
 msgstr "Désactiver la sélection"
 
-#: menu.py:172 utils.py:552
+#: __init__.py:59
+msgid "Disable User Account Control"
+msgstr "Désactiver le contrôle de compte d'utilisateur (UAC)"
+
+#: menu.py:172
+#: utils.py:596
 msgid "Disabled"
 msgstr "Désactivé"
 
-#: __init__.py:68
+#: __init__.py:53
+msgid "Disconnect Internet"
+msgstr "Se déconnecter d'Internet"
+
+#: __init__.py:73
+msgid "Disk Cleanup"
+msgstr "Nettoyage de disque"
+
+#: __init__.py:201
+msgid "Disk Cleanup report will open when complete."
+msgstr "Le rapport de nettoyage de disque s'ouvrira une fois terminé."
+
+#: __init__.py:219
+msgid "Disk status report will open when complete."
+msgstr "Le rapport d'état du disque s'ouvrira une fois terminé."
+
+#: menu.py:254
+msgid "Display Name"
+msgstr "Nom d'affichage"
+
+#: menu.py:186
+msgid "Drive Optimize"
+msgstr "Optimisation de disque"
+
+#: __init__.py:78
 msgid "Empty Recycle Bin"
 msgstr "Vider la corbeille"
 
-#: menu.py:119 menu.py:261
+#: menu.py:119
+#: menu.py:261
 msgid "Enable Selected"
 msgstr "Activer la sélection"
 
-#: menu.py:157 utils.py:407 utils.py:424 utils.py:441 utils.py:454
+#: __init__.py:61
+msgid "Enable User Account Control"
+msgstr "Activer le contrôle de compte d'utilisateur (UAC)"
+
+#: menu.py:157
+#: utils.py:451
+#: utils.py:468
+#: utils.py:485
+#: utils.py:498
 msgid "Enabled"
 msgstr "Activé"
 
-#: __init__.py:79
+#: __init__.py:67
+msgid "Environment Variables"
+msgstr "Variables d'environnement"
+
+#: menu.py:154
+#: menu.py:164
+#: menu.py:169
+#: menu.py:179
+#: menu.py:222
+#: menu.py:237
+#: menu.py:298
+#: menu.py:305
+#: menu.py:310
+#: menu.py:317
+msgid "Error"
+msgstr "Erreur"
+
+#: cmd_tools.py:46
+msgid "Exception occurred: {error}"
+msgstr "Une exception s'est produite : {error}"
+
+#: __init__.py:240
+msgid "Failed to clean temporary files."
+msgstr "Échec du nettoyage des fichiers temporaires."
+
+#: __init__.py:308
+msgid "Failed to clean: {}"
+msgstr "Échec du nettoyage : {}"
+
+#: __init__.py:271
+msgid "Failed to clear RAM cache."
+msgstr "Échec de la libération du cache RAM."
+
+#: __init__.py:249
+msgid "Failed to clear Run history."
+msgstr "Échec du nettoyage de l'historique d'exécution."
+
+#: kill_dialog.py:170
+msgid "Failed to close window."
+msgstr "Échec de la fermeture de la fenêtre."
+
+#: __init__.py:127
+msgid "Failed to connect internet."
+msgstr "Échec de la connexion à Internet."
+
+#: menu.py:179
+msgid "Failed to disable item."
+msgstr "Échec de la désactivation de l'élément."
+
+#: menu.py:305
+msgid "Failed to disable service: {}"
+msgstr "Échec de la désactivation du service : {}"
+
+#: __init__.py:111
+msgid "Failed to disconnect internet."
+msgstr "Échec de la déconnexion d'Internet."
+
+#: utils.py:386
+#: utils.py:389
+msgid "Failed to empty recycle bin."
+msgstr "Échec du vidage de la corbeille."
+
+#: menu.py:164
+msgid "Failed to enable item."
+msgstr "Échec de l'activation de l'élément."
+
+#: menu.py:317
+msgid "Failed to enable service: {}"
+msgstr "Échec de l'activation du service : {}"
+
+#: __init__.py:168
+msgid "Failed to restart Windows Explorer."
+msgstr "Échec du redémarrage de l'Explorateur Windows."
+
+#: __init__.py:231
+msgid "Failed to start system cleanup."
+msgstr "Échec du démarrage du nettoyage système."
+
+#: kill_dialog.py:193
+msgid "Failed to terminate process. Insufficient privileges."
+msgstr "Échec de la fin du processus. Privilèges insuffisants."
+
+#: __init__.py:141
+msgid "Failed to toggle UAC."
+msgstr "Échec du basculement de l'UAC."
+
+#: menu.py:158
+#: menu.py:173
+#: menu.py:230
+msgid "Info"
+msgstr "Info"
+
+#: __init__.py:124
+msgid "Internet connected."
+msgstr "Connecté à Internet."
+
+#: __init__.py:108
+msgid "Internet disconnected."
+msgstr "Déconnecté d'Internet."
+
+#: menu.py:173
+msgid "Item already disabled."
+msgstr "Élément déjà désactivé."
+
+#: menu.py:158
+msgid "Item already enabled."
+msgstr "Élément déjà activé."
+
+#: __init__.py:62
+#: __init__.py:408
+#: kill_dialog.py:56
+msgid "Kill Not Responding Apps"
+msgstr "Tuer les applications qui ne répondent pas"
+
+#: kill_dialog.py:215
+msgid "Kill Process"
+msgstr "Tuer le processus"
+
+#: menu.py:115
+msgid "Location"
+msgstr "Emplacement"
+
+#: __init__.py:66
+#: menu.py:244
+msgid "Manage Services"
+msgstr "Gérer les services"
+
+#: utils.py:598
+msgid "Manual"
+msgstr "Manuel"
+
+#: __init__.py:71
+msgid "Microsoft Windows Malicious Software Removal Tool"
+msgstr "Outil de suppression de logiciels malveillants Microsoft Windows"
+
+#: menu.py:112
+msgid "Name"
+msgstr "Nom"
+
+#: __init__.py:155
+msgid "No Wi-Fi network is currently connected."
+msgstr "Aucun réseau Wi-Fi n'est actuellement connecté."
+
+#: __init__.py:101
+msgid "No active network adapter found."
+msgstr "Aucun adaptateur réseau actif trouvé."
+
+#: __init__.py:118
+msgid "No disabled network adapter found."
+msgstr "Aucun adaptateur réseau désactivé trouvé."
+
+#: menu.py:154
+#: menu.py:169
+msgid "No item selected."
+msgstr "Aucun élément sélectionné."
+
+#: kill_dialog.py:149
+msgid "No window selected."
+msgstr "Aucune fenêtre sélectionnée."
+
+#: __init__.py:65
+msgid "Open Services"
+msgstr "Ouvrir les Services"
+
+#: menu.py:235
+msgid "Optimization completed."
+msgstr "Optimisation terminée."
+
+#: menu.py:237
+msgid "Optimization failed: {}"
+msgstr "L'optimisation a échoué : {}"
+
+#: menu.py:197
+msgid "Optimize Selected"
+msgstr "Optimiser la sélection"
+
+#: __init__.py:72
+msgid "Optimize and defragment drive"
+msgstr "Optimiser et défragmenter le disque"
+
+#: menu.py:230
+msgid "Optimizing drive, please wait..."
+msgstr "Optimisation du disque en cours, veuillez patienter..."
+
+#: __init__.py:88
+msgid "Power Diagnostic (Battery Report)"
+msgstr "Diagnostic d'énergie (Rapport de batterie)"
+
+#: __init__.py:305
+msgid "Prefetch and recent files cleaned."
+msgstr "Prefetch et fichiers récents nettoyés."
+
+#: kill_dialog.py:186
+msgid "Process terminated."
+msgstr "Processus terminé."
+
+#: __init__.py:268
+msgid "RAM cache cleared."
+msgstr "Cache RAM libéré."
+
+#: utils.py:383
+msgid "Recycle bin emptied."
+msgstr "Corbeille vidée."
+
+#: utils.py:380
+msgid "Recycle bin is already empty."
+msgstr "La corbeille est déjà vide."
+
+#: menu.py:262
+msgid "Refresh"
+msgstr "Actualiser"
+
+#: __init__.py:69
+msgid "Regedit"
+msgstr "Regedit"
+
+#: __init__.py:64
+msgid "Restart Windows Explorer"
+msgstr "Redémarrer l'Explorateur Windows"
+
+#: __init__.py:86
+msgid "Run Chkdsk on C:"
+msgstr "Exécuter Chkdsk sur C:"
+
+#: __init__.py:68
+msgid "Run Cmd"
+msgstr "Exécuter Cmd"
+
+#: __init__.py:84
+msgid "Run DISM"
+msgstr "Exécuter DISM"
+
+#: __init__.py:87
 msgid "Run Disk Cleanup"
-msgstr "Lancer le nettoyage de disque"
+msgstr "Exécuter le Nettoyage de disque"
+
+#: __init__.py:85
+msgid "Run SFC Scannow"
+msgstr "Exécuter SFC Scannow"
+
+#: utils.py:603
+msgid "Running"
+msgstr "En cours d'exécution"
+
+#: __init__.py:174
+msgid "SFC Scannow report will open when complete."
+msgstr "Le rapport SFC Scannow s'ouvrira une fois terminé."
+
+#: menu.py:222
+msgid "Select a drive first."
+msgstr "Sélectionnez d'abord un disque."
+
+#: menu.py:298
+#: menu.py:310
+msgid "Select a service first."
+msgstr "Sélectionnez d'abord un service."
+
+#: menu.py:253
+msgid "Service Name"
+msgstr "Nom du service"
+
+#: __init__.py:400
+msgid "Show Absolute Windows menu"
+msgstr "Afficher le menu Absolute Windows"
+
+#: __init__.py:56
+msgid "Show Wi-Fi Password"
+msgstr "Afficher le mot de passe Wi-Fi"
+
+#: __init__.py:63
+#: menu.py:101
+msgid "Startup Manager"
+msgstr "Gestionnaire de démarrage"
+
+#: menu.py:255
+msgid "Startup Type"
+msgstr "Type de démarrage"
+
+#: menu.py:114
+#: menu.py:256
+msgid "Status"
+msgstr "Statut"
+
+#: utils.py:605
+msgid "Stopped"
+msgstr "Arrêté"
+
+#: menu.py:235
+msgid "Success"
+msgstr "Succès"
+
+#: __init__.py:228
+msgid "System cleanup started."
+msgstr "Nettoyage du système démarré."
+
+#: __init__.py:237
+msgid "Temporary files cleaned."
+msgstr "Fichiers temporaires nettoyés."
+
+#: __init__.py:152
+msgid "The Wi-Fi network '{ssid}' is open (no password)."
+msgstr "Le réseau Wi-Fi '{ssid}' est ouvert (pas de mot de passe)."
+
+#: menu.py:113
+msgid "Type"
+msgstr "Type"
+
+#: __init__.py:138
+msgid "User Account Control toggled."
+msgstr "Contrôle de compte d'utilisateur basculé."
+
+#: cmd_tools.py:41
+msgid "User cancelled the UAC elevation prompt."
+msgstr "L'utilisateur a annulé la demande d'élévation UAC."
+
+#: __init__.py:149
+msgid "Wi-Fi password for {ssid} copied to clipboard."
+msgstr "Mot de passe Wi-Fi pour {ssid} copié dans le presse-papiers."
+
+#: kill_dialog.py:164
+msgid "Window closed."
+msgstr "Fenêtre fermée."
+
+#: __init__.py:70
+msgid "Windows Defender"
+msgstr "Windows Defender"
+
+#: __init__.py:165
+msgid "Windows Explorer has been restarted."
+msgstr "L'Explorateur Windows a été redémarré."
+
+#: __init__.py:246
+msgid "Windows Run history cleared."
+msgstr "Historique d'exécution de Windows nettoyé."

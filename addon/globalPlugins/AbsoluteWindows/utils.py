@@ -24,6 +24,8 @@ SHERB_NOCONFIRMATION = 0x00000001
 SHERB_NOPROGRESSUI = 0x00000002
 SHERB_NOSOUND = 0x00000004
 
+BM_CLICK = 0x00F5
+
 shell32 = ctypes.windll.shell32
 shell32.SHEmptyRecycleBinW.argtypes = [wintypes.HWND, wintypes.LPCWSTR, wintypes.DWORD]
 shell32.SHEmptyRecycleBinW.restype = ctypes.c_long
@@ -137,16 +139,72 @@ def get_first_disabled_adapter():
 
 def isUACEnabled():
 	try:
-		key = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System", 0, winreg.KEY_READ)
-		value, _ = winreg.QueryValueEx(key, "EnableLUA")
-		winreg.CloseKey(key)
-		return value == 1
-	except Exception:
+		KEY_WOW64_64KEY = 0x0100
+		key_handle = winreg.OpenKey(
+			winreg.HKEY_LOCAL_MACHINE,
+			r"SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System",
+			0,
+			winreg.KEY_READ | KEY_WOW64_64KEY
+		)
+		value, reg_type = winreg.QueryValueEx(key_handle, "EnableLUA")
+		winreg.CloseKey(key_handle)
+		is_enabled = (value == 1)
+		log.info(f"UAC registry EnableLUA = {value} (type {reg_type}) => enabled={is_enabled}")
+		return is_enabled
+	except FileNotFoundError:
+		log.warning("EnableLUA registry key not found, assuming UAC enabled")
 		return True
+	except Exception as e:
+		log.error(f"Failed to read UAC registry: {e}, falling back to reg query")
+		try:
+			cmd = 'reg query "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System" /v EnableLUA'
+			output = subprocess.check_output(cmd, shell=True, text=True, stderr=subprocess.DEVNULL)
+			for line in output.splitlines():
+				if "EnableLUA" in line:
+					parts = line.split()
+					if len(parts) >= 3:
+						value_str = parts[-1]
+						if value_str == "0x1":
+							log.info("reg query returned EnableLUA=0x1")
+							return True
+						elif value_str == "0x0":
+							log.info("reg query returned EnableLUA=0x0")
+							return False
+			log.warning("reg query could not parse EnableLUA value, assuming True")
+			return True
+		except subprocess.CalledProcessError as e:
+			log.error(f"reg query failed: {e}, assuming UAC enabled")
+			return True
+		except Exception as e2:
+			log.error(f"Unexpected error in fallback: {e2}, assuming True")
+			return True
 
 def _setUACRegistry(value):
 	cmd = f'reg add "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System" /v EnableLUA /t REG_DWORD /d {value} /f'
-	return _runAsAdmin(cmd, hide=True)
+	try:
+		result = ctypes.windll.shell32.ShellExecuteW(None, "runas", "reg.exe", cmd, None, 0)
+		if result <= 32:
+			log.error(f"Failed to launch reg.exe: {result}")
+			return False
+		time.sleep(0.5)
+		current = isUACEnabled()
+		expected = (value == 1)
+		if current == expected:
+			log.info(f"UAC registry set to {value} and verified")
+			return True
+		else:
+			log.warning(f"UAC registry set to {value} but current is {current}, retrying with subprocess")
+			try:
+				subprocess.run(f'reg add "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System" /v EnableLUA /t REG_DWORD /d {value} /f', shell=True, check=True, timeout=5)
+				time.sleep(0.3)
+				if isUACEnabled() == expected:
+					return True
+			except Exception as e2:
+				log.error(f"Fallback reg add also failed: {e2}")
+			return False
+	except Exception as e:
+		log.error(f"_setUACRegistry exception: {e}")
+		return False
 
 def disableUAC():
 	return _setUACRegistry(0)
@@ -379,20 +437,6 @@ def clear_ram_cache():
 	except Exception as e:
 		log.error(f"Failed to clear RAM cache: {e}")
 		return -1
-
-def open_system_tray():
-	try:
-		import winUser
-		winUser.keybd_event(winUser.VK_LWIN, 0, 0, 0)
-		winUser.keybd_event(ord('B'), 0, 0, 0)
-		winUser.keybd_event(ord('B'), 0, winUser.KEYEVENTF_KEYUP, 0)
-		winUser.keybd_event(winUser.VK_LWIN, 0, winUser.KEYEVENTF_KEYUP, 0)
-		time.sleep(0.1)
-		winUser.keybd_event(winUser.VK_RETURN, 0, 0, 0)
-		winUser.keybd_event(winUser.VK_RETURN, 0, winUser.KEYEVENTF_KEYUP, 0)
-	except Exception as e:
-		log.error(f"Failed to open system tray via Win+B: {e}")
-		wx.CallAfter(ui.message, _("Press Windows+B, then Enter to open system tray."))
 
 def get_startup_items():
 	items = []
