@@ -1,5 +1,4 @@
 # menu.py
-
 import wx
 import addonHandler
 import tones
@@ -9,16 +8,12 @@ from logHandler import log
 from . import utils
 
 addonHandler.initTranslation()
-try:
-	_ = addonHandler.getTranslation()
-except:
-	def _(x): return x
 
 _instance = None
 
 class AbsoluteWindowsMenu(wx.Frame):
 	def __init__(self, itemsFunc, configPath):
-		super().__init__(None, title=_("AbsoluteWindows"), size=(400, 300),
+		super().__init__(None, title=("AbsoluteWindows"), size=(400, 300),
 						 style=wx.DEFAULT_FRAME_STYLE | wx.STAY_ON_TOP)
 		self.itemsFunc = itemsFunc
 		self.configPath = configPath
@@ -40,6 +35,8 @@ class AbsoluteWindowsMenu(wx.Frame):
 		self.listBox.Bind(wx.EVT_CHAR_HOOK, self.onKey)
 
 		self.Bind(wx.EVT_CLOSE, self.onClose)
+		self.Bind(wx.EVT_ACTIVATE, self.onActivate)
+
 		self.Show()
 		self.Raise()
 		self.RequestUserAttention()
@@ -55,6 +52,11 @@ class AbsoluteWindowsMenu(wx.Frame):
 			self.listBox.SetSelection(0)
 		self.listBox.SetFocus()
 		self.timer.Start(15000)
+
+	def onActivate(self, event):
+		if event.GetActive():
+			self.refreshList()
+		event.Skip()
 
 	def onSelect(self, event):
 		self.timer.Start(15000)
@@ -92,6 +94,7 @@ def showAbsoluteWindowsMenu(itemsFunc, configPath):
 	if _instance:
 		_instance.Raise()
 		_instance.RequestUserAttention()
+		_instance.refreshList()
 		_instance.timer.Start(15000)
 	else:
 		_instance = AbsoluteWindowsMenu(itemsFunc, configPath)

@@ -20,10 +20,6 @@ from . import cmd_tools
 from . import kill_dialog
 
 addonHandler.initTranslation()
-try:
-	_ = addonHandler.getTranslation()
-except:
-	def _(x): return x
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = "Absolute Windows"
@@ -33,6 +29,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super().__init__()
+		log.info("AbsoluteWindows add-on initializing...")
+		log.info(f"NVDA language: {globalVars.appArgs.language}")
+		
+		test_translation = _("Disconnect Internet")
+		log.info(f"Test translation of 'Disconnect Internet' = '{test_translation}'")
+		
 		try:
 			os.makedirs(self.CONFIG_DIR, exist_ok=True)
 		except Exception as e:
@@ -48,11 +50,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		return utils.isInternetConnected()
 
 	def _buildMenuItems(self):
+		current_internet_state = self._checkInternetConnected()
 		items = []
-		if self.internetConnected:
-			items.append((_("Disconnect Internet"), self._toggleInternet))
+		if current_internet_state:
+			disconnect_label = _("Disconnect Internet")
+			log.info(f"Menu label 'Disconnect Internet' = '{disconnect_label}'")
+			items.append((disconnect_label, self._toggleInternet))
 		else:
-			items.append((_("Connect Internet"), self._toggleInternet))
+			connect_label = _("Connect Internet")
+			log.info(f"Menu label 'Connect Internet' = '{connect_label}'")
+			items.append((connect_label, self._toggleInternet))
 		items.append((_("Show Wi-Fi Password"), self._showWifiPassword))
 		is_uac_enabled = utils.isUACEnabled()
 		if is_uac_enabled:
