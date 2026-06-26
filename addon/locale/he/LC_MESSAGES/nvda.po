@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AbsoluteWindows 2026.5.3\n"
+"Project-Id-Version: AbsoluteWindows 2026.7.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-05-15 15:50+0700\n"
-"PO-Revision-Date: 2026-05-15 15:50+0700\n"
+"POT-Creation-Date: 2026-06-25 16:16+0700\n"
+"PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Hebrew\n"
 "Language: he\n"
@@ -11,3 +11,782 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
+
+#: kill_dialog.py:76
+msgid "&Kill Process of Selected Window"
+msgstr "&הרוג תהליך של החלון הנבחר"
+
+#: sys_monitor.py:280
+#: sys_monitor.py:308
+msgid "<1 minute"
+msgstr "<דקה אחת"
+
+#: sys_monitor.py:313
+#: sys_monitor.py:389
+#: sys_monitor.py:435
+msgid "??"
+msgstr "??"
+
+#: sys_monitor.py:77
+#: sys_monitor.py:112
+msgid "??%"
+msgstr "??%"
+
+#: menu.py:22
+msgid "AbsoluteWindows"
+msgstr "AbsoluteWindows"
+
+#: sys_monitor.py:400
+#: sys_monitor.py:415
+msgid "Activated"
+msgstr "מופעל"
+
+#: utils.py:691
+msgid "Automatic"
+msgstr "אוטומטי"
+
+#: __init__.py:280
+msgid "Battery report will open in your browser."
+msgstr "דוח הסוללה ייפתח בדפדפן שלך."
+
+#: utils.py:123
+msgid "Bluetooth turned off."
+msgstr "בלוטות' כובה."
+
+#: utils.py:124
+msgid "Bluetooth turned on."
+msgstr "בלוטות' הודלק."
+
+#: kill_dialog.py:156
+msgid "Cannot kill system process: {}"
+msgstr "לא ניתן להרוג תהליך מערכת: {}"
+
+#: kill_dialog.py:176
+msgid "Cannot open process. Access denied."
+msgstr "לא ניתן לפתוח תהליך. הגישה נדחתה."
+
+#: sys_monitor.py:236
+#: sys_monitor.py:237
+msgid "Charging"
+msgstr "בטעינה"
+
+#: __init__.py:115
+msgid "Check Disk Status"
+msgstr "בדוק מצב דיסק"
+
+#: __init__.py:262
+msgid "Chkdsk report will open when complete."
+msgstr "דוח Chkdsk ייפתח עם סיום."
+
+#: __init__.py:100
+msgid "Clean Prefetch & Recent"
+msgstr "נקה Prefetch ואחרונים"
+
+#: __init__.py:101
+msgid "Clean System files"
+msgstr "נקה קבצי מערכת"
+
+#: __init__.py:102
+msgid "Clean Temp"
+msgstr "נקה Temp"
+
+#: __init__.py:103
+msgid "Clean Windows Run History"
+msgstr "נקה היסטוריית הפעלה של Windows"
+
+#: __init__.py:105
+msgid "Clear Ram"
+msgstr "פנה זיכרון RAM"
+
+#: __init__.py:335
+msgid "Cleared {:.1f} MB of RAM cache."
+msgstr "פונה {:.1f} מגה-בייט של מטמון RAM."
+
+#: kill_dialog.py:77
+#: menu.py:242
+#: menu.py:315
+#: menu.py:393
+#: menu.py:459
+msgid "Close"
+msgstr "סגור"
+
+#: __init__.py:68
+msgid "Connect Internet"
+msgstr "התחבר לאינטרנט"
+
+#: sys_monitor.py:217
+msgid "Connected"
+msgstr "מחובר"
+
+#: __init__.py:86
+msgid "Control Panel"
+msgstr "לוח הבקרה"
+
+#: utils.py:125
+msgid "Could not find or change Bluetooth status."
+msgstr "לא ניתן למצוא או לשנות את מצב הבלוטות'."
+
+#: __init__.py:577
+msgid "Could not open Control Panel."
+msgstr "לא ניתן לפתוח את לוח הבקרה."
+
+#: __init__.py:449
+msgid "Could not open Disk Cleanup."
+msgstr "לא ניתן לפתוח את ניקוי הדיסק."
+
+#: __init__.py:394
+msgid "Could not open Environment Variables."
+msgstr "לא ניתן לפתוח את משתני הסביבה."
+
+#: __init__.py:470
+msgid "Could not open Folder Options."
+msgstr "לא ניתן לפתוח את אפשרויות התיקייה."
+
+#: __init__.py:410
+msgid "Could not open Malicious Software Removal Tool."
+msgstr "לא ניתן לפתוח את כלי להסרת תוכנות זדוניות."
+
+#: __init__.py:360
+msgid "Could not open Optimize Drives."
+msgstr "לא ניתן לפתוח את אופטימיזציית כוננים."
+
+#: __init__.py:587
+msgid "Could not open Programs and Features."
+msgstr "לא ניתן לפתוח את תוכניות ותכונות."
+
+#: __init__.py:459
+msgid "Could not open Registry Editor."
+msgstr "לא ניתן לפתוח את עורך הרישום."
+
+#: __init__.py:374
+msgid "Could not open Services."
+msgstr "לא ניתן לפתוח את השירותים."
+
+#: __init__.py:597
+msgid "Could not open Sound Settings."
+msgstr "לא ניתן לפתוח את הגדרות השמע."
+
+#: __init__.py:567
+msgid "Could not open Windows Defender."
+msgstr "לא ניתן לפתוח את Windows Defender."
+
+#: kill_dialog.py:225
+msgid "Could not open kill dialog. See log for details."
+msgstr "לא ניתן לפתוח דו-שיח הריגה. עיין ביומן לפרטים."
+
+#: __init__.py:253
+msgid "DISM report will open when complete."
+msgstr "דוח DISM ייפתח עם סיום."
+
+#: menu.py:314
+#: menu.py:456
+msgid "Disable Selected"
+msgstr "השבת נבחרים"
+
+#: __init__.py:78
+msgid "Disable User Account Control"
+msgstr "השבת בקרת חשבון משתמש"
+
+#: menu.py:366
+#: utils.py:687
+msgid "Disabled"
+msgstr "מושבת"
+
+#: sys_monitor.py:239
+msgid "Discharging"
+msgstr "בפריקה"
+
+#: __init__.py:66
+msgid "Disconnect Internet"
+msgstr "נתק אינטרנט"
+
+#: sys_monitor.py:220
+msgid "Disconnected"
+msgstr "מנותק"
+
+#: __init__.py:99
+msgid "Disk Cleanup"
+msgstr "ניקוי דיסק"
+
+#: __init__.py:271
+msgid "Disk Cleanup report will open when complete."
+msgstr "דוח ניקוי הדיסק ייפתח עם סיום."
+
+#: __init__.py:289
+msgid "Disk status report will open when complete."
+msgstr "דוח מצב הדיסק ייפתח עם סיום."
+
+#: menu.py:450
+msgid "Display Name"
+msgstr "שם תצוגה"
+
+#: menu.py:236
+msgid "Drive"
+msgstr "כונן"
+
+#: menu.py:381
+msgid "Drive Optimize"
+msgstr "אופטימיזציית כונן"
+
+#: menu.py:241
+msgid "Eject Selected"
+msgstr "הוצא נבחרים"
+
+#: __init__.py:104
+msgid "Empty Recycle Bin"
+msgstr "רוקן סל מחזור"
+
+#: menu.py:313
+#: menu.py:457
+msgid "Enable Selected"
+msgstr "הפעל נבחרים"
+
+#: __init__.py:80
+msgid "Enable User Account Control"
+msgstr "הפעל בקרת חשבון משתמש"
+
+#: menu.py:351
+#: utils.py:542
+#: utils.py:559
+#: utils.py:576
+#: utils.py:589
+msgid "Enabled"
+msgstr "מופעל"
+
+#: __init__.py:93
+msgid "Environment Variables"
+msgstr "משתני סביבה"
+
+#: menu.py:271
+#: menu.py:280
+#: menu.py:348
+#: menu.py:358
+#: menu.py:363
+#: menu.py:373
+#: menu.py:417
+#: menu.py:432
+#: menu.py:494
+#: menu.py:501
+#: menu.py:506
+#: menu.py:513
+msgid "Error"
+msgstr "שגיאה"
+
+#: sys_monitor.py:342
+msgid "Excellent"
+msgstr "מצוין"
+
+#: cmd_tools.py:46
+msgid "Exception occurred: {error}"
+msgstr "אירעה חריגה: {error}"
+
+#: __init__.py:310
+msgid "Failed to clean temporary files."
+msgstr "ניקוי קבצים זמניים נכשל."
+
+#: __init__.py:384
+msgid "Failed to clean: {errorMsg}"
+msgstr "הניקוי נכשל: {errorMsg}"
+
+#: __init__.py:341
+msgid "Failed to clear RAM cache."
+msgstr "פינוי מטמון RAM נכשל."
+
+#: __init__.py:319
+msgid "Failed to clear Run history."
+msgstr "ניקוי היסטוריית הפעלה נכשל."
+
+#: kill_dialog.py:170
+msgid "Failed to close window."
+msgstr "סגירת החלון נכשלה."
+
+#: __init__.py:164
+msgid "Failed to connect internet."
+msgstr "התחברות לאינטרנט נכשלה."
+
+#: menu.py:373
+msgid "Failed to disable item."
+msgstr "השבתת הפריט נכשלה."
+
+#: menu.py:501
+msgid "Failed to disable service: {}"
+msgstr "השבתת השירות נכשלה: {}"
+
+#: __init__.py:148
+msgid "Failed to disconnect internet."
+msgstr "ניתוק האינטרנט נכשל."
+
+#: menu.py:280
+msgid "Failed to eject {drive}."
+msgstr "הוצאת {drive} נכשלה."
+
+#: utils.py:477
+#: utils.py:480
+msgid "Failed to empty recycle bin."
+msgstr "ריקון סל המחזור נכשל."
+
+#: menu.py:358
+msgid "Failed to enable item."
+msgstr "הפעלת הפריט נכשלה."
+
+#: menu.py:513
+msgid "Failed to enable service: {}"
+msgstr "הפעלת השירות נכשלה: {}"
+
+#: __init__.py:184
+msgid "Failed to restart Windows Audio Services."
+msgstr "הפעלה מחדש של שירותי השמע של Windows נכשלה."
+
+#: __init__.py:238
+msgid "Failed to restart Windows Explorer."
+msgstr "הפעלה מחדש של Windows Explorer נכשלה."
+
+#: __init__.py:198
+msgid "Failed to restart to BIOS. Your system may not support this feature via Windows."
+msgstr "הפעלה מחדש ל-BIOS נכשלה. ייתכן שהמערכת שלך לא תומכת בתכונה זו דרך Windows."
+
+#: __init__.py:301
+msgid "Failed to start system cleanup."
+msgstr "התחלת ניקוי המערכת נכשלה."
+
+#: kill_dialog.py:193
+msgid "Failed to terminate process. Insufficient privileges."
+msgstr "סיום התהליך נכשל. הרשאות לא מספקות."
+
+#: utils.py:128
+msgid "Failed to toggle Bluetooth."
+msgstr "החלפת מצב בלוטות' נכשלה."
+
+#: __init__.py:211
+msgid "Failed to toggle UAC."
+msgstr "החלפת מצב UAC נכשלה."
+
+#: sys_monitor.py:346
+msgid "Fair"
+msgstr "סביר"
+
+#: __init__.py:475
+msgid "File Explorer Options"
+msgstr "אפשרויות סייר הקבצים"
+
+#: __init__.py:89
+msgid "Folder Option"
+msgstr "אפשרויות תיקייה"
+
+#: __init__.py:475
+msgid "Folder Options"
+msgstr "אפשרויות תיקייה"
+
+#: sys_monitor.py:238
+msgid "Fully Charged"
+msgstr "טעון במלואו"
+
+#: sys_monitor.py:344
+msgid "Good"
+msgstr "טוב"
+
+#: menu.py:352
+#: menu.py:367
+#: menu.py:425
+msgid "Info"
+msgstr "מידע"
+
+#: __init__.py:161
+msgid "Internet connected."
+msgstr "האינטרנט מחובר."
+
+#: __init__.py:145
+msgid "Internet disconnected."
+msgstr "האינטרנט מנותק."
+
+#: menu.py:367
+msgid "Item already disabled."
+msgstr "הפריט כבר מושבת."
+
+#: menu.py:352
+msgid "Item already enabled."
+msgstr "הפריט כבר מופעל."
+
+#: __init__.py:84
+#: __init__.py:630
+#: kill_dialog.py:56
+msgid "Kill Not Responding Apps"
+msgstr "הרוג אפליקציות שלא מגיבות"
+
+#: kill_dialog.py:215
+msgid "Kill Process"
+msgstr "הרוג תהליך"
+
+#: menu.py:237
+msgid "Label"
+msgstr "תווית"
+
+#: menu.py:119
+msgid "Loading system information..."
+msgstr "טוען מידע מערכת..."
+
+#: menu.py:309
+msgid "Location"
+msgstr "מיקום"
+
+#: sys_monitor.py:240
+msgid "Low"
+msgstr "נמוך"
+
+#: __init__.py:92
+#: menu.py:440
+msgid "Manage Services"
+msgstr "נהל שירותים"
+
+#: utils.py:689
+msgid "Manual"
+msgstr "ידני"
+
+#: __init__.py:97
+msgid "Microsoft Windows Malicious Software Removal Tool"
+msgstr "כלי להסרת תוכנות זדוניות של Microsoft Windows"
+
+#: menu.py:306
+msgid "Name"
+msgstr "שם"
+
+#: menu.py:266
+msgid "No USB drives found"
+msgstr "לא נמצאו כונני USB"
+
+#: __init__.py:225
+msgid "No Wi-Fi network is currently connected."
+msgstr "אין רשת Wi-Fi מחוברת כעת."
+
+#: __init__.py:138
+msgid "No active network adapter found."
+msgstr "לא נמצא מתאם רשת פעיל."
+
+#: menu.py:156
+msgid "No data available"
+msgstr "אין נתונים זמינים"
+
+#: __init__.py:155
+msgid "No disabled network adapter found."
+msgstr "לא נמצא מתאם רשת מושבת."
+
+#: menu.py:348
+#: menu.py:363
+msgid "No item selected."
+msgstr "לא נבחר פריט."
+
+#: kill_dialog.py:149
+msgid "No window selected."
+msgstr "לא נבחר חלון."
+
+#: sys_monitor.py:402
+#: sys_monitor.py:417
+msgid "Not Activated"
+msgstr "לא מופעל"
+
+#: __init__.py:91
+msgid "Open Services"
+msgstr "פתח שירותים"
+
+#: menu.py:430
+msgid "Optimization completed."
+msgstr "האופטימיזציה הושלמה."
+
+#: menu.py:432
+msgid "Optimization failed: {}"
+msgstr "האופטימיזציה נכשלה: {}"
+
+#: menu.py:392
+msgid "Optimize Selected"
+msgstr "בצע אופטימיזציה לנבחרים"
+
+#: __init__.py:98
+msgid "Optimize and defragment drive"
+msgstr "בצע אופטימיזציה ואיחוי לכונן"
+
+#: menu.py:425
+msgid "Optimizing drive, please wait..."
+msgstr "מבצע אופטימיזציה לכונן, אנא המתן..."
+
+#: __init__.py:114
+msgid "Power Diagnostic (Battery Report)"
+msgstr "אבחון חשמל (דוח סוללה)"
+
+#: __init__.py:381
+msgid "Prefetch and recent files cleaned. {count} items removed."
+msgstr "קבצי Prefetch ואחרונים נוקו. {count} פריטים הוסרו."
+
+#: kill_dialog.py:186
+msgid "Process terminated."
+msgstr "התהליך הסתיים."
+
+#: __init__.py:87
+msgid "Programs and Features"
+msgstr "תוכניות ותכונות"
+
+#: __init__.py:338
+msgid "RAM cache is already clean."
+msgstr "מטמון RAM כבר נקי."
+
+#: utils.py:474
+msgid "Recycle bin emptied. {count} items removed."
+msgstr "סל המחזור רוקן. {count} פריטים הוסרו."
+
+#: utils.py:468
+msgid "Recycle bin is already empty."
+msgstr "סל המחזור כבר ריק."
+
+#: menu.py:458
+msgid "Refresh"
+msgstr "רענן"
+
+#: __init__.py:95
+msgid "Regedit"
+msgstr "עורך הרישום"
+
+#: __init__.py:74
+msgid "Restart Windows Audio Service"
+msgstr "הפעל מחדש את שירות השמע של Windows"
+
+#: __init__.py:85
+msgid "Restart Windows Explorer"
+msgstr "הפעל מחדש את Windows Explorer"
+
+#: __init__.py:82
+msgid "Restart to BIOS/UEFI Settings"
+msgstr "הפעל מחדש להגדרות BIOS/UEFI"
+
+#: __init__.py:178
+msgid "Restarting Audio Services, please wait..."
+msgstr "מפעיל מחדש שירותי שמע, אנא המתן..."
+
+#: __init__.py:192
+msgid "Restarting to BIOS/UEFI, please wait..."
+msgstr "מפעיל מחדש ל-BIOS/UEFI, אנא המתן..."
+
+#: __init__.py:112
+msgid "Run Chkdsk on C:"
+msgstr "הפעל Chkdsk על C:"
+
+#: __init__.py:94
+msgid "Run Cmd"
+msgstr "הפעל Cmd"
+
+#: __init__.py:110
+msgid "Run DISM"
+msgstr "הפעל DISM"
+
+#: __init__.py:113
+msgid "Run Disk Cleanup"
+msgstr "הפעל ניקוי דיסק"
+
+#: __init__.py:111
+msgid "Run SFC Scannow"
+msgstr "הפעל SFC Scannow"
+
+#: utils.py:694
+msgid "Running"
+msgstr "פועל"
+
+#: __init__.py:244
+msgid "SFC Scannow report will open when complete."
+msgstr "דוח SFC Scannow ייפתח עם סיום."
+
+#: __init__.py:73
+#: menu.py:228
+msgid "Safely Remove USB"
+msgstr "הסר USB בבטחה"
+
+#: menu.py:271
+msgid "Select a USB drive first."
+msgstr "בחר תחילה כונן USB."
+
+#: menu.py:417
+msgid "Select a drive first."
+msgstr "בחר תחילה כונן."
+
+#: menu.py:494
+#: menu.py:506
+msgid "Select a service first."
+msgstr "בחר תחילה שירות."
+
+#: menu.py:449
+msgid "Service Name"
+msgstr "שם השירות"
+
+#: __init__.py:614
+msgid "Show Absolute Windows menu (single tap) or System Monitor (double tap)"
+msgstr "הצג תפריט Absolute Windows (הקשה אחת) או צג מערכת (שתי הקשות)"
+
+#: __init__.py:71
+msgid "Show Wi-Fi Password"
+msgstr "הצג סיסמת Wi-Fi"
+
+#: __init__.py:88
+msgid "Sound setting"
+msgstr "הגדרות שמע"
+
+#: __init__.py:90
+#: menu.py:295
+msgid "Startup Manager"
+msgstr "מנהל הפעלה"
+
+#: menu.py:451
+msgid "Startup Type"
+msgstr "סוג הפעלה"
+
+#: menu.py:308
+#: menu.py:452
+msgid "Status"
+msgstr "סטטוס"
+
+#: utils.py:696
+msgid "Stopped"
+msgstr "עצור"
+
+#: menu.py:277
+#: menu.py:430
+msgid "Success"
+msgstr "הצלחה"
+
+#: menu.py:101
+msgid "System Monitor"
+msgstr "צג מערכת"
+
+#: __init__.py:63
+msgid "System Tray"
+msgstr "מגש המערכת"
+
+#: __init__.py:298
+msgid "System cleanup started."
+msgstr "ניקוי המערכת החל."
+
+#: __init__.py:307
+msgid "Temporary files cleaned. {count} items removed."
+msgstr "קבצים זמניים נוקו. {count} פריטים הוסרו."
+
+#: __init__.py:222
+msgid "The Wi-Fi network '{ssid}' is open (no password)."
+msgstr "רשת ה-Wi-Fi '{ssid}' פתוחה (ללא סיסמה)."
+
+#: __init__.py:70
+msgid "Toggle Bluetooth"
+msgstr "החלף מצב בלוטות'"
+
+#: menu.py:307
+msgid "Type"
+msgstr "סוג"
+
+#: utils.py:89
+msgid "USB Drive"
+msgstr "כונן USB"
+
+#: menu.py:277
+msgid "USB drive {drive} ejected safely."
+msgstr "כונן USB {drive} הוצא בבטחה."
+
+#: sys_monitor.py:241
+msgid "Unknown"
+msgstr "לא ידוע"
+
+#: __init__.py:208
+msgid "User Account Control toggled."
+msgstr "מצב בקרת חשבון משתמש הוחלף."
+
+#: cmd_tools.py:41
+msgid "User cancelled the UAC elevation prompt."
+msgstr "המשתמש ביטל את בקשת הרמת ההרשאות של UAC."
+
+#: sys_monitor.py:350
+msgid "Very Weak"
+msgstr "חלש מאוד"
+
+#: sys_monitor.py:348
+msgid "Weak"
+msgstr "חלש"
+
+#: __init__.py:219
+msgid "Wi-Fi password for {ssid} copied to clipboard."
+msgstr "סיסמת Wi-Fi עבור {ssid} הועתקה ללוח."
+
+#: kill_dialog.py:164
+msgid "Window closed."
+msgstr "החלון נסגר."
+
+#: __init__.py:181
+msgid "Windows Audio Services restarted successfully."
+msgstr "שירותי השמע של Windows הופעלו מחדש בהצלחה."
+
+#: __init__.py:96
+msgid "Windows Defender"
+msgstr "Windows Defender"
+
+#: __init__.py:235
+msgid "Windows Explorer has been restarted."
+msgstr "Windows Explorer הופעל מחדש."
+
+#: __init__.py:316
+msgid "Windows Run history cleared. {count} items removed."
+msgstr "היסטוריית ההפעלה של Windows נוקתה. {count} פריטים הוסרו."
+
+#: sys_monitor.py:430
+msgid "Windows Server {}"
+msgstr "Windows Server {}"
+
+#: sys_monitor.py:193
+#: sys_monitor.py:206
+msgid "{:.1F} MB/s down, {:.1F} MB/s up"
+msgstr "{:.1F} מגה-בייט/שנייה הורדה, {:.1F} מגה-בייט/שנייה העלאה"
+
+#: sys_monitor.py:166
+#: sys_monitor.py:178
+msgid "{:.1F} MB/s read, {:.1F} MB/s write"
+msgstr "{:.1F} מגה-בייט/שנייה קריאה, {:.1F} מגה-בייט/שנייה כתיבה"
+
+#: sys_monitor.py:96
+#: sys_monitor.py:108
+msgid "{:.2F} GB of {:.2F} GB used ({:.1F}%)"
+msgstr "{:.2F} ג'יגה-בייט מתוך {:.2F} ג'יגה-בייט בשימוש ({:.1F}%)"
+
+#: sys_monitor.py:432
+msgid "{} ({} bit) build {}"
+msgstr "{} ({} ביט) build {}"
+
+#: sys_monitor.py:271
+#: sys_monitor.py:299
+msgid "{} day{}"
+msgstr "{} יום{}"
+
+#: sys_monitor.py:273
+#: sys_monitor.py:301
+msgid "{} hour{}"
+msgstr "{} שעה{}"
+
+#: sys_monitor.py:275
+#: sys_monitor.py:303
+msgid "{} minute{}"
+msgstr "{} דקה{}"
+
+#: sys_monitor.py:378
+#: sys_monitor.py:385
+msgid "{} process{}"
+msgstr "{} תהליך{}"
+
+#: sys_monitor.py:277
+#: sys_monitor.py:305
+msgid "{} second{}"
+msgstr "{} שניה{}"
+
+#: sys_monitor.py:133
+#: sys_monitor.py:149
+msgid "{} {:.1F} GB of {:.1F} GB used ({:.0F}%)"
+msgstr "{} {:.1F} ג'יגה-בייט מתוך {:.1F} ג'יגה-בייט בשימוש ({:.0F}%)"
+
+#: sys_monitor.py:67
+#: sys_monitor.py:73
+msgid "{}%"
+msgstr "{}%"
+
+#: sys_monitor.py:242
+msgid "{}% ({})"
+msgstr "{}% ({})"

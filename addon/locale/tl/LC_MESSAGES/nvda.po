@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AbsoluteWindows 2026.5.3\n"
+"Project-Id-Version: AbsoluteWindows 2026.7.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-05-15 16:00+0700\n"
-"PO-Revision-Date: 2026-05-15 16:00+0700\n"
+"POT-Creation-Date: 2026-06-25 16:16+0700\n"
+"PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Tagalog\n"
 "Language: tl\n"
@@ -11,3 +11,782 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
+
+#: kill_dialog.py:76
+msgid "&Kill Process of Selected Window"
+msgstr "&Patayin ang Proseso ng Napiling Window"
+
+#: sys_monitor.py:280
+#: sys_monitor.py:308
+msgid "<1 minute"
+msgstr "<1 minuto"
+
+#: sys_monitor.py:313
+#: sys_monitor.py:389
+#: sys_monitor.py:435
+msgid "??"
+msgstr "??"
+
+#: sys_monitor.py:77
+#: sys_monitor.py:112
+msgid "??%"
+msgstr "??%"
+
+#: menu.py:22
+msgid "AbsoluteWindows"
+msgstr "AbsoluteWindows"
+
+#: sys_monitor.py:400
+#: sys_monitor.py:415
+msgid "Activated"
+msgstr "Na-activate"
+
+#: utils.py:691
+msgid "Automatic"
+msgstr "Awtomatiko"
+
+#: __init__.py:280
+msgid "Battery report will open in your browser."
+msgstr "Magbubukas ang ulat ng baterya sa iyong browser."
+
+#: utils.py:123
+msgid "Bluetooth turned off."
+msgstr "Naka-off ang Bluetooth."
+
+#: utils.py:124
+msgid "Bluetooth turned on."
+msgstr "Naka-on ang Bluetooth."
+
+#: kill_dialog.py:156
+msgid "Cannot kill system process: {}"
+msgstr "Hindi mapapatay ang proseso ng sistema: {}"
+
+#: kill_dialog.py:176
+msgid "Cannot open process. Access denied."
+msgstr "Hindi mabuksan ang proseso. Tinanggihan ang pag-access."
+
+#: sys_monitor.py:236
+#: sys_monitor.py:237
+msgid "Charging"
+msgstr "Nagcha-charge"
+
+#: __init__.py:115
+msgid "Check Disk Status"
+msgstr "Suriin ang Katayuan ng Disk"
+
+#: __init__.py:262
+msgid "Chkdsk report will open when complete."
+msgstr "Magbubukas ang ulat ng Chkdsk kapag kumpleto na."
+
+#: __init__.py:100
+msgid "Clean Prefetch & Recent"
+msgstr "Linisin ang Prefetch at Kamakailan"
+
+#: __init__.py:101
+msgid "Clean System files"
+msgstr "Linisin ang mga file ng sistema"
+
+#: __init__.py:102
+msgid "Clean Temp"
+msgstr "Linisin ang Temp"
+
+#: __init__.py:103
+msgid "Clean Windows Run History"
+msgstr "Linisin ang Kasaysayan ng Run ng Windows"
+
+#: __init__.py:105
+msgid "Clear Ram"
+msgstr "I-clear ang RAM"
+
+#: __init__.py:335
+msgid "Cleared {:.1f} MB of RAM cache."
+msgstr "Na-clear ang {:.1f} MB ng RAM cache."
+
+#: kill_dialog.py:77
+#: menu.py:242
+#: menu.py:315
+#: menu.py:393
+#: menu.py:459
+msgid "Close"
+msgstr "Isara"
+
+#: __init__.py:68
+msgid "Connect Internet"
+msgstr "Kumonekta sa Internet"
+
+#: sys_monitor.py:217
+msgid "Connected"
+msgstr "Nakakonekta"
+
+#: __init__.py:86
+msgid "Control Panel"
+msgstr "Control Panel"
+
+#: utils.py:125
+msgid "Could not find or change Bluetooth status."
+msgstr "Hindi mahanap o mabago ang katayuan ng Bluetooth."
+
+#: __init__.py:577
+msgid "Could not open Control Panel."
+msgstr "Hindi mabuksan ang Control Panel."
+
+#: __init__.py:449
+msgid "Could not open Disk Cleanup."
+msgstr "Hindi mabuksan ang Paglilinis ng Disk."
+
+#: __init__.py:394
+msgid "Could not open Environment Variables."
+msgstr "Hindi mabuksan ang mga Variable ng Kapaligiran."
+
+#: __init__.py:470
+msgid "Could not open Folder Options."
+msgstr "Hindi mabuksan ang mga Opsyon ng Folder."
+
+#: __init__.py:410
+msgid "Could not open Malicious Software Removal Tool."
+msgstr "Hindi mabuksan ang Tool sa Pag-alis ng Malisyosong Software."
+
+#: __init__.py:360
+msgid "Could not open Optimize Drives."
+msgstr "Hindi mabuksan ang I-optimize ang mga Drive."
+
+#: __init__.py:587
+msgid "Could not open Programs and Features."
+msgstr "Hindi mabuksan ang mga Programa at Tampok."
+
+#: __init__.py:459
+msgid "Could not open Registry Editor."
+msgstr "Hindi mabuksan ang Editor ng Registry."
+
+#: __init__.py:374
+msgid "Could not open Services."
+msgstr "Hindi mabuksan ang mga Serbisyo."
+
+#: __init__.py:597
+msgid "Could not open Sound Settings."
+msgstr "Hindi mabuksan ang mga Setting ng Tunog."
+
+#: __init__.py:567
+msgid "Could not open Windows Defender."
+msgstr "Hindi mabuksan ang Windows Defender."
+
+#: kill_dialog.py:225
+msgid "Could not open kill dialog. See log for details."
+msgstr "Hindi mabuksan ang dialog ng pagpatay. Tingnan ang log para sa mga detalye."
+
+#: __init__.py:253
+msgid "DISM report will open when complete."
+msgstr "Magbubukas ang ulat ng DISM kapag kumpleto na."
+
+#: menu.py:314
+#: menu.py:456
+msgid "Disable Selected"
+msgstr "Huwag paganahin ang Napili"
+
+#: __init__.py:78
+msgid "Disable User Account Control"
+msgstr "Huwag paganahin ang Kontrol ng User Account"
+
+#: menu.py:366
+#: utils.py:687
+msgid "Disabled"
+msgstr "Hindi pinagana"
+
+#: sys_monitor.py:239
+msgid "Discharging"
+msgstr "Nagdi-discharge"
+
+#: __init__.py:66
+msgid "Disconnect Internet"
+msgstr "Idiskonekta ang Internet"
+
+#: sys_monitor.py:220
+msgid "Disconnected"
+msgstr "Naka-disconnect"
+
+#: __init__.py:99
+msgid "Disk Cleanup"
+msgstr "Paglilinis ng Disk"
+
+#: __init__.py:271
+msgid "Disk Cleanup report will open when complete."
+msgstr "Magbubukas ang ulat ng Paglilinis ng Disk kapag kumpleto na."
+
+#: __init__.py:289
+msgid "Disk status report will open when complete."
+msgstr "Magbubukas ang ulat ng katayuan ng disk kapag kumpleto na."
+
+#: menu.py:450
+msgid "Display Name"
+msgstr "Ipapakitang Pangalan"
+
+#: menu.py:236
+msgid "Drive"
+msgstr "Drive"
+
+#: menu.py:381
+msgid "Drive Optimize"
+msgstr "I-optimize ang Drive"
+
+#: menu.py:241
+msgid "Eject Selected"
+msgstr "I-eject ang Napili"
+
+#: __init__.py:104
+msgid "Empty Recycle Bin"
+msgstr "Alisin ang laman ng Recycle Bin"
+
+#: menu.py:313
+#: menu.py:457
+msgid "Enable Selected"
+msgstr "Paganahin ang Napili"
+
+#: __init__.py:80
+msgid "Enable User Account Control"
+msgstr "Paganahin ang Kontrol ng User Account"
+
+#: menu.py:351
+#: utils.py:542
+#: utils.py:559
+#: utils.py:576
+#: utils.py:589
+msgid "Enabled"
+msgstr "Pinagana"
+
+#: __init__.py:93
+msgid "Environment Variables"
+msgstr "Mga Variable ng Kapaligiran"
+
+#: menu.py:271
+#: menu.py:280
+#: menu.py:348
+#: menu.py:358
+#: menu.py:363
+#: menu.py:373
+#: menu.py:417
+#: menu.py:432
+#: menu.py:494
+#: menu.py:501
+#: menu.py:506
+#: menu.py:513
+msgid "Error"
+msgstr "Error"
+
+#: sys_monitor.py:342
+msgid "Excellent"
+msgstr "Napakahusay"
+
+#: cmd_tools.py:46
+msgid "Exception occurred: {error}"
+msgstr "Nagkaroon ng exception: {error}"
+
+#: __init__.py:310
+msgid "Failed to clean temporary files."
+msgstr "Nabigo ang paglilinis ng mga pansamantalang file."
+
+#: __init__.py:384
+msgid "Failed to clean: {errorMsg}"
+msgstr "Nabigo ang paglilinis: {errorMsg}"
+
+#: __init__.py:341
+msgid "Failed to clear RAM cache."
+msgstr "Nabigo ang pag-clear ng RAM cache."
+
+#: __init__.py:319
+msgid "Failed to clear Run history."
+msgstr "Nabigo ang pag-clear ng kasaysayan ng Run."
+
+#: kill_dialog.py:170
+msgid "Failed to close window."
+msgstr "Nabigo ang pagsasara ng window."
+
+#: __init__.py:164
+msgid "Failed to connect internet."
+msgstr "Nabigo ang pagkonekta sa internet."
+
+#: menu.py:373
+msgid "Failed to disable item."
+msgstr "Nabigo ang pag-disable ng item."
+
+#: menu.py:501
+msgid "Failed to disable service: {}"
+msgstr "Nabigo ang pag-disable ng serbisyo: {}"
+
+#: __init__.py:148
+msgid "Failed to disconnect internet."
+msgstr "Nabigo ang pagdiskonekta sa internet."
+
+#: menu.py:280
+msgid "Failed to eject {drive}."
+msgstr "Nabigo ang pag-eject ng {drive}."
+
+#: utils.py:477
+#: utils.py:480
+msgid "Failed to empty recycle bin."
+msgstr "Nabigo ang pag-alis ng laman ng recycle bin."
+
+#: menu.py:358
+msgid "Failed to enable item."
+msgstr "Nabigo ang pag-enable ng item."
+
+#: menu.py:513
+msgid "Failed to enable service: {}"
+msgstr "Nabigo ang pag-enable ng serbisyo: {}"
+
+#: __init__.py:184
+msgid "Failed to restart Windows Audio Services."
+msgstr "Nabigo ang pag-restart ng Windows Audio Services."
+
+#: __init__.py:238
+msgid "Failed to restart Windows Explorer."
+msgstr "Nabigo ang pag-restart ng Windows Explorer."
+
+#: __init__.py:198
+msgid "Failed to restart to BIOS. Your system may not support this feature via Windows."
+msgstr "Nabigo ang pag-restart sa BIOS. Maaaring hindi suportado ng iyong sistema ang tampok na ito sa pamamagitan ng Windows."
+
+#: __init__.py:301
+msgid "Failed to start system cleanup."
+msgstr "Nabigo ang pagsisimula ng paglilinis ng sistema."
+
+#: kill_dialog.py:193
+msgid "Failed to terminate process. Insufficient privileges."
+msgstr "Nabigo ang pagtatapos ng proseso. Hindi sapat ang mga pribilehiyo."
+
+#: utils.py:128
+msgid "Failed to toggle Bluetooth."
+msgstr "Nabigo ang pag-toggle ng Bluetooth."
+
+#: __init__.py:211
+msgid "Failed to toggle UAC."
+msgstr "Nabigo ang pag-toggle ng UAC."
+
+#: sys_monitor.py:346
+msgid "Fair"
+msgstr "Katamtaman"
+
+#: __init__.py:475
+msgid "File Explorer Options"
+msgstr "Mga Opsyon ng File Explorer"
+
+#: __init__.py:89
+msgid "Folder Option"
+msgstr "Mga Opsyon ng Folder"
+
+#: __init__.py:475
+msgid "Folder Options"
+msgstr "Mga Opsyon ng Folder"
+
+#: sys_monitor.py:238
+msgid "Fully Charged"
+msgstr "Lubusang Na-charge"
+
+#: sys_monitor.py:344
+msgid "Good"
+msgstr "Mabuti"
+
+#: menu.py:352
+#: menu.py:367
+#: menu.py:425
+msgid "Info"
+msgstr "Impormasyon"
+
+#: __init__.py:161
+msgid "Internet connected."
+msgstr "Nakakonekta ang internet."
+
+#: __init__.py:145
+msgid "Internet disconnected."
+msgstr "Naka-disconnect ang internet."
+
+#: menu.py:367
+msgid "Item already disabled."
+msgstr "Naka-disable na ang item."
+
+#: menu.py:352
+msgid "Item already enabled."
+msgstr "Naka-enable na ang item."
+
+#: __init__.py:84
+#: __init__.py:630
+#: kill_dialog.py:56
+msgid "Kill Not Responding Apps"
+msgstr "Patayin ang Hindi Tumutugon na Apps"
+
+#: kill_dialog.py:215
+msgid "Kill Process"
+msgstr "Patayin ang Proseso"
+
+#: menu.py:237
+msgid "Label"
+msgstr "Label"
+
+#: menu.py:119
+msgid "Loading system information..."
+msgstr "Naglo-load ng impormasyon ng sistema..."
+
+#: menu.py:309
+msgid "Location"
+msgstr "Lokasyon"
+
+#: sys_monitor.py:240
+msgid "Low"
+msgstr "Mababa"
+
+#: __init__.py:92
+#: menu.py:440
+msgid "Manage Services"
+msgstr "Pamahalaan ang mga Serbisyo"
+
+#: utils.py:689
+msgid "Manual"
+msgstr "Manual"
+
+#: __init__.py:97
+msgid "Microsoft Windows Malicious Software Removal Tool"
+msgstr "Microsoft Windows Tool sa Pag-alis ng Malisyosong Software"
+
+#: menu.py:306
+msgid "Name"
+msgstr "Pangalan"
+
+#: menu.py:266
+msgid "No USB drives found"
+msgstr "Walang nakitang USB drive"
+
+#: __init__.py:225
+msgid "No Wi-Fi network is currently connected."
+msgstr "Walang Wi-Fi network na kasalukuyang nakakonekta."
+
+#: __init__.py:138
+msgid "No active network adapter found."
+msgstr "Walang nakitang aktibong network adapter."
+
+#: menu.py:156
+msgid "No data available"
+msgstr "Walang available na data"
+
+#: __init__.py:155
+msgid "No disabled network adapter found."
+msgstr "Walang nakitang naka-disable na network adapter."
+
+#: menu.py:348
+#: menu.py:363
+msgid "No item selected."
+msgstr "Walang napiling item."
+
+#: kill_dialog.py:149
+msgid "No window selected."
+msgstr "Walang napiling window."
+
+#: sys_monitor.py:402
+#: sys_monitor.py:417
+msgid "Not Activated"
+msgstr "Hindi Na-activate"
+
+#: __init__.py:91
+msgid "Open Services"
+msgstr "Buksan ang mga Serbisyo"
+
+#: menu.py:430
+msgid "Optimization completed."
+msgstr "Nakumpleto ang pag-optimize."
+
+#: menu.py:432
+msgid "Optimization failed: {}"
+msgstr "Nabigo ang pag-optimize: {}"
+
+#: menu.py:392
+msgid "Optimize Selected"
+msgstr "I-optimize ang Napili"
+
+#: __init__.py:98
+msgid "Optimize and defragment drive"
+msgstr "I-optimize at i-defragment ang drive"
+
+#: menu.py:425
+msgid "Optimizing drive, please wait..."
+msgstr "Ino-optimize ang drive, mangyaring maghintay..."
+
+#: __init__.py:114
+msgid "Power Diagnostic (Battery Report)"
+msgstr "Diagnostic ng Power (Ulat ng Baterya)"
+
+#: __init__.py:381
+msgid "Prefetch and recent files cleaned. {count} items removed."
+msgstr "Na-clean ang Prefetch at mga kamakailang file. {count} mga item ang naalis."
+
+#: kill_dialog.py:186
+msgid "Process terminated."
+msgstr "Tinapos ang proseso."
+
+#: __init__.py:87
+msgid "Programs and Features"
+msgstr "Mga Programa at Tampok"
+
+#: __init__.py:338
+msgid "RAM cache is already clean."
+msgstr "Malinis na ang RAM cache."
+
+#: utils.py:474
+msgid "Recycle bin emptied. {count} items removed."
+msgstr "Na-empty ang recycle bin. {count} mga item ang naalis."
+
+#: utils.py:468
+msgid "Recycle bin is already empty."
+msgstr "Walang laman na ang recycle bin."
+
+#: menu.py:458
+msgid "Refresh"
+msgstr "I-refresh"
+
+#: __init__.py:95
+msgid "Regedit"
+msgstr "Editor ng Registry"
+
+#: __init__.py:74
+msgid "Restart Windows Audio Service"
+msgstr "I-restart ang Windows Audio Service"
+
+#: __init__.py:85
+msgid "Restart Windows Explorer"
+msgstr "I-restart ang Windows Explorer"
+
+#: __init__.py:82
+msgid "Restart to BIOS/UEFI Settings"
+msgstr "I-restart sa mga Setting ng BIOS/UEFI"
+
+#: __init__.py:178
+msgid "Restarting Audio Services, please wait..."
+msgstr "Ni-restart ang mga Audio Service, mangyaring maghintay..."
+
+#: __init__.py:192
+msgid "Restarting to BIOS/UEFI, please wait..."
+msgstr "Nagre-restart sa BIOS/UEFI, mangyaring maghintay..."
+
+#: __init__.py:112
+msgid "Run Chkdsk on C:"
+msgstr "Patakbuhin ang Chkdsk sa C:"
+
+#: __init__.py:94
+msgid "Run Cmd"
+msgstr "Patakbuhin ang Cmd"
+
+#: __init__.py:110
+msgid "Run DISM"
+msgstr "Patakbuhin ang DISM"
+
+#: __init__.py:113
+msgid "Run Disk Cleanup"
+msgstr "Patakbuhin ang Paglilinis ng Disk"
+
+#: __init__.py:111
+msgid "Run SFC Scannow"
+msgstr "Patakbuhin ang SFC Scannow"
+
+#: utils.py:694
+msgid "Running"
+msgstr "Tumakbo"
+
+#: __init__.py:244
+msgid "SFC Scannow report will open when complete."
+msgstr "Magbubukas ang ulat ng SFC Scannow kapag kumpleto na."
+
+#: __init__.py:73
+#: menu.py:228
+msgid "Safely Remove USB"
+msgstr "Ligtas na Alisin ang USB"
+
+#: menu.py:271
+msgid "Select a USB drive first."
+msgstr "Pumili muna ng USB drive."
+
+#: menu.py:417
+msgid "Select a drive first."
+msgstr "Pumili muna ng drive."
+
+#: menu.py:494
+#: menu.py:506
+msgid "Select a service first."
+msgstr "Pumili muna ng serbisyo."
+
+#: menu.py:449
+msgid "Service Name"
+msgstr "Pangalan ng Serbisyo"
+
+#: __init__.py:614
+msgid "Show Absolute Windows menu (single tap) or System Monitor (double tap)"
+msgstr "Ipakita ang menu ng Absolute Windows (isang tap) o System Monitor (dalawang tap)"
+
+#: __init__.py:71
+msgid "Show Wi-Fi Password"
+msgstr "Ipakita ang Password ng Wi-Fi"
+
+#: __init__.py:88
+msgid "Sound setting"
+msgstr "Setting ng Tunog"
+
+#: __init__.py:90
+#: menu.py:295
+msgid "Startup Manager"
+msgstr "Manager ng Startup"
+
+#: menu.py:451
+msgid "Startup Type"
+msgstr "Uri ng Startup"
+
+#: menu.py:308
+#: menu.py:452
+msgid "Status"
+msgstr "Katayuan"
+
+#: utils.py:696
+msgid "Stopped"
+msgstr "Nahinto"
+
+#: menu.py:277
+#: menu.py:430
+msgid "Success"
+msgstr "Tagumpay"
+
+#: menu.py:101
+msgid "System Monitor"
+msgstr "System Monitor"
+
+#: __init__.py:63
+msgid "System Tray"
+msgstr "System Tray"
+
+#: __init__.py:298
+msgid "System cleanup started."
+msgstr "Nagsimula ang paglilinis ng sistema."
+
+#: __init__.py:307
+msgid "Temporary files cleaned. {count} items removed."
+msgstr "Na-clean ang mga pansamantalang file. {count} mga item ang naalis."
+
+#: __init__.py:222
+msgid "The Wi-Fi network '{ssid}' is open (no password)."
+msgstr "Ang Wi-Fi network na '{ssid}' ay bukas (walang password)."
+
+#: __init__.py:70
+msgid "Toggle Bluetooth"
+msgstr "I-toggle ang Bluetooth"
+
+#: menu.py:307
+msgid "Type"
+msgstr "Uri"
+
+#: utils.py:89
+msgid "USB Drive"
+msgstr "USB Drive"
+
+#: menu.py:277
+msgid "USB drive {drive} ejected safely."
+msgstr "Ligtas na na-eject ang USB drive {drive}."
+
+#: sys_monitor.py:241
+msgid "Unknown"
+msgstr "Hindi Kilala"
+
+#: __init__.py:208
+msgid "User Account Control toggled."
+msgstr "Na-toggle ang Kontrol ng User Account."
+
+#: cmd_tools.py:41
+msgid "User cancelled the UAC elevation prompt."
+msgstr "Kinansela ng user ang prompt ng UAC elevation."
+
+#: sys_monitor.py:350
+msgid "Very Weak"
+msgstr "Napakahina"
+
+#: sys_monitor.py:348
+msgid "Weak"
+msgstr "Mahina"
+
+#: __init__.py:219
+msgid "Wi-Fi password for {ssid} copied to clipboard."
+msgstr "Na-copy sa clipboard ang password ng Wi-Fi para sa {ssid}."
+
+#: kill_dialog.py:164
+msgid "Window closed."
+msgstr "Isinara ang window."
+
+#: __init__.py:181
+msgid "Windows Audio Services restarted successfully."
+msgstr "Matagumpay na na-restart ang Windows Audio Services."
+
+#: __init__.py:96
+msgid "Windows Defender"
+msgstr "Windows Defender"
+
+#: __init__.py:235
+msgid "Windows Explorer has been restarted."
+msgstr "Na-restart ang Windows Explorer."
+
+#: __init__.py:316
+msgid "Windows Run history cleared. {count} items removed."
+msgstr "Na-clear ang kasaysayan ng Run ng Windows. {count} mga item ang naalis."
+
+#: sys_monitor.py:430
+msgid "Windows Server {}"
+msgstr "Windows Server {}"
+
+#: sys_monitor.py:193
+#: sys_monitor.py:206
+msgid "{:.1F} MB/s down, {:.1F} MB/s up"
+msgstr "{:.1F} MB/s pababa, {:.1F} MB/s pataas"
+
+#: sys_monitor.py:166
+#: sys_monitor.py:178
+msgid "{:.1F} MB/s read, {:.1F} MB/s write"
+msgstr "{:.1F} MB/s basahin, {:.1F} MB/s isulat"
+
+#: sys_monitor.py:96
+#: sys_monitor.py:108
+msgid "{:.2F} GB of {:.2F} GB used ({:.1F}%)"
+msgstr "{:.2F} GB ng {:.2F} GB ang nagamit ({:.1F}%)"
+
+#: sys_monitor.py:432
+msgid "{} ({} bit) build {}"
+msgstr "{} ({} bit) build {}"
+
+#: sys_monitor.py:271
+#: sys_monitor.py:299
+msgid "{} day{}"
+msgstr "{} araw{}"
+
+#: sys_monitor.py:273
+#: sys_monitor.py:301
+msgid "{} hour{}"
+msgstr "{} oras{}"
+
+#: sys_monitor.py:275
+#: sys_monitor.py:303
+msgid "{} minute{}"
+msgstr "{} minuto{}"
+
+#: sys_monitor.py:378
+#: sys_monitor.py:385
+msgid "{} process{}"
+msgstr "{} proseso{}"
+
+#: sys_monitor.py:277
+#: sys_monitor.py:305
+msgid "{} second{}"
+msgstr "{} segundo{}"
+
+#: sys_monitor.py:133
+#: sys_monitor.py:149
+msgid "{} {:.1F} GB of {:.1F} GB used ({:.0F}%)"
+msgstr "{} {:.1F} GB ng {:.1F} GB ang nagamit ({:.0F}%)"
+
+#: sys_monitor.py:67
+#: sys_monitor.py:73
+msgid "{}%"
+msgstr "{}%"
+
+#: sys_monitor.py:242
+msgid "{}% ({})"
+msgstr "{}% ({})"

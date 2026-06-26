@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AbsoluteWindows 2026.5.3\n"
+"Project-Id-Version: AbsoluteWindows 2026.7.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-05-15 12:37+0700\n"
-"PO-Revision-Date: 2026-05-15 15:45+0700\n"
+"POT-Creation-Date: 2026-06-25 16:16+0700\n"
+"PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Arabic\n"
 "Language: ar\n"
@@ -14,19 +14,48 @@ msgstr ""
 
 #: kill_dialog.py:76
 msgid "&Kill Process of Selected Window"
-msgstr "إنهاء &عملية النافذة المحددة"
+msgstr "&إنهاء عملية النافذة المحددة"
 
-#: menu.py:21
+#: sys_monitor.py:280
+#: sys_monitor.py:308
+msgid "<1 minute"
+msgstr "<1 دقيقة"
+
+#: sys_monitor.py:313
+#: sys_monitor.py:389
+#: sys_monitor.py:435
+msgid "??"
+msgstr "؟؟"
+
+#: sys_monitor.py:77
+#: sys_monitor.py:112
+msgid "??%"
+msgstr "؟؟%"
+
+#: menu.py:22
 msgid "AbsoluteWindows"
 msgstr "AbsoluteWindows"
 
-#: utils.py:600
+#: sys_monitor.py:400
+#: sys_monitor.py:415
+msgid "Activated"
+msgstr "مفعل"
+
+#: utils.py:691
 msgid "Automatic"
 msgstr "تلقائي"
 
-#: __init__.py:210
+#: __init__.py:280
 msgid "Battery report will open in your browser."
-msgstr "سيفتح تقرير البطارية في متصفحك."
+msgstr "سيتم فتح تقرير البطارية في متصفحك."
+
+#: utils.py:123
+msgid "Bluetooth turned off."
+msgstr "تم إيقاف البلوتوث."
+
+#: utils.py:124
+msgid "Bluetooth turned on."
+msgstr "تم تشغيل البلوتوث."
 
 #: kill_dialog.py:156
 msgid "Cannot kill system process: {}"
@@ -34,72 +63,110 @@ msgstr "لا يمكن إنهاء عملية النظام: {}"
 
 #: kill_dialog.py:176
 msgid "Cannot open process. Access denied."
-msgstr "تعذر فتح العملية. الوصول مرفوض."
+msgstr "لا يمكن فتح العملية. تم رفض الوصول."
 
-#: __init__.py:89
+#: sys_monitor.py:236
+#: sys_monitor.py:237
+msgid "Charging"
+msgstr "يشحن"
+
+#: __init__.py:115
 msgid "Check Disk Status"
-msgstr "تحقق من حالة القرص"
+msgstr "التحقق من حالة القرص"
 
-#: __init__.py:192
+#: __init__.py:262
 msgid "Chkdsk report will open when complete."
-msgstr "سيفتح تقرير Chkdsk عند الاكتمال."
+msgstr "سيتم فتح تقرير Chkdsk عند الانتهاء."
 
-#: __init__.py:74
+#: __init__.py:100
 msgid "Clean Prefetch & Recent"
-msgstr "تنظيف الملفات المسبقة التحميل والحديثة"
+msgstr "تنظيف Prefetch والأخيرة"
 
-#: __init__.py:75
+#: __init__.py:101
 msgid "Clean System files"
 msgstr "تنظيف ملفات النظام"
 
-#: __init__.py:76
+#: __init__.py:102
 msgid "Clean Temp"
-msgstr "تنظيف الملفات المؤقتة"
+msgstr "تنظيف المجلد المؤقت"
 
-#: __init__.py:77
+#: __init__.py:103
 msgid "Clean Windows Run History"
-msgstr "تنظيف سجل تشغيل ويندوز"
+msgstr "تنظيف سجل تشغيل Windows"
 
-#: __init__.py:79
+#: __init__.py:105
 msgid "Clear Ram"
-msgstr "تفريغ الذاكرة العشوائية (RAM)"
+msgstr "تفريغ ذاكرة الوصول العشوائي"
 
-#: __init__.py:265
+#: __init__.py:335
 msgid "Cleared {:.1f} MB of RAM cache."
-msgstr "تم تفريغ {:.1f} ميجابايت من ذاكرة التخزين المؤقت للرام."
+msgstr "تم تفريغ {:.1f} ميجابايت من ذاكرة التخزين المؤقت."
 
 #: kill_dialog.py:77
-#: menu.py:121
-#: menu.py:198
-#: menu.py:263
+#: menu.py:242
+#: menu.py:315
+#: menu.py:393
+#: menu.py:459
 msgid "Close"
 msgstr "إغلاق"
 
-#: __init__.py:55
+#: __init__.py:68
 msgid "Connect Internet"
-msgstr "اتصال بالإنترنت"
+msgstr "الاتصال بالإنترنت"
 
-#: __init__.py:366
+#: sys_monitor.py:217
+msgid "Connected"
+msgstr "متصل"
+
+#: __init__.py:86
+msgid "Control Panel"
+msgstr "لوحة التحكم"
+
+#: utils.py:125
+msgid "Could not find or change Bluetooth status."
+msgstr "تعذر العثور على حالة البلوتوث أو تغييرها."
+
+#: __init__.py:577
+msgid "Could not open Control Panel."
+msgstr "تعذر فتح لوحة التحكم."
+
+#: __init__.py:449
 msgid "Could not open Disk Cleanup."
 msgstr "تعذر فتح تنظيف القرص."
 
-#: __init__.py:318
+#: __init__.py:394
 msgid "Could not open Environment Variables."
 msgstr "تعذر فتح متغيرات البيئة."
 
-#: __init__.py:334
+#: __init__.py:470
+msgid "Could not open Folder Options."
+msgstr "تعذر فتح خيارات المجلد."
+
+#: __init__.py:410
 msgid "Could not open Malicious Software Removal Tool."
 msgstr "تعذر فتح أداة إزالة البرامج الضارة."
 
-#: __init__.py:290
+#: __init__.py:360
 msgid "Could not open Optimize Drives."
-msgstr "تعذر فتح تحسين محركات الأقراص."
+msgstr "تعذر فتح تحسين الأقراص."
 
-#: __init__.py:376
+#: __init__.py:587
+msgid "Could not open Programs and Features."
+msgstr "تعذر فتح البرامج والميزات."
+
+#: __init__.py:459
 msgid "Could not open Registry Editor."
-msgstr "تعذر فتح محرر السجل."
+msgstr "تعذر فتح محرر التسجيل."
 
-#: __init__.py:397
+#: __init__.py:374
+msgid "Could not open Services."
+msgstr "تعذر فتح الخدمات."
+
+#: __init__.py:597
+msgid "Could not open Sound Settings."
+msgstr "تعذر فتح إعدادات الصوت."
+
+#: __init__.py:567
 msgid "Could not open Windows Defender."
 msgstr "تعذر فتح Windows Defender."
 
@@ -107,103 +174,125 @@ msgstr "تعذر فتح Windows Defender."
 msgid "Could not open kill dialog. See log for details."
 msgstr "تعذر فتح مربع حوار الإنهاء. راجع السجل للتفاصيل."
 
-#: __init__.py:183
+#: __init__.py:253
 msgid "DISM report will open when complete."
-msgstr "سيفتح تقرير DISM عند الاكتمال."
+msgstr "سيتم فتح تقرير DISM عند الانتهاء."
 
-#: menu.py:120
-#: menu.py:260
+#: menu.py:314
+#: menu.py:456
 msgid "Disable Selected"
 msgstr "تعطيل المحدد"
 
-#: __init__.py:59
+#: __init__.py:78
 msgid "Disable User Account Control"
 msgstr "تعطيل التحكم في حساب المستخدم"
 
-#: menu.py:172
-#: utils.py:596
+#: menu.py:366
+#: utils.py:687
 msgid "Disabled"
 msgstr "معطل"
 
-#: __init__.py:53
+#: sys_monitor.py:239
+msgid "Discharging"
+msgstr "يفرغ"
+
+#: __init__.py:66
 msgid "Disconnect Internet"
 msgstr "قطع الاتصال بالإنترنت"
 
-#: __init__.py:73
+#: sys_monitor.py:220
+msgid "Disconnected"
+msgstr "غير متصل"
+
+#: __init__.py:99
 msgid "Disk Cleanup"
 msgstr "تنظيف القرص"
 
-#: __init__.py:201
+#: __init__.py:271
 msgid "Disk Cleanup report will open when complete."
-msgstr "سيفتح تقرير تنظيف القرص عند الاكتمال."
+msgstr "سيتم فتح تقرير تنظيف القرص عند الانتهاء."
 
-#: __init__.py:219
+#: __init__.py:289
 msgid "Disk status report will open when complete."
-msgstr "سيفتح تقرير حالة القرص عند الاكتمال."
+msgstr "سيتم فتح تقرير حالة القرص عند الانتهاء."
 
-#: menu.py:254
+#: menu.py:450
 msgid "Display Name"
-msgstr "اسم العرض"
+msgstr "الاسم المعروض"
 
-#: menu.py:186
+#: menu.py:236
+msgid "Drive"
+msgstr "محرك الأقراص"
+
+#: menu.py:381
 msgid "Drive Optimize"
-msgstr "تحسين القرص"
+msgstr "تحسين محرك الأقراص"
 
-#: __init__.py:78
+#: menu.py:241
+msgid "Eject Selected"
+msgstr "إخراج المحدد"
+
+#: __init__.py:104
 msgid "Empty Recycle Bin"
 msgstr "إفراغ سلة المحذوفات"
 
-#: menu.py:119
-#: menu.py:261
+#: menu.py:313
+#: menu.py:457
 msgid "Enable Selected"
 msgstr "تمكين المحدد"
 
-#: __init__.py:61
+#: __init__.py:80
 msgid "Enable User Account Control"
 msgstr "تمكين التحكم في حساب المستخدم"
 
-#: menu.py:157
-#: utils.py:451
-#: utils.py:468
-#: utils.py:485
-#: utils.py:498
+#: menu.py:351
+#: utils.py:542
+#: utils.py:559
+#: utils.py:576
+#: utils.py:589
 msgid "Enabled"
-msgstr "ممكن"
+msgstr "ممكّن"
 
-#: __init__.py:67
+#: __init__.py:93
 msgid "Environment Variables"
 msgstr "متغيرات البيئة"
 
-#: menu.py:154
-#: menu.py:164
-#: menu.py:169
-#: menu.py:179
-#: menu.py:222
-#: menu.py:237
-#: menu.py:298
-#: menu.py:305
-#: menu.py:310
-#: menu.py:317
+#: menu.py:271
+#: menu.py:280
+#: menu.py:348
+#: menu.py:358
+#: menu.py:363
+#: menu.py:373
+#: menu.py:417
+#: menu.py:432
+#: menu.py:494
+#: menu.py:501
+#: menu.py:506
+#: menu.py:513
 msgid "Error"
 msgstr "خطأ"
+
+#: sys_monitor.py:342
+msgid "Excellent"
+msgstr "ممتاز"
 
 #: cmd_tools.py:46
 msgid "Exception occurred: {error}"
 msgstr "حدث استثناء: {error}"
 
-#: __init__.py:240
+#: __init__.py:310
 msgid "Failed to clean temporary files."
 msgstr "فشل تنظيف الملفات المؤقتة."
 
-#: __init__.py:308
-msgid "Failed to clean: {}"
-msgstr "فشل تنظيف: {}"
+#: __init__.py:384
+msgid "Failed to clean: {errorMsg}"
+msgstr "فشل التنظيف: {errorMsg}"
 
-#: __init__.py:271
+#: __init__.py:341
 msgid "Failed to clear RAM cache."
-msgstr "فشل تفريغ ذاكرة التخزين المؤقت للرام."
+msgstr "فشل تفريغ ذاكرة التخزين المؤقت."
 
-#: __init__.py:249
+#: __init__.py:319
 msgid "Failed to clear Run history."
 msgstr "فشل مسح سجل التشغيل."
 
@@ -211,40 +300,52 @@ msgstr "فشل مسح سجل التشغيل."
 msgid "Failed to close window."
 msgstr "فشل إغلاق النافذة."
 
-#: __init__.py:127
+#: __init__.py:164
 msgid "Failed to connect internet."
 msgstr "فشل الاتصال بالإنترنت."
 
-#: menu.py:179
+#: menu.py:373
 msgid "Failed to disable item."
 msgstr "فشل تعطيل العنصر."
 
-#: menu.py:305
+#: menu.py:501
 msgid "Failed to disable service: {}"
 msgstr "فشل تعطيل الخدمة: {}"
 
-#: __init__.py:111
+#: __init__.py:148
 msgid "Failed to disconnect internet."
 msgstr "فشل قطع الاتصال بالإنترنت."
 
-#: utils.py:386
-#: utils.py:389
+#: menu.py:280
+msgid "Failed to eject {drive}."
+msgstr "فشل إخراج {drive}."
+
+#: utils.py:477
+#: utils.py:480
 msgid "Failed to empty recycle bin."
 msgstr "فشل إفراغ سلة المحذوفات."
 
-#: menu.py:164
+#: menu.py:358
 msgid "Failed to enable item."
 msgstr "فشل تمكين العنصر."
 
-#: menu.py:317
+#: menu.py:513
 msgid "Failed to enable service: {}"
 msgstr "فشل تمكين الخدمة: {}"
 
-#: __init__.py:168
-msgid "Failed to restart Windows Explorer."
-msgstr "فشل إعادة تشغيل مستكشف ويندوز."
+#: __init__.py:184
+msgid "Failed to restart Windows Audio Services."
+msgstr "فشل إعادة تشغيل خدمات الصوت في Windows."
 
-#: __init__.py:231
+#: __init__.py:238
+msgid "Failed to restart Windows Explorer."
+msgstr "فشل إعادة تشغيل مستكشف Windows."
+
+#: __init__.py:198
+msgid "Failed to restart to BIOS. Your system may not support this feature via Windows."
+msgstr "فشل إعادة التشغيل إلى BIOS. قد لا يدعم نظامك هذه الميزة عبر Windows."
+
+#: __init__.py:301
 msgid "Failed to start system cleanup."
 msgstr "فشل بدء تنظيف النظام."
 
@@ -252,240 +353,359 @@ msgstr "فشل بدء تنظيف النظام."
 msgid "Failed to terminate process. Insufficient privileges."
 msgstr "فشل إنهاء العملية. صلاحيات غير كافية."
 
-#: __init__.py:141
-msgid "Failed to toggle UAC."
-msgstr "فشل تغيير حالة التحكم في حساب المستخدم (UAC)."
+#: utils.py:128
+msgid "Failed to toggle Bluetooth."
+msgstr "فشل تبديل حالة البلوتوث."
 
-#: menu.py:158
-#: menu.py:173
-#: menu.py:230
+#: __init__.py:211
+msgid "Failed to toggle UAC."
+msgstr "فشل تبديل حالة UAC."
+
+#: sys_monitor.py:346
+msgid "Fair"
+msgstr "متوسط"
+
+#: __init__.py:475
+msgid "File Explorer Options"
+msgstr "خيارات مستكشف الملفات"
+
+#: __init__.py:89
+msgid "Folder Option"
+msgstr "خيارات المجلد"
+
+#: __init__.py:475
+msgid "Folder Options"
+msgstr "خيارات المجلد"
+
+#: sys_monitor.py:238
+msgid "Fully Charged"
+msgstr "شحن كامل"
+
+#: sys_monitor.py:344
+msgid "Good"
+msgstr "جيد"
+
+#: menu.py:352
+#: menu.py:367
+#: menu.py:425
 msgid "Info"
 msgstr "معلومات"
 
-#: __init__.py:124
+#: __init__.py:161
 msgid "Internet connected."
-msgstr "تم الاتصال بالإنترنت."
+msgstr "الإنترنت متصل."
 
-#: __init__.py:108
+#: __init__.py:145
 msgid "Internet disconnected."
-msgstr "تم قطع الاتصال بالإنترنت."
+msgstr "الإنترنت غير متصل."
 
-#: menu.py:173
+#: menu.py:367
 msgid "Item already disabled."
 msgstr "العنصر معطل بالفعل."
 
-#: menu.py:158
+#: menu.py:352
 msgid "Item already enabled."
-msgstr "العنصر ممكن بالفعل."
+msgstr "العنصر ممكّن بالفعل."
 
-#: __init__.py:62
-#: __init__.py:408
+#: __init__.py:84
+#: __init__.py:630
 #: kill_dialog.py:56
 msgid "Kill Not Responding Apps"
-msgstr "إنهاء التطبيقات التي لا تستجيب"
+msgstr "إنهاء التطبيقات غير المستجيبة"
 
 #: kill_dialog.py:215
 msgid "Kill Process"
 msgstr "إنهاء العملية"
 
-#: menu.py:115
+#: menu.py:237
+msgid "Label"
+msgstr "التسمية"
+
+#: menu.py:119
+msgid "Loading system information..."
+msgstr "جاري تحميل معلومات النظام..."
+
+#: menu.py:309
 msgid "Location"
 msgstr "الموقع"
 
-#: __init__.py:66
-#: menu.py:244
+#: sys_monitor.py:240
+msgid "Low"
+msgstr "منخفض"
+
+#: __init__.py:92
+#: menu.py:440
 msgid "Manage Services"
 msgstr "إدارة الخدمات"
 
-#: utils.py:598
+#: utils.py:689
 msgid "Manual"
 msgstr "يدوي"
 
-#: __init__.py:71
+#: __init__.py:97
 msgid "Microsoft Windows Malicious Software Removal Tool"
-msgstr "أداة مايكروسوفت ويندوز لإزالة البرامج الضارة"
+msgstr "أداة إزالة البرامج الضارة من Microsoft Windows"
 
-#: menu.py:112
+#: menu.py:306
 msgid "Name"
 msgstr "الاسم"
 
-#: __init__.py:155
-msgid "No Wi-Fi network is currently connected."
-msgstr "لا يوجد اتصال بشبكة Wi-Fi حالياً."
+#: menu.py:266
+msgid "No USB drives found"
+msgstr "لم يتم العثور على محركات أقراص USB"
 
-#: __init__.py:101
+#: __init__.py:225
+msgid "No Wi-Fi network is currently connected."
+msgstr "لا توجد شبكة Wi-Fi متصلة حالياً."
+
+#: __init__.py:138
 msgid "No active network adapter found."
 msgstr "لم يتم العثور على محول شبكة نشط."
 
-#: __init__.py:118
+#: menu.py:156
+msgid "No data available"
+msgstr "لا توجد بيانات متاحة"
+
+#: __init__.py:155
 msgid "No disabled network adapter found."
 msgstr "لم يتم العثور على محول شبكة معطل."
 
-#: menu.py:154
-#: menu.py:169
+#: menu.py:348
+#: menu.py:363
 msgid "No item selected."
-msgstr "لم يتم تحديد أي عنصر."
+msgstr "لم يتم تحديد عنصر."
 
 #: kill_dialog.py:149
 msgid "No window selected."
-msgstr "لم يتم تحديد أي نافذة."
+msgstr "لم يتم تحديد نافذة."
 
-#: __init__.py:65
+#: sys_monitor.py:402
+#: sys_monitor.py:417
+msgid "Not Activated"
+msgstr "غير مفعل"
+
+#: __init__.py:91
 msgid "Open Services"
 msgstr "فتح الخدمات"
 
-#: menu.py:235
+#: menu.py:430
 msgid "Optimization completed."
 msgstr "اكتمل التحسين."
 
-#: menu.py:237
+#: menu.py:432
 msgid "Optimization failed: {}"
 msgstr "فشل التحسين: {}"
 
-#: menu.py:197
+#: menu.py:392
 msgid "Optimize Selected"
 msgstr "تحسين المحدد"
 
-#: __init__.py:72
+#: __init__.py:98
 msgid "Optimize and defragment drive"
-msgstr "تحسين وإلغاء تجزئة القرص"
+msgstr "تحسين وإزالة تجزئة محرك الأقراص"
 
-#: menu.py:230
+#: menu.py:425
 msgid "Optimizing drive, please wait..."
-msgstr "جاري تحسين القرص، يرجى الانتظار..."
+msgstr "جاري تحسين محرك الأقراص، يرجى الانتظار..."
 
-#: __init__.py:88
+#: __init__.py:114
 msgid "Power Diagnostic (Battery Report)"
 msgstr "تشخيص الطاقة (تقرير البطارية)"
 
-#: __init__.py:305
-msgid "Prefetch and recent files cleaned."
-msgstr "تم تنظيف الملفات المسبقة التحميل والحديثة."
+#: __init__.py:381
+msgid "Prefetch and recent files cleaned. {count} items removed."
+msgstr "تم تنظيف ملفات Prefetch والأخيرة. تمت إزالة {count} عنصر."
 
 #: kill_dialog.py:186
 msgid "Process terminated."
 msgstr "تم إنهاء العملية."
 
-#: __init__.py:268
-msgid "RAM cache cleared."
-msgstr "تم تفريغ ذاكرة التخزين المؤقت للرام."
+#: __init__.py:87
+msgid "Programs and Features"
+msgstr "البرامج والميزات"
 
-#: utils.py:383
-msgid "Recycle bin emptied."
-msgstr "تم إفراغ سلة المحذوفات."
+#: __init__.py:338
+msgid "RAM cache is already clean."
+msgstr "ذاكرة التخزين المؤقت نظيفة بالفعل."
 
-#: utils.py:380
+#: utils.py:474
+msgid "Recycle bin emptied. {count} items removed."
+msgstr "تم إفراغ سلة المحذوفات. تمت إزالة {count} عنصر."
+
+#: utils.py:468
 msgid "Recycle bin is already empty."
 msgstr "سلة المحذوفات فارغة بالفعل."
 
-#: menu.py:262
+#: menu.py:458
 msgid "Refresh"
 msgstr "تحديث"
 
-#: __init__.py:69
+#: __init__.py:95
 msgid "Regedit"
-msgstr "Regedit"
+msgstr "محرر التسجيل"
 
-#: __init__.py:64
+#: __init__.py:74
+msgid "Restart Windows Audio Service"
+msgstr "إعادة تشغيل خدمة الصوت في Windows"
+
+#: __init__.py:85
 msgid "Restart Windows Explorer"
-msgstr "إعادة تشغيل مستكشف ويندوز"
+msgstr "إعادة تشغيل مستكشف Windows"
 
-#: __init__.py:86
+#: __init__.py:82
+msgid "Restart to BIOS/UEFI Settings"
+msgstr "إعادة التشغيل إلى إعدادات BIOS/UEFI"
+
+#: __init__.py:178
+msgid "Restarting Audio Services, please wait..."
+msgstr "جاري إعادة تشغيل خدمات الصوت، يرجى الانتظار..."
+
+#: __init__.py:192
+msgid "Restarting to BIOS/UEFI, please wait..."
+msgstr "جاري إعادة التشغيل إلى BIOS/UEFI، يرجى الانتظار..."
+
+#: __init__.py:112
 msgid "Run Chkdsk on C:"
-msgstr "تشغيل Chkdsk على القرص C:"
+msgstr "تشغيل Chkdsk على C:"
 
-#: __init__.py:68
+#: __init__.py:94
 msgid "Run Cmd"
-msgstr "تشغيل Cmd"
+msgstr "تشغيل موجه الأوامر"
 
-#: __init__.py:84
+#: __init__.py:110
 msgid "Run DISM"
 msgstr "تشغيل DISM"
 
-#: __init__.py:87
+#: __init__.py:113
 msgid "Run Disk Cleanup"
 msgstr "تشغيل تنظيف القرص"
 
-#: __init__.py:85
+#: __init__.py:111
 msgid "Run SFC Scannow"
 msgstr "تشغيل SFC Scannow"
 
-#: utils.py:603
+#: utils.py:694
 msgid "Running"
-msgstr "قيد التشغيل"
+msgstr "يعمل"
 
-#: __init__.py:174
+#: __init__.py:244
 msgid "SFC Scannow report will open when complete."
-msgstr "سيفتح تقرير SFC Scannow عند الاكتمال."
+msgstr "سيتم فتح تقرير SFC Scannow عند الانتهاء."
 
-#: menu.py:222
+#: __init__.py:73
+#: menu.py:228
+msgid "Safely Remove USB"
+msgstr "إزالة USB بأمان"
+
+#: menu.py:271
+msgid "Select a USB drive first."
+msgstr "حدد محرك أقراص USB أولاً."
+
+#: menu.py:417
 msgid "Select a drive first."
-msgstr "اختر محرك أقراص أولاً."
+msgstr "حدد محرك أقراص أولاً."
 
-#: menu.py:298
-#: menu.py:310
+#: menu.py:494
+#: menu.py:506
 msgid "Select a service first."
-msgstr "اختر خدمة أولاً."
+msgstr "حدد خدمة أولاً."
 
-#: menu.py:253
+#: menu.py:449
 msgid "Service Name"
 msgstr "اسم الخدمة"
 
-#: __init__.py:400
-msgid "Show Absolute Windows menu"
-msgstr "إظهار قائمة Absolute Windows"
+#: __init__.py:614
+msgid "Show Absolute Windows menu (single tap) or System Monitor (double tap)"
+msgstr "إظهار قائمة Absolute Windows (نقرة واحدة) أو مراقبة النظام (نقرتان)"
 
-#: __init__.py:56
+#: __init__.py:71
 msgid "Show Wi-Fi Password"
 msgstr "إظهار كلمة مرور Wi-Fi"
 
-#: __init__.py:63
-#: menu.py:101
+#: __init__.py:88
+msgid "Sound setting"
+msgstr "إعدادات الصوت"
+
+#: __init__.py:90
+#: menu.py:295
 msgid "Startup Manager"
 msgstr "مدير بدء التشغيل"
 
-#: menu.py:255
+#: menu.py:451
 msgid "Startup Type"
 msgstr "نوع بدء التشغيل"
 
-#: menu.py:114
-#: menu.py:256
+#: menu.py:308
+#: menu.py:452
 msgid "Status"
 msgstr "الحالة"
 
-#: utils.py:605
+#: utils.py:696
 msgid "Stopped"
 msgstr "متوقف"
 
-#: menu.py:235
+#: menu.py:277
+#: menu.py:430
 msgid "Success"
 msgstr "نجاح"
 
-#: __init__.py:228
+#: menu.py:101
+msgid "System Monitor"
+msgstr "مراقبة النظام"
+
+#: __init__.py:63
+msgid "System Tray"
+msgstr "علبة النظام"
+
+#: __init__.py:298
 msgid "System cleanup started."
 msgstr "بدأ تنظيف النظام."
 
-#: __init__.py:237
-msgid "Temporary files cleaned."
-msgstr "تم تنظيف الملفات المؤقتة."
+#: __init__.py:307
+msgid "Temporary files cleaned. {count} items removed."
+msgstr "تم تنظيف الملفات المؤقتة. تمت إزالة {count} عنصر."
 
-#: __init__.py:152
+#: __init__.py:222
 msgid "The Wi-Fi network '{ssid}' is open (no password)."
 msgstr "شبكة Wi-Fi '{ssid}' مفتوحة (بدون كلمة مرور)."
 
-#: menu.py:113
+#: __init__.py:70
+msgid "Toggle Bluetooth"
+msgstr "تبديل حالة البلوتوث"
+
+#: menu.py:307
 msgid "Type"
 msgstr "النوع"
 
-#: __init__.py:138
+#: utils.py:89
+msgid "USB Drive"
+msgstr "محرك أقراص USB"
+
+#: menu.py:277
+msgid "USB drive {drive} ejected safely."
+msgstr "تم إخراج محرك أقراص USB {drive} بأمان."
+
+#: sys_monitor.py:241
+msgid "Unknown"
+msgstr "غير معروف"
+
+#: __init__.py:208
 msgid "User Account Control toggled."
-msgstr "تم تغيير حالة التحكم في حساب المستخدم."
+msgstr "تم تبديل حالة التحكم في حساب المستخدم."
 
 #: cmd_tools.py:41
 msgid "User cancelled the UAC elevation prompt."
-msgstr "ألغى المستخدم مطالبة رفع صلاحيات UAC."
+msgstr "ألغى المستخدم موجه ترقية صلاحيات UAC."
 
-#: __init__.py:149
+#: sys_monitor.py:350
+msgid "Very Weak"
+msgstr "ضعيف جداً"
+
+#: sys_monitor.py:348
+msgid "Weak"
+msgstr "ضعيف"
+
+#: __init__.py:219
 msgid "Wi-Fi password for {ssid} copied to clipboard."
 msgstr "تم نسخ كلمة مرور Wi-Fi لـ {ssid} إلى الحافظة."
 
@@ -493,14 +713,80 @@ msgstr "تم نسخ كلمة مرور Wi-Fi لـ {ssid} إلى الحافظة."
 msgid "Window closed."
 msgstr "تم إغلاق النافذة."
 
-#: __init__.py:70
+#: __init__.py:181
+msgid "Windows Audio Services restarted successfully."
+msgstr "تم إعادة تشغيل خدمات الصوت في Windows بنجاح."
+
+#: __init__.py:96
 msgid "Windows Defender"
 msgstr "Windows Defender"
 
-#: __init__.py:165
+#: __init__.py:235
 msgid "Windows Explorer has been restarted."
-msgstr "تم إعادة تشغيل مستكشف ويندوز."
+msgstr "تم إعادة تشغيل مستكشف Windows."
 
-#: __init__.py:246
-msgid "Windows Run history cleared."
-msgstr "تم مسح سجل تشغيل ويندوز."
+#: __init__.py:316
+msgid "Windows Run history cleared. {count} items removed."
+msgstr "تم مسح سجل تشغيل Windows. تمت إزالة {count} عنصر."
+
+#: sys_monitor.py:430
+msgid "Windows Server {}"
+msgstr "Windows Server {}"
+
+#: sys_monitor.py:193
+#: sys_monitor.py:206
+msgid "{:.1F} MB/s down, {:.1F} MB/s up"
+msgstr "{:.1F} ميجابايت/ث تنزيل، {:.1F} ميجابايت/ث تحميل"
+
+#: sys_monitor.py:166
+#: sys_monitor.py:178
+msgid "{:.1F} MB/s read, {:.1F} MB/s write"
+msgstr "{:.1F} ميجابايت/ث قراءة، {:.1F} ميجابايت/ث كتابة"
+
+#: sys_monitor.py:96
+#: sys_monitor.py:108
+msgid "{:.2F} GB of {:.2F} GB used ({:.1F}%)"
+msgstr "{:.2F} جيجابايت من {:.2F} جيجابايت مستخدمة ({:.1F}%)"
+
+#: sys_monitor.py:432
+msgid "{} ({} bit) build {}"
+msgstr "{} ({} بت) الإصدار {}"
+
+#: sys_monitor.py:271
+#: sys_monitor.py:299
+msgid "{} day{}"
+msgstr "{} يوم{}"
+
+#: sys_monitor.py:273
+#: sys_monitor.py:301
+msgid "{} hour{}"
+msgstr "{} ساعة{}"
+
+#: sys_monitor.py:275
+#: sys_monitor.py:303
+msgid "{} minute{}"
+msgstr "{} دقيقة{}"
+
+#: sys_monitor.py:378
+#: sys_monitor.py:385
+msgid "{} process{}"
+msgstr "{} عملية{}"
+
+#: sys_monitor.py:277
+#: sys_monitor.py:305
+msgid "{} second{}"
+msgstr "{} ثانية{}"
+
+#: sys_monitor.py:133
+#: sys_monitor.py:149
+msgid "{} {:.1F} GB of {:.1F} GB used ({:.0F}%)"
+msgstr "{} {:.1F} جيجابايت من {:.1F} جيجابايت مستخدمة ({:.0F}%)"
+
+#: sys_monitor.py:67
+#: sys_monitor.py:73
+msgid "{}%"
+msgstr "{}%"
+
+#: sys_monitor.py:242
+msgid "{}% ({})"
+msgstr "{}% ({})"

@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AbsoluteWindows 2026.5.3\n"
+"Project-Id-Version: AbsoluteWindows 2026.7.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-05-15 15:58+0700\n"
-"PO-Revision-Date: 2026-05-15 15:58+0700\n"
+"POT-Creation-Date: 2026-06-25 16:16+0700\n"
+"PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Malay\n"
 "Language: ms\n"
@@ -11,3 +11,781 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
+
+#: kill_dialog.py:76
+msgid "&Kill Process of Selected Window"
+msgstr "&Tamatkan Proses Tetingkap Terpilih"
+
+#: sys_monitor.py:280
+#: sys_monitor.py:308
+msgid "<1 minute"
+msgstr "<1 minit"
+
+#: sys_monitor.py:313
+#: sys_monitor.py:389
+#: sys_monitor.py:435
+msgid "??"
+msgstr "??"
+
+#: sys_monitor.py:77
+#: sys_monitor.py:112
+msgid "??%"
+msgstr "??%"
+
+#: menu.py:22
+msgid "AbsoluteWindows"
+msgstr "AbsoluteWindows"
+
+#: sys_monitor.py:400
+#: sys_monitor.py:415
+msgid "Activated"
+msgstr "Diaktifkan"
+
+#: utils.py:691
+msgid "Automatic"
+msgstr "Automatik"
+
+#: __init__.py:280
+msgid "Battery report will open in your browser."
+msgstr "Laporan bateri akan dibuka dalam pelayar anda."
+
+#: utils.py:123
+msgid "Bluetooth turned off."
+msgstr "Bluetooth dimatikan."
+
+#: utils.py:124
+msgid "Bluetooth turned on."
+msgstr "Bluetooth dihidupkan."
+
+#: kill_dialog.py:156
+msgid "Cannot kill system process: {}"
+msgstr "Tidak dapat menamatkan proses sistem: {}"
+
+#: kill_dialog.py:176
+msgid "Cannot open process. Access denied."
+msgstr "Tidak dapat membuka proses. Akses ditolak."
+
+#: sys_monitor.py:236
+#: sys_monitor.py:237
+msgid "Charging"
+msgstr "Mengecas"
+
+#: __init__.py:115
+msgid "Check Disk Status"
+msgstr "Semak Status Cakera"
+
+#: __init__.py:262
+msgid "Chkdsk report will open when complete."
+msgstr "Laporan Chkdsk akan dibuka apabila selesai."
+
+#: __init__.py:100
+msgid "Clean Prefetch & Recent"
+msgstr "Bersihkan Prefetch & Terkini"
+
+#: __init__.py:101
+msgid "Clean System files"
+msgstr "Bersihkan fail sistem"
+
+#: __init__.py:102
+msgid "Clean Temp"
+msgstr "Bersihkan Temp"
+
+#: __init__.py:103
+msgid "Clean Windows Run History"
+msgstr "Bersihkan Sejarah Larian Windows"
+
+#: __init__.py:105
+msgid "Clear Ram"
+msgstr "Kosongkan RAM"
+
+#: __init__.py:335
+msgid "Cleared {:.1f} MB of RAM cache."
+msgstr "{:.1f} MB cache RAM telah dikosongkan."
+
+#: kill_dialog.py:77
+#: menu.py:242
+#: menu.py:315
+#: menu.py:393
+#: menu.py:459
+msgid "Close"
+msgstr "Tutup"
+
+#: __init__.py:68
+msgid "Connect Internet"
+msgstr "Sambung Internet"
+
+#: sys_monitor.py:217
+msgid "Connected"
+msgstr "Bersambung"
+
+#: __init__.py:86
+msgid "Control Panel"
+msgstr "Panel Kawalan"
+
+#: utils.py:125
+msgid "Could not find or change Bluetooth status."
+msgstr "Tidak dapat mencari atau menukar status Bluetooth."
+
+#: __init__.py:577
+msgid "Could not open Control Panel."
+msgstr "Tidak dapat membuka Panel Kawalan."
+
+#: __init__.py:449
+msgid "Could not open Disk Cleanup."
+msgstr "Tidak dapat membuka Pembersihan Cakera."
+
+#: __init__.py:394
+msgid "Could not open Environment Variables."
+msgstr "Tidak dapat membuka Pemboleh Ubah Persekitaran."
+
+#: __init__.py:470
+msgid "Could not open Folder Options."
+msgstr "Tidak dapat membuka Pilihan Folder."
+
+#: __init__.py:410
+msgid "Could not open Malicious Software Removal Tool."
+msgstr "Tidak dapat membuka Alat Pembuangan Perisian Hasad."
+
+#: __init__.py:360
+msgid "Could not open Optimize Drives."
+msgstr "Tidak dapat membuka Optimumkan Pemacu."
+
+#: __init__.py:587
+msgid "Could not open Programs and Features."
+msgstr "Tidak dapat membuka Program dan Ciri."
+
+#: __init__.py:459
+msgid "Could not open Registry Editor."
+msgstr "Tidak dapat membuka Editor Registry."
+
+#: __init__.py:374
+msgid "Could not open Services."
+msgstr "Tidak dapat membuka Perkhidmatan."
+
+#: __init__.py:597
+msgid "Could not open Sound Settings."
+msgstr "Tidak dapat membuka Tetapan Bunyi."
+
+#: __init__.py:567
+msgid "Could not open Windows Defender."
+msgstr "Tidak dapat membuka Windows Defender."
+
+#: kill_dialog.py:225
+msgid "Could not open kill dialog. See log for details."
+msgstr "Tidak dapat membuka dialog tamat. Lihat log untuk butiran."
+
+#: __init__.py:253
+msgid "DISM report will open when complete."
+msgstr "Laporan DISM akan dibuka apabila selesai."
+
+#: menu.py:314
+#: menu.py:456
+msgid "Disable Selected"
+msgstr "Nyahaktif Pilihan"
+
+#: __init__.py:78
+msgid "Disable User Account Control"
+msgstr "Nyahaktif Kawalan Akaun Pengguna"
+
+#: menu.py:366
+#: utils.py:687
+msgid "Disabled"
+msgstr "Dinyahaktif"
+
+#: sys_monitor.py:239
+msgid "Discharging"
+msgstr "Menyahcas"
+
+#: __init__.py:66
+msgid "Disconnect Internet"
+msgstr "Putuskan Internet"
+
+#: sys_monitor.py:220
+msgid "Disconnected"
+msgstr "Terputus"
+
+#: __init__.py:99
+msgid "Disk Cleanup"
+msgstr "Pembersihan Cakera"
+
+#: __init__.py:271
+msgid "Disk Cleanup report will open when complete."
+msgstr "Laporan Pembersihan Cakera akan dibuka apabila selesai."
+
+#: __init__.py:289
+msgid "Disk status report will open when complete."
+msgstr "Laporan status cakera akan dibuka apabila selesai."
+
+#: menu.py:450
+msgid "Display Name"
+msgstr "Nama Paparan"
+
+#: menu.py:236
+msgid "Drive"
+msgstr "Pemacu"
+
+#: menu.py:381
+msgid "Drive Optimize"
+msgstr "Optimumkan Pemacu"
+
+#: menu.py:241
+msgid "Eject Selected"
+msgstr "Keluarkan Pilihan"
+
+#: __init__.py:104
+msgid "Empty Recycle Bin"
+msgstr "Kosongkan Tong Kitar Semula"
+
+#: menu.py:313
+#: menu.py:457
+msgid "Enable Selected"
+msgstr "Aktifkan Pilihan"
+
+#: __init__.py:80
+msgid "Enable User Account Control"
+msgstr "Aktifkan Kawalan Akaun Pengguna"
+
+#: menu.py:351
+#: utils.py:542
+#: utils.py:559
+#: utils.py:576
+#: utils.py:589
+msgid "Enabled"
+msgstr "Diaktifkan"
+
+#: __init__.py:93
+msgid "Environment Variables"
+msgstr "Pemboleh Ubah Persekitaran"
+
+#: menu.py:271
+#: menu.py:280
+#: menu.py:348
+#: menu.py:358
+#: menu.py:363
+#: menu.py:373
+#: menu.py:417
+#: menu.py:432
+#: menu.py:494
+#: menu.py:501
+#: menu.py:506
+#: menu.py:513
+msgid "Error"
+msgstr "Ralat"
+
+#: sys_monitor.py:342
+msgid "Excellent"
+msgstr "Cemerlang"
+
+#: cmd_tools.py:46
+msgid "Exception occurred: {error}"
+msgstr "Berlakunya pengecualian: {error}"
+
+#: __init__.py:310
+msgid "Failed to clean temporary files."
+msgstr "Gagal membersihkan fail sementara."
+
+#: __init__.py:384
+msgid "Failed to clean: {errorMsg}"
+msgstr "Gagal membersihkan: {errorMsg}"
+
+#: __init__.py:341
+msgid "Failed to clear RAM cache."
+msgstr "Gagal mengosongkan cache RAM."
+
+#: __init__.py:319
+msgid "Failed to clear Run history."
+msgstr "Gagal mengosongkan sejarah Larian."
+
+#: kill_dialog.py:170
+msgid "Failed to close window."
+msgstr "Gagal menutup tetingkap."
+
+#: __init__.py:164
+msgid "Failed to connect internet."
+msgstr "Gagal menyambung internet."
+
+#: menu.py:373
+msgid "Failed to disable item."
+msgstr "Gagal menyahaktifkan item."
+
+#: menu.py:501
+msgid "Failed to disable service: {}"
+msgstr "Gagal menyahaktifkan perkhidmatan: {}"
+
+#: __init__.py:148
+msgid "Failed to disconnect internet."
+msgstr "Gagal memutuskan internet."
+
+#: menu.py:280
+msgid "Failed to eject {drive}."
+msgstr "Gagal mengeluarkan {drive}."
+
+#: utils.py:477
+#: utils.py:480
+msgid "Failed to empty recycle bin."
+msgstr "Gagal mengosongkan tong kitar semula."
+
+#: menu.py:358
+msgid "Failed to enable item."
+msgstr "Gagal mengaktifkan item."
+
+#: menu.py:513
+msgid "Failed to enable service: {}"
+msgstr "Gagal mengaktifkan perkhidmatan: {}"
+
+#: __init__.py:184
+msgid "Failed to restart Windows Audio Services."
+msgstr "Gagal memulakan semula Perkhidmatan Audio Windows."
+
+#: __init__.py:238
+msgid "Failed to restart Windows Explorer."
+msgstr "Gagal memulakan semula Windows Explorer."
+
+#: __init__.py:198
+msgid "Failed to restart to BIOS. Your system may not support this feature via Windows."
+msgstr "Gagal memulakan semula ke BIOS. Sistem anda mungkin tidak menyokong ciri ini melalui Windows."
+
+#: __init__.py:301
+msgid "Failed to start system cleanup."
+msgstr "Gagal memulakan pembersihan sistem."
+
+#: kill_dialog.py:193
+msgid "Failed to terminate process. Insufficient privileges."
+msgstr "Gagal menamatkan proses. Keistimewaan tidak mencukupi."
+
+#: utils.py:128
+msgid "Failed to toggle Bluetooth."
+msgstr "Gagal menogol Bluetooth."
+
+#: __init__.py:211
+msgid "Failed to toggle UAC."
+msgstr "Gagal menogol UAC."
+
+#: sys_monitor.py:346
+msgid "Fair"
+msgstr "Sederhana"
+
+#: __init__.py:475
+msgid "File Explorer Options"
+msgstr "Pilihan File Explorer"
+
+#: __init__.py:89
+msgid "Folder Option"
+msgstr "Pilihan Folder"
+
+#: __init__.py:475
+msgid "Folder Options"
+msgstr "Pilihan Folder"
+
+#: sys_monitor.py:238
+msgid "Fully Charged"
+msgstr "Tercekup Penuh"
+
+#: sys_monitor.py:344
+msgid "Good"
+msgstr "Baik"
+
+#: menu.py:352
+#: menu.py:367
+#: menu.py:425
+msgid "Info"
+msgstr "Maklumat"
+
+#: __init__.py:161
+msgid "Internet connected."
+msgstr "Internet bersambung."
+
+#: __init__.py:145
+msgid "Internet disconnected."
+msgstr "Internet terputus."
+
+#: menu.py:367
+msgid "Item already disabled."
+msgstr "Item sudah dinyahaktif."
+
+#: menu.py:352
+msgid "Item already enabled."
+msgstr "Item sudah diaktifkan."
+
+#: __init__.py:84
+#: __init__.py:630
+#: kill_dialog.py:56
+msgid "Kill Not Responding Apps"
+msgstr "Tamatkan Apl Tidak Respons"
+
+#: kill_dialog.py:215
+msgid "Kill Process"
+msgstr "Tamatkan Proses"
+
+#: menu.py:237
+msgid "Label"
+msgstr "Label"
+
+#: menu.py:119
+msgid "Loading system information..."
+msgstr "Memuatkan maklumat sistem..."
+
+#: menu.py:309
+msgid "Location"
+msgstr "Lokasi"
+
+#: sys_monitor.py:240
+msgid "Low"
+msgstr "Rendah"
+
+#: __init__.py:92
+#: menu.py:440
+msgid "Manage Services"
+msgstr "Urus Perkhidmatan"
+
+#: utils.py:689
+msgid "Manual"
+msgstr "Manual"
+
+#: __init__.py:97
+msgid "Microsoft Windows Malicious Software Removal Tool"
+msgstr "Alat Pembuangan Perisian Hasad Microsoft Windows"
+
+#: menu.py:306
+msgid "Name"
+msgstr "Nama"
+
+#: menu.py:266
+msgid "No USB drives found"
+msgstr "Tiada pemacu USB dijumpai"
+
+#: __init__.py:225
+msgid "No Wi-Fi network is currently connected."
+msgstr "Tiada rangkaian Wi-Fi yang disambung pada masa ini."
+
+#: __init__.py:138
+msgid "No active network adapter found."
+msgstr "Tiada penyesuai rangkaian aktif dijumpai."
+
+#: menu.py:156
+msgid "No data available"
+msgstr "Tiada data tersedia"
+
+#: __init__.py:155
+msgid "No disabled network adapter found."
+msgstr "Tiada penyesuai rangkaian dinyahaktif dijumpai."
+
+#: menu.py:348
+#: menu.py:363
+msgid "No item selected."
+msgstr "Tiada item dipilih."
+
+#: kill_dialog.py:149
+msgid "No window selected."
+msgstr "Tiada tetingkap dipilih."
+
+#: sys_monitor.py:402
+#: sys_monitor.py:417
+msgid "Not Activated"
+msgstr "Tidak Diaktifkan"
+
+#: __init__.py:91
+msgid "Open Services"
+msgstr "Buka Perkhidmatan"
+
+#: menu.py:430
+msgid "Optimization completed."
+msgstr "Pengoptimuman selesai."
+
+#: menu.py:432
+msgid "Optimization failed: {}"
+msgstr "Pengoptimuman gagal: {}"
+
+#: menu.py:392
+msgid "Optimize Selected"
+msgstr "Optimumkan Pilihan"
+
+#: __init__.py:98
+msgid "Optimize and defragment drive"
+msgstr "Optimumkan dan nyahfragmentasi pemacu"
+
+#: menu.py:425
+msgid "Optimizing drive, please wait..."
+msgstr "Mengoptimumkan pemacu, sila tunggu..."
+
+#: __init__.py:114
+msgid "Power Diagnostic (Battery Report)"
+msgstr "Diagnostik Kuasa (Laporan Bateri)"
+
+#: __init__.py:381
+msgid "Prefetch and recent files cleaned. {count} items removed."
+msgstr "Fail Prefetch dan terkini dibersihkan. {count} item dibuang."
+
+#: kill_dialog.py:186
+msgid "Process terminated."
+msgstr "Proses ditamatkan."
+
+#: __init__.py:87
+msgid "Programs and Features"
+msgstr "Program dan Ciri"
+
+#: __init__.py:338
+msgid "RAM cache is already clean."
+msgstr "Cache RAM sudah bersih."
+
+#: utils.py:474
+msgid "Recycle bin emptied. {count} items removed."
+msgstr "Tong kitar semula dikosongkan. {count} item dibuang."
+
+#: utils.py:468
+msgid "Recycle bin is already empty."
+msgstr "Tong kitar semula sudah kosong."
+
+#: menu.py:458
+msgid "Refresh"
+msgstr "Segar Semula"
+
+#: __init__.py:95
+msgid "Regedit"
+msgstr "Editor Registry"
+
+#: __init__.py:74
+msgid "Restart Windows Audio Service"
+msgstr "Mulakan Semula Perkhidmatan Audio Windows"
+
+#: __init__.py:85
+msgid "Restart Windows Explorer"
+msgstr "Mulakan Semula Windows Explorer"
+
+#: __init__.py:82
+msgid "Restart to BIOS/UEFI Settings"
+msgstr "Mulakan Semula ke Tetapan BIOS/UEFI"
+
+#: __init__.py:178
+msgid "Restarting Audio Services, please wait..."
+msgstr "Memulakan semula Perkhidmatan Audio, sila tunggu..."
+
+#: __init__.py:192
+msgid "Restarting to BIOS/UEFI, please wait..."
+msgstr "Memulakan semula ke BIOS/UEFI, sila tunggu..."
+
+#: __init__.py:112
+msgid "Run Chkdsk on C:"
+msgstr "Jalankan Chkdsk pada C:"
+
+#: __init__.py:94
+msgid "Run Cmd"
+msgstr "Jalankan Cmd"
+
+#: __init__.py:110
+msgid "Run DISM"
+msgstr "Jalankan DISM"
+
+#: __init__.py:113
+msgid "Run Disk Cleanup"
+msgstr "Jalankan Pembersihan Cakera"
+
+#: __init__.py:111
+msgid "Run SFC Scannow"
+msgstr "Jalankan SFC Scannow"
+
+#: utils.py:694
+msgid "Running"
+msgstr "Berjalan"
+
+#: __init__.py:244
+msgid "SFC Scannow report will open when complete."
+msgstr "Laporan SFC Scannow akan dibuka apabila selesai."
+
+#: __init__.py:73
+#: menu.py:228
+msgid "Safely Remove USB"
+msgstr "Tanggalkan USB dengan Selamat"
+
+#: menu.py:271
+msgid "Select a USB drive first."
+msgstr "Pilih pemacu USB terlebih dahulu."
+
+#: menu.py:417
+msgid "Select a drive first."
+msgstr "Pilih pemacu terlebih dahulu."
+
+#: menu.py:494
+#: menu.py:506
+msgid "Select a service first."
+msgstr "Pilih perkhidmatan terlebih dahulu."
+
+#: menu.py:449
+msgid "Service Name"
+msgstr "Nama Perkhidmatan"
+
+#: __init__.py:614
+msgid "Show Absolute Windows menu (single tap) or System Monitor (double tap)"
+msgstr "Tunjukkan menu Absolute Windows (satu ketikan) atau Monitor Sistem (dua ketikan)"
+
+#: __init__.py:71
+msgid "Show Wi-Fi Password"
+msgstr "Tunjukkan Kata Laluan Wi-Fi"
+
+#: __init__.py:88
+msgid "Sound setting"
+msgstr "Tetapan Bunyi"
+
+#: __init__.py:90
+#: menu.py:295
+msgid "Startup Manager"
+msgstr "Pengurus Permulaan"
+
+#: menu.py:451
+msgid "Startup Type"
+msgstr "Jenis Permulaan"
+
+#: menu.py:308
+#: menu.py:452
+msgid "Status"
+msgstr "Status"
+
+#: utils.py:696
+msgid "Stopped"
+msgstr "Berhenti"
+
+#: menu.py:277
+#: menu.py:430
+msgid "Success"
+msgstr "Berjaya"
+
+#: menu.py:101
+msgid "System Monitor"
+msgstr "Monitor Sistem"
+
+#: __init__.py:63
+msgid "System Tray"
+msgstr "Dulang Sistem"
+
+#: __init__.py:298
+msgid "System cleanup started."
+msgstr "Pembersihan sistem bermula."
+
+#: __init__.py:307
+msgid "Temporary files cleaned. {count} items removed."
+msgstr "Fail sementara dibersihkan. {count} item dibuang."
+
+#: __init__.py:222
+msgid "The Wi-Fi network '{ssid}' is open (no password)."
+msgstr "Rangkaian Wi-Fi '{ssid}' terbuka (tiada kata laluan)."
+
+#: __init__.py:70
+msgid "Toggle Bluetooth"
+msgstr "Togol Bluetooth"
+
+#: menu.py:307
+msgid "Type"
+msgstr "Jenis"
+
+#: utils.py:89
+msgid "USB Drive"
+msgstr "Pemacu USB"
+
+#: menu.py:277
+msgid "USB drive {drive} ejected safely."
+msgstr "Pemacu USB {drive} dikeluarkan dengan selamat."
+
+#: sys_monitor.py:241
+msgid "Unknown"
+msgstr "Tidak Diketahui"
+
+#: __init__.py:208
+msgid "User Account Control toggled."
+msgstr "Kawalan Akaun Pengguna ditogol."
+
+#: cmd_tools.py:41
+msgid "User cancelled the UAC elevation prompt."
+msgstr "Pengguna membatalkan gesaan peningkatan UAC."
+
+#: sys_monitor.py:350
+msgid "Very Weak"
+msgstr "Sangat Lemah"
+
+#: sys_monitor.py:348
+msgid "Weak"
+msgstr "Lemah"
+
+#: __init__.py:219
+msgid "Wi-Fi password for {ssid} copied to clipboard."
+msgstr "Kata laluan Wi-Fi untuk {ssid} disalin ke papan klip."
+
+#: kill_dialog.py:164
+msgid "Window closed."
+msgstr "Tetingkap ditutup."
+
+#: __init__.py:181
+msgid "Windows Audio Services restarted successfully."
+msgstr "Perkhidmatan Audio Windows berjaya dimulakan semula."
+
+#: __init__.py:96
+msgid "Windows Defender"
+msgstr "Windows Defender"
+
+#: __init__.py:235
+msgid "Windows Explorer has been restarted."
+msgstr "Windows Explorer telah dimulakan semula."
+
+#: __init__.py:316
+msgid "Windows Run history cleared. {count} items removed."
+msgstr "Sejarah Larian Windows dikosongkan. {count} item dibuang."
+
+#: sys_monitor.py:430
+msgid "Windows Server {}"
+msgstr "Windows Server {}"
+
+#: sys_monitor.py:193
+#: sys_monitor.py:206
+msgid "{:.1F} MB/s down, {:.1F} MB/s up"
+msgstr "{:.1F} MB/s muat turun, {:.1F} MB/s muat naik"
+
+#: sys_monitor.py:166
+#: sys_monitor.py:178
+msgid "{:.1F} MB/s read, {:.1F} MB/s write"
+msgstr "{:.1F} MB/s baca, {:.1F} MB/s tulis"
+
+#: sys_monitor.py:96
+#: sys_monitor.py:108
+msgid "{:.2F} GB of {:.2F} GB used ({:.1F}%)"
+msgstr "{:.2F} GB daripada {:.2F} GB digunakan ({:.1F}%)"
+
+#: sys_monitor.py:432
+msgid "{} ({} bit) build {}"
+msgstr "{} ({} bit) bina {}"
+
+#: sys_monitor.py:271
+#: sys_monitor.py:299
+msgid "{} day{}"
+msgstr "{} hari{}"
+
+#: sys_monitor.py:273
+#: sys_monitor.py:301
+msgid "{} hour{}"
+msgstr "{} jam{}"
+
+#: sys_monitor.py:275
+#: sys_monitor.py:303
+msgid "{} minute{}"
+msgstr "{} minit{}"
+
+#: sys_monitor.py:378
+#: sys_monitor.py:385
+msgid "{} process{}"
+msgstr "{} proses{}"
+
+#: sys_monitor.py:277
+#: sys_monitor.py:305msgid "{} second{}"
+msgstr "{} saat{}"
+
+#: sys_monitor.py:133
+#: sys_monitor.py:149
+msgid "{} {:.1F} GB of {:.1F} GB used ({:.0F}%)"
+msgstr "{} {:.1F} GB daripada {:.1F} GB digunakan ({:.0F}%)"
+
+#: sys_monitor.py:67
+#: sys_monitor.py:73
+msgid "{}%"
+msgstr "{}%"
+
+#: sys_monitor.py:242
+msgid "{}% ({})"
+msgstr "{}% ({})"

@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AbsoluteWindows 2026.5.3\n"
+"Project-Id-Version: AbsoluteWindows 2026.7.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-05-15 12:37+0700\n"
-"PO-Revision-Date: 2026-05-15 15:45+0700\n"
+"POT-Creation-Date: 2026-06-25 16:16+0700\n"
+"PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Bulgarian\n"
 "Language: bg\n"
@@ -14,493 +14,779 @@ msgstr ""
 
 #: kill_dialog.py:76
 msgid "&Kill Process of Selected Window"
-msgstr "&Прекратяване процеса на избрания прозорец"
+msgstr "&Убиване на процеса на избрания прозорец"
 
-#: menu.py:21
+#: sys_monitor.py:280
+#: sys_monitor.py:308
+msgid "<1 minute"
+msgstr "<1 минута"
+
+#: sys_monitor.py:313
+#: sys_monitor.py:389
+#: sys_monitor.py:435
+msgid "??"
+msgstr "??"
+
+#: sys_monitor.py:77
+#: sys_monitor.py:112
+msgid "??%"
+msgstr "??%"
+
+#: menu.py:22
 msgid "AbsoluteWindows"
 msgstr "AbsoluteWindows"
 
-#: utils.py:600
-msgid "Automatic"
-msgstr "Автоматично"
+#: sys_monitor.py:400
+#: sys_monitor.py:415
+msgid "Activated"
+msgstr "Активиран"
 
-#: __init__.py:210
+#: utils.py:691
+msgid "Automatic"
+msgstr "Автоматичен"
+
+#: __init__.py:280
 msgid "Battery report will open in your browser."
-msgstr "Отчетът за батерията ще се отвори в браузъра ви."
+msgstr "Докладът за батерията ще се отвори в браузъра ви."
+
+#: utils.py:123
+msgid "Bluetooth turned off."
+msgstr "Bluetooth е изключен."
+
+#: utils.py:124
+msgid "Bluetooth turned on."
+msgstr "Bluetooth е включен."
 
 #: kill_dialog.py:156
 msgid "Cannot kill system process: {}"
-msgstr "Системният процес не може да бъде прекратен: {}"
+msgstr "Не може да се убие системен процес: {}"
 
 #: kill_dialog.py:176
 msgid "Cannot open process. Access denied."
-msgstr "Процесът не може да бъде отворен. Достъпът е отказан."
+msgstr "Не може да се отвори процес. Отказан достъп."
 
-#: __init__.py:89
+#: sys_monitor.py:236
+#: sys_monitor.py:237
+msgid "Charging"
+msgstr "Зарежда се"
+
+#: __init__.py:115
 msgid "Check Disk Status"
-msgstr "Проверка състоянието на диска"
+msgstr "Проверка на състоянието на диска"
 
-#: __init__.py:192
+#: __init__.py:262
 msgid "Chkdsk report will open when complete."
-msgstr "Отчетът от Chkdsk ще се отвори при завършване."
+msgstr "Докладът от Chkdsk ще се отвори при завършване."
 
-#: __init__.py:74
+#: __init__.py:100
 msgid "Clean Prefetch & Recent"
-msgstr "Изчистване на Prefetch и скорошни файлове"
+msgstr "Почистване на Prefetch и Recent"
 
-#: __init__.py:75
+#: __init__.py:101
 msgid "Clean System files"
-msgstr "Изчистване на системни файлове"
+msgstr "Почистване на системни файлове"
 
-#: __init__.py:76
+#: __init__.py:102
 msgid "Clean Temp"
-msgstr "Изчистване на временни файлове (Temp)"
+msgstr "Почистване на Temp"
 
-#: __init__.py:77
+#: __init__.py:103
 msgid "Clean Windows Run History"
-msgstr "Изчистване на историята на Windows Run"
+msgstr "Почистване на историята за изпълнение на Windows"
 
-#: __init__.py:79
+#: __init__.py:105
 msgid "Clear Ram"
-msgstr "Изчистване на оперативната памет (RAM)"
+msgstr "Изчистване на RAM"
 
-#: __init__.py:265
+#: __init__.py:335
 msgid "Cleared {:.1f} MB of RAM cache."
-msgstr "Изчистени са {:.1f} MB от кеша на RAM паметта."
+msgstr "Изчистени {:.1f} MB RAM кеш."
 
 #: kill_dialog.py:77
-#: menu.py:121
-#: menu.py:198
-#: menu.py:263
+#: menu.py:242
+#: menu.py:315
+#: menu.py:393
+#: menu.py:459
 msgid "Close"
 msgstr "Затваряне"
 
-#: __init__.py:55
+#: __init__.py:68
 msgid "Connect Internet"
-msgstr "Свързване към интернет"
+msgstr "Свързване с интернет"
 
-#: __init__.py:366
+#: sys_monitor.py:217
+msgid "Connected"
+msgstr "Свързан"
+
+#: __init__.py:86
+msgid "Control Panel"
+msgstr "Контролен панел"
+
+#: utils.py:125
+msgid "Could not find or change Bluetooth status."
+msgstr "Не може да се намери или промени състоянието на Bluetooth."
+
+#: __init__.py:577
+msgid "Could not open Control Panel."
+msgstr "Не може да се отвори Контролен панел."
+
+#: __init__.py:449
 msgid "Could not open Disk Cleanup."
-msgstr "Инструментът за почистване на диска не може да бъде отворен."
+msgstr "Не може да се отвори Почистване на диск."
 
-#: __init__.py:318
+#: __init__.py:394
 msgid "Could not open Environment Variables."
-msgstr "Променливите на обкръжението не могат да бъдат отворени."
+msgstr "Не може да се отворят Променливи на средата."
 
-#: __init__.py:334
+#: __init__.py:470
+msgid "Could not open Folder Options."
+msgstr "Не може да се отворят Опции на папки."
+
+#: __init__.py:410
 msgid "Could not open Malicious Software Removal Tool."
-msgstr "Инструментът за премахване на зловреден софтуер не може да бъде отворен."
+msgstr "Не може да се отвори Инструмент за премахване на зловреден софтуер."
 
-#: __init__.py:290
+#: __init__.py:360
 msgid "Could not open Optimize Drives."
-msgstr "Оптимизирането на дискове не може да бъде отворено."
+msgstr "Не може да се отвори Оптимизиране на дискове."
 
-#: __init__.py:376
+#: __init__.py:587
+msgid "Could not open Programs and Features."
+msgstr "Не може да се отворят Програми и функции."
+
+#: __init__.py:459
 msgid "Could not open Registry Editor."
-msgstr "Редакторът на системния регистър не може да бъде отворен."
+msgstr "Не може да се отвори Редактор на регистъра."
 
-#: __init__.py:397
+#: __init__.py:374
+msgid "Could not open Services."
+msgstr "Не може да се отворят Услуги."
+
+#: __init__.py:597
+msgid "Could not open Sound Settings."
+msgstr "Не може да се отворят Настройки на звука."
+
+#: __init__.py:567
 msgid "Could not open Windows Defender."
-msgstr "Windows Defender не може да бъде отворен."
+msgstr "Не може да се отвори Windows Defender."
 
 #: kill_dialog.py:225
 msgid "Could not open kill dialog. See log for details."
-msgstr "Диалогът за прекратяване не може да бъде отворен. Вижте лог файла за подробности."
+msgstr "Не може да се отвори диалогът за убиване. Вижте лога за подробности."
 
-#: __init__.py:183
+#: __init__.py:253
 msgid "DISM report will open when complete."
-msgstr "Отчетът от DISM ще се отвори при завършване."
+msgstr "Докладът от DISM ще се отвори при завършване."
 
-#: menu.py:120
-#: menu.py:260
+#: menu.py:314
+#: menu.py:456
 msgid "Disable Selected"
 msgstr "Деактивиране на избраното"
 
-#: __init__.py:59
-msgid "Disable User Account Control"
-msgstr "Деактивиране на управлението на потребителските акаунти (UAC)"
-
-#: menu.py:172
-#: utils.py:596
-msgid "Disabled"
-msgstr "Деактивирано"
-
-#: __init__.py:53
-msgid "Disconnect Internet"
-msgstr "Прекъсване на интернет връзката"
-
-#: __init__.py:73
-msgid "Disk Cleanup"
-msgstr "Почистване на диска"
-
-#: __init__.py:201
-msgid "Disk Cleanup report will open when complete."
-msgstr "Отчетът от почистването на диска ще се отвори при завършване."
-
-#: __init__.py:219
-msgid "Disk status report will open when complete."
-msgstr "Отчетът за състоянието на диска ще се отвори при завършване."
-
-#: menu.py:254
-msgid "Display Name"
-msgstr "Екранно име"
-
-#: menu.py:186
-msgid "Drive Optimize"
-msgstr "Оптимизиране на диска"
-
 #: __init__.py:78
+msgid "Disable User Account Control"
+msgstr "Деактивиране на контрола на потребителските акаунти"
+
+#: menu.py:366
+#: utils.py:687
+msgid "Disabled"
+msgstr "Деактивиран"
+
+#: sys_monitor.py:239
+msgid "Discharging"
+msgstr "Разрежда се"
+
+#: __init__.py:66
+msgid "Disconnect Internet"
+msgstr "Прекъсване на интернет"
+
+#: sys_monitor.py:220
+msgid "Disconnected"
+msgstr "Прекъснат"
+
+#: __init__.py:99
+msgid "Disk Cleanup"
+msgstr "Почистване на диск"
+
+#: __init__.py:271
+msgid "Disk Cleanup report will open when complete."
+msgstr "Докладът от почистване на диск ще се отвори при завършване."
+
+#: __init__.py:289
+msgid "Disk status report will open when complete."
+msgstr "Докладът за състоянието на диска ще се отвори при завършване."
+
+#: menu.py:450
+msgid "Display Name"
+msgstr "Показвано име"
+
+#: menu.py:236
+msgid "Drive"
+msgstr "Диск"
+
+#: menu.py:381
+msgid "Drive Optimize"
+msgstr "Оптимизиране на диск"
+
+#: menu.py:241
+msgid "Eject Selected"
+msgstr "Изваждане на избраното"
+
+#: __init__.py:104
 msgid "Empty Recycle Bin"
 msgstr "Изпразване на кошчето"
 
-#: menu.py:119
-#: menu.py:261
+#: menu.py:313
+#: menu.py:457
 msgid "Enable Selected"
 msgstr "Активиране на избраното"
 
-#: __init__.py:61
+#: __init__.py:80
 msgid "Enable User Account Control"
-msgstr "Активиране на управлението на потребителските акаунти (UAC)"
+msgstr "Активиране на контрола на потребителските акаунти"
 
-#: menu.py:157
-#: utils.py:451
-#: utils.py:468
-#: utils.py:485
-#: utils.py:498
+#: menu.py:351
+#: utils.py:542
+#: utils.py:559
+#: utils.py:576
+#: utils.py:589
 msgid "Enabled"
-msgstr "Активирано"
+msgstr "Активиран"
 
-#: __init__.py:67
+#: __init__.py:93
 msgid "Environment Variables"
-msgstr "Променливи на обкръжението"
+msgstr "Променливи на средата"
 
-#: menu.py:154
-#: menu.py:164
-#: menu.py:169
-#: menu.py:179
-#: menu.py:222
-#: menu.py:237
-#: menu.py:298
-#: menu.py:305
-#: menu.py:310
-#: menu.py:317
+#: menu.py:271
+#: menu.py:280
+#: menu.py:348
+#: menu.py:358
+#: menu.py:363
+#: menu.py:373
+#: menu.py:417
+#: menu.py:432
+#: menu.py:494
+#: menu.py:501
+#: menu.py:506
+#: menu.py:513
 msgid "Error"
 msgstr "Грешка"
+
+#: sys_monitor.py:342
+msgid "Excellent"
+msgstr "Отличен"
 
 #: cmd_tools.py:46
 msgid "Exception occurred: {error}"
 msgstr "Възникна изключение: {error}"
 
-#: __init__.py:240
+#: __init__.py:310
 msgid "Failed to clean temporary files."
-msgstr "Неуспешно почистване на временните файлове."
+msgstr "Неуспешно почистване на временни файлове."
 
-#: __init__.py:308
-msgid "Failed to clean: {}"
-msgstr "Неуспешно почистване: {}"
+#: __init__.py:384
+msgid "Failed to clean: {errorMsg}"
+msgstr "Неуспешно почистване: {errorMsg}"
 
-#: __init__.py:271
+#: __init__.py:341
 msgid "Failed to clear RAM cache."
-msgstr "Неуспешно изчистване на кеша на RAM паметта."
+msgstr "Неуспешно изчистване на RAM кеш."
 
-#: __init__.py:249
+#: __init__.py:319
 msgid "Failed to clear Run history."
-msgstr "Неуспешно изчистване на историята на Run."
+msgstr "Неуспешно изчистване на историята за изпълнение."
 
 #: kill_dialog.py:170
 msgid "Failed to close window."
-msgstr "Неуспешно затваряне на прозореца."
+msgstr "Неуспешно затваряне на прозорец."
 
-#: __init__.py:127
+#: __init__.py:164
 msgid "Failed to connect internet."
-msgstr "Неуспешно свързване към интернет."
+msgstr "Неуспешно свързване с интернет."
 
-#: menu.py:179
+#: menu.py:373
 msgid "Failed to disable item."
-msgstr "Неуспешно деактивиране на елемента."
+msgstr "Неуспешно деактивиране на елемент."
 
-#: menu.py:305
+#: menu.py:501
 msgid "Failed to disable service: {}"
-msgstr "Неуспешно деактивиране на услугата: {}"
+msgstr "Неуспешно деактивиране на услуга: {}"
 
-#: __init__.py:111
+#: __init__.py:148
 msgid "Failed to disconnect internet."
-msgstr "Неуспешно прекъсване на интернет връзката."
+msgstr "Неуспешно прекъсване на интернет."
 
-#: utils.py:386
-#: utils.py:389
+#: menu.py:280
+msgid "Failed to eject {drive}."
+msgstr "Неуспешно изваждане на {drive}."
+
+#: utils.py:477
+#: utils.py:480
 msgid "Failed to empty recycle bin."
 msgstr "Неуспешно изпразване на кошчето."
 
-#: menu.py:164
+#: menu.py:358
 msgid "Failed to enable item."
-msgstr "Неуспешно активиране на елемента."
+msgstr "Неуспешно активиране на елемент."
 
-#: menu.py:317
+#: menu.py:513
 msgid "Failed to enable service: {}"
-msgstr "Неуспешно активиране на услугата: {}"
+msgstr "Неуспешно активиране на услуга: {}"
 
-#: __init__.py:168
+#: __init__.py:184
+msgid "Failed to restart Windows Audio Services."
+msgstr "Неуспешно рестартиране на Windows Audio Services."
+
+#: __init__.py:238
 msgid "Failed to restart Windows Explorer."
 msgstr "Неуспешно рестартиране на Windows Explorer."
 
-#: __init__.py:231
+#: __init__.py:198
+msgid "Failed to restart to BIOS. Your system may not support this feature via Windows."
+msgstr "Неуспешно рестартиране към BIOS. Вашата система може да не поддържа тази функция чрез Windows."
+
+#: __init__.py:301
 msgid "Failed to start system cleanup."
-msgstr "Неуспешно стартиране на системното почистване."
+msgstr "Неуспешно стартиране на почистване на системата."
 
 #: kill_dialog.py:193
 msgid "Failed to terminate process. Insufficient privileges."
-msgstr "Неуспешно прекратяване на процеса. Недостатъчни привилегии."
+msgstr "Неуспешно прекратяване на процес. Недостатъчни привилегии."
 
-#: __init__.py:141
+#: utils.py:128
+msgid "Failed to toggle Bluetooth."
+msgstr "Неуспешно превключване на Bluetooth."
+
+#: __init__.py:211
 msgid "Failed to toggle UAC."
 msgstr "Неуспешно превключване на UAC."
 
-#: menu.py:158
-#: menu.py:173
-#: menu.py:230
+#: sys_monitor.py:346
+msgid "Fair"
+msgstr "Среден"
+
+#: __init__.py:475
+msgid "File Explorer Options"
+msgstr "Опции на файловия мениджър"
+
+#: __init__.py:89
+msgid "Folder Option"
+msgstr "Опции на папки"
+
+#: __init__.py:475
+msgid "Folder Options"
+msgstr "Опции на папки"
+
+#: sys_monitor.py:238
+msgid "Fully Charged"
+msgstr "Напълно зареден"
+
+#: sys_monitor.py:344
+msgid "Good"
+msgstr "Добър"
+
+#: menu.py:352
+#: menu.py:367
+#: menu.py:425
 msgid "Info"
 msgstr "Информация"
 
-#: __init__.py:124
+#: __init__.py:161
 msgid "Internet connected."
-msgstr "Интернет връзката е установена."
+msgstr "Интернет свързан."
 
-#: __init__.py:108
+#: __init__.py:145
 msgid "Internet disconnected."
-msgstr "Интернет връзката е прекъсната."
+msgstr "Интернет прекъснат."
 
-#: menu.py:173
+#: menu.py:367
 msgid "Item already disabled."
 msgstr "Елементът вече е деактивиран."
 
-#: menu.py:158
+#: menu.py:352
 msgid "Item already enabled."
 msgstr "Елементът вече е активиран."
 
-#: __init__.py:62
-#: __init__.py:408
+#: __init__.py:84
+#: __init__.py:630
 #: kill_dialog.py:56
 msgid "Kill Not Responding Apps"
-msgstr "Прекратяване на блокирали приложения"
+msgstr "Убиване на неотговарящи приложения"
 
 #: kill_dialog.py:215
 msgid "Kill Process"
-msgstr "Прекратяване на процеса"
+msgstr "Убиване на процес"
 
-#: menu.py:115
+#: menu.py:237
+msgid "Label"
+msgstr "Етикет"
+
+#: menu.py:119
+msgid "Loading system information..."
+msgstr "Зареждане на системна информация..."
+
+#: menu.py:309
 msgid "Location"
 msgstr "Местоположение"
 
-#: __init__.py:66
-#: menu.py:244
+#: sys_monitor.py:240
+msgid "Low"
+msgstr "Нисък"
+
+#: __init__.py:92
+#: menu.py:440
 msgid "Manage Services"
 msgstr "Управление на услуги"
 
-#: utils.py:598
+#: utils.py:689
 msgid "Manual"
-msgstr "Ръчно"
+msgstr "Ръчен"
 
-#: __init__.py:71
+#: __init__.py:97
 msgid "Microsoft Windows Malicious Software Removal Tool"
-msgstr "Инструмент на Microsoft Windows за премахване на зловреден софтуер"
+msgstr "Инструмент за премахване на зловреден софтуер на Microsoft Windows"
 
-#: menu.py:112
+#: menu.py:306
 msgid "Name"
 msgstr "Име"
 
-#: __init__.py:155
+#: menu.py:266
+msgid "No USB drives found"
+msgstr "Не са намерени USB устройства"
+
+#: __init__.py:225
 msgid "No Wi-Fi network is currently connected."
 msgstr "В момента няма свързана Wi-Fi мрежа."
 
-#: __init__.py:101
+#: __init__.py:138
 msgid "No active network adapter found."
 msgstr "Не е намерен активен мрежов адаптер."
 
-#: __init__.py:118
+#: menu.py:156
+msgid "No data available"
+msgstr "Няма налични данни"
+
+#: __init__.py:155
 msgid "No disabled network adapter found."
 msgstr "Не е намерен деактивиран мрежов адаптер."
 
-#: menu.py:154
-#: menu.py:169
+#: menu.py:348
+#: menu.py:363
 msgid "No item selected."
-msgstr "Няма избран елемент."
+msgstr "Не е избран елемент."
 
 #: kill_dialog.py:149
 msgid "No window selected."
-msgstr "Няма избран прозорец."
+msgstr "Не е избран прозорец."
 
-#: __init__.py:65
+#: sys_monitor.py:402
+#: sys_monitor.py:417
+msgid "Not Activated"
+msgstr "Не е активиран"
+
+#: __init__.py:91
 msgid "Open Services"
-msgstr "Отваряне на услугите"
+msgstr "Отваряне на услуги"
 
-#: menu.py:235
+#: menu.py:430
 msgid "Optimization completed."
 msgstr "Оптимизацията завърши."
 
-#: menu.py:237
+#: menu.py:432
 msgid "Optimization failed: {}"
-msgstr "Оптимизацията не бе успешна: {}"
+msgstr "Неуспешна оптимизация: {}"
 
-#: menu.py:197
+#: menu.py:392
 msgid "Optimize Selected"
 msgstr "Оптимизиране на избраното"
 
-#: __init__.py:72
+#: __init__.py:98
 msgid "Optimize and defragment drive"
-msgstr "Оптимизиране и дефрагментиране на диска"
+msgstr "Оптимизиране и дефрагментиране на диск"
 
-#: menu.py:230
+#: menu.py:425
 msgid "Optimizing drive, please wait..."
-msgstr "Дискът се оптимизира, моля изчакайте..."
+msgstr "Оптимизиране на диск, моля изчакайте..."
 
-#: __init__.py:88
+#: __init__.py:114
 msgid "Power Diagnostic (Battery Report)"
-msgstr "Диагностика на захранването (Отчет за батерията)"
+msgstr "Диагностика на захранването (доклад за батерията)"
 
-#: __init__.py:305
-msgid "Prefetch and recent files cleaned."
-msgstr "Prefetch и скорошните файлове са изчистени."
+#: __init__.py:381
+msgid "Prefetch and recent files cleaned. {count} items removed."
+msgstr "Почистени са Prefetch и скорошни файлове. Премахнати {count} елемента."
 
 #: kill_dialog.py:186
 msgid "Process terminated."
 msgstr "Процесът е прекратен."
 
-#: __init__.py:268
-msgid "RAM cache cleared."
-msgstr "Кешът на оперативната памет е изчистен."
+#: __init__.py:87
+msgid "Programs and Features"
+msgstr "Програми и функции"
 
-#: utils.py:383
-msgid "Recycle bin emptied."
-msgstr "Кошчето е изпразнено."
+#: __init__.py:338
+msgid "RAM cache is already clean."
+msgstr "RAM кешът вече е чист."
 
-#: utils.py:380
+#: utils.py:474
+msgid "Recycle bin emptied. {count} items removed."
+msgstr "Кошчето е изпразнено. Премахнати {count} елемента."
+
+#: utils.py:468
 msgid "Recycle bin is already empty."
 msgstr "Кошчето вече е празно."
 
-#: menu.py:262
+#: menu.py:458
 msgid "Refresh"
 msgstr "Опресняване"
 
-#: __init__.py:69
+#: __init__.py:95
 msgid "Regedit"
-msgstr "Regedit"
+msgstr "Редактор на регистър"
 
-#: __init__.py:64
+#: __init__.py:74
+msgid "Restart Windows Audio Service"
+msgstr "Рестартиране на Windows Audio Service"
+
+#: __init__.py:85
 msgid "Restart Windows Explorer"
 msgstr "Рестартиране на Windows Explorer"
 
-#: __init__.py:86
+#: __init__.py:82
+msgid "Restart to BIOS/UEFI Settings"
+msgstr "Рестартиране към BIOS/UEFI настройки"
+
+#: __init__.py:178
+msgid "Restarting Audio Services, please wait..."
+msgstr "Рестартиране на аудио услугите, моля изчакайте..."
+
+#: __init__.py:192
+msgid "Restarting to BIOS/UEFI, please wait..."
+msgstr "Рестартиране към BIOS/UEFI, моля изчакайте..."
+
+#: __init__.py:112
 msgid "Run Chkdsk on C:"
 msgstr "Изпълнение на Chkdsk на C:"
 
-#: __init__.py:68
+#: __init__.py:94
 msgid "Run Cmd"
 msgstr "Изпълнение на Cmd"
 
-#: __init__.py:84
+#: __init__.py:110
 msgid "Run DISM"
 msgstr "Изпълнение на DISM"
 
-#: __init__.py:87
+#: __init__.py:113
 msgid "Run Disk Cleanup"
-msgstr "Изпълнение на почистване на диска"
+msgstr "Изпълнение на почистване на диск"
 
-#: __init__.py:85
+#: __init__.py:111
 msgid "Run SFC Scannow"
 msgstr "Изпълнение на SFC Scannow"
 
-#: utils.py:603
+#: utils.py:694
 msgid "Running"
-msgstr "Изпълнява се"
+msgstr "Работи"
 
-#: __init__.py:174
+#: __init__.py:244
 msgid "SFC Scannow report will open when complete."
-msgstr "Отчетът от SFC Scannow ще се отвори при завършване."
+msgstr "Докладът от SFC Scannow ще се отвори при завършване."
 
-#: menu.py:222
+#: __init__.py:73
+#: menu.py:228
+msgid "Safely Remove USB"
+msgstr "Безопасно премахване на USB"
+
+#: menu.py:271
+msgid "Select a USB drive first."
+msgstr "Първо изберете USB устройство."
+
+#: menu.py:417
 msgid "Select a drive first."
 msgstr "Първо изберете диск."
 
-#: menu.py:298
-#: menu.py:310
+#: menu.py:494
+#: menu.py:506
 msgid "Select a service first."
 msgstr "Първо изберете услуга."
 
-#: menu.py:253
+#: menu.py:449
 msgid "Service Name"
-msgstr "Име на услугата"
+msgstr "Име на услуга"
 
-#: __init__.py:400
-msgid "Show Absolute Windows menu"
-msgstr "Показване на менюто на Absolute Windows"
+#: __init__.py:614
+msgid "Show Absolute Windows menu (single tap) or System Monitor (double tap)"
+msgstr "Показване на Absolute Windows меню (едно натискане) или Системен монитор (две натискания)"
 
-#: __init__.py:56
+#: __init__.py:71
 msgid "Show Wi-Fi Password"
-msgstr "Показване на паролата за Wi-Fi"
+msgstr "Показване на Wi-Fi парола"
 
-#: __init__.py:63
-#: menu.py:101
+#: __init__.py:88
+msgid "Sound setting"
+msgstr "Настройки на звука"
+
+#: __init__.py:90
+#: menu.py:295
 msgid "Startup Manager"
-msgstr "Мениджър на автозареждането"
+msgstr "Мениджър на стартиране"
 
-#: menu.py:255
+#: menu.py:451
 msgid "Startup Type"
-msgstr "Тип стартиране"
+msgstr "Тип на стартиране"
 
-#: menu.py:114
-#: menu.py:256
+#: menu.py:308
+#: menu.py:452
 msgid "Status"
-msgstr "Статус"
+msgstr "Състояние"
 
-#: utils.py:605
+#: utils.py:696
 msgid "Stopped"
-msgstr "Спряно"
+msgstr "Спрян"
 
-#: menu.py:235
+#: menu.py:277
+#: menu.py:430
 msgid "Success"
 msgstr "Успех"
 
-#: __init__.py:228
+#: menu.py:101
+msgid "System Monitor"
+msgstr "Системен монитор"
+
+#: __init__.py:63
+msgid "System Tray"
+msgstr "Системна област"
+
+#: __init__.py:298
 msgid "System cleanup started."
-msgstr "Системното почистване започна."
+msgstr "Почистването на системата започна."
 
-#: __init__.py:237
-msgid "Temporary files cleaned."
-msgstr "Временните файлове са изчистени."
+#: __init__.py:307
+msgid "Temporary files cleaned. {count} items removed."
+msgstr "Временните файлове са почистени. Премахнати {count} елемента."
 
-#: __init__.py:152
+#: __init__.py:222
 msgid "The Wi-Fi network '{ssid}' is open (no password)."
 msgstr "Wi-Fi мрежата '{ssid}' е отворена (без парола)."
 
-#: menu.py:113
+#: __init__.py:70
+msgid "Toggle Bluetooth"
+msgstr "Превключване на Bluetooth"
+
+#: menu.py:307
 msgid "Type"
 msgstr "Тип"
 
-#: __init__.py:138
+#: utils.py:89
+msgid "USB Drive"
+msgstr "USB устройство"
+
+#: menu.py:277
+msgid "USB drive {drive} ejected safely."
+msgstr "USB устройство {drive} беше безопасно извадено."
+
+#: sys_monitor.py:241
+msgid "Unknown"
+msgstr "Неизвестен"
+
+#: __init__.py:208
 msgid "User Account Control toggled."
-msgstr "Управлението на потребителските акаунти (UAC) бе превключено."
+msgstr "Контролът на потребителските акаунти беше превключен."
 
 #: cmd_tools.py:41
 msgid "User cancelled the UAC elevation prompt."
-msgstr "Потребителят отказа заявката за административни права (UAC)."
+msgstr "Потребителят отказа поканата за UAC повишаване на привилегиите."
 
-#: __init__.py:149
+#: sys_monitor.py:350
+msgid "Very Weak"
+msgstr "Много слаб"
+
+#: sys_monitor.py:348
+msgid "Weak"
+msgstr "Слаб"
+
+#: __init__.py:219
 msgid "Wi-Fi password for {ssid} copied to clipboard."
-msgstr "Паролата за Wi-Fi за {ssid} е копирана в клипборда."
+msgstr "Wi-Fi паролата за {ssid} е копирана в клипборда."
 
 #: kill_dialog.py:164
 msgid "Window closed."
 msgstr "Прозорецът е затворен."
 
-#: __init__.py:70
+#: __init__.py:181
+msgid "Windows Audio Services restarted successfully."
+msgstr "Windows Audio Services бяха рестартирани успешно."
+
+#: __init__.py:96
 msgid "Windows Defender"
 msgstr "Windows Defender"
 
-#: __init__.py:165
+#: __init__.py:235
 msgid "Windows Explorer has been restarted."
-msgstr "Windows Explorer бе рестартиран."
+msgstr "Windows Explorer беше рестартиран."
 
-#: __init__.py:246
-msgid "Windows Run history cleared."
-msgstr "Историята на Windows Run е изчистена."
+#: __init__.py:316
+msgid "Windows Run history cleared. {count} items removed."
+msgstr "Историята за изпълнение на Windows е изчистена. Премахнати {count} елемента."
+
+#: sys_monitor.py:430
+msgid "Windows Server {}"
+msgstr "Windows Server {}"
+
+#: sys_monitor.py:193
+#: sys_monitor.py:206
+msgid "{:.1F} MB/s down, {:.1F} MB/s up"
+msgstr "{:.1F} MB/s изтегляне, {:.1F} MB/s качване"
+
+#: sys_monitor.py:166
+#: sys_monitor.py:178
+msgid "{:.1F} MB/s read, {:.1F} MB/s write"
+msgstr "{:.1F} MB/s четене, {:.1F} MB/s запис"
+
+#: sys_monitor.py:96
+#: sys_monitor.py:108
+msgid "{:.2F} GB of {:.2F} GB used ({:.1F}%)"
+msgstr "{:.2F} GB от {:.2F} GB използвани ({:.1F}%)"
+
+#: sys_monitor.py:432
+msgid "{} ({} bit) build {}"
+msgstr "{} ({} бита) компилация {}"
+
+#: sys_monitor.py:271
+#: sys_monitor.py:299
+msgid "{} day{}"
+msgstr "{} ден{}"
+
+#: sys_monitor.py:273
+#: sys_monitor.py:301
+msgid "{} hour{}"
+msgstr "{} час{}"
+
+#: sys_monitor.py:275
+#: sys_monitor.py:303
+msgid "{} minute{}"
+msgstr "{} минута{}"
+
+#: sys_monitor.py:378
+#: sys_monitor.py:385
+msgid "{} process{}"
+msgstr "{} процес{}"
+
+#: sys_monitor.py:277
+#: sys_monitor.py:305
+msgid "{} second{}"
+msgstr "{} секунда{}"
+
+#: sys_monitor.py:133
+#: sys_monitor.py:149
+msgid "{} {:.1F} GB of {:.1F} GB used ({:.0F}%)"
+msgstr "{} {:.1F} GB от {:.1F} GB използвани ({:.0F}%)"
+
+#: sys_monitor.py:67
+#: sys_monitor.py:73
+msgid "{}%"
+msgstr "{}%"
+
+#: sys_monitor.py:242
+msgid "{}% ({})"
+msgstr "{}% ({})"

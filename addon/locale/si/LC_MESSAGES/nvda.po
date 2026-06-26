@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AbsoluteWindows 2026.5.3\n"
+"Project-Id-Version: AbsoluteWindows 2026.7.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-05-15 15:58+0700\n"
-"PO-Revision-Date: 2026-05-15 15:58+0700\n"
+"POT-Creation-Date: 2026-06-25 16:16+0700\n"
+"PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Sinhala\n"
 "Language: si\n"
@@ -11,3 +11,782 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
+
+#: kill_dialog.py:76
+msgid "&Kill Process of Selected Window"
+msgstr "තෝරාගත් කවුළුවේ ක්‍රියාවලිය &නවත්වන්න"
+
+#: sys_monitor.py:280
+#: sys_monitor.py:308
+msgid "<1 minute"
+msgstr "<1 මිනිත්තුව"
+
+#: sys_monitor.py:313
+#: sys_monitor.py:389
+#: sys_monitor.py:435
+msgid "??"
+msgstr "??"
+
+#: sys_monitor.py:77
+#: sys_monitor.py:112
+msgid "??%"
+msgstr "??%"
+
+#: menu.py:22
+msgid "AbsoluteWindows"
+msgstr "AbsoluteWindows"
+
+#: sys_monitor.py:400
+#: sys_monitor.py:415
+msgid "Activated"
+msgstr "සක්‍රිය කරන ලදි"
+
+#: utils.py:691
+msgid "Automatic"
+msgstr "ස්වයංක්‍රීය"
+
+#: __init__.py:280
+msgid "Battery report will open in your browser."
+msgstr "බැටරි වාර්තාව ඔබගේ බ්‍රවුසරයේ විවෘත වේ."
+
+#: utils.py:123
+msgid "Bluetooth turned off."
+msgstr "බ්ලූටූත් අක්‍රිය කරන ලදි."
+
+#: utils.py:124
+msgid "Bluetooth turned on."
+msgstr "බ්ලූටූත් සක්‍රිය කරන ලදි."
+
+#: kill_dialog.py:156
+msgid "Cannot kill system process: {}"
+msgstr "පද්ධති ක්‍රියාවලිය නැවැත්විය නොහැක: {}"
+
+#: kill_dialog.py:176
+msgid "Cannot open process. Access denied."
+msgstr "ක්‍රියාවලිය විවෘත කළ නොහැක. ප්‍රවේශය ප්‍රතික්ෂේප කරන ලදි."
+
+#: sys_monitor.py:236
+#: sys_monitor.py:237
+msgid "Charging"
+msgstr "ආරෝපණය වෙමින්"
+
+#: __init__.py:115
+msgid "Check Disk Status"
+msgstr "තැටි තත්වය පරීක්ෂා කරන්න"
+
+#: __init__.py:262
+msgid "Chkdsk report will open when complete."
+msgstr "සම්පූර්ණ වූ විට Chkdsk වාර්තාව විවෘත වේ."
+
+#: __init__.py:100
+msgid "Clean Prefetch & Recent"
+msgstr "Prefetch සහ මෑතකාලීන පිරිසිදු කරන්න"
+
+#: __init__.py:101
+msgid "Clean System files"
+msgstr "පද්ධති ගොනු පිරිසිදු කරන්න"
+
+#: __init__.py:102
+msgid "Clean Temp"
+msgstr "Temp පිරිසිදු කරන්න"
+
+#: __init__.py:103
+msgid "Clean Windows Run History"
+msgstr "Windows ධාවන ඉතිහාසය පිරිසිදු කරන්න"
+
+#: __init__.py:105
+msgid "Clear Ram"
+msgstr "RAM හිස් කරන්න"
+
+#: __init__.py:335
+msgid "Cleared {:.1f} MB of RAM cache."
+msgstr "RAM හැඹිලිය {:.1f} MB හිස් කරන ලදි."
+
+#: kill_dialog.py:77
+#: menu.py:242
+#: menu.py:315
+#: menu.py:393
+#: menu.py:459
+msgid "Close"
+msgstr "වසන්න"
+
+#: __init__.py:68
+msgid "Connect Internet"
+msgstr "අන්තර්ජාලයට සම්බන්ධ වන්න"
+
+#: sys_monitor.py:217
+msgid "Connected"
+msgstr "සම්බන්ධිත"
+
+#: __init__.py:86
+msgid "Control Panel"
+msgstr "පාලන පුවරුව"
+
+#: utils.py:125
+msgid "Could not find or change Bluetooth status."
+msgstr "බ්ලූටූත් තත්වය සොයා ගැනීමට හෝ වෙනස් කිරීමට නොහැකි විය."
+
+#: __init__.py:577
+msgid "Could not open Control Panel."
+msgstr "පාලන පුවරුව විවෘත කළ නොහැකි විය."
+
+#: __init__.py:449
+msgid "Could not open Disk Cleanup."
+msgstr "තැටි පිරිසිදු කිරීම විවෘත කළ නොහැකි විය."
+
+#: __init__.py:394
+msgid "Could not open Environment Variables."
+msgstr "පරිසර විචල්‍ය විවෘත කළ නොහැකි විය."
+
+#: __init__.py:470
+msgid "Could not open Folder Options."
+msgstr "ෆෝල්ඩර විකල්ප විවෘත කළ නොහැකි විය."
+
+#: __init__.py:410
+msgid "Could not open Malicious Software Removal Tool."
+msgstr "හානිකර මෘදුකාංග ඉවත් කිරීමේ මෙවලම විවෘත කළ නොහැකි විය."
+
+#: __init__.py:360
+msgid "Could not open Optimize Drives."
+msgstr "ධාවක ප්‍රශස්ත කිරීම විවෘත කළ නොහැකි විය."
+
+#: __init__.py:587
+msgid "Could not open Programs and Features."
+msgstr "වැඩසටහන් සහ විශේෂාංග විවෘත කළ නොහැකි විය."
+
+#: __init__.py:459
+msgid "Could not open Registry Editor."
+msgstr "ලේඛන සංස්කාරකය විවෘත කළ නොහැකි විය."
+
+#: __init__.py:374
+msgid "Could not open Services."
+msgstr "සේවා විවෘත කළ නොහැකි විය."
+
+#: __init__.py:597
+msgid "Could not open Sound Settings."
+msgstr "ශබ්ද සැකසුම් විවෘත කළ නොහැකි විය."
+
+#: __init__.py:567
+msgid "Could not open Windows Defender."
+msgstr "Windows Defender විවෘත කළ නොහැකි විය."
+
+#: kill_dialog.py:225
+msgid "Could not open kill dialog. See log for details."
+msgstr "නැවැත්වීමේ සංවාදය විවෘත කළ නොහැකි විය. විස්තර සඳහා ලොග් බලන්න."
+
+#: __init__.py:253
+msgid "DISM report will open when complete."
+msgstr "සම්පූර්ණ වූ විට DISM වාර්තාව විවෘත වේ."
+
+#: menu.py:314
+#: menu.py:456
+msgid "Disable Selected"
+msgstr "තෝරාගත් අක්‍රිය කරන්න"
+
+#: __init__.py:78
+msgid "Disable User Account Control"
+msgstr "පරිශීලක ගිණුම් පාලනය අක්‍රිය කරන්න"
+
+#: menu.py:366
+#: utils.py:687
+msgid "Disabled"
+msgstr "අක්‍රියයි"
+
+#: sys_monitor.py:239
+msgid "Discharging"
+msgstr "විසර්ජනය වෙමින්"
+
+#: __init__.py:66
+msgid "Disconnect Internet"
+msgstr "අන්තර්ජාලයෙන් විසන්ධි කරන්න"
+
+#: sys_monitor.py:220
+msgid "Disconnected"
+msgstr "විසන්ධි කරන ලදි"
+
+#: __init__.py:99
+msgid "Disk Cleanup"
+msgstr "තැටි පිරිසිදු කිරීම"
+
+#: __init__.py:271
+msgid "Disk Cleanup report will open when complete."
+msgstr "සම්පූර්ණ වූ විට තැටි පිරිසිදු කිරීමේ වාර්තාව විවෘත වේ."
+
+#: __init__.py:289
+msgid "Disk status report will open when complete."
+msgstr "සම්පූර්ණ වූ විට තැටි තත්ව වාර්තාව විවෘත වේ."
+
+#: menu.py:450
+msgid "Display Name"
+msgstr "පෙන්වන නම"
+
+#: menu.py:236
+msgid "Drive"
+msgstr "ධාවකය"
+
+#: menu.py:381
+msgid "Drive Optimize"
+msgstr "ධාවකය ප්‍රශස්ත කරන්න"
+
+#: menu.py:241
+msgid "Eject Selected"
+msgstr "තෝරාගත් ඉවත් කරන්න"
+
+#: __init__.py:104
+msgid "Empty Recycle Bin"
+msgstr "ප්‍රතිචක්‍රීකරණ බඳුන හිස් කරන්න"
+
+#: menu.py:313
+#: menu.py:457
+msgid "Enable Selected"
+msgstr "තෝරාගත් සක්‍රිය කරන්න"
+
+#: __init__.py:80
+msgid "Enable User Account Control"
+msgstr "පරිශීලක ගිණුම් පාලනය සක්‍රිය කරන්න"
+
+#: menu.py:351
+#: utils.py:542
+#: utils.py:559
+#: utils.py:576
+#: utils.py:589
+msgid "Enabled"
+msgstr "සක්‍රියයි"
+
+#: __init__.py:93
+msgid "Environment Variables"
+msgstr "පරිසර විචල්‍ය"
+
+#: menu.py:271
+#: menu.py:280
+#: menu.py:348
+#: menu.py:358
+#: menu.py:363
+#: menu.py:373
+#: menu.py:417
+#: menu.py:432
+#: menu.py:494
+#: menu.py:501
+#: menu.py:506
+#: menu.py:513
+msgid "Error"
+msgstr "දෝෂය"
+
+#: sys_monitor.py:342
+msgid "Excellent"
+msgstr "විශිෂ්ටයි"
+
+#: cmd_tools.py:46
+msgid "Exception occurred: {error}"
+msgstr "ව්‍යතිරේකයක් සිදු විය: {error}"
+
+#: __init__.py:310
+msgid "Failed to clean temporary files."
+msgstr "තාවකාලික ගොනු පිරිසිදු කිරීමට අසමත් විය."
+
+#: __init__.py:384
+msgid "Failed to clean: {errorMsg}"
+msgstr "පිරිසිදු කිරීමට අසමත් විය: {errorMsg}"
+
+#: __init__.py:341
+msgid "Failed to clear RAM cache."
+msgstr "RAM හැඹිලිය හිස් කිරීමට අසමත් විය."
+
+#: __init__.py:319
+msgid "Failed to clear Run history."
+msgstr "ධාවන ඉතිහාසය හිස් කිරීමට අසමත් විය."
+
+#: kill_dialog.py:170
+msgid "Failed to close window."
+msgstr "කවුළුව වැසීමට අසමත් විය."
+
+#: __init__.py:164
+msgid "Failed to connect internet."
+msgstr "අන්තර්ජාලයට සම්බන්ධ වීමට අසමත් විය."
+
+#: menu.py:373
+msgid "Failed to disable item."
+msgstr "අයිතමය අක්‍රිය කිරීමට අසමත් විය."
+
+#: menu.py:501
+msgid "Failed to disable service: {}"
+msgstr "සේවාව අක්‍රිය කිරීමට අසමත් විය: {}"
+
+#: __init__.py:148
+msgid "Failed to disconnect internet."
+msgstr "අන්තර්ජාලයෙන් විසන්ධි වීමට අසමත් විය."
+
+#: menu.py:280
+msgid "Failed to eject {drive}."
+msgstr "{drive} ඉවත් කිරීමට අසමත් විය."
+
+#: utils.py:477
+#: utils.py:480
+msgid "Failed to empty recycle bin."
+msgstr "ප්‍රතිචක්‍රීකරණ බඳුන හිස් කිරීමට අසමත් විය."
+
+#: menu.py:358
+msgid "Failed to enable item."
+msgstr "අයිතමය සක්‍රිය කිරීමට අසමත් විය."
+
+#: menu.py:513
+msgid "Failed to enable service: {}"
+msgstr "සේවාව සක්‍රිය කිරීමට අසමත් විය: {}"
+
+#: __init__.py:184
+msgid "Failed to restart Windows Audio Services."
+msgstr "Windows ශ්‍රව්‍ය සේවා නැවත ආරම්භ කිරීමට අසමත් විය."
+
+#: __init__.py:238
+msgid "Failed to restart Windows Explorer."
+msgstr "Windows Explorer නැවත ආරම්භ කිරීමට අසමත් විය."
+
+#: __init__.py:198
+msgid "Failed to restart to BIOS. Your system may not support this feature via Windows."
+msgstr "BIOS වෙත නැවත ආරම්භ කිරීමට අසමත් විය. ඔබගේ පද්ධතිය Windows හරහා මෙම විශේෂාංගය සහාය නොදැක්විය හැක."
+
+#: __init__.py:301
+msgid "Failed to start system cleanup."
+msgstr "පද්ධති පිරිසිදු කිරීම ආරම්භ කිරීමට අසමත් විය."
+
+#: kill_dialog.py:193
+msgid "Failed to terminate process. Insufficient privileges."
+msgstr "ක්‍රියාවලිය අවසන් කිරීමට අසමත් විය. ප්‍රමාණවත් වරප්‍රසාද නොමැත."
+
+#: utils.py:128
+msgid "Failed to toggle Bluetooth."
+msgstr "බ්ලූටූත් මාරු කිරීමට අසමත් විය."
+
+#: __init__.py:211
+msgid "Failed to toggle UAC."
+msgstr "UAC මාරු කිරීමට අසමත් විය."
+
+#: sys_monitor.py:346
+msgid "Fair"
+msgstr "සාධාරණ"
+
+#: __init__.py:475
+msgid "File Explorer Options"
+msgstr "ගොනු ගවේෂක විකල්ප"
+
+#: __init__.py:89
+msgid "Folder Option"
+msgstr "ෆෝල්ඩර විකල්ප"
+
+#: __init__.py:475
+msgid "Folder Options"
+msgstr "ෆෝල්ඩර විකල්ප"
+
+#: sys_monitor.py:238
+msgid "Fully Charged"
+msgstr "සම්පූර්ණයෙන් ආරෝපණය"
+
+#: sys_monitor.py:344
+msgid "Good"
+msgstr "හොඳයි"
+
+#: menu.py:352
+#: menu.py:367
+#: menu.py:425
+msgid "Info"
+msgstr "තොරතුරු"
+
+#: __init__.py:161
+msgid "Internet connected."
+msgstr "අන්තර්ජාලය සම්බන්ධ කර ඇත."
+
+#: __init__.py:145
+msgid "Internet disconnected."
+msgstr "අන්තර්ජාලය විසන්ධි කර ඇත."
+
+#: menu.py:367
+msgid "Item already disabled."
+msgstr "අයිතමය දැනටමත් අක්‍රිය කර ඇත."
+
+#: menu.py:352
+msgid "Item already enabled."
+msgstr "අයිතමය දැනටමත් සක්‍රිය කර ඇත."
+
+#: __init__.py:84
+#: __init__.py:630
+#: kill_dialog.py:56
+msgid "Kill Not Responding Apps"
+msgstr "ප්‍රතිචාර නොදක්වන යෙදුම් නවත්වන්න"
+
+#: kill_dialog.py:215
+msgid "Kill Process"
+msgstr "ක්‍රියාවලිය නවත්වන්න"
+
+#: menu.py:237
+msgid "Label"
+msgstr "ලේබලය"
+
+#: menu.py:119
+msgid "Loading system information..."
+msgstr "පද්ධති තොරතුරු පූරණය වෙමින්..."
+
+#: menu.py:309
+msgid "Location"
+msgstr "ස්ථානය"
+
+#: sys_monitor.py:240
+msgid "Low"
+msgstr "අඩු"
+
+#: __init__.py:92
+#: menu.py:440
+msgid "Manage Services"
+msgstr "සේවා කළමනාකරණය කරන්න"
+
+#: utils.py:689
+msgid "Manual"
+msgstr "අතින්"
+
+#: __init__.py:97
+msgid "Microsoft Windows Malicious Software Removal Tool"
+msgstr "Microsoft Windows හානිකර මෘදුකාංග ඉවත් කිරීමේ මෙවලම"
+
+#: menu.py:306
+msgid "Name"
+msgstr "නම"
+
+#: menu.py:266
+msgid "No USB drives found"
+msgstr "USB ධාවක හමු නොවිණි"
+
+#: __init__.py:225
+msgid "No Wi-Fi network is currently connected."
+msgstr "දැනට Wi-Fi ජාලයක් සම්බන්ධ කර නොමැත."
+
+#: __init__.py:138
+msgid "No active network adapter found."
+msgstr "ක්‍රියාකාරී ජාල ඇඩැප්ටරයක් හමු නොවිණි."
+
+#: menu.py:156
+msgid "No data available"
+msgstr "දත්ත නොමැත"
+
+#: __init__.py:155
+msgid "No disabled network adapter found."
+msgstr "අක්‍රිය කළ ජාල ඇඩැප්ටරයක් හමු නොවිණි."
+
+#: menu.py:348
+#: menu.py:363
+msgid "No item selected."
+msgstr "අයිතමයක් තෝරා නොමැත."
+
+#: kill_dialog.py:149
+msgid "No window selected."
+msgstr "කවුළුවක් තෝරා නොමැත."
+
+#: sys_monitor.py:402
+#: sys_monitor.py:417
+msgid "Not Activated"
+msgstr "සක්‍රිය කර නැත"
+
+#: __init__.py:91
+msgid "Open Services"
+msgstr "සේවා විවෘත කරන්න"
+
+#: menu.py:430
+msgid "Optimization completed."
+msgstr "ප්‍රශස්තකරණය සම්පූර්ණ විය."
+
+#: menu.py:432
+msgid "Optimization failed: {}"
+msgstr "ප්‍රශස්තකරණය අසමත් විය: {}"
+
+#: menu.py:392
+msgid "Optimize Selected"
+msgstr "තෝරාගත් ප්‍රශස්ත කරන්න"
+
+#: __init__.py:98
+msgid "Optimize and defragment drive"
+msgstr "ධාවකය ප්‍රශස්ත කර ඛණ්ඩනය කරන්න"
+
+#: menu.py:425
+msgid "Optimizing drive, please wait..."
+msgstr "ධාවකය ප්‍රශස්ත වෙමින් පවතී, කරුණාකර රැඳී සිටින්න..."
+
+#: __init__.py:114
+msgid "Power Diagnostic (Battery Report)"
+msgstr "බල රෝග විනිශ්චය (බැටරි වාර්තාව)"
+
+#: __init__.py:381
+msgid "Prefetch and recent files cleaned. {count} items removed."
+msgstr "Prefetch සහ මෑතකාලීන ගොනු පිරිසිදු කරන ලදි. {count} අයිතම ඉවත් කරන ලදි."
+
+#: kill_dialog.py:186
+msgid "Process terminated."
+msgstr "ක්‍රියාවලිය අවසන් කරන ලදි."
+
+#: __init__.py:87
+msgid "Programs and Features"
+msgstr "වැඩසටහන් සහ විශේෂාංග"
+
+#: __init__.py:338
+msgid "RAM cache is already clean."
+msgstr "RAM හැඹිලිය දැනටමත් පිරිසිදුයි."
+
+#: utils.py:474
+msgid "Recycle bin emptied. {count} items removed."
+msgstr "ප්‍රතිචක්‍රීකරණ බඳුන හිස් කරන ලදි. {count} අයිතම ඉවත් කරන ලදි."
+
+#: utils.py:468
+msgid "Recycle bin is already empty."
+msgstr "ප්‍රතිචක්‍රීකරණ බඳුන දැනටමත් හිස්ව ඇත."
+
+#: menu.py:458
+msgid "Refresh"
+msgstr "නැවත පූරණය කරන්න"
+
+#: __init__.py:95
+msgid "Regedit"
+msgstr "ලේඛන සංස්කාරකය"
+
+#: __init__.py:74
+msgid "Restart Windows Audio Service"
+msgstr "Windows ශ්‍රව්‍ය සේවාව නැවත ආරම්භ කරන්න"
+
+#: __init__.py:85
+msgid "Restart Windows Explorer"
+msgstr "Windows Explorer නැවත ආරම්භ කරන්න"
+
+#: __init__.py:82
+msgid "Restart to BIOS/UEFI Settings"
+msgstr "BIOS/UEFI සැකසුම් වෙත නැවත ආරම්භ කරන්න"
+
+#: __init__.py:178
+msgid "Restarting Audio Services, please wait..."
+msgstr "ශ්‍රව්‍ය සේවා නැවත ආරම්භ වෙමින්, කරුණාකර රැඳී සිටින්න..."
+
+#: __init__.py:192
+msgid "Restarting to BIOS/UEFI, please wait..."
+msgstr "BIOS/UEFI වෙත නැවත ආරම්භ වෙමින්, කරුණාකර රැඳී සිටින්න..."
+
+#: __init__.py:112
+msgid "Run Chkdsk on C:"
+msgstr "C: මත Chkdsk ධාවනය කරන්න"
+
+#: __init__.py:94
+msgid "Run Cmd"
+msgstr "Cmd ධාවනය කරන්න"
+
+#: __init__.py:110
+msgid "Run DISM"
+msgstr "DISM ධාවනය කරන්න"
+
+#: __init__.py:113
+msgid "Run Disk Cleanup"
+msgstr "තැටි පිරිසිදු කිරීම ධාවනය කරන්න"
+
+#: __init__.py:111
+msgid "Run SFC Scannow"
+msgstr "SFC Scannow ධාවනය කරන්න"
+
+#: utils.py:694
+msgid "Running"
+msgstr "ධාවනය වෙමින්"
+
+#: __init__.py:244
+msgid "SFC Scannow report will open when complete."
+msgstr "සම්පූර්ණ වූ විට SFC Scannow වාර්තාව විවෘත වේ."
+
+#: __init__.py:73
+#: menu.py:228
+msgid "Safely Remove USB"
+msgstr "USB ආරක්ෂිතව ඉවත් කරන්න"
+
+#: menu.py:271
+msgid "Select a USB drive first."
+msgstr "මුලින්ම USB ධාවකයක් තෝරන්න."
+
+#: menu.py:417
+msgid "Select a drive first."
+msgstr "මුලින්ම ධාවකයක් තෝරන්න."
+
+#: menu.py:494
+#: menu.py:506
+msgid "Select a service first."
+msgstr "මුලින්ම සේවාවක් තෝරන්න."
+
+#: menu.py:449
+msgid "Service Name"
+msgstr "සේවා නම"
+
+#: __init__.py:614
+msgid "Show Absolute Windows menu (single tap) or System Monitor (double tap)"
+msgstr "Absolute Windows මෙනුව පෙන්වන්න (තනි තට්ටුව) හෝ පද්ධති මොනිටරය (ද්විත්ව තට්ටුව)"
+
+#: __init__.py:71
+msgid "Show Wi-Fi Password"
+msgstr "Wi-Fi මුරපදය පෙන්වන්න"
+
+#: __init__.py:88
+msgid "Sound setting"
+msgstr "ශබ්ද සැකසුම"
+
+#: __init__.py:90
+#: menu.py:295
+msgid "Startup Manager"
+msgstr "ආරම්භක කළමනාකරු"
+
+#: menu.py:451
+msgid "Startup Type"
+msgstr "ආරම්භක වර්ගය"
+
+#: menu.py:308
+#: menu.py:452
+msgid "Status"
+msgstr "තත්වය"
+
+#: utils.py:696
+msgid "Stopped"
+msgstr "නතර කරන ලදි"
+
+#: menu.py:277
+#: menu.py:430
+msgid "Success"
+msgstr "සාර්ථකයි"
+
+#: menu.py:101
+msgid "System Monitor"
+msgstr "පද්ධති මොනිටරය"
+
+#: __init__.py:63
+msgid "System Tray"
+msgstr "පද්ධති තැටිය"
+
+#: __init__.py:298
+msgid "System cleanup started."
+msgstr "පද්ධති පිරිසිදු කිරීම ආරම්භ කරන ලදි."
+
+#: __init__.py:307
+msgid "Temporary files cleaned. {count} items removed."
+msgstr "තාවකාලික ගොනු පිරිසිදු කරන ලදි. {count} අයිතම ඉවත් කරන ලදි."
+
+#: __init__.py:222
+msgid "The Wi-Fi network '{ssid}' is open (no password)."
+msgstr "Wi-Fi ජාලය '{ssid}' විවෘතයි (මුරපදයක් නොමැත)."
+
+#: __init__.py:70
+msgid "Toggle Bluetooth"
+msgstr "බ්ලූටූත් මාරු කරන්න"
+
+#: menu.py:307
+msgid "Type"
+msgstr "වර්ගය"
+
+#: utils.py:89
+msgid "USB Drive"
+msgstr "USB ධාවකය"
+
+#: menu.py:277
+msgid "USB drive {drive} ejected safely."
+msgstr "USB ධාවකය {drive} ආරක්ෂිතව ඉවත් කරන ලදි."
+
+#: sys_monitor.py:241
+msgid "Unknown"
+msgstr "නොදන්නා"
+
+#: __init__.py:208
+msgid "User Account Control toggled."
+msgstr "පරිශීලක ගිණුම් පාලනය මාරු කරන ලදි."
+
+#: cmd_tools.py:41
+msgid "User cancelled the UAC elevation prompt."
+msgstr "පරිශීලක UAC උන්නති විමසුම අවලංගු කරන ලදි."
+
+#: sys_monitor.py:350
+msgid "Very Weak"
+msgstr "ඉතා දුර්වලයි"
+
+#: sys_monitor.py:348
+msgid "Weak"
+msgstr "දුර්වලයි"
+
+#: __init__.py:219
+msgid "Wi-Fi password for {ssid} copied to clipboard."
+msgstr "{ssid} සඳහා Wi-Fi මුරපදය ක්ලිප්බෝඩ් වෙත පිටපත් කරන ලදි."
+
+#: kill_dialog.py:164
+msgid "Window closed."
+msgstr "කවුළුව වසා ඇත."
+
+#: __init__.py:181
+msgid "Windows Audio Services restarted successfully."
+msgstr "Windows ශ්‍රව්‍ය සේවා සාර්ථකව නැවත ආරම්භ කරන ලදි."
+
+#: __init__.py:96
+msgid "Windows Defender"
+msgstr "Windows Defender"
+
+#: __init__.py:235
+msgid "Windows Explorer has been restarted."
+msgstr "Windows Explorer නැවත ආරම්භ කරන ලදි."
+
+#: __init__.py:316
+msgid "Windows Run history cleared. {count} items removed."
+msgstr "Windows ධාවන ඉතිහාසය හිස් කරන ලදි. {count} අයිතම ඉවත් කරන ලදි."
+
+#: sys_monitor.py:430
+msgid "Windows Server {}"
+msgstr "Windows Server {}"
+
+#: sys_monitor.py:193
+#: sys_monitor.py:206
+msgid "{:.1F} MB/s down, {:.1F} MB/s up"
+msgstr "{:.1F} MB/s බාගත, {:.1F} MB/s උඩුගත"
+
+#: sys_monitor.py:166
+#: sys_monitor.py:178
+msgid "{:.1F} MB/s read, {:.1F} MB/s write"
+msgstr "{:.1F} MB/s කියවීම, {:.1F} MB/s ලිවීම"
+
+#: sys_monitor.py:96
+#: sys_monitor.py:108
+msgid "{:.2F} GB of {:.2F} GB used ({:.1F}%)"
+msgstr "{:.2F} GB න් {:.2F} GB භාවිතා කර ඇත ({:.1F}%)"
+
+#: sys_monitor.py:432
+msgid "{} ({} bit) build {}"
+msgstr "{} ({} බිට්) ගොඩනැගීම {}"
+
+#: sys_monitor.py:271
+#: sys_monitor.py:299
+msgid "{} day{}"
+msgstr "{} දින{}"
+
+#: sys_monitor.py:273
+#: sys_monitor.py:301
+msgid "{} hour{}"
+msgstr "{} පැය{}"
+
+#: sys_monitor.py:275
+#: sys_monitor.py:303
+msgid "{} minute{}"
+msgstr "{} මිනිත්තු{}"
+
+#: sys_monitor.py:378
+#: sys_monitor.py:385
+msgid "{} process{}"
+msgstr "{} ක්‍රියාවලි{}"
+
+#: sys_monitor.py:277
+#: sys_monitor.py:305
+msgid "{} second{}"
+msgstr "{} තත්පර{}"
+
+#: sys_monitor.py:133
+#: sys_monitor.py:149
+msgid "{} {:.1F} GB of {:.1F} GB used ({:.0F}%)"
+msgstr "{} {:.1F} GB න් {:.1F} GB භාවිතා කර ඇත ({:.0F}%)"
+
+#: sys_monitor.py:67
+#: sys_monitor.py:73
+msgid "{}%"
+msgstr "{}%"
+
+#: sys_monitor.py:242
+msgid "{}% ({})"
+msgstr "{}% ({})"

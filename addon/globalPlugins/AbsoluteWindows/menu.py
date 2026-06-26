@@ -1,19 +1,25 @@
 # menu.py
+
 import wx
 import addonHandler
 import tones
 import os
 import threading
+import sys
+import core
 from logHandler import log
+import ui
 from . import utils
+from . import sys_monitor
 
 addonHandler.initTranslation()
 
 _instance = None
+_monitor_instance = None
 
 class AbsoluteWindowsMenu(wx.Frame):
 	def __init__(self, itemsFunc, configPath):
-		super().__init__(None, title=("AbsoluteWindows"), size=(400, 300),
+		super().__init__(None, title=_("AbsoluteWindows"), size=(400, 300),
 						 style=wx.DEFAULT_FRAME_STYLE | wx.STAY_ON_TOP)
 		self.itemsFunc = itemsFunc
 		self.configPath = configPath
@@ -89,6 +95,112 @@ class AbsoluteWindowsMenu(wx.Frame):
 		_instance = None
 		self.Destroy()
 
+
+class SystemMonitorMenu(wx.Frame):
+	def __init__(self, itemsFunc, configPath):
+		super().__init__(None, title=_("System Monitor"), size=(500, 450),
+						 style=wx.DEFAULT_FRAME_STYLE | wx.STAY_ON_TOP)
+		self.itemsFunc = itemsFunc
+		self.configPath = configPath
+		self.currentItems = []
+		self.updateScheduled = False
+		self._firstLoad = True
+
+		panel = wx.Panel(self)
+		vbox = wx.BoxSizer(wx.VERTICAL)
+
+		self.listBox = wx.ListBox(panel, style=wx.LB_SINGLE)
+		vbox.Add(self.listBox, 1, wx.EXPAND | wx.ALL, 10)
+		panel.SetSizer(vbox)
+
+		self.closeTimer = wx.Timer(self)
+		self.Bind(wx.EVT_TIMER, self.onTimeout, self.closeTimer)
+
+		self.listBox.Append(_("Loading system information..."))
+		self.closeTimer.Start(30000)
+
+		self.listBox.Bind(wx.EVT_LISTBOX_DCLICK, self.onSelect)
+		self.listBox.Bind(wx.EVT_CHAR_HOOK, self.onKey)
+
+		self.Bind(wx.EVT_CLOSE, self.onClose)
+		self.Bind(wx.EVT_ACTIVATE, self.onActivate)
+
+		self.Show()
+		self.Raise()
+		self.RequestUserAttention()
+
+		core.callLater(50, self.scheduleRefresh)
+
+	def scheduleRefresh(self):
+		if self.updateScheduled:
+			return
+		self.updateScheduled = True
+		sys_monitor.get_monitor_items_async(self.onDataReceived)
+
+	def onDataReceived(self, items):
+		self.updateScheduled = False
+		if not self or not self.IsShown():
+			return
+		try:
+			self.currentItems = items
+			self.listBox.Clear()
+			if items:
+				for label, _ in items:
+					self.listBox.Append(label)
+				if self.listBox.GetCount() > 0:
+					self.listBox.SetSelection(0)
+					if self._firstLoad and items:
+						self._firstLoad = False
+						ui.message(items[0][0])
+			else:
+				self.listBox.Append(_("No data available"))
+			self.listBox.SetFocus()
+			self.closeTimer.Start(30000)
+		except Exception as e:
+			log.error("Error updating monitor display: {}".format(e))
+
+	def refreshDisplay(self):
+		if self.updateScheduled:
+			return
+		self.scheduleRefresh()
+
+	def onActivate(self, event):
+		if event.GetActive():
+			self.refreshDisplay()
+		event.Skip()
+
+	def onSelect(self, event):
+		self.closeTimer.Start(30000)
+		idx = self.listBox.GetSelection()
+		if idx != wx.NOT_FOUND and idx < len(self.currentItems):
+			callback = self.currentItems[idx][1]
+			if callback is not None and callable(callback):
+				callback(self)
+
+	def onKey(self, event):
+		self.closeTimer.Start(30000)
+		key = event.GetKeyCode()
+		if key == wx.WXK_RETURN:
+			idx = self.listBox.GetSelection()
+			if idx != wx.NOT_FOUND and idx < len(self.currentItems):
+				callback = self.currentItems[idx][1]
+				if callback is not None and callable(callback):
+					callback(self)
+		elif key == wx.WXK_ESCAPE:
+			self.Close()
+		else:
+			event.Skip()
+
+	def onTimeout(self, event):
+		tones.beep(100, 100)
+		self.Close()
+
+	def onClose(self, event):
+		global _monitor_instance
+		_monitor_instance = None
+		self.Destroy()
+
+
 def showAbsoluteWindowsMenu(itemsFunc, configPath):
 	global _instance
 	if _instance:
@@ -98,6 +210,85 @@ def showAbsoluteWindowsMenu(itemsFunc, configPath):
 		_instance.timer.Start(15000)
 	else:
 		_instance = AbsoluteWindowsMenu(itemsFunc, configPath)
+
+
+def showSystemMonitorMenu(itemsFunc, configPath):
+	global _monitor_instance
+	if _monitor_instance:
+		_monitor_instance.Raise()
+		_monitor_instance.RequestUserAttention()
+		_monitor_instance.refreshDisplay()
+		_monitor_instance.closeTimer.Start(30000)
+	else:
+		_monitor_instance = SystemMonitorMenu(itemsFunc, configPath)
+
+
+class UsbEjectDialog(wx.Dialog):
+	def __init__(self, configDir):
+		super().__init__(None, title=_("Safely Remove USB"), size=(500, 300),
+						 style=wx.DEFAULT_DIALOG_STYLE | wx.RESIZE_BORDER)
+		self.usbItems = []
+
+		panel = wx.Panel(self)
+		sizer = wx.BoxSizer(wx.VERTICAL)
+
+		self.listCtrl = wx.ListCtrl(panel, style=wx.LC_REPORT | wx.LC_SINGLE_SEL)
+		self.listCtrl.AppendColumn(_("Drive"), width=100)
+		self.listCtrl.AppendColumn(_("Label"), width=350)
+		sizer.Add(self.listCtrl, 1, wx.EXPAND | wx.ALL, 5)
+
+		btnSizer = wx.BoxSizer(wx.HORIZONTAL)
+		self.ejectBtn = wx.Button(panel, label=_("Eject Selected"))
+		self.closeBtn = wx.Button(panel, label=_("Close"))
+		btnSizer.Add(self.ejectBtn, 0, wx.ALL, 5)
+		btnSizer.Add(self.closeBtn, 0, wx.ALL, 5)
+		sizer.Add(btnSizer, 0, wx.ALIGN_CENTER)
+
+		panel.SetSizer(sizer)
+
+		self.Bind(wx.EVT_BUTTON, self.onEject, self.ejectBtn)
+		self.Bind(wx.EVT_BUTTON, self.onClose, self.closeBtn)
+		self.Bind(wx.EVT_CLOSE, self.onClose)
+		self.Bind(wx.EVT_CHAR_HOOK, self.onCharHook)
+
+		self.loadUsbDrives()
+
+		self.Centre()
+		self.Show()
+
+	def loadUsbDrives(self):
+		self.usbItems = utils.get_usb_drives()
+		self.listCtrl.DeleteAllItems()
+		for idx, item in enumerate(self.usbItems):
+			self.listCtrl.InsertItem(idx, item['letter'])
+			self.listCtrl.SetItem(idx, 1, item['name'])
+		if not self.usbItems:
+			self.listCtrl.InsertItem(0, _("No USB drives found"))
+
+	def onEject(self, event):
+		idx = self.listCtrl.GetFirstSelected()
+		if idx == -1 or not self.usbItems:
+			wx.MessageBox(_("Select a USB drive first."), _("Error"), wx.OK | wx.ICON_ERROR)
+			return
+		item = self.usbItems[idx]
+		self.ejectBtn.Disable()
+		success = utils.eject_usb(item['letter'])
+		if success:
+			wx.MessageBox(_("USB drive {drive} ejected safely.").format(drive=item['letter']), _("Success"), wx.OK | wx.ICON_INFORMATION)
+			self.loadUsbDrives()
+		else:
+			wx.MessageBox(_("Failed to eject {drive}.").format(drive=item['letter']), _("Error"), wx.OK | wx.ICON_ERROR)
+		self.ejectBtn.Enable()
+
+	def onClose(self, event):
+		self.Destroy()
+
+	def onCharHook(self, event):
+		if event.GetKeyCode() == wx.WXK_ESCAPE:
+			self.Close()
+		else:
+			event.Skip()
+
 
 class StartupManagerDialog(wx.Dialog):
 	def __init__(self, configDir):
@@ -184,6 +375,7 @@ class StartupManagerDialog(wx.Dialog):
 	def onClose(self, event):
 		self.Destroy()
 
+
 class DriveOptimizeDialog(wx.Dialog):
 	def __init__(self, configDir):
 		super().__init__(None, title=_("Drive Optimize"), size=(500, 300),
@@ -241,6 +433,7 @@ class DriveOptimizeDialog(wx.Dialog):
 
 	def onClose(self, event):
 		self.Destroy()
+
 
 class ManageServicesDialog(wx.Dialog):
 	def __init__(self, configDir):

@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AbsoluteWindows 2026.5.3\n"
+"Project-Id-Version: AbsoluteWindows 2026.7.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-05-15 15:58+0700\n"
-"PO-Revision-Date: 2026-05-15 15:58+0700\n"
+"POT-Creation-Date: 2026-06-25 16:16+0700\n"
+"PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt_BR\n"
@@ -11,3 +11,782 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
+
+#: kill_dialog.py:76
+msgid "&Kill Process of Selected Window"
+msgstr "&Matar processo da janela selecionada"
+
+#: sys_monitor.py:280
+#: sys_monitor.py:308
+msgid "<1 minute"
+msgstr "<1 minuto"
+
+#: sys_monitor.py:313
+#: sys_monitor.py:389
+#: sys_monitor.py:435
+msgid "??"
+msgstr "??"
+
+#: sys_monitor.py:77
+#: sys_monitor.py:112
+msgid "??%"
+msgstr "??%"
+
+#: menu.py:22
+msgid "AbsoluteWindows"
+msgstr "AbsoluteWindows"
+
+#: sys_monitor.py:400
+#: sys_monitor.py:415
+msgid "Activated"
+msgstr "Ativado"
+
+#: utils.py:691
+msgid "Automatic"
+msgstr "Automático"
+
+#: __init__.py:280
+msgid "Battery report will open in your browser."
+msgstr "O relatório da bateria será aberto no seu navegador."
+
+#: utils.py:123
+msgid "Bluetooth turned off."
+msgstr "Bluetooth desligado."
+
+#: utils.py:124
+msgid "Bluetooth turned on."
+msgstr "Bluetooth ligado."
+
+#: kill_dialog.py:156
+msgid "Cannot kill system process: {}"
+msgstr "Não é possível matar o processo do sistema: {}"
+
+#: kill_dialog.py:176
+msgid "Cannot open process. Access denied."
+msgstr "Não é possível abrir o processo. Acesso negado."
+
+#: sys_monitor.py:236
+#: sys_monitor.py:237
+msgid "Charging"
+msgstr "Carregando"
+
+#: __init__.py:115
+msgid "Check Disk Status"
+msgstr "Verificar status do disco"
+
+#: __init__.py:262
+msgid "Chkdsk report will open when complete."
+msgstr "O relatório do Chkdsk será aberto quando concluído."
+
+#: __init__.py:100
+msgid "Clean Prefetch & Recent"
+msgstr "Limpar Prefetch e Recentes"
+
+#: __init__.py:101
+msgid "Clean System files"
+msgstr "Limpar arquivos do sistema"
+
+#: __init__.py:102
+msgid "Clean Temp"
+msgstr "Limpar Temp"
+
+#: __init__.py:103
+msgid "Clean Windows Run History"
+msgstr "Limpar histórico de Executar do Windows"
+
+#: __init__.py:105
+msgid "Clear Ram"
+msgstr "Limpar RAM"
+
+#: __init__.py:335
+msgid "Cleared {:.1f} MB of RAM cache."
+msgstr "{:.1f} MB de cache RAM limpos."
+
+#: kill_dialog.py:77
+#: menu.py:242
+#: menu.py:315
+#: menu.py:393
+#: menu.py:459
+msgid "Close"
+msgstr "Fechar"
+
+#: __init__.py:68
+msgid "Connect Internet"
+msgstr "Conectar à Internet"
+
+#: sys_monitor.py:217
+msgid "Connected"
+msgstr "Conectado"
+
+#: __init__.py:86
+msgid "Control Panel"
+msgstr "Painel de controle"
+
+#: utils.py:125
+msgid "Could not find or change Bluetooth status."
+msgstr "Não foi possível encontrar ou alterar o status do Bluetooth."
+
+#: __init__.py:577
+msgid "Could not open Control Panel."
+msgstr "Não foi possível abrir o Painel de controle."
+
+#: __init__.py:449
+msgid "Could not open Disk Cleanup."
+msgstr "Não foi possível abrir a Limpeza de disco."
+
+#: __init__.py:394
+msgid "Could not open Environment Variables."
+msgstr "Não foi possível abrir as Variáveis de ambiente."
+
+#: __init__.py:470
+msgid "Could not open Folder Options."
+msgstr "Não foi possível abrir as Opções de pasta."
+
+#: __init__.py:410
+msgid "Could not open Malicious Software Removal Tool."
+msgstr "Não foi possível abrir a Ferramenta de remoção de software malicioso."
+
+#: __init__.py:360
+msgid "Could not open Optimize Drives."
+msgstr "Não foi possível abrir Otimizar unidades."
+
+#: __init__.py:587
+msgid "Could not open Programs and Features."
+msgstr "Não foi possível abrir Programas e recursos."
+
+#: __init__.py:459
+msgid "Could not open Registry Editor."
+msgstr "Não foi possível abrir o Editor do registro."
+
+#: __init__.py:374
+msgid "Could not open Services."
+msgstr "Não foi possível abrir os Serviços."
+
+#: __init__.py:597
+msgid "Could not open Sound Settings."
+msgstr "Não foi possível abrir as Configurações de som."
+
+#: __init__.py:567
+msgid "Could not open Windows Defender."
+msgstr "Não foi possível abrir o Windows Defender."
+
+#: kill_dialog.py:225
+msgid "Could not open kill dialog. See log for details."
+msgstr "Não foi possível abrir o diálogo de matar. Consulte o log para obter detalhes."
+
+#: __init__.py:253
+msgid "DISM report will open when complete."
+msgstr "O relatório do DISM será aberto quando concluído."
+
+#: menu.py:314
+#: menu.py:456
+msgid "Disable Selected"
+msgstr "Desativar selecionados"
+
+#: __init__.py:78
+msgid "Disable User Account Control"
+msgstr "Desativar Controle de conta de usuário"
+
+#: menu.py:366
+#: utils.py:687
+msgid "Disabled"
+msgstr "Desativado"
+
+#: sys_monitor.py:239
+msgid "Discharging"
+msgstr "Descarregando"
+
+#: __init__.py:66
+msgid "Disconnect Internet"
+msgstr "Desconectar da Internet"
+
+#: sys_monitor.py:220
+msgid "Disconnected"
+msgstr "Desconectado"
+
+#: __init__.py:99
+msgid "Disk Cleanup"
+msgstr "Limpeza de disco"
+
+#: __init__.py:271
+msgid "Disk Cleanup report will open when complete."
+msgstr "O relatório da Limpeza de disco será aberto quando concluído."
+
+#: __init__.py:289
+msgid "Disk status report will open when complete."
+msgstr "O relatório de status do disco será aberto quando concluído."
+
+#: menu.py:450
+msgid "Display Name"
+msgstr "Nome de exibição"
+
+#: menu.py:236
+msgid "Drive"
+msgstr "Unidade"
+
+#: menu.py:381
+msgid "Drive Optimize"
+msgstr "Otimizar unidade"
+
+#: menu.py:241
+msgid "Eject Selected"
+msgstr "Ejetar selecionados"
+
+#: __init__.py:104
+msgid "Empty Recycle Bin"
+msgstr "Esvaziar lixeira"
+
+#: menu.py:313
+#: menu.py:457
+msgid "Enable Selected"
+msgstr "Ativar selecionados"
+
+#: __init__.py:80
+msgid "Enable User Account Control"
+msgstr "Ativar Controle de conta de usuário"
+
+#: menu.py:351
+#: utils.py:542
+#: utils.py:559
+#: utils.py:576
+#: utils.py:589
+msgid "Enabled"
+msgstr "Ativado"
+
+#: __init__.py:93
+msgid "Environment Variables"
+msgstr "Variáveis de ambiente"
+
+#: menu.py:271
+#: menu.py:280
+#: menu.py:348
+#: menu.py:358
+#: menu.py:363
+#: menu.py:373
+#: menu.py:417
+#: menu.py:432
+#: menu.py:494
+#: menu.py:501
+#: menu.py:506
+#: menu.py:513
+msgid "Error"
+msgstr "Erro"
+
+#: sys_monitor.py:342
+msgid "Excellent"
+msgstr "Excelente"
+
+#: cmd_tools.py:46
+msgid "Exception occurred: {error}"
+msgstr "Ocorreu uma exceção: {error}"
+
+#: __init__.py:310
+msgid "Failed to clean temporary files."
+msgstr "Falha ao limpar arquivos temporários."
+
+#: __init__.py:384
+msgid "Failed to clean: {errorMsg}"
+msgstr "Falha ao limpar: {errorMsg}"
+
+#: __init__.py:341
+msgid "Failed to clear RAM cache."
+msgstr "Falha ao limpar o cache RAM."
+
+#: __init__.py:319
+msgid "Failed to clear Run history."
+msgstr "Falha ao limpar o histórico de Executar."
+
+#: kill_dialog.py:170
+msgid "Failed to close window."
+msgstr "Falha ao fechar a janela."
+
+#: __init__.py:164
+msgid "Failed to connect internet."
+msgstr "Falha ao conectar à Internet."
+
+#: menu.py:373
+msgid "Failed to disable item."
+msgstr "Falha ao desativar o item."
+
+#: menu.py:501
+msgid "Failed to disable service: {}"
+msgstr "Falha ao desativar o serviço: {}"
+
+#: __init__.py:148
+msgid "Failed to disconnect internet."
+msgstr "Falha ao desconectar da Internet."
+
+#: menu.py:280
+msgid "Failed to eject {drive}."
+msgstr "Falha ao ejetar {drive}."
+
+#: utils.py:477
+#: utils.py:480
+msgid "Failed to empty recycle bin."
+msgstr "Falha ao esvaziar a lixeira."
+
+#: menu.py:358
+msgid "Failed to enable item."
+msgstr "Falha ao ativar o item."
+
+#: menu.py:513
+msgid "Failed to enable service: {}"
+msgstr "Falha ao ativar o serviço: {}"
+
+#: __init__.py:184
+msgid "Failed to restart Windows Audio Services."
+msgstr "Falha ao reiniciar os Serviços de áudio do Windows."
+
+#: __init__.py:238
+msgid "Failed to restart Windows Explorer."
+msgstr "Falha ao reiniciar o Windows Explorer."
+
+#: __init__.py:198
+msgid "Failed to restart to BIOS. Your system may not support this feature via Windows."
+msgstr "Falha ao reiniciar para a BIOS. Seu sistema pode não oferecer suporte a este recurso através do Windows."
+
+#: __init__.py:301
+msgid "Failed to start system cleanup."
+msgstr "Falha ao iniciar a limpeza do sistema."
+
+#: kill_dialog.py:193
+msgid "Failed to terminate process. Insufficient privileges."
+msgstr "Falha ao encerrar o processo. Privilégios insuficientes."
+
+#: utils.py:128
+msgid "Failed to toggle Bluetooth."
+msgstr "Falha ao alternar o Bluetooth."
+
+#: __init__.py:211
+msgid "Failed to toggle UAC."
+msgstr "Falha ao alternar o UAC."
+
+#: sys_monitor.py:346
+msgid "Fair"
+msgstr "Razoável"
+
+#: __init__.py:475
+msgid "File Explorer Options"
+msgstr "Opções do Explorador de arquivos"
+
+#: __init__.py:89
+msgid "Folder Option"
+msgstr "Opções de pasta"
+
+#: __init__.py:475
+msgid "Folder Options"
+msgstr "Opções de pasta"
+
+#: sys_monitor.py:238
+msgid "Fully Charged"
+msgstr "Totalmente carregado"
+
+#: sys_monitor.py:344
+msgid "Good"
+msgstr "Bom"
+
+#: menu.py:352
+#: menu.py:367
+#: menu.py:425
+msgid "Info"
+msgstr "Informações"
+
+#: __init__.py:161
+msgid "Internet connected."
+msgstr "Internet conectada."
+
+#: __init__.py:145
+msgid "Internet disconnected."
+msgstr "Internet desconectada."
+
+#: menu.py:367
+msgid "Item already disabled."
+msgstr "O item já está desativado."
+
+#: menu.py:352
+msgid "Item already enabled."
+msgstr "O item já está ativado."
+
+#: __init__.py:84
+#: __init__.py:630
+#: kill_dialog.py:56
+msgid "Kill Not Responding Apps"
+msgstr "Matar aplicativos que não respondem"
+
+#: kill_dialog.py:215
+msgid "Kill Process"
+msgstr "Matar processo"
+
+#: menu.py:237
+msgid "Label"
+msgstr "Rótulo"
+
+#: menu.py:119
+msgid "Loading system information..."
+msgstr "Carregando informações do sistema..."
+
+#: menu.py:309
+msgid "Location"
+msgstr "Localização"
+
+#: sys_monitor.py:240
+msgid "Low"
+msgstr "Baixo"
+
+#: __init__.py:92
+#: menu.py:440
+msgid "Manage Services"
+msgstr "Gerenciar serviços"
+
+#: utils.py:689
+msgid "Manual"
+msgstr "Manual"
+
+#: __init__.py:97
+msgid "Microsoft Windows Malicious Software Removal Tool"
+msgstr "Ferramenta de remoção de software malicioso do Microsoft Windows"
+
+#: menu.py:306
+msgid "Name"
+msgstr "Nome"
+
+#: menu.py:266
+msgid "No USB drives found"
+msgstr "Nenhuma unidade USB encontrada"
+
+#: __init__.py:225
+msgid "No Wi-Fi network is currently connected."
+msgstr "Nenhuma rede Wi-Fi está conectada no momento."
+
+#: __init__.py:138
+msgid "No active network adapter found."
+msgstr "Nenhum adaptador de rede ativo encontrado."
+
+#: menu.py:156
+msgid "No data available"
+msgstr "Nenhum dado disponível"
+
+#: __init__.py:155
+msgid "No disabled network adapter found."
+msgstr "Nenhum adaptador de rede desativado encontrado."
+
+#: menu.py:348
+#: menu.py:363
+msgid "No item selected."
+msgstr "Nenhum item selecionado."
+
+#: kill_dialog.py:149
+msgid "No window selected."
+msgstr "Nenhuma janela selecionada."
+
+#: sys_monitor.py:402
+#: sys_monitor.py:417
+msgid "Not Activated"
+msgstr "Não ativado"
+
+#: __init__.py:91
+msgid "Open Services"
+msgstr "Abrir serviços"
+
+#: menu.py:430
+msgid "Optimization completed."
+msgstr "Otimização concluída."
+
+#: menu.py:432
+msgid "Optimization failed: {}"
+msgstr "Falha na otimização: {}"
+
+#: menu.py:392
+msgid "Optimize Selected"
+msgstr "Otimizar selecionados"
+
+#: __init__.py:98
+msgid "Optimize and defragment drive"
+msgstr "Otimizar e desfragmentar unidade"
+
+#: menu.py:425
+msgid "Optimizing drive, please wait..."
+msgstr "Otimizando a unidade, aguarde..."
+
+#: __init__.py:114
+msgid "Power Diagnostic (Battery Report)"
+msgstr "Diagnóstico de energia (relatório da bateria)"
+
+#: __init__.py:381
+msgid "Prefetch and recent files cleaned. {count} items removed."
+msgstr "Arquivos Prefetch e recentes limpos. {count} itens removidos."
+
+#: kill_dialog.py:186
+msgid "Process terminated."
+msgstr "Processo encerrado."
+
+#: __init__.py:87
+msgid "Programs and Features"
+msgstr "Programas e recursos"
+
+#: __init__.py:338
+msgid "RAM cache is already clean."
+msgstr "O cache RAM já está limpo."
+
+#: utils.py:474
+msgid "Recycle bin emptied. {count} items removed."
+msgstr "Lixeira esvaziada. {count} itens removidos."
+
+#: utils.py:468
+msgid "Recycle bin is already empty."
+msgstr "A lixeira já está vazia."
+
+#: menu.py:458
+msgid "Refresh"
+msgstr "Atualizar"
+
+#: __init__.py:95
+msgid "Regedit"
+msgstr "Editor do registro"
+
+#: __init__.py:74
+msgid "Restart Windows Audio Service"
+msgstr "Reiniciar serviço de áudio do Windows"
+
+#: __init__.py:85
+msgid "Restart Windows Explorer"
+msgstr "Reiniciar o Windows Explorer"
+
+#: __init__.py:82
+msgid "Restart to BIOS/UEFI Settings"
+msgstr "Reiniciar para configurações da BIOS/UEFI"
+
+#: __init__.py:178
+msgid "Restarting Audio Services, please wait..."
+msgstr "Reiniciando os serviços de áudio, aguarde..."
+
+#: __init__.py:192
+msgid "Restarting to BIOS/UEFI, please wait..."
+msgstr "Reiniciando para a BIOS/UEFI, aguarde..."
+
+#: __init__.py:112
+msgid "Run Chkdsk on C:"
+msgstr "Executar Chkdsk em C:"
+
+#: __init__.py:94
+msgid "Run Cmd"
+msgstr "Executar Cmd"
+
+#: __init__.py:110
+msgid "Run DISM"
+msgstr "Executar DISM"
+
+#: __init__.py:113
+msgid "Run Disk Cleanup"
+msgstr "Executar Limpeza de disco"
+
+#: __init__.py:111
+msgid "Run SFC Scannow"
+msgstr "Executar SFC Scannow"
+
+#: utils.py:694
+msgid "Running"
+msgstr "Em execução"
+
+#: __init__.py:244
+msgid "SFC Scannow report will open when complete."
+msgstr "O relatório do SFC Scannow será aberto quando concluído."
+
+#: __init__.py:73
+#: menu.py:228
+msgid "Safely Remove USB"
+msgstr "Remover USB com segurança"
+
+#: menu.py:271
+msgid "Select a USB drive first."
+msgstr "Selecione primeiro uma unidade USB."
+
+#: menu.py:417
+msgid "Select a drive first."
+msgstr "Selecione primeiro uma unidade."
+
+#: menu.py:494
+#: menu.py:506
+msgid "Select a service first."
+msgstr "Selecione primeiro um serviço."
+
+#: menu.py:449
+msgid "Service Name"
+msgstr "Nome do serviço"
+
+#: __init__.py:614
+msgid "Show Absolute Windows menu (single tap) or System Monitor (double tap)"
+msgstr "Mostrar menu Absolute Windows (um toque) ou Monitor do sistema (dois toques)"
+
+#: __init__.py:71
+msgid "Show Wi-Fi Password"
+msgstr "Mostrar senha do Wi-Fi"
+
+#: __init__.py:88
+msgid "Sound setting"
+msgstr "Configurações de som"
+
+#: __init__.py:90
+#: menu.py:295
+msgid "Startup Manager"
+msgstr "Gerenciador de inicialização"
+
+#: menu.py:451
+msgid "Startup Type"
+msgstr "Tipo de inicialização"
+
+#: menu.py:308
+#: menu.py:452
+msgid "Status"
+msgstr "Status"
+
+#: utils.py:696
+msgid "Stopped"
+msgstr "Parado"
+
+#: menu.py:277
+#: menu.py:430
+msgid "Success"
+msgstr "Sucesso"
+
+#: menu.py:101
+msgid "System Monitor"
+msgstr "Monitor do sistema"
+
+#: __init__.py:63
+msgid "System Tray"
+msgstr "Bandeja do sistema"
+
+#: __init__.py:298
+msgid "System cleanup started."
+msgstr "Limpeza do sistema iniciada."
+
+#: __init__.py:307
+msgid "Temporary files cleaned. {count} items removed."
+msgstr "Arquivos temporários limpos. {count} itens removidos."
+
+#: __init__.py:222
+msgid "The Wi-Fi network '{ssid}' is open (no password)."
+msgstr "A rede Wi-Fi '{ssid}' está aberta (sem senha)."
+
+#: __init__.py:70
+msgid "Toggle Bluetooth"
+msgstr "Alternar Bluetooth"
+
+#: menu.py:307
+msgid "Type"
+msgstr "Tipo"
+
+#: utils.py:89
+msgid "USB Drive"
+msgstr "Unidade USB"
+
+#: menu.py:277
+msgid "USB drive {drive} ejected safely."
+msgstr "Unidade USB {drive} ejetada com segurança."
+
+#: sys_monitor.py:241
+msgid "Unknown"
+msgstr "Desconhecido"
+
+#: __init__.py:208
+msgid "User Account Control toggled."
+msgstr "Controle de conta de usuário alternado."
+
+#: cmd_tools.py:41
+msgid "User cancelled the UAC elevation prompt."
+msgstr "O usuário cancelou o prompt de elevação do UAC."
+
+#: sys_monitor.py:350
+msgid "Very Weak"
+msgstr "Muito fraco"
+
+#: sys_monitor.py:348
+msgid "Weak"
+msgstr "Fraco"
+
+#: __init__.py:219
+msgid "Wi-Fi password for {ssid} copied to clipboard."
+msgstr "Senha do Wi-Fi para {ssid} copiada para a área de transferência."
+
+#: kill_dialog.py:164
+msgid "Window closed."
+msgstr "Janela fechada."
+
+#: __init__.py:181
+msgid "Windows Audio Services restarted successfully."
+msgstr "Serviços de áudio do Windows reiniciados com sucesso."
+
+#: __init__.py:96
+msgid "Windows Defender"
+msgstr "Windows Defender"
+
+#: __init__.py:235
+msgid "Windows Explorer has been restarted."
+msgstr "O Windows Explorer foi reiniciado."
+
+#: __init__.py:316
+msgid "Windows Run history cleared. {count} items removed."
+msgstr "Histórico de Executar do Windows limpo. {count} itens removidos."
+
+#: sys_monitor.py:430
+msgid "Windows Server {}"
+msgstr "Windows Server {}"
+
+#: sys_monitor.py:193
+#: sys_monitor.py:206
+msgid "{:.1F} MB/s down, {:.1F} MB/s up"
+msgstr "{:.1F} MB/s de download, {:.1F} MB/s de upload"
+
+#: sys_monitor.py:166
+#: sys_monitor.py:178
+msgid "{:.1F} MB/s read, {:.1F} MB/s write"
+msgstr "{:.1F} MB/s de leitura, {:.1F} MB/s de escrita"
+
+#: sys_monitor.py:96
+#: sys_monitor.py:108
+msgid "{:.2F} GB of {:.2F} GB used ({:.1F}%)"
+msgstr "{:.2F} GB de {:.2F} GB usados ({:.1F}%)"
+
+#: sys_monitor.py:432
+msgid "{} ({} bit) build {}"
+msgstr "{} ({} bits) build {}"
+
+#: sys_monitor.py:271
+#: sys_monitor.py:299
+msgid "{} day{}"
+msgstr "{} dia{}"
+
+#: sys_monitor.py:273
+#: sys_monitor.py:301
+msgid "{} hour{}"
+msgstr "{} hora{}"
+
+#: sys_monitor.py:275
+#: sys_monitor.py:303
+msgid "{} minute{}"
+msgstr "{} minuto{}"
+
+#: sys_monitor.py:378
+#: sys_monitor.py:385
+msgid "{} process{}"
+msgstr "{} processo{}"
+
+#: sys_monitor.py:277
+#: sys_monitor.py:305
+msgid "{} second{}"
+msgstr "{} segundo{}"
+
+#: sys_monitor.py:133
+#: sys_monitor.py:149
+msgid "{} {:.1F} GB of {:.1F} GB used ({:.0F}%)"
+msgstr "{} {:.1F} GB de {:.1F} GB usados ({:.0F}%)"
+
+#: sys_monitor.py:67
+#: sys_monitor.py:73
+msgid "{}%"
+msgstr "{}%"
+
+#: sys_monitor.py:242
+msgid "{}% ({})"
+msgstr "{}% ({})"
