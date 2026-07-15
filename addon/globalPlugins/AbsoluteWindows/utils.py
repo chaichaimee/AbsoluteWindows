@@ -10,6 +10,7 @@ import time
 import threading
 import wx
 import ui
+import tones
 from ctypes import wintypes
 from logHandler import log
 import addonHandler
@@ -54,6 +55,9 @@ class SHQUERYRBINFO(ctypes.Structure):
 shell32.SHQueryRecycleBinW.argtypes = [wintypes.LPCWSTR, ctypes.POINTER(SHQUERYRBINFO)]
 shell32.SHQueryRecycleBinW.restype = ctypes.c_long
 
+# Constants for GetDriveTypeW
+DRIVE_REMOVABLE = 2
+
 def open_system_tray():
 	try:
 		user32 = ctypes.windll.user32
@@ -77,30 +81,58 @@ def restart_audio_services():
 def get_usb_drives():
 	drives = []
 	try:
-		info = subprocess.STARTUPINFO()
-		info.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-		out = subprocess.check_output("wmic logicaldisk where drivetype=2 get deviceid,volumename", startupinfo=info, text=True)
-		lines = out.splitlines()
-		for line in lines[1:]:
-			if line.strip():
-				parts = line.split(maxsplit=1)
-				if len(parts) >= 1:
-					letter = parts[0]
-					name = parts[1].strip() if len(parts) > 1 else _("USB Drive")
-					drives.append({'letter': letter, 'name': name})
+		bitmask = ctypes.windll.kernel32.GetLogicalDrives()
+		for i in range(26):
+			if bitmask & (1 << i):
+				drive_letter = chr(ord('A') + i)
+				path = f"{drive_letter}:\\"
+				drive_type = ctypes.windll.kernel32.GetDriveTypeW(path)
+				if drive_type == DRIVE_REMOVABLE:
+					volume_name = _("USB Drive")
+					buf = ctypes.create_unicode_buffer(256)
+					fs_buf = ctypes.create_unicode_buffer(256)
+					serial = wintypes.DWORD()
+					max_comp = wintypes.DWORD()
+					flags = wintypes.DWORD()
+					success = ctypes.windll.kernel32.GetVolumeInformationW(
+						path, buf, 256,
+						ctypes.byref(serial),
+						ctypes.byref(max_comp),
+						ctypes.byref(flags),
+						fs_buf, 256
+					)
+					if success and buf.value:
+						volume_name = buf.value
+					drives.append({
+						'letter': f"{drive_letter}:",
+						'name': volume_name
+					})
 	except Exception as e:
-		log.error(f"Error getting USB drives: {e}")
+		log.error(f"Error getting USB drives via API: {e}")
 	return drives
 
 def eject_usb(drive_letter):
+	systemRoot = os.environ.get('SystemRoot', 'C:\\Windows')
+	powershellPath = os.path.join(systemRoot, 'Sysnative', 'WindowsPowerShell', 'v1.0', 'powershell.exe')
+	if not os.path.isfile(powershellPath):
+		powershellPath = os.path.join(systemRoot, 'System32', 'WindowsPowerShell', 'v1.0', 'powershell.exe')
+	if not os.path.isfile(powershellPath):
+		powershellPath = 'powershell.exe'
+
 	ps_script = f"$driveEject = New-Object -comObject Shell.Application; $driveEject.Namespace(17).ParseName('{drive_letter}').InvokeVerb('Eject')"
 	try:
-		info = subprocess.STARTUPINFO()
-		info.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-		subprocess.run(["powershell", "-ExecutionPolicy", "Bypass", "-NoProfile", "-Command", ps_script], startupinfo=info, check=True)
+		subprocess.run(
+			[powershellPath, '-ExecutionPolicy', 'Bypass', '-NoProfile', '-Command', ps_script],
+			check=True,
+			timeout=10,
+			capture_output=True,
+			startupinfo=None
+		)
+		tones.beep(440, 100)
 		return True
 	except Exception as e:
 		log.error(f"Eject USB error: {e}")
+		tones.beep(220, 200)
 		return False
 
 def toggle_bluetooth():
@@ -118,7 +150,7 @@ def toggle_bluetooth():
 		info.dwFlags |= subprocess.STARTF_USESHOWWINDOW
 		out = subprocess.check_output(
 			["powershell", "-ExecutionPolicy", "Bypass", "-NoProfile", "-Command", ps_script],
-			startupinfo=info, text=True
+			startupinfo=info, text=True, timeout=10
 		)
 		if "Off" in out: return True, _("Bluetooth turned off.")
 		elif "On" in out: return True, _("Bluetooth turned on.")
@@ -162,7 +194,7 @@ def _runAsAdmin(command, hide=True, keepOpen=False):
 
 def get_active_adapter_name():
 	try:
-		output = subprocess.check_output("netsh interface show interface", shell=True, text=True)
+		output = subprocess.check_output("netsh interface show interface", shell=True, text=True, timeout=5)
 		lines = output.splitlines()
 		for line in lines:
 			if "Connected" in line:
@@ -197,7 +229,7 @@ def enable_adapter(name):
 
 def get_first_disabled_adapter():
 	try:
-		output = subprocess.check_output("netsh interface show interface", shell=True, text=True)
+		output = subprocess.check_output("netsh interface show interface", shell=True, text=True, timeout=5)
 		for line in output.splitlines():
 			if "Disabled" in line:
 				parts = line.split()
@@ -229,38 +261,12 @@ def isUACEnabled():
 			0,
 			winreg.KEY_READ | KEY_WOW64_64KEY
 		)
-		value, reg_type = winreg.QueryValueEx(key_handle, "EnableLUA")
+		value, _ = winreg.QueryValueEx(key_handle, "EnableLUA")
 		winreg.CloseKey(key_handle)
-		is_enabled = (value == 1)
-		log.info(f"UAC registry EnableLUA = {value} (type {reg_type}) => enabled={is_enabled}")
-		return is_enabled
-	except FileNotFoundError:
-		log.warning("EnableLUA registry key not found, assuming UAC enabled")
-		return True
+		return (value == 1)
 	except Exception as e:
-		log.error(f"Failed to read UAC registry: {e}, falling back to reg query")
-		try:
-			cmd = 'reg query "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System" /v EnableLUA'
-			output = subprocess.check_output(cmd, shell=True, text=True, stderr=subprocess.DEVNULL)
-			for line in output.splitlines():
-				if "EnableLUA" in line:
-					parts = line.split()
-					if len(parts) >= 3:
-						value_str = parts[-1]
-						if value_str == "0x1":
-							log.info("reg query returned EnableLUA=0x1")
-							return True
-						elif value_str == "0x0":
-							log.info("reg query returned EnableLUA=0x0")
-							return False
-			log.warning("reg query could not parse EnableLUA value, assuming True")
-			return True
-		except subprocess.CalledProcessError as e:
-			log.error(f"reg query failed: {e}, assuming UAC enabled")
-			return True
-		except Exception as e2:
-			log.error(f"Unexpected error in fallback: {e2}, assuming True")
-			return True
+		log.warning(f"Could not read UAC registry: {e}, assuming enabled")
+		return True
 
 def _setUACRegistry(value):
 	cmd = f'reg add "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System" /v EnableLUA /t REG_DWORD /d {value} /f'
@@ -272,19 +278,7 @@ def _setUACRegistry(value):
 		time.sleep(0.5)
 		current = isUACEnabled()
 		expected = (value == 1)
-		if current == expected:
-			log.info(f"UAC registry set to {value} and verified")
-			return True
-		else:
-			log.warning(f"UAC registry set to {value} but current is {current}, retrying with subprocess")
-			try:
-				subprocess.run(f'reg add "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System" /v EnableLUA /t REG_DWORD /d {value} /f', shell=True, check=True, timeout=5)
-				time.sleep(0.3)
-				if isUACEnabled() == expected:
-					return True
-			except Exception as e2:
-				log.error(f"Fallback reg add also failed: {e2}")
-			return False
+		return (current == expected)
 	except Exception as e:
 		log.error(f"_setUACRegistry exception: {e}")
 		return False
@@ -365,7 +359,7 @@ def cleanRunHistory():
 
 def get_current_wifi_password():
 	try:
-		output = subprocess.check_output("netsh wlan show interfaces", shell=True, text=True)
+		output = subprocess.check_output("netsh wlan show interfaces", shell=True, text=True, timeout=5)
 		ssid = None
 		for line in output.splitlines():
 			if "SSID" in line and "BSSID" not in line:
@@ -377,7 +371,7 @@ def get_current_wifi_password():
 			return (None, None)
 
 		cmd = f'netsh wlan show profile name="{ssid}" key=clear'
-		output = subprocess.check_output(cmd, shell=True, text=True)
+		output = subprocess.check_output(cmd, shell=True, text=True, timeout=5)
 		password = None
 		for line in output.splitlines():
 			if "Key Content" in line:
@@ -416,7 +410,7 @@ def copy_to_clipboard(text):
 
 def kill_not_responding_apps():
 	try:
-		output = subprocess.check_output('tasklist /v /fi "status eq not responding"', shell=True, text=True)
+		output = subprocess.check_output('tasklist /v /fi "status eq not responding"', shell=True, text=True, timeout=5)
 		lines = output.splitlines()
 		pids = []
 		for line in lines:
@@ -678,7 +672,7 @@ def get_suggested_services():
 	services = []
 	for svc in suggested:
 		try:
-			out = subprocess.check_output(f'sc query {svc}', shell=True, text=True, stderr=subprocess.DEVNULL)
+			out = subprocess.check_output(f'sc query {svc}', shell=True, text=True, stderr=subprocess.DEVNULL, timeout=3)
 			start_type = "Unknown"
 			status = "Unknown"
 			for line in out.splitlines():
@@ -696,7 +690,7 @@ def get_suggested_services():
 						status = _("Stopped")
 			display = svc
 			try:
-				out2 = subprocess.check_output(f'sc qdescription {svc}', shell=True, text=True)
+				out2 = subprocess.check_output(f'sc qdescription {svc}', shell=True, text=True, timeout=3)
 				for line in out2.splitlines():
 					if "DESCRIPTION:" in line:
 						display = line.split(":",1)[1].strip()

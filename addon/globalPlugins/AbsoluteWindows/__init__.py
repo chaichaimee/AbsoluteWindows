@@ -30,6 +30,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	CONFIG_DIR = os.path.join(globalVars.appArgs.configPath, "ChaiChaimee", "AbsoluteWindows")
 	CONFIG_PATH = os.path.join(CONFIG_DIR, "settings.json")
 
+	# Cache for internet status
+	_internetCache = None
+	_internetCacheTime = 0
+	_internetCacheTTL = 5  # seconds
+
 	def __init__(self):
 		super().__init__()
 		log.info("AbsoluteWindows add-on initializing...")
@@ -40,9 +45,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except Exception as e:
 			log.error(f"Could not create config directory: {e}")
 
-		self.internetConnected = self._checkInternetConnected()
 		self._lastDisabledAdapter = None
-
 		self._lastTapTime = 0
 		self._tapCount = 0
 		self._tapThreshold = 0.5
@@ -51,7 +54,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		pass
 
 	def _checkInternetConnected(self):
-		return utils.isInternetConnected()
+		now = time.time()
+		if (self._internetCache is not None and 
+			now - self._internetCacheTime < self._internetCacheTTL):
+			return self._internetCache
+		self._internetCache = utils.isInternetConnected()
+		self._internetCacheTime = now
+		return self._internetCache
 
 	def _restartSystem(self):
 		utils.force_restart_now()
@@ -131,7 +140,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		core.callLater(200, press_space_to_expand)
 
 	def _toggleInternet(self, menuInstance):
-		if self.internetConnected:
+		if self._checkInternetConnected():
 			adapter = utils.get_active_adapter_name()
 			if not adapter:
 				tones.beep(220, 200)
@@ -140,7 +149,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			success = utils.disable_adapter(adapter)
 			if success:
 				self._lastDisabledAdapter = adapter
-				self.internetConnected = False
+				self._internetCache = False
+				self._internetCacheTime = time.time()
 				tones.beep(440, 100)
 				ui.message(_("Internet disconnected."))
 			else:
@@ -156,7 +166,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				return
 			success = utils.enable_adapter(adapter)
 			if success:
-				self.internetConnected = True
+				self._internetCache = True
+				self._internetCacheTime = time.time()
 				tones.beep(440, 100)
 				ui.message(_("Internet connected."))
 			else:
