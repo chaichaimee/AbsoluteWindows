@@ -14,7 +14,7 @@ import addonHandler
 addonHandler.initTranslation()
 try:
 	_ = addonHandler.getTranslation()
-except:
+except Exception:
 	def _(x): return x
 
 PROCESS_TERMINATE = 0x0001
@@ -48,7 +48,8 @@ class KillDialog(wx.Dialog):
 				cls._instance.Raise()
 				cls._instance.SetFocus()
 				cls._instance.Show()
-			except:
+			except RuntimeError:
+				# The wx window behind the cached instance was already destroyed.
 				cls._instance = cls(parent)
 		return cls._instance
 
@@ -224,3 +225,4 @@ def show_kill_dialog():
 		log.exception("Failed to open kill dialog")
 		ui.message(_("Could not open kill dialog. See log for details."))
 		tones.beep(220, 200)
+

@@ -3,18 +3,65 @@
 import subprocess
 import os
 import threading
+import time
+import ctypes
+from ctypes import wintypes
 from logHandler import log
 import addonHandler
-import core
+import wx
 import winVersion
-import re
+from . import utils
 
 addonHandler.initTranslation()
 
 try:
 	_ = addonHandler.getTranslation()
-except:
+except Exception:
 	def _(x): return x
+
+kernel32 = ctypes.windll.kernel32
+kernel32.GetTickCount64.restype = ctypes.c_ulonglong
+kernel32.GetDiskFreeSpaceExW.argtypes = [
+	wintypes.LPCWSTR, ctypes.POINTER(ctypes.c_ulonglong),
+	ctypes.POINTER(ctypes.c_ulonglong), ctypes.POINTER(ctypes.c_ulonglong)
+]
+kernel32.GetDiskFreeSpaceExW.restype = wintypes.BOOL
+kernel32.GetSystemPowerStatus.argtypes = [ctypes.c_void_p]
+kernel32.GetSystemPowerStatus.restype = wintypes.BOOL
+
+DRIVE_FIXED = 3
+
+
+class FILETIME(ctypes.Structure):
+	_fields_ = [
+		("dwLowDateTime", wintypes.DWORD),
+		("dwHighDateTime", wintypes.DWORD),
+	]
+
+
+class MEMORYSTATUSEX(ctypes.Structure):
+	_fields_ = [
+		("dwLength", wintypes.DWORD),
+		("dwMemoryLoad", wintypes.DWORD),
+		("ullTotalPhys", ctypes.c_ulonglong),
+		("ullAvailPhys", ctypes.c_ulonglong),
+		("ullTotalPageFile", ctypes.c_ulonglong),
+		("ullAvailPageFile", ctypes.c_ulonglong),
+		("ullTotalVirtual", ctypes.c_ulonglong),
+		("ullAvailVirtual", ctypes.c_ulonglong),
+		("ullAvailExtendedVirtual", ctypes.c_ulonglong),
+	]
+
+
+class SYSTEM_POWER_STATUS(ctypes.Structure):
+	_fields_ = [
+		("ACLineStatus", ctypes.c_ubyte),
+		("BatteryFlag", ctypes.c_ubyte),
+		("BatteryLifePercent", ctypes.c_ubyte),
+		("SystemStatusFlag", ctypes.c_ubyte),
+		("BatteryLifeTime", wintypes.DWORD),
+		("BatteryFullLifeTime", wintypes.DWORD),
+	]
 
 
 def _getSystemRoot():
@@ -31,6 +78,7 @@ def _runCommand(cmd, timeout=1):
 			text=True,
 			timeout=timeout,
 			startupinfo=startupinfo,
+			creationflags=subprocess.CREATE_NO_WINDOW,
 			encoding='utf-8',
 			errors='replace'
 		)
@@ -41,259 +89,180 @@ def _runCommand(cmd, timeout=1):
 		return ""
 
 
-def _runWmic(query, timeout=1):
-	systemRoot = _getSystemRoot()
-	wmic = os.path.join(systemRoot, 'System32', 'wbem', 'wmic.exe')
-	if not os.path.exists(wmic):
-		wmic = 'wmic.exe'
-	return _runCommand([wmic] + query.split(), timeout)
-
-
 def _runPowerShell(script, timeout=1):
 	systemRoot = _getSystemRoot()
 	powershell = os.path.join(systemRoot, 'System32', 'WindowsPowerShell', 'v1.0', 'powershell.exe')
 	if not os.path.exists(powershell):
 		powershell = 'powershell.exe'
-	return _runCommand([powershell, '-ExecutionPolicy', 'Bypass', '-NoProfile', '-Command', script], timeout)
+	return _runCommand([powershell, '-NoLogo', '-NonInteractive', '-ExecutionPolicy', 'Bypass', '-NoProfile', '-Command', script], timeout)
+
+
+def _fileTimeToInt(fileTime):
+	return (fileTime.dwHighDateTime << 32) | fileTime.dwLowDateTime
 
 
 def get_cpu_usage():
 	try:
-		output = _runWmic("cpu get loadpercentage")
-		lines = output.splitlines()
-		for line in lines:
-			line = line.strip()
-			if line.isdigit():
-				return _("{}%").format(int(line))
+		idleFirst = FILETIME()
+		kernelFirst = FILETIME()
+		userFirst = FILETIME()
+		kernel32.GetSystemTimes(ctypes.byref(idleFirst), ctypes.byref(kernelFirst), ctypes.byref(userFirst))
+		time.sleep(0.2)
+		idleSecond = FILETIME()
+		kernelSecond = FILETIME()
+		userSecond = FILETIME()
+		kernel32.GetSystemTimes(ctypes.byref(idleSecond), ctypes.byref(kernelSecond), ctypes.byref(userSecond))
+
+		idleDelta = _fileTimeToInt(idleSecond) - _fileTimeToInt(idleFirst)
+		totalDelta = (_fileTimeToInt(kernelSecond) - _fileTimeToInt(kernelFirst)) + (_fileTimeToInt(userSecond) - _fileTimeToInt(userFirst))
+		if totalDelta <= 0:
+			return _("??%")
+		busyPercent = ((totalDelta - idleDelta) / totalDelta) * 100
+		return _("{}%").format(round(busyPercent))
 	except Exception:
-		pass
-	
-	try:
-		import psutil
-		return _("{}%").format(round(psutil.cpu_percent(interval=0.1), 1))
-	except Exception:
-		pass
-	
-	return _("??%")
+		return _("??%")
 
 
 def get_ram_usage():
 	try:
-		output = _runWmic("os get FreePhysicalMemory,TotalVisibleMemorySize")
-		lines = output.splitlines()
-		for line in lines:
-			if "FreePhysicalMemory" in line or not line.strip():
-				continue
-			parts = line.split()
-			if len(parts) >= 2:
-				try:
-					free_kb = int(parts[0])
-					total_kb = int(parts[1])
-					used_kb = total_kb - free_kb
-					percent = (used_kb / total_kb) * 100
-					used_gb = used_kb / (1024 * 1024)
-					total_gb = total_kb / (1024 * 1024)
-					return _("{:.2F} GB of {:.2F} GB used ({:.1F}%)").format(used_gb, total_gb, round(percent, 1))
-				except ValueError:
-					continue
-	except Exception:
-		pass
-	
-	try:
-		import psutil
-		mem = psutil.virtual_memory()
-		used_gb = mem.used / (1024**3)
-		total_gb = mem.total / (1024**3)
-		percent = mem.percent
+		memoryStatus = MEMORYSTATUSEX()
+		memoryStatus.dwLength = ctypes.sizeof(MEMORYSTATUSEX)
+		kernel32.GlobalMemoryStatusEx(ctypes.byref(memoryStatus))
+		used_bytes = memoryStatus.ullTotalPhys - memoryStatus.ullAvailPhys
+		used_gb = used_bytes / (1024 ** 3)
+		total_gb = memoryStatus.ullTotalPhys / (1024 ** 3)
+		percent = (used_bytes / memoryStatus.ullTotalPhys) * 100
 		return _("{:.2F} GB of {:.2F} GB used ({:.1F}%)").format(used_gb, total_gb, round(percent, 1))
 	except Exception:
-		pass
-	
-	return _("??%")
+		return _("??%")
 
 
 def get_disk_usage():
 	disk_info = []
-	
 	try:
-		output = _runWmic("logicaldisk where DriveType=3 get DeviceId,FreeSpace,Size")
-		lines = output.splitlines()
-		for line in lines:
-			if "DeviceId" in line or not line.strip():
+		bitmask = kernel32.GetLogicalDrives()
+		for i in range(26):
+			if not (bitmask & (1 << i)):
 				continue
-			parts = line.split()
-			if len(parts) >= 3:
-				try:
-					drive = parts[0]
-					free = int(parts[1])
-					total = int(parts[2])
-					used_gb = (total - free) / (1024**3)
-					total_gb = total / (1024**3)
-					percent = ((total - free) / total) * 100
-					disk_info.append(_("{} {:.1F} GB of {:.1F} GB used ({:.0F}%)").format(drive, used_gb, total_gb, percent))
-				except ValueError:
-					continue
+			driveLetter = chr(ord('A') + i)
+			path = f"{driveLetter}:\\"
+			if kernel32.GetDriveTypeW(path) != DRIVE_FIXED:
+				continue
+			freeBytesAvailable = ctypes.c_ulonglong(0)
+			totalBytes = ctypes.c_ulonglong(0)
+			totalFreeBytes = ctypes.c_ulonglong(0)
+			success = kernel32.GetDiskFreeSpaceExW(
+				path,
+				ctypes.byref(freeBytesAvailable),
+				ctypes.byref(totalBytes),
+				ctypes.byref(totalFreeBytes)
+			)
+			if not success or totalBytes.value == 0:
+				continue
+			used_bytes = totalBytes.value - totalFreeBytes.value
+			used_gb = used_bytes / (1024 ** 3)
+			total_gb = totalBytes.value / (1024 ** 3)
+			percent = (used_bytes / totalBytes.value) * 100
+			disk_info.append(_("{} {:.1F} GB of {:.1F} GB used ({:.0F}%)").format(f"{driveLetter}:", used_gb, total_gb, percent))
 	except Exception:
 		pass
-	
-	if not disk_info:
-		try:
-			import psutil
-			for partition in psutil.disk_partitions():
-				if partition.fstype:
-					try:
-						usage = psutil.disk_usage(partition.mountpoint)
-						used_gb = usage.used / (1024**3)
-						total_gb = usage.total / (1024**3)
-						percent = usage.percent
-						disk_info.append(_("{} {:.1F} GB of {:.1F} GB used ({:.0F}%)").format(
-							partition.device[:2], used_gb, total_gb, percent))
-					except Exception:
-						pass
-		except Exception:
-			pass
-	
 	return disk_info
 
 
-def get_disk_activity():
-	try:
-		import psutil
-		disk_io = psutil.disk_io_counters()
-		if disk_io:
-			read_speed = disk_io.read_bytes / (1024 * 1024)
-			write_speed = disk_io.write_bytes / (1024 * 1024)
-			return _("{:.1F} MB/s read, {:.1F} MB/s write").format(read_speed, write_speed)
-	except Exception:
-		pass
-	
-	try:
-		script = "Get-Counter '\\PhysicalDisk(_Total)\\Disk Read Bytes/sec' -ErrorAction SilentlyContinue | Select-Object -ExpandProperty CounterSamples | Select-Object -ExpandProperty CookedValue"
-		read_bytes = _runPowerShell(script)
-		script2 = "Get-Counter '\\PhysicalDisk(_Total)\\Disk Write Bytes/sec' -ErrorAction SilentlyContinue | Select-Object -ExpandProperty CounterSamples | Select-Object -ExpandProperty CookedValue"
-		write_bytes = _runPowerShell(script2)
-		if read_bytes and write_bytes:
-			read_mb = float(read_bytes) / (1024 * 1024)
-			write_mb = float(write_bytes) / (1024 * 1024)
-			return _("{:.1F} MB/s read, {:.1F} MB/s write").format(read_mb, write_mb)
-	except Exception:
-		pass
-	
-	return None
+# One Get-Counter call for all four rate counters. The old code started four separate
+# PowerShell processes with a 1 second timeout each; PowerShell's own startup plus
+# Get-Counter's built-in 1 second sample interval is longer than that, so every one of
+# them timed out and the whole block cost ~4 seconds while never producing a value.
+_COUNTER_SCRIPT = (
+	"Get-Counter -Counter '\\PhysicalDisk(_Total)\\Disk Read Bytes/sec',"
+	"'\\PhysicalDisk(_Total)\\Disk Write Bytes/sec',"
+	"'\\Network Interface(*)\\Bytes Received/sec',"
+	"'\\Network Interface(*)\\Bytes Sent/sec' -ErrorAction SilentlyContinue "
+	"| Select-Object -ExpandProperty CounterSamples "
+	"| ForEach-Object { [string]::Format([cultureinfo]::InvariantCulture, '{0}|{1}', $_.Path, $_.CookedValue) }"
+)
+_COUNTER_TIMEOUT = 4
+_MONITOR_DEADLINE = 4.5
 
 
-def get_network_speed():
-	try:
-		import psutil
-		net_io = psutil.net_io_counters()
-		if net_io:
-			down_mb = net_io.bytes_recv / (1024 * 1024)
-			up_mb = net_io.bytes_sent / (1024 * 1024)
-			if down_mb > 0 or up_mb > 0:
-				return _("{:.1F} MB/s down, {:.1F} MB/s up").format(down_mb, up_mb)
-	except Exception:
-		pass
-	
-	try:
-		script = "Get-Counter '\\Network Interface(*)\\Bytes Received/sec' -ErrorAction SilentlyContinue | Select-Object -ExpandProperty CounterSamples | ForEach-Object { $_.CookedValue } | Measure-Object -Sum | Select-Object -ExpandProperty Sum"
-		received = _runPowerShell(script)
-		script2 = "Get-Counter '\\Network Interface(*)\\Bytes Sent/sec' -ErrorAction SilentlyContinue | Select-Object -ExpandProperty CounterSamples | ForEach-Object { $_.CookedValue } | Measure-Object -Sum | Select-Object -ExpandProperty Sum"
-		sent = _runPowerShell(script2)
-		if received and sent:
-			down_mb = float(received) / (1024 * 1024)
-			up_mb = float(sent) / (1024 * 1024)
-			if down_mb > 0 or up_mb > 0:
-				return _("{:.1F} MB/s down, {:.1F} MB/s up").format(down_mb, up_mb)
-	except Exception:
-		pass
-	
-	return None
+def _parseCounterOutput(output):
+	"""Sum the counter samples by kind. Returns (totals, seenKinds); pure text
+	parsing, kept separate from the PowerShell call so it can be checked on its own."""
+	totals = {"read": 0.0, "write": 0.0, "rx": 0.0, "tx": 0.0}
+	seen = set()
+	for line in output.splitlines():
+		path, _sep, value = line.rpartition("|")
+		path = path.lower()
+		try:
+			number = float(value)
+		except ValueError:
+			continue
+		if "disk read bytes/sec" in path:
+			kind = "read"
+		elif "disk write bytes/sec" in path:
+			kind = "write"
+		elif "bytes received/sec" in path:
+			kind = "rx"
+		elif "bytes sent/sec" in path:
+			kind = "tx"
+		else:
+			continue
+		totals[kind] += number
+		seen.add(kind)
+	return totals, seen
+
+
+def get_performance_counters():
+	"""Returns {"disk_activity": text or None, "network_speed": text or None}."""
+	result = {"disk_activity": None, "network_speed": None}
+	output = _runPowerShell(_COUNTER_SCRIPT, timeout=_COUNTER_TIMEOUT)
+	if not output:
+		return result
+	totals, seen = _parseCounterOutput(output)
+	megabyte = 1024 * 1024
+	if {"read", "write"} <= seen:
+		result["disk_activity"] = _("{:.1F} MB/s read, {:.1F} MB/s write").format(
+			totals["read"] / megabyte, totals["write"] / megabyte)
+	if {"rx", "tx"} <= seen and (totals["rx"] > 0 or totals["tx"] > 0):
+		result["network_speed"] = _("{:.1F} MB/s down, {:.1F} MB/s up").format(
+			totals["rx"] / megabyte, totals["tx"] / megabyte)
+	return result
 
 
 def get_network_status():
-	try:
-		output = _runCommand(["ping", "-n", "1", "8.8.8.8"], 2)
-		if "time=" in output.lower() or "ttl=" in output.lower():
-			return _("Connected")
-	except Exception:
-		pass
+	if utils.isInternetConnected():
+		return _("Connected")
 	return _("Disconnected")
 
 
 def get_battery_info():
 	try:
-		output = _runWmic("path Win32_Battery get EstimatedChargeRemaining,BatteryStatus")
-		lines = output.splitlines()
-		for line in lines:
-			if "EstimatedChargeRemaining" in line or not line.strip():
-				continue
-			parts = line.split()
-			if len(parts) >= 2:
-				try:
-					percent = int(parts[0])
-					status = int(parts[1])
-					status_text = {
-						1: _("Charging"),
-						2: _("Charging"),
-						3: _("Fully Charged"),
-						4: _("Discharging"),
-						5: _("Low")
-					}.get(status, _("Unknown"))
-					return _("{}% ({})").format(percent, status_text)
-				except ValueError:
-					continue
+		powerStatus = SYSTEM_POWER_STATUS()
+		success = kernel32.GetSystemPowerStatus(ctypes.byref(powerStatus))
+		if not success:
+			return None
+		if powerStatus.BatteryFlag in (128, 255):
+			return None
+		percent = powerStatus.BatteryLifePercent
+		if percent > 100:
+			return None
+		if powerStatus.ACLineStatus == 1:
+			status_text = _("Fully Charged") if powerStatus.BatteryFlag == 8 else _("Charging")
+		else:
+			status_text = _("Low") if powerStatus.BatteryFlag == 2 else _("Discharging")
+		return _("{}% ({})").format(percent, status_text)
 	except Exception:
-		pass
-	return None
+		return None
 
 
 def get_uptime():
 	try:
-		output = _runWmic("os get lastbootuptime")
-		lines = output.splitlines()
-		for line in lines:
-			if "LastBootUpTime" in line or not line.strip():
-				continue
-			if line.strip():
-				try:
-					from datetime import datetime
-					dt_str = line.strip().split('.')[0]
-					dt = datetime.strptime(dt_str, "%Y%m%d%H%M%S")
-					now = datetime.now()
-					delta = now - dt
-					
-					days = delta.days
-					hours, rem = divmod(delta.seconds, 3600)
-					minutes, seconds = divmod(rem, 60)
-					
-					parts = []
-					if days > 0:
-						parts.append(_("{} day{}").format(days, "s" if days > 1 else ""))
-					if hours > 0:
-						parts.append(_("{} hour{}").format(hours, "s" if hours > 1 else ""))
-					if minutes > 0:
-						parts.append(_("{} minute{}").format(minutes, "s" if minutes > 1 else ""))
-					if seconds > 0:
-						parts.append(_("{} second{}").format(seconds, "s" if seconds > 1 else ""))
-					
-					if not parts:
-						return _("<1 minute")
-					return ", ".join(parts)
-				except Exception:
-					pass
-	except Exception:
-		pass
-	
-	try:
-		import psutil
-		boot_time = psutil.boot_time()
-		from datetime import datetime
-		delta = datetime.now() - datetime.fromtimestamp(boot_time)
-		
-		days = delta.days
-		hours, rem = divmod(delta.seconds, 3600)
-		minutes, seconds = divmod(rem, 60)
-		
+		uptimeMs = kernel32.GetTickCount64()
+		totalSeconds = int(uptimeMs / 1000)
+		days, remainder = divmod(totalSeconds, 86400)
+		hours, remainder = divmod(remainder, 3600)
+		minutes, seconds = divmod(remainder, 60)
+
 		parts = []
 		if days > 0:
 			parts.append(_("{} day{}").format(days, "s" if days > 1 else ""))
@@ -303,89 +272,115 @@ def get_uptime():
 			parts.append(_("{} minute{}").format(minutes, "s" if minutes > 1 else ""))
 		if seconds > 0:
 			parts.append(_("{} second{}").format(seconds, "s" if seconds > 1 else ""))
-		
+
 		if not parts:
 			return _("<1 minute")
 		return ", ".join(parts)
 	except Exception:
-		pass
-	
-	return _("??")
+		return _("??")
 
 
-def get_wifi_info():
-	try:
-		output = _runCommand(["netsh", "wlan", "show", "interfaces"], 1)
-		for line in output.splitlines():
-			if "SSID" in line and "BSSID" not in line:
-				parts = line.split(":")
-				if len(parts) >= 2:
-					ssid = parts[1].strip()
-					if ssid:
-						return ssid
-	except Exception:
-		pass
-	return None
+def _signalLabel(signalText):
+	if not signalText.endswith("%"):
+		return signalText
+	value = int(signalText[:-1])
+	if value >= 80:
+		return _("Excellent")
+	if value >= 60:
+		return _("Good")
+	if value >= 40:
+		return _("Fair")
+	if value >= 20:
+		return _("Weak")
+	return _("Very Weak")
 
 
-def get_wifi_signal():
-	try:
-		output = _runCommand(["netsh", "wlan", "show", "interfaces"], 1)
-		for line in output.splitlines():
-			if "Signal" in line:
-				parts = line.split(":")
-				if len(parts) >= 2:
-					signal = parts[1].strip()
-					if signal.endswith("%"):
-						value = int(signal[:-1])
-						if value >= 80:
-							return _("Excellent")
-						elif value >= 60:
-							return _("Good")
-						elif value >= 40:
-							return _("Fair")
-						elif value >= 20:
-							return _("Weak")
-						else:
-							return _("Very Weak")
-					return signal
-	except Exception:
-		pass
-	return None
+def get_wifi_details():
+	"""Returns (ssid, signalLabel) from a single netsh call; (None, None) when there
+	is no connected Wi-Fi interface. The old code ran netsh twice, once per field."""
+	netsh = os.path.join(_getSystemRoot(), "System32", "netsh.exe")
+	output = _runCommand([netsh, "wlan", "show", "interfaces"], 2)
+	ssid = None
+	signal = None
+	for line in output.splitlines():
+		stripped = line.strip()
+		if ssid is None and stripped.startswith("SSID") and not stripped.startswith("BSSID"):
+			ssid = stripped.partition(":")[2].strip() or None
+		elif signal is None and stripped.startswith("Signal"):
+			rawSignal = stripped.partition(":")[2].strip()
+			try:
+				signal = _signalLabel(rawSignal) if rawSignal else None
+			except ValueError:
+				signal = rawSignal or None
+	if not ssid:
+		return None, None
+	return ssid, signal
+
+
+class DISPLAY_DEVICEW(ctypes.Structure):
+	_fields_ = [
+		("cb", wintypes.DWORD),
+		("DeviceName", wintypes.WCHAR * 32),
+		("DeviceString", wintypes.WCHAR * 128),
+		("StateFlags", wintypes.DWORD),
+		("DeviceID", wintypes.WCHAR * 128),
+		("DeviceKey", wintypes.WCHAR * 128),
+	]
 
 
 def get_gpu_info():
+	"""First real display adapter name via EnumDisplayDevicesW, which answers in
+	milliseconds; the old Get-CimInstance PowerShell call timed out on this machine
+	and the GPU line never appeared."""
 	try:
-		script = "Get-WmiObject -Class Win32_VideoController -ErrorAction SilentlyContinue | Where-Object { $_.Name -notlike '*Mirror*' -and $_.Name -notlike '*Remote*' -and $_.Name -notlike '*Basic*' } | Select-Object -First 1 -ExpandProperty Name"
-		gpu_name = _runPowerShell(script)
-		if not gpu_name:
+		user32 = ctypes.WinDLL("user32", use_last_error=True)
+		user32.EnumDisplayDevicesW.argtypes = [wintypes.LPCWSTR, wintypes.DWORD, ctypes.POINTER(DISPLAY_DEVICEW), wintypes.DWORD]
+		user32.EnumDisplayDevicesW.restype = wintypes.BOOL
+		for index in range(16):
+			device = DISPLAY_DEVICEW()
+			device.cb = ctypes.sizeof(DISPLAY_DEVICEW)
+			if not user32.EnumDisplayDevicesW(None, index, ctypes.byref(device), 0):
+				break
+			name = device.DeviceString.strip()
+			lowered = name.lower()
+			if not name or "mirror" in lowered or "remote" in lowered or "basic" in lowered:
+				continue
+			return name[:30]
+	except (OSError, AttributeError) as e:
+		log.debug(f"GPU lookup failed: {e}")
+	return None
+
+
+def _count_running_processes():
+	"""Number of running processes via psapi EnumProcesses, or None on failure.
+	EnumProcesses reports how many bytes it filled but not how many it dropped, so
+	the buffer is doubled until the result no longer fills it completely."""
+	psapi = ctypes.WinDLL("psapi", use_last_error=True)
+	psapi.EnumProcesses.argtypes = [ctypes.POINTER(wintypes.DWORD), wintypes.DWORD, ctypes.POINTER(wintypes.DWORD)]
+	psapi.EnumProcesses.restype = wintypes.BOOL
+	capacity = 1024
+	while capacity <= 65536:
+		pids = (wintypes.DWORD * capacity)()
+		bytesReturned = wintypes.DWORD(0)
+		if not psapi.EnumProcesses(pids, ctypes.sizeof(pids), ctypes.byref(bytesReturned)):
 			return None
-		gpu_name = gpu_name[:30]
-		return gpu_name
-	except Exception:
-		pass
+		if bytesReturned.value < ctypes.sizeof(pids):
+			return bytesReturned.value // ctypes.sizeof(wintypes.DWORD)
+		capacity *= 2
 	return None
 
 
 def get_process_count():
+	# Previously this called utils.enumerate_running_processes(), which does not
+	# exist anywhere in the add-on; the resulting AttributeError was swallowed by a
+	# silent "except Exception: pass", so the readout always fell through to "??".
 	try:
-		output = _runWmic("process list brief")
-		count = 0
-		for line in output.splitlines():
-			if line.strip() and "HandleCount" not in line:
-				count += 1
-		if count > 0:
-			return _("{} process{}").format(count, "es" if count > 1 else "")
-	except Exception:
-		pass
-	
-	try:
-		import psutil
-		count = len(psutil.pids())
-		return _("{} process{}").format(count, "es" if count > 1 else "")
-	except Exception:
-		pass
-	
+		count = _count_running_processes()
+		if count:
+			return str(count)
+		log.warning("Process count unavailable: EnumProcesses returned no result")
+	except (OSError, AttributeError, ValueError) as e:
+		log.warning(f"Process count failed: {e}")
 	return _("??")
 
 
@@ -402,12 +397,12 @@ def get_windows_activation_status():
 					return _("Not Activated")
 	except Exception:
 		pass
-	
+
 	try:
 		systemRoot = _getSystemRoot()
 		cscriptExe = os.path.join(systemRoot, "System32", "cscript.exe")
 		slmgrVbs = os.path.join(systemRoot, "System32", "slmgr.vbs")
-		
+
 		if os.path.exists(cscriptExe) and os.path.exists(slmgrVbs):
 			output = _runCommand([cscriptExe, "//nologo", slmgrVbs, "/dli"], timeout=3)
 			if output:
@@ -417,7 +412,7 @@ def get_windows_activation_status():
 					return _("Not Activated")
 	except Exception:
 		pass
-	
+
 	return None
 
 
@@ -436,68 +431,97 @@ def get_windows_version():
 
 
 def get_monitor_items_async(callback):
+	# The collectors are independent, so they run side by side and the dialog opens
+	# when the slowest one finishes (capped by _MONITOR_DEADLINE) instead of after the
+	# sum of all of them, which took ~9 seconds when run one after another. A
+	# collector that has not answered by the deadline is left out of the list (or
+	# shows as unknown) rather than holding the window back.
 	def worker():
 		try:
+			results = {}
+
+			def runCollector(key, func):
+				try:
+					results[key] = func()
+				except Exception as e:
+					log.warning("System information collector {} failed: {}".format(key, e))
+
+			collectors = {
+				"cpu": get_cpu_usage,
+				"ram": get_ram_usage,
+				"disk": get_disk_usage,
+				"counters": get_performance_counters,
+				"network": get_network_status,
+				"wifi": get_wifi_details,
+				"battery": get_battery_info,
+				"gpu": get_gpu_info,
+				"activation": get_windows_activation_status,
+			}
+			threads = []
+			for key, func in collectors.items():
+				thread = threading.Thread(target=runCollector, args=(key, func), daemon=True)
+				thread.start()
+				threads.append(thread)
+			deadline = time.time() + _MONITOR_DEADLINE
+			for thread in threads:
+				thread.join(max(0.0, deadline - time.time()))
+			snapshot = dict(results)
+
 			items = []
-			
-			cpu = get_cpu_usage()
-			items.append(("CPU: {}".format(cpu), "cpu"))
-			
-			ram = get_ram_usage()
-			items.append(("RAM: {}".format(ram), "ram"))
-			
-			disk_list = get_disk_usage()
-			if disk_list:
-				for disk_item in disk_list:
-					items.append(("Disk: {}".format(disk_item), "disk"))
-			else:
+			items.append(("CPU: {}".format(snapshot.get("cpu") or _("??%")), "cpu"))
+			items.append(("RAM: {}".format(snapshot.get("ram") or _("??%")), "ram"))
+
+			for disk_item in snapshot.get("disk") or []:
+				items.append(("Disk: {}".format(disk_item), "disk"))
+			if not snapshot.get("disk"):
 				items.append(("Disk: ??", "disk"))
-			
-			disk_activity = get_disk_activity()
-			if disk_activity:
-				items.append(("Disk Activity: {}".format(disk_activity), "disk_activity"))
-			
-			network_speed = get_network_speed()
-			if network_speed:
-				items.append(("Network Speed: {}".format(network_speed), "network_speed"))
+
+			counters = snapshot.get("counters") or {}
+			if counters.get("disk_activity"):
+				items.append(("Disk Activity: {}".format(counters["disk_activity"]), "disk_activity"))
+			if counters.get("network_speed"):
+				items.append(("Network Speed: {}".format(counters["network_speed"]), "network_speed"))
 			else:
-				network_status = get_network_status()
-				items.append(("Network: {}".format(network_status), "network"))
-			
-			wifi = get_wifi_info()
-			if wifi:
-				signal = get_wifi_signal()
+				networkStatus = _("Connected") if snapshot.get("network") else _("Disconnected")
+				items.append(("Network: {}".format(networkStatus), "network"))
+
+			ssid, signal = snapshot.get("wifi") or (None, None)
+			if ssid:
 				if signal:
-					items.append(("Wi-Fi: {} (Signal {})".format(wifi, signal), "wifi"))
+					items.append(("Wi-Fi: {} (Signal {})".format(ssid, signal), "wifi"))
 				else:
-					items.append(("Wi-Fi: {}".format(wifi), "wifi"))
-			
-			battery = get_battery_info()
-			if battery:
-				items.append(("Battery: {}".format(battery), "battery"))
-			
-			uptime = get_uptime()
-			items.append(("Uptime: {}".format(uptime), "uptime"))
-			
-			processes = get_process_count()
-			items.append(("Processes: {}".format(processes), "processes"))
-			
-			gpu = get_gpu_info()
-			if gpu:
-				items.append(("GPU: {}".format(gpu), "gpu"))
-			
-			activation = get_windows_activation_status()
-			if activation:
-				items.append(("Windows Activation: {}".format(activation), "activation"))
-			else:
-				items.append(("Windows Activation: Unknown", "activation"))
-			
-			windows = get_windows_version()
-			items.append(("Windows: {}".format(windows), "windows"))
-			
-			core.callLater(0, callback, items)
+					items.append(("Wi-Fi: {}".format(ssid), "wifi"))
+
+			if snapshot.get("battery"):
+				items.append(("Battery: {}".format(snapshot["battery"]), "battery"))
+
+			items.append(("Uptime: {}".format(get_uptime()), "uptime"))
+			items.append(("Processes: {}".format(get_process_count()), "processes"))
+
+			if snapshot.get("gpu"):
+				items.append(("GPU: {}".format(snapshot["gpu"]), "gpu"))
+
+			items.append(("Windows Activation: {}".format(snapshot.get("activation") or "Unknown"), "activation"))
+			items.append(("Windows: {}".format(get_windows_version()), "windows"))
+
+			wx.CallAfter(callback, items)
 		except Exception as e:
 			log.error("Error collecting monitor data: {}".format(e))
-			core.callLater(0, callback, [("Error collecting data", "error")])
-	
+			wx.CallAfter(callback, [("Error collecting data", "error")])
+
 	threading.Thread(target=worker, daemon=True).start()
+
+
+def get_monitor_items():
+	"""Synchronous fallback used when a caller needs an immediate, non-async snapshot."""
+	items = []
+	items.append(("CPU: {}".format(get_cpu_usage()), "cpu"))
+	items.append(("RAM: {}".format(get_ram_usage()), "ram"))
+	for disk_item in get_disk_usage():
+		items.append(("Disk: {}".format(disk_item), "disk"))
+	items.append(("Uptime: {}".format(get_uptime()), "uptime"))
+	items.append(("Processes: {}".format(get_process_count()), "processes"))
+	items.append(("Windows: {}".format(get_windows_version()), "windows"))
+	return items
+
+

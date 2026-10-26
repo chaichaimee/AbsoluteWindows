@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AbsoluteWindows 2026.7.0\n"
+"Project-Id-Version: AbsoluteWindows 2026.11.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-06-25 16:16+0700\n"
+"POT-Creation-Date: 2026-10-26 17:06+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Chinese (Traditional)\n"
@@ -10,783 +10,1104 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: DevOn Addon\n"
+"X-Generator: ChaiBot Addon\n"
 
-#: kill_dialog.py:76
+#: kill_dialog.py:77
 msgid "&Kill Process of Selected Window"
 msgstr "終止所選視窗的處理程序(&K)"
 
-#: sys_monitor.py:280
-#: sys_monitor.py:308
+#: sys_monitor.py:277
 msgid "<1 minute"
 msgstr "<1分鐘"
 
-#: sys_monitor.py:313
-#: sys_monitor.py:389
-#: sys_monitor.py:435
+#: sys_monitor.py:280
+#: sys_monitor.py:384
+#: sys_monitor.py:430
 msgid "??"
 msgstr "??"
 
-#: sys_monitor.py:77
-#: sys_monitor.py:112
+#: sys_monitor.py:119
+#: sys_monitor.py:123
+#: sys_monitor.py:137
+#: sys_monitor.py:471
+#: sys_monitor.py:472
 msgid "??%"
 msgstr "??%"
 
-#: menu.py:22
+#: menu.py:193
 msgid "AbsoluteWindows"
 msgstr "AbsoluteWindows"
 
-#: sys_monitor.py:400
-#: sys_monitor.py:415
+#: sys_monitor.py:395
+#: sys_monitor.py:410
 msgid "Activated"
 msgstr "已啟用"
 
-#: utils.py:691
+#: menu.py:625
+msgid "Applying changes. A Windows permission prompt may appear."
+msgstr "正在套用變更。可能會出現 Windows 權限提示。"
+
+#: utils.py:847
 msgid "Automatic"
 msgstr "自動"
 
-#: __init__.py:280
+#: utils.py:848
+msgid "Automatic (Delayed Start)"
+msgstr "自動 (延遲啟動)"
+
+#: addonCore.py:221
+msgid "Backing up Open With associations, please wait..."
+msgstr "正在備份「開啟方式」關聯，請稍候..."
+
+#: addonCore.py:139
+msgid "Backup Open With"
+msgstr "備份「開啟方式」"
+
+#: addonCore.py:536
 msgid "Battery report will open in your browser."
 msgstr "電池報告將在您的瀏覽器中開啟。"
 
-#: utils.py:123
+#: utils.py:155
 msgid "Bluetooth turned off."
 msgstr "藍牙已關閉。"
 
-#: utils.py:124
+#: utils.py:156
 msgid "Bluetooth turned on."
 msgstr "藍牙已開啟。"
 
-#: kill_dialog.py:156
+#: kill_dialog.py:157
 msgid "Cannot kill system process: {}"
 msgstr "無法終止系統處理程序：{}"
 
-#: kill_dialog.py:176
+#: kill_dialog.py:177
 msgid "Cannot open process. Access denied."
 msgstr "無法開啟處理程序。存取遭拒。"
 
-#: sys_monitor.py:236
-#: sys_monitor.py:237
+#: menu.py:524
+msgid "Caution"
+msgstr "注意"
+
+#: menu.py:597
+msgid "Caution: {note}"
+msgstr "注意：{note}"
+
+#: sys_monitor.py:250
 msgid "Charging"
 msgstr "充電中"
 
-#: __init__.py:115
+#: addonCore.py:138
 msgid "Check Disk Status"
 msgstr "檢查磁碟狀態"
 
-#: __init__.py:262
-msgid "Chkdsk report will open when complete."
-msgstr "完成後將開啟Chkdsk報告。"
+#: addonCore.py:516
+msgid "Chkdsk report will open when complete. On the system drive this normally only schedules a check for the next restart rather than running it immediately - that is expected."
+msgstr "Chkdsk 報告將在完成時開啟。對於系統磁碟機，這通常只排程在下次重新啟動時檢查，而不是立即執行，這是預期的行為。"
 
-#: __init__.py:100
+#: addonCore.py:122
 msgid "Clean Prefetch & Recent"
 msgstr "清理Prefetch和最近項目"
 
-#: __init__.py:101
+#: addonCore.py:123
 msgid "Clean System files"
 msgstr "清理系統檔案"
 
-#: __init__.py:102
+#: addonCore.py:124
 msgid "Clean Temp"
 msgstr "清理Temp資料夾"
 
-#: __init__.py:103
+#: addonCore.py:125
 msgid "Clean Windows Run History"
 msgstr "清理Windows執行歷程記錄"
 
-#: __init__.py:105
+#: addonCore.py:563
+msgid "Cleaning temporary files, please wait..."
+msgstr "正在清除暫存檔，請稍候..."
+
+#: addonCore.py:127
 msgid "Clear Ram"
 msgstr "清空記憶體"
 
-#: __init__.py:335
+#: addonCore.py:153
+msgid "Clear URL Cache"
+msgstr "清除網址快取"
+
+#: addonCore.py:624
 msgid "Cleared {:.1f} MB of RAM cache."
 msgstr "已清空 {:.1f} MB 記憶體快取。"
 
-#: kill_dialog.py:77
-#: menu.py:242
-#: menu.py:315
-#: menu.py:393
-#: menu.py:459
+#: addonCore.py:613
+msgid "Clearing RAM cache, please wait..."
+msgstr "正在清除 RAM 快取，請稍候..."
+
+#: addonCore.py:580
+msgid "Clearing Windows Run history, please wait..."
+msgstr "正在清除 Windows 執行歷史紀錄，請稍候..."
+
+#: kill_dialog.py:78
+#: menu.py:310
+#: menu.py:395
+#: menu.py:479
 msgid "Close"
 msgstr "關閉"
 
-#: __init__.py:68
+#: menu.py:621
+msgid "Confirm"
+msgstr "確認"
+
+#: addonCore.py:81
 msgid "Connect Internet"
 msgstr "連線網際網路"
 
-#: sys_monitor.py:217
+#: sys_monitor.py:234
+#: sys_monitor.py:485
 msgid "Connected"
 msgstr "已連線"
 
-#: __init__.py:86
+#: addonCore.py:105
 msgid "Control Panel"
 msgstr "控制台"
 
-#: utils.py:125
+#: cmd_tools.py:508
+msgid "Could not create the backup folder."
+msgstr "無法建立備份資料夾。"
+
+#: utils.py:157
 msgid "Could not find or change Bluetooth status."
 msgstr "無法找到或變更藍牙狀態。"
 
-#: __init__.py:577
+#: addonCore.py:876
 msgid "Could not open Control Panel."
 msgstr "無法開啟控制台。"
 
-#: __init__.py:449
+#: addonCore.py:738
 msgid "Could not open Disk Cleanup."
 msgstr "無法開啟磁碟清理。"
 
-#: __init__.py:394
+#: addonCore.py:683
 msgid "Could not open Environment Variables."
 msgstr "無法開啟環境變數。"
 
-#: __init__.py:470
+#: addonCore.py:759
 msgid "Could not open Folder Options."
 msgstr "無法開啟資料夾選項。"
 
-#: __init__.py:410
+#: addonCore.py:699
 msgid "Could not open Malicious Software Removal Tool."
 msgstr "無法開啟惡意軟體移除工具。"
 
-#: __init__.py:360
+#: addonCore.py:649
 msgid "Could not open Optimize Drives."
 msgstr "無法開啟最佳化磁碟機。"
 
-#: __init__.py:587
+#: addonCore.py:886
 msgid "Could not open Programs and Features."
 msgstr "無法開啟程式和功能。"
 
-#: __init__.py:459
+#: addonCore.py:748
 msgid "Could not open Registry Editor."
 msgstr "無法開啟登錄編輯程式。"
 
-#: __init__.py:374
+#: addonCore.py:663
 msgid "Could not open Services."
 msgstr "無法開啟服務。"
 
-#: __init__.py:597
+#: addonCore.py:909
 msgid "Could not open Sound Settings."
 msgstr "無法開啟音效設定。"
 
-#: __init__.py:567
+#: addonCore.py:899
+msgid "Could not open Volume Mixer."
+msgstr "無法開啟音量混音程式。"
+
+#: addonCore.py:856
 msgid "Could not open Windows Defender."
 msgstr "無法開啟Windows Defender。"
 
-#: kill_dialog.py:225
+#: kill_dialog.py:226
 msgid "Could not open kill dialog. See log for details."
 msgstr "無法開啟終止對話方塊。詳情請參閱紀錄。"
 
-#: __init__.py:253
+#: cmd_tools.py:672
+msgid "Could not start the elevated service change. Error code: {code}"
+msgstr "無法啟動提升權限的服務變更。錯誤代碼：{code}"
+
+#: cmd_tools.py:676
+msgid "Could not track the elevated service change."
+msgstr "無法追蹤提升權限的服務變更。"
+
+#: addonCore.py:133
+msgid "DISM Get International Settings"
+msgstr "DISM 取得國際設定"
+
+#: addonCore.py:506
+msgid "DISM international settings report will open when complete."
+msgstr "DISM 國際設定報告將在完成時開啟。"
+
+#: addonCore.py:496
 msgid "DISM report will open when complete."
 msgstr "完成後將開啟DISM報告。"
 
-#: menu.py:314
-#: menu.py:456
+#: addonCore.py:151
+msgid "Defragment Windows Search Database"
+msgstr "重組 Windows 搜尋資料庫"
+
+#: addonCore.py:99
+msgid "Disable Search Web Results"
+msgstr "停用搜尋網路結果"
+
+#: menu.py:309
+#: menu.py:474
+#: menu.py:672
 msgid "Disable Selected"
 msgstr "停用所選項目"
 
-#: __init__.py:78
+#: addonCore.py:92
 msgid "Disable User Account Control"
 msgstr "停用使用者帳戶控制"
 
-#: menu.py:366
-#: utils.py:687
+#: menu.py:476
+#: menu.py:674
+msgid "Disable all"
+msgstr "全部停用"
+
+#: menu.py:614
+msgid "Disable {count} services rated Safe? Services marked Caution are not included. A Windows permission prompt will appear."
+msgstr "是否停用 {count} 個評等為安全的服務？標示為注意的服務將不會包含在內。隨後將會出現 Windows 權限提示。"
+
+#: menu.py:362
+#: utils.py:845
 msgid "Disabled"
 msgstr "已停用"
 
-#: sys_monitor.py:239
+#: utils.py:731
+msgid "Disabling slows Start menu and File Explorer search"
+msgstr "停用會拖慢「開始」功能表與「檔案總管」的搜尋速度"
+
+#: utils.py:733
+msgid "Disabling stops Windows security updates"
+msgstr "停用會停止 Windows 安全性更新"
+
+#: sys_monitor.py:252
 msgid "Discharging"
 msgstr "放電中"
 
-#: __init__.py:66
+#: addonCore.py:79
 msgid "Disconnect Internet"
 msgstr "中斷網際網路連線"
 
-#: sys_monitor.py:220
+#: sys_monitor.py:235
+#: sys_monitor.py:485
 msgid "Disconnected"
 msgstr "已中斷連線"
 
-#: __init__.py:99
+#: addonCore.py:121
 msgid "Disk Cleanup"
 msgstr "磁碟清理"
 
-#: __init__.py:271
+#: addonCore.py:526
 msgid "Disk Cleanup report will open when complete."
 msgstr "完成後將開啟磁碟清理報告。"
 
-#: __init__.py:289
+#: addonCore.py:546
 msgid "Disk status report will open when complete."
 msgstr "完成後將開啟磁碟狀態報告。"
 
-#: menu.py:450
+#: menu.py:467
 msgid "Display Name"
 msgstr "顯示名稱"
 
-#: menu.py:236
+#: menu.py:592
+msgid "Display name: {name}"
+msgstr "顯示名稱：{name}"
+
+#: menu.py:219
 msgid "Drive"
 msgstr "磁碟機"
 
-#: menu.py:381
+#: menu.py:383
 msgid "Drive Optimize"
 msgstr "最佳化磁碟機"
 
-#: menu.py:241
-msgid "Eject Selected"
-msgstr "退出所選項目"
-
-#: __init__.py:104
+#: addonCore.py:126
 msgid "Empty Recycle Bin"
 msgstr "清空資源回收筒"
 
-#: menu.py:313
-#: menu.py:457
+#: addonCore.py:597
+msgid "Emptying Recycle Bin, please wait..."
+msgstr "正在清空資源回收桶，請稍候..."
+
+#: addonCore.py:97
+msgid "Enable Search Web Results"
+msgstr "啟用搜尋網路結果"
+
+#: menu.py:308
+#: menu.py:475
+#: menu.py:673
 msgid "Enable Selected"
 msgstr "啟用所選項目"
 
-#: __init__.py:80
+#: addonCore.py:94
 msgid "Enable User Account Control"
 msgstr "啟用使用者帳戶控制"
 
-#: menu.py:351
-#: utils.py:542
-#: utils.py:559
-#: utils.py:576
-#: utils.py:589
+#: menu.py:477
+#: menu.py:675
+msgid "Enable all"
+msgstr "全部啟用"
+
+#: menu.py:347
+#: utils.py:578
+#: utils.py:595
+#: utils.py:612
+#: utils.py:625
 msgid "Enabled"
 msgstr "已啟用"
 
-#: __init__.py:93
+#: addonCore.py:113
 msgid "Environment Variables"
 msgstr "環境變數"
 
-#: menu.py:271
-#: menu.py:280
-#: menu.py:348
-#: menu.py:358
-#: menu.py:363
-#: menu.py:373
-#: menu.py:417
-#: menu.py:432
-#: menu.py:494
-#: menu.py:501
-#: menu.py:506
-#: menu.py:513
+#: menu.py:344
+#: menu.py:354
+#: menu.py:359
+#: menu.py:369
+#: menu.py:420
+#: menu.py:436
+#: menu.py:583
+#: menu.py:604
+#: menu.py:609
 msgid "Error"
 msgstr "錯誤"
 
-#: sys_monitor.py:342
+#: sys_monitor.py:288
 msgid "Excellent"
 msgstr "極佳"
 
-#: cmd_tools.py:46
+#: cmd_tools.py:123
+#: cmd_tools.py:686
 msgid "Exception occurred: {error}"
 msgstr "發生例外狀況：{error}"
 
-#: __init__.py:310
+#: cmd_tools.py:517
+#: cmd_tools.py:521
+msgid "Failed to back up Open With associations."
+msgstr "備份「開啟檔案方式」關聯失敗。"
+
+#: addonCore.py:576
 msgid "Failed to clean temporary files."
 msgstr "清理暫存檔案失敗。"
 
-#: __init__.py:384
+#: addonCore.py:673
 msgid "Failed to clean: {errorMsg}"
 msgstr "清理失敗：{errorMsg}"
 
-#: __init__.py:341
+#: addonCore.py:630
 msgid "Failed to clear RAM cache."
 msgstr "清空記憶體快取失敗。"
 
-#: __init__.py:319
+#: addonCore.py:593
 msgid "Failed to clear Run history."
 msgstr "清空執行歷程記錄失敗。"
 
-#: kill_dialog.py:170
+#: kill_dialog.py:171
 msgid "Failed to close window."
 msgstr "關閉視窗失敗。"
 
-#: __init__.py:164
+#: addonCore.py:312
 msgid "Failed to connect internet."
 msgstr "連線網際網路失敗。"
 
-#: menu.py:373
+#: menu.py:369
 msgid "Failed to disable item."
 msgstr "停用項目失敗。"
 
-#: menu.py:501
-msgid "Failed to disable service: {}"
-msgstr "停用服務失敗：{}"
-
-#: __init__.py:148
+#: addonCore.py:295
 msgid "Failed to disconnect internet."
 msgstr "中斷網際網路連線失敗。"
 
-#: menu.py:280
+#: addonCore.py:379
+#: menu.py:272
 msgid "Failed to eject {drive}."
 msgstr "退出 {drive} 失敗。"
 
-#: utils.py:477
-#: utils.py:480
+#: utils.py:513
+#: utils.py:516
 msgid "Failed to empty recycle bin."
 msgstr "清空資源回收筒失敗。"
 
-#: menu.py:358
+#: menu.py:354
 msgid "Failed to enable item."
 msgstr "啟用項目失敗。"
 
-#: menu.py:513
-msgid "Failed to enable service: {}"
-msgstr "啟用服務失敗：{}"
-
-#: __init__.py:184
+#: addonCore.py:332
 msgid "Failed to restart Windows Audio Services."
 msgstr "重新啟動Windows音效服務失敗。"
 
-#: __init__.py:238
+#: addonCore.py:479
 msgid "Failed to restart Windows Explorer."
 msgstr "重新啟動Windows檔案總管失敗。"
 
-#: __init__.py:198
+#: addonCore.py:389
 msgid "Failed to restart to BIOS. Your system may not support this feature via Windows."
 msgstr "重新啟動至BIOS失敗。您的系統可能不支援透過Windows使用此功能。"
 
-#: __init__.py:301
+#: cmd_tools.py:555
+#: cmd_tools.py:559
+msgid "Failed to restore Open With associations."
+msgstr "還原「開啟檔案方式」關聯失敗。"
+
+#: addonCore.py:559
 msgid "Failed to start system cleanup."
 msgstr "啟動系統清理失敗。"
 
-#: kill_dialog.py:193
+#: audio_device.py:215
+msgid "Failed to switch audio device."
+msgstr "切換音訊裝置失敗。"
+
+#: kill_dialog.py:194
 msgid "Failed to terminate process. Insufficient privileges."
 msgstr "終止處理程序失敗。權限不足。"
 
-#: utils.py:128
+#: utils.py:160
 msgid "Failed to toggle Bluetooth."
 msgstr "切換藍牙失敗。"
 
-#: __init__.py:211
+#: addonCore.py:415
 msgid "Failed to toggle UAC."
 msgstr "切換UAC失敗。"
 
-#: sys_monitor.py:346
+#: addonCore.py:422
+msgid "Failed to toggle search web results."
+msgstr "切換搜尋網路結果失敗。"
+
+#: sys_monitor.py:292
 msgid "Fair"
 msgstr "一般"
 
-#: __init__.py:475
+#: addonCore.py:764
 msgid "File Explorer Options"
 msgstr "檔案總管選項"
 
-#: __init__.py:89
+#: addonCore.py:109
 msgid "Folder Option"
 msgstr "資料夾選項"
 
-#: __init__.py:475
+#: addonCore.py:764
 msgid "Folder Options"
 msgstr "資料夾選項"
 
-#: sys_monitor.py:238
+#: sys_monitor.py:250
 msgid "Fully Charged"
 msgstr "已充滿"
 
-#: sys_monitor.py:344
+#: sys_monitor.py:290
 msgid "Good"
 msgstr "良好"
 
-#: menu.py:352
-#: menu.py:367
-#: menu.py:425
+#: menu.py:348
+#: menu.py:363
 msgid "Info"
 msgstr "資訊"
 
-#: __init__.py:161
+#: addonCore.py:175
+msgid "Installed packages report will open when complete."
+msgstr "已安裝套件報告將會在完成時開啟。"
+
+#: addonCore.py:309
 msgid "Internet connected."
 msgstr "網際網路已連線。"
 
-#: __init__.py:145
+#: addonCore.py:292
 msgid "Internet disconnected."
 msgstr "網際網路已中斷連線。"
 
-#: menu.py:367
+#: menu.py:363
 msgid "Item already disabled."
 msgstr "項目已停用。"
 
-#: menu.py:352
+#: menu.py:348
 msgid "Item already enabled."
 msgstr "項目已啟用。"
 
-#: __init__.py:84
-#: __init__.py:630
-#: kill_dialog.py:56
+#: addonCore.py:103
+#: kill_dialog.py:57
 msgid "Kill Not Responding Apps"
 msgstr "終止沒有回應的應用程式"
 
-#: kill_dialog.py:215
+#: addonCore.py:942
+msgid "Kill Not Responding Apps (single tap) or Safely Remove USB (double tap)"
+msgstr "強制結束沒有回應的應用程式 (按一下) 或安全移除 USB (按兩下)"
+
+#: kill_dialog.py:216
 msgid "Kill Process"
 msgstr "終止處理程序"
 
-#: menu.py:237
+#: menu.py:220
 msgid "Label"
 msgstr "標籤"
 
-#: menu.py:119
+#: addonCore.py:150
+msgid "List Installed Packages (winget list)"
+msgstr "列出已安裝的套件 (winget list)"
+
+#: menu.py:511
+msgid "Loading services, please wait..."
+msgstr "正在載入服務，請稍候..."
+
+#: menu.py:197
 msgid "Loading system information..."
 msgstr "正在載入系統資訊..."
 
-#: menu.py:309
+#: menu.py:304
 msgid "Location"
 msgstr "位置"
 
-#: sys_monitor.py:240
+#: sys_monitor.py:252
 msgid "Low"
 msgstr "低"
 
-#: __init__.py:92
-#: menu.py:440
+#: addonCore.py:115
+msgid "Maintenance Tools"
+msgstr "維護工具"
+
+#: addonCore.py:112
+#: menu.py:450
 msgid "Manage Services"
 msgstr "管理服務"
 
-#: utils.py:689
+#: utils.py:846
 msgid "Manual"
 msgstr "手動"
 
-#: __init__.py:97
+#: addonCore.py:119
 msgid "Microsoft Windows Malicious Software Removal Tool"
 msgstr "Microsoft Windows 惡意軟體移除工具"
 
-#: menu.py:306
+#: menu.py:301
 msgid "Name"
 msgstr "名稱"
 
-#: menu.py:266
-msgid "No USB drives found"
-msgstr "找不到USB磁碟機"
+#: utils.py:735
+msgid "Needed by Windows troubleshooters, including the audio one"
+msgstr "Windows 疑難排解員 (包含音訊疑難排解員) 所需"
 
-#: __init__.py:225
+#: utils.py:748
+msgid "Needed for Xbox controllers, including the Adaptive Controller"
+msgstr "Xbox 控制器 (包含無障礙控制器) 所需"
+
+#: utils.py:729
+msgid "Needed for printing, including braille embossers"
+msgstr "列印 (包含點字印表機) 所需"
+
+#: utils.py:769
+msgid "Needed for scanners and cameras, including scanning documents for OCR"
+msgstr "掃描器與相機 (包含掃描文件以進行 OCR) 所需"
+
+#: utils.py:767
+msgid "Needed for smart card sign-in and some banking cards"
+msgstr "智慧卡登入與部分金融卡所需"
+
+#: utils.py:750
+msgid "Needed for touch keyboard, handwriting and voice typing"
+msgstr "觸控式鍵盤、手寫與語音打字所需"
+
+#: addonCore.py:239
+msgid "No Open With backups found"
+msgstr "找不到「開啟方式」備份"
+
+#: addonCore.py:371
+msgid "No USB drives found."
+msgstr "找不到 USB 磁碟機。"
+
+#: addonCore.py:457
 msgid "No Wi-Fi network is currently connected."
 msgstr "目前未連線Wi-Fi網路。"
 
-#: __init__.py:138
+#: addonCore.py:284
 msgid "No active network adapter found."
 msgstr "找不到作用中的網路介面卡。"
 
-#: menu.py:156
+#: cmd_tools.py:647
+msgid "No changeable services were selected."
+msgstr "未選取任何可變更的服務。"
+
+#: menu.py:201
 msgid "No data available"
 msgstr "無可用資料"
 
-#: __init__.py:155
+#: menu.py:599
+msgid "No description available."
+msgstr "無可用描述。"
+
+#: addonCore.py:302
 msgid "No disabled network adapter found."
 msgstr "找不到已停用的網路介面卡。"
 
-#: menu.py:348
-#: menu.py:363
+#: menu.py:344
+#: menu.py:359
 msgid "No item selected."
 msgstr "未選取項目。"
 
-#: kill_dialog.py:149
+#: kill_dialog.py:150
 msgid "No window selected."
 msgstr "未選取視窗。"
 
-#: sys_monitor.py:402
-#: sys_monitor.py:417
+#: sys_monitor.py:397
+#: sys_monitor.py:412
 msgid "Not Activated"
 msgstr "未啟用"
 
-#: __init__.py:91
+#: utils.py:884
+msgid "Not installed"
+msgstr "未安裝"
+
+#: utils.py:985
+msgid "Nothing to change - the selected services are already in that state."
+msgstr "無需變更 - 所選服務已處於該狀態。"
+
+#: audio_device.py:193
+msgid "Only one playback device is available."
+msgstr "僅有一個播放裝置可用。"
+
+#: addonCore.py:111
 msgid "Open Services"
 msgstr "開啟服務"
 
-#: menu.py:430
+#: addonCore.py:231
+msgid "Open With associations backed up successfully. Note: this restores reliably only on this same Windows installation and user account, not after a Windows reinstall."
+msgstr "「開啟方式」關聯已成功備份。注意：這僅能在此 Windows 安裝與使用者帳戶上可靠還原，重新安裝 Windows 後則無法還原。"
+
+#: addonCore.py:263
+msgid "Open With associations restored. Restart Windows Explorer or sign out and back in for the change to take effect."
+msgstr "「開啟方式」關聯已還原。請重新啟動 Windows 檔案總管或登出再重新登入以讓變更生效。"
+
+#: menu.py:434
 msgid "Optimization completed."
 msgstr "最佳化已完成。"
 
-#: menu.py:432
+#: menu.py:436
 msgid "Optimization failed: {}"
 msgstr "最佳化失敗：{}"
 
-#: menu.py:392
+#: menu.py:394
 msgid "Optimize Selected"
 msgstr "最佳化所選項目"
 
-#: __init__.py:98
+#: addonCore.py:120
 msgid "Optimize and defragment drive"
 msgstr "最佳化並重組磁碟機"
 
-#: menu.py:425
+#: menu.py:429
 msgid "Optimizing drive, please wait..."
 msgstr "正在最佳化磁碟機，請稍候..."
 
-#: __init__.py:114
+#: utils.py:871
+msgid "Other"
+msgstr "其他"
+
+#: addonCore.py:165
+msgid "Package upgrade report will open when complete."
+msgstr "套件升級報告將在完成時開啟。"
+
+#: addonCore.py:137
 msgid "Power Diagnostic (Battery Report)"
 msgstr "電源診斷（電池報告）"
 
-#: __init__.py:381
+#: addonCore.py:670
 msgid "Prefetch and recent files cleaned. {count} items removed."
 msgstr "已清理Prefetch和最近檔案。已移除 {count} 個項目。"
 
-#: kill_dialog.py:186
+#: kill_dialog.py:187
 msgid "Process terminated."
 msgstr "處理程序已終止。"
 
-#: __init__.py:87
+#: addonCore.py:106
 msgid "Programs and Features"
 msgstr "程式和功能"
 
-#: __init__.py:338
+#: addonCore.py:88
+msgid "Quick Switch Audio Device"
+msgstr "快速切換音訊裝置"
+
+#: addonCore.py:627
 msgid "RAM cache is already clean."
 msgstr "記憶體快取已清空。"
 
-#: utils.py:474
+#: utils.py:510
 msgid "Recycle bin emptied. {count} items removed."
 msgstr "資源回收筒已清空。已移除 {count} 個項目。"
 
-#: utils.py:468
+#: utils.py:504
 msgid "Recycle bin is already empty."
 msgstr "資源回收筒已為空。"
 
-#: menu.py:458
+#: menu.py:478
+#: menu.py:677
 msgid "Refresh"
 msgstr "重新整理"
 
-#: __init__.py:95
+#: addonCore.py:116
 msgid "Regedit"
 msgstr "登錄編輯程式"
 
-#: __init__.py:74
+#: addonCore.py:87
 msgid "Restart Windows Audio Service"
 msgstr "重新啟動Windows音效服務"
 
-#: __init__.py:85
+#: addonCore.py:104
 msgid "Restart Windows Explorer"
 msgstr "重新啟動Windows檔案總管"
 
-#: __init__.py:82
+#: addonCore.py:101
 msgid "Restart to BIOS/UEFI Settings"
 msgstr "重新啟動至BIOS/UEFI設定"
 
-#: __init__.py:178
+#: addonCore.py:326
 msgid "Restarting Audio Services, please wait..."
 msgstr "正在重新啟動音效服務，請稍候..."
 
-#: __init__.py:192
+#: addonCore.py:466
+msgid "Restarting Windows Explorer, please wait..."
+msgstr "正在重新啟動 Windows 檔案總管，請稍候..."
+
+#: addonCore.py:383
 msgid "Restarting to BIOS/UEFI, please wait..."
 msgstr "正在重新啟動至BIOS/UEFI，請稍候..."
 
-#: __init__.py:112
+#: addonCore.py:140
+msgid "Restore Open With"
+msgstr "還原「開啟方式」"
+
+#: addonCore.py:253
+msgid "Restoring Open With associations, please wait..."
+msgstr "正在還原「開啟方式」關聯，請稍候..."
+
+#: addonCore.py:135
 msgid "Run Chkdsk on C:"
 msgstr "在C：上執行Chkdsk"
 
-#: __init__.py:94
+#: addonCore.py:114
 msgid "Run Cmd"
 msgstr "執行Cmd"
 
-#: __init__.py:110
+#: addonCore.py:132
 msgid "Run DISM"
 msgstr "執行DISM"
 
-#: __init__.py:113
+#: addonCore.py:136
 msgid "Run Disk Cleanup"
 msgstr "執行磁碟清理"
 
-#: __init__.py:111
+#: addonCore.py:134
 msgid "Run SFC Scannow"
 msgstr "執行SFC Scannow"
 
-#: utils.py:694
+#: addonCore.py:152
+msgid "Run Windows Defender Full Scan"
+msgstr "執行 Windows Defender 完整掃描"
+
+#: utils.py:867
 msgid "Running"
 msgstr "執行中"
 
-#: __init__.py:244
+#: addonCore.py:486
 msgid "SFC Scannow report will open when complete."
 msgstr "完成後將開啟SFC Scannow報告。"
 
-#: __init__.py:73
-#: menu.py:228
+#: menu.py:524
+msgid "Safe"
+msgstr "安全"
+
+#: addonCore.py:86
+#: menu.py:211
 msgid "Safely Remove USB"
 msgstr "安全移除USB裝置"
 
-#: menu.py:271
-msgid "Select a USB drive first."
-msgstr "請先選取USB磁碟機。"
+#: menu.py:470
+msgid "Safety"
+msgstr "安全性"
 
-#: menu.py:417
+#: addonCore.py:427
+msgid "Search web results disabled. Restarting Explorer to apply changes..."
+msgstr "已停用搜尋網路結果。正在重新啟動檔案總管以套用變更..."
+
+#: addonCore.py:429
+msgid "Search web results enabled. Restarting Explorer to apply changes..."
+msgstr "已啟用搜尋網路結果。正在重新啟動檔案總管以套用變更..."
+
+#: menu.py:420
 msgid "Select a drive first."
 msgstr "請先選取磁碟機。"
 
-#: menu.py:494
-#: menu.py:506
+#: menu.py:583
+#: menu.py:604
 msgid "Select a service first."
 msgstr "請先選取服務。"
 
-#: menu.py:449
-msgid "Service Name"
-msgstr "服務名稱"
+#: menu.py:679
+msgid "Service Actions"
+msgstr "服務動作"
 
-#: __init__.py:614
+#: menu.py:588
+#: menu.py:600
+msgid "Service Details"
+msgstr "服務詳細資料"
+
+#: menu.py:591
+msgid "Service name: {name}"
+msgstr "服務名稱：{name}"
+
+#: addonCore.py:926
 msgid "Show Absolute Windows menu (single tap) or System Monitor (double tap)"
 msgstr "顯示Absolute Windows功能表（單擊）或系統監視器（雙擊）"
 
-#: __init__.py:71
+#: addonCore.py:84
 msgid "Show Wi-Fi Password"
 msgstr "顯示Wi-Fi密碼"
 
-#: __init__.py:88
+#: menu.py:676
+msgid "Show service details"
+msgstr "顯示服務詳細資料"
+
+#: menu.py:617
+msgid ""
+"Some selected services are marked Caution:\n"
+"{details}\n"
+"\n"
+"Disable the selected services anyway?"
+msgstr ""
+"部分選取的服務標示為注意：\n"
+"{details}\n"
+"\n"
+"是否仍要停用選取的服務？"
+
+#: addonCore.py:108
 msgid "Sound setting"
 msgstr "音效設定"
 
-#: __init__.py:90
-#: menu.py:295
+#: addonCore.py:110
+#: menu.py:290
 msgid "Startup Manager"
 msgstr "啟動管理員"
 
-#: menu.py:451
+#: menu.py:468
 msgid "Startup Type"
 msgstr "啟動類型"
 
-#: menu.py:308
-#: menu.py:452
+#: menu.py:593
+msgid "Startup type: {value}"
+msgstr "啟動類型：{value}"
+
+#: menu.py:303
+#: menu.py:469
 msgid "Status"
 msgstr "狀態"
 
-#: utils.py:696
+#: menu.py:594
+msgid "Status: {value}"
+msgstr "狀態：{value}"
+
+#: utils.py:869
+#: utils.py:908
 msgid "Stopped"
 msgstr "已停止"
 
-#: menu.py:277
-#: menu.py:430
+#: menu.py:434
 msgid "Success"
 msgstr "成功"
 
-#: menu.py:101
-msgid "System Monitor"
-msgstr "系統監視器"
+#: addonCore.py:345
+msgid "Switched to {device}."
+msgstr "已切換至 {device}。"
 
-#: __init__.py:63
+#: menu.py:204
+msgid "System Information"
+msgstr "系統資訊"
+
+#: addonCore.py:76
 msgid "System Tray"
 msgstr "系統匣"
 
-#: __init__.py:298
+#: addonCore.py:556
 msgid "System cleanup started."
 msgstr "系統清理已開始。"
 
-#: __init__.py:307
+#: addonCore.py:573
 msgid "Temporary files cleaned. {count} items removed."
 msgstr "已清理暫存檔案。已移除 {count} 個項目。"
 
-#: __init__.py:222
+#: addonCore.py:454
 msgid "The Wi-Fi network '{ssid}' is open (no password)."
 msgstr "Wi-Fi網路 '{ssid}' 為開放網路（無密碼）。"
 
-#: __init__.py:70
+#: cmd_tools.py:546
+msgid "The selected backup file no longer exists."
+msgstr "選取的備份檔案已不存在。"
+
+#: menu.py:609
+msgid "The selected services are not installed on this system."
+msgstr "選取的服務未安裝在此系統上。"
+
+#: cmd_tools.py:683
+msgid "The service change took too long to finish."
+msgstr "服務變更花費太多時間才完成。"
+
+#: addonCore.py:83
 msgid "Toggle Bluetooth"
 msgstr "切換藍牙"
 
-#: menu.py:307
+#: menu.py:302
 msgid "Type"
 msgstr "類型"
 
-#: utils.py:89
+#: addonCore.py:205
+msgid "URL cache clearing started."
+msgstr "已開始清除 URL 快取。"
+
+#: utils.py:91
 msgid "USB Drive"
 msgstr "USB磁碟機"
 
-#: menu.py:277
+#: addonCore.py:376
+#: menu.py:264
 msgid "USB drive {drive} ejected safely."
 msgstr "USB磁碟機 {drive} 已安全退出。"
 
-#: sys_monitor.py:241
+#: utils.py:849
 msgid "Unknown"
 msgstr "未知"
 
-#: __init__.py:208
-msgid "User Account Control toggled."
-msgstr "使用者帳戶控制已切換。"
+#: audio_device.py:164
+msgid "Unknown Device"
+msgstr "未知裝置"
 
-#: cmd_tools.py:41
+#: addonCore.py:149
+msgid "Update All Packages (winget upgrade)"
+msgstr "更新所有套件 (winget upgrade)"
+
+#: addonCore.py:412
+msgid "User Account Control changed. Restart Windows for the change to take effect."
+msgstr "使用者帳戶控制已變更。請重新啟動 Windows 以使變更生效。"
+
+#: cmd_tools.py:99
+#: cmd_tools.py:671
 msgid "User cancelled the UAC elevation prompt."
 msgstr "使用者已取消UAC提升提示。"
 
-#: sys_monitor.py:350
+#: sys_monitor.py:295
 msgid "Very Weak"
 msgstr "非常弱"
 
-#: sys_monitor.py:348
+#: addonCore.py:107
+msgid "Volume Mixer"
+msgstr "音量混音程式"
+
+#: sys_monitor.py:294
 msgid "Weak"
 msgstr "弱"
 
-#: __init__.py:219
+#: addonCore.py:451
 msgid "Wi-Fi password for {ssid} copied to clipboard."
 msgstr "已複製 {ssid} 的Wi-Fi密碼到剪貼簿。"
 
-#: kill_dialog.py:164
+#: kill_dialog.py:165
 msgid "Window closed."
 msgstr "視窗已關閉。"
 
-#: __init__.py:181
+#: addonCore.py:329
 msgid "Windows Audio Services restarted successfully."
 msgstr "Windows音效服務已成功重新啟動。"
 
-#: __init__.py:96
+#: addonCore.py:117
+# keep-identical
 msgid "Windows Defender"
 msgstr "Windows Defender"
 
-#: __init__.py:235
+#: addonCore.py:118
+msgid "Windows Defender Full Scan Low"
+msgstr "Windows Defender 完整掃描（低優先級）"
+
+#: addonCore.py:863
+msgid "Windows Defender Full Scan started at low priority."
+msgstr "Windows Defender 完整掃描已以低優先級啟動。"
+
+#: addonCore.py:195
+msgid "Windows Defender full scan started."
+msgstr "Windows Defender 完整掃描已啟動。"
+
+#: addonCore.py:476
 msgid "Windows Explorer has been restarted."
 msgstr "Windows檔案總管已重新啟動。"
 
-#: __init__.py:316
+#: addonCore.py:590
 msgid "Windows Run history cleared. {count} items removed."
 msgstr "已清空Windows執行歷程記錄。已移除 {count} 個項目。"
 
-#: sys_monitor.py:430
+#: addonCore.py:185
+msgid "Windows Search database defragmentation started."
+msgstr "Windows 搜尋資料庫重組已啟動。"
+
+#: sys_monitor.py:425
+# keep-identical
 msgid "Windows Server {}"
 msgstr "Windows Server {}"
 
-#: sys_monitor.py:193
-#: sys_monitor.py:206
+#: sys_monitor.py:227
 msgid "{:.1F} MB/s down, {:.1F} MB/s up"
 msgstr "{:.1F} MB/s 下載，{:.1F} MB/s 上傳"
 
-#: sys_monitor.py:166
-#: sys_monitor.py:178
+#: sys_monitor.py:224
 msgid "{:.1F} MB/s read, {:.1F} MB/s write"
 msgstr "{:.1F} MB/s 讀取，{:.1F} MB/s 寫入"
 
-#: sys_monitor.py:96
-#: sys_monitor.py:108
+#: sys_monitor.py:135
 msgid "{:.2F} GB of {:.2F} GB used ({:.1F}%)"
 msgstr "已使用 {:.2F} GB / {:.2F} GB ({:.1F}%)"
 
-#: sys_monitor.py:432
+#: menu.py:645
+msgid "{changed} changed, {failed} failed: {names}"
+msgstr "已變更 {changed} 個，失敗 {failed} 個：{names}"
+
+#: menu.py:649
+msgid "{changed} services changed."
+msgstr "已變更 {changed} 個服務。"
+
+#: menu.py:534
+msgid "{count} services listed."
+msgstr "已列出 {count} 個服務。"
+
+#: menu.py:587
+msgid "{name} is not installed on this system."
+msgstr "系統未安裝 {name}。"
+
+#: sys_monitor.py:427
 msgid "{} ({} bit) build {}"
 msgstr "{} ({}位元) 組建 {}"
 
-#: sys_monitor.py:271
-#: sys_monitor.py:299
+#: sys_monitor.py:268
 msgid "{} day{}"
 msgstr "{}天{}"
 
-#: sys_monitor.py:273
-#: sys_monitor.py:301
+#: sys_monitor.py:270
 msgid "{} hour{}"
 msgstr "{}小時{}"
 
-#: sys_monitor.py:275
-#: sys_monitor.py:303
+#: sys_monitor.py:272
 msgid "{} minute{}"
 msgstr "{}分鐘{}"
 
-#: sys_monitor.py:378
-#: sys_monitor.py:385
-msgid "{} process{}"
-msgstr "{}個處理程序{}"
-
-#: sys_monitor.py:277
-#: sys_monitor.py:305
+#: sys_monitor.py:274
 msgid "{} second{}"
 msgstr "{}秒{}"
 
-#: sys_monitor.py:133
-#: sys_monitor.py:149
+#: sys_monitor.py:166
 msgid "{} {:.1F} GB of {:.1F} GB used ({:.0F}%)"
 msgstr "{} 已使用 {:.1F} GB / {:.1F} GB ({:.0F}%)"
 
-#: sys_monitor.py:67
-#: sys_monitor.py:73
+#: sys_monitor.py:121
 msgid "{}%"
 msgstr "{}%"
 
-#: sys_monitor.py:242
+#: sys_monitor.py:253
 msgid "{}% ({})"
 msgstr "{}% ({})"

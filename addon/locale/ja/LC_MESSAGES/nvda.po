@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AbsoluteWindows 2026.7.0\n"
+"Project-Id-Version: AbsoluteWindows 2026.11.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-06-25 16:16+0700\n"
+"POT-Creation-Date: 2026-10-26 17:06+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Japanese\n"
@@ -10,783 +10,1104 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: DevOn Addon\n"
+"X-Generator: ChaiBot Addon\n"
 
-#: kill_dialog.py:76
+#: kill_dialog.py:77
 msgid "&Kill Process of Selected Window"
 msgstr "選択したウィンドウのプロセスを&強制終了"
 
-#: sys_monitor.py:280
-#: sys_monitor.py:308
+#: sys_monitor.py:277
 msgid "<1 minute"
 msgstr "1分未満"
 
-#: sys_monitor.py:313
-#: sys_monitor.py:389
-#: sys_monitor.py:435
+#: sys_monitor.py:280
+#: sys_monitor.py:384
+#: sys_monitor.py:430
 msgid "??"
 msgstr "??"
 
-#: sys_monitor.py:77
-#: sys_monitor.py:112
+#: sys_monitor.py:119
+#: sys_monitor.py:123
+#: sys_monitor.py:137
+#: sys_monitor.py:471
+#: sys_monitor.py:472
 msgid "??%"
 msgstr "??%"
 
-#: menu.py:22
+#: menu.py:193
 msgid "AbsoluteWindows"
 msgstr "AbsoluteWindows"
 
-#: sys_monitor.py:400
-#: sys_monitor.py:415
+#: sys_monitor.py:395
+#: sys_monitor.py:410
 msgid "Activated"
 msgstr "アクティブ化済み"
 
-#: utils.py:691
+#: menu.py:625
+msgid "Applying changes. A Windows permission prompt may appear."
+msgstr "変更を適用しています。Windowsのアクセス許可プロンプトが表示される場合があります。"
+
+#: utils.py:847
 msgid "Automatic"
 msgstr "自動"
 
-#: __init__.py:280
+#: utils.py:848
+msgid "Automatic (Delayed Start)"
+msgstr "自動 (遅延開始)"
+
+#: addonCore.py:221
+msgid "Backing up Open With associations, please wait..."
+msgstr "「プログラムから開く」の関連付けをバックアップしています。お待ちください..."
+
+#: addonCore.py:139
+msgid "Backup Open With"
+msgstr "「プログラムから開く」のバックアップ"
+
+#: addonCore.py:536
 msgid "Battery report will open in your browser."
 msgstr "バッテリーレポートがブラウザで開きます。"
 
-#: utils.py:123
+#: utils.py:155
 msgid "Bluetooth turned off."
 msgstr "Bluetoothをオフにしました。"
 
-#: utils.py:124
+#: utils.py:156
 msgid "Bluetooth turned on."
 msgstr "Bluetoothをオンにしました。"
 
-#: kill_dialog.py:156
+#: kill_dialog.py:157
 msgid "Cannot kill system process: {}"
 msgstr "システムプロセスを強制終了できません: {}"
 
-#: kill_dialog.py:176
+#: kill_dialog.py:177
 msgid "Cannot open process. Access denied."
 msgstr "プロセスを開けません。アクセスが拒否されました。"
 
-#: sys_monitor.py:236
-#: sys_monitor.py:237
+#: menu.py:524
+msgid "Caution"
+msgstr "注意"
+
+#: menu.py:597
+msgid "Caution: {note}"
+msgstr "注意: {note}"
+
+#: sys_monitor.py:250
 msgid "Charging"
 msgstr "充電中"
 
-#: __init__.py:115
+#: addonCore.py:138
 msgid "Check Disk Status"
 msgstr "ディスクの状態を確認"
 
-#: __init__.py:262
-msgid "Chkdsk report will open when complete."
-msgstr "完了するとChkdskレポートが開きます。"
+#: addonCore.py:516
+msgid "Chkdsk report will open when complete. On the system drive this normally only schedules a check for the next restart rather than running it immediately - that is expected."
+msgstr "完了するとChkdskレポートが開きます。システムドライブの場合、通常は即座に実行されるのではなく、次回の再起動時にチェックがスケジュールされますが、これは正常な動作です。"
 
-#: __init__.py:100
+#: addonCore.py:122
 msgid "Clean Prefetch & Recent"
 msgstr "Prefetchと最近使ったファイルをクリーンアップ"
 
-#: __init__.py:101
+#: addonCore.py:123
 msgid "Clean System files"
 msgstr "システムファイルをクリーンアップ"
 
-#: __init__.py:102
+#: addonCore.py:124
 msgid "Clean Temp"
 msgstr "Tempをクリーンアップ"
 
-#: __init__.py:103
+#: addonCore.py:125
 msgid "Clean Windows Run History"
 msgstr "Windowsのファイル名を指定して実行の履歴をクリーンアップ"
 
-#: __init__.py:105
+#: addonCore.py:563
+msgid "Cleaning temporary files, please wait..."
+msgstr "一時ファイルを削除しています。お待ちください..."
+
+#: addonCore.py:127
 msgid "Clear Ram"
 msgstr "RAMをクリア"
 
-#: __init__.py:335
+#: addonCore.py:153
+msgid "Clear URL Cache"
+msgstr "URLキャッシュをクリア"
+
+#: addonCore.py:624
 msgid "Cleared {:.1f} MB of RAM cache."
 msgstr "{:.1f} MBのRAMキャッシュをクリアしました。"
 
-#: kill_dialog.py:77
-#: menu.py:242
-#: menu.py:315
-#: menu.py:393
-#: menu.py:459
+#: addonCore.py:613
+msgid "Clearing RAM cache, please wait..."
+msgstr "RAMキャッシュをクリアしています。お待ちください..."
+
+#: addonCore.py:580
+msgid "Clearing Windows Run history, please wait..."
+msgstr "Windowsのファイル名を指定して実行の履歴をクリアしています。お待ちください..."
+
+#: kill_dialog.py:78
+#: menu.py:310
+#: menu.py:395
+#: menu.py:479
 msgid "Close"
 msgstr "閉じる"
 
-#: __init__.py:68
+#: menu.py:621
+msgid "Confirm"
+msgstr "確認"
+
+#: addonCore.py:81
 msgid "Connect Internet"
 msgstr "インターネットに接続"
 
-#: sys_monitor.py:217
+#: sys_monitor.py:234
+#: sys_monitor.py:485
 msgid "Connected"
 msgstr "接続済み"
 
-#: __init__.py:86
+#: addonCore.py:105
 msgid "Control Panel"
 msgstr "コントロールパネル"
 
-#: utils.py:125
+#: cmd_tools.py:508
+msgid "Could not create the backup folder."
+msgstr "バックアップフォルダを作成できませんでした。"
+
+#: utils.py:157
 msgid "Could not find or change Bluetooth status."
 msgstr "Bluetoothの状態が見つからないか、変更できませんでした。"
 
-#: __init__.py:577
+#: addonCore.py:876
 msgid "Could not open Control Panel."
 msgstr "コントロールパネルを開けませんでした。"
 
-#: __init__.py:449
+#: addonCore.py:738
 msgid "Could not open Disk Cleanup."
 msgstr "ディスククリーンアップを開けませんでした。"
 
-#: __init__.py:394
+#: addonCore.py:683
 msgid "Could not open Environment Variables."
 msgstr "環境変数を開けませんでした。"
 
-#: __init__.py:470
+#: addonCore.py:759
 msgid "Could not open Folder Options."
 msgstr "フォルダーオプションを開けませんでした。"
 
-#: __init__.py:410
+#: addonCore.py:699
 msgid "Could not open Malicious Software Removal Tool."
 msgstr "悪意のあるソフトウェアの削除ツールを開けませんでした。"
 
-#: __init__.py:360
+#: addonCore.py:649
 msgid "Could not open Optimize Drives."
 msgstr "ドライブの最適化を開けませんでした。"
 
-#: __init__.py:587
+#: addonCore.py:886
 msgid "Could not open Programs and Features."
 msgstr "プログラムと機能を開けませんでした。"
 
-#: __init__.py:459
+#: addonCore.py:748
 msgid "Could not open Registry Editor."
 msgstr "レジストリエディターを開けませんでした。"
 
-#: __init__.py:374
+#: addonCore.py:663
 msgid "Could not open Services."
 msgstr "サービスを開けませんでした。"
 
-#: __init__.py:597
+#: addonCore.py:909
 msgid "Could not open Sound Settings."
 msgstr "サウンド設定を開けませんでした。"
 
-#: __init__.py:567
+#: addonCore.py:899
+msgid "Could not open Volume Mixer."
+msgstr "音量ミキサーを開けませんでした。"
+
+#: addonCore.py:856
 msgid "Could not open Windows Defender."
 msgstr "Windows Defenderを開けませんでした。"
 
-#: kill_dialog.py:225
+#: kill_dialog.py:226
 msgid "Could not open kill dialog. See log for details."
 msgstr "強制終了ダイアログを開けませんでした。詳細はログを参照してください。"
 
-#: __init__.py:253
+#: cmd_tools.py:672
+msgid "Could not start the elevated service change. Error code: {code}"
+msgstr "昇格したサービスの変更を開始できませんでした。エラーコード: {code}"
+
+#: cmd_tools.py:676
+msgid "Could not track the elevated service change."
+msgstr "昇格したサービスの変更を追跡できませんでした。"
+
+#: addonCore.py:133
+msgid "DISM Get International Settings"
+msgstr "DISM 国際設定の取得"
+
+#: addonCore.py:506
+msgid "DISM international settings report will open when complete."
+msgstr "完了するとDISM国際設定レポートが開きます。"
+
+#: addonCore.py:496
 msgid "DISM report will open when complete."
 msgstr "完了するとDISMレポートが開きます。"
 
-#: menu.py:314
-#: menu.py:456
+#: addonCore.py:151
+msgid "Defragment Windows Search Database"
+msgstr "Windows検索データベースの最適化"
+
+#: addonCore.py:99
+msgid "Disable Search Web Results"
+msgstr "検索のWeb結果を無効化"
+
+#: menu.py:309
+#: menu.py:474
+#: menu.py:672
 msgid "Disable Selected"
 msgstr "選択項目を無効化"
 
-#: __init__.py:78
+#: addonCore.py:92
 msgid "Disable User Account Control"
 msgstr "ユーザーアカウント制御を無効化"
 
-#: menu.py:366
-#: utils.py:687
+#: menu.py:476
+#: menu.py:674
+msgid "Disable all"
+msgstr "すべて無効化"
+
+#: menu.py:614
+msgid "Disable {count} services rated Safe? Services marked Caution are not included. A Windows permission prompt will appear."
+msgstr "安全と評価された {count} 個のサービスを無効化しますか？ 「注意」とマークされたサービスは含まれません。Windowsのアクセス許可プロンプトが表示されます。"
+
+#: menu.py:362
+#: utils.py:845
 msgid "Disabled"
 msgstr "無効"
 
-#: sys_monitor.py:239
+#: utils.py:731
+msgid "Disabling slows Start menu and File Explorer search"
+msgstr "無効にすると、スタートメニューとエクスプローラーの検索が遅くなります"
+
+#: utils.py:733
+msgid "Disabling stops Windows security updates"
+msgstr "無効にすると、Windowsセキュリティ更新プログラムが停止します"
+
+#: sys_monitor.py:252
 msgid "Discharging"
 msgstr "放電中"
 
-#: __init__.py:66
+#: addonCore.py:79
 msgid "Disconnect Internet"
 msgstr "インターネットから切断"
 
-#: sys_monitor.py:220
+#: sys_monitor.py:235
+#: sys_monitor.py:485
 msgid "Disconnected"
 msgstr "切断済み"
 
-#: __init__.py:99
+#: addonCore.py:121
 msgid "Disk Cleanup"
 msgstr "ディスククリーンアップ"
 
-#: __init__.py:271
+#: addonCore.py:526
 msgid "Disk Cleanup report will open when complete."
 msgstr "完了するとディスククリーンアップのレポートが開きます。"
 
-#: __init__.py:289
+#: addonCore.py:546
 msgid "Disk status report will open when complete."
 msgstr "完了するとディスク状態レポートが開きます。"
 
-#: menu.py:450
+#: menu.py:467
 msgid "Display Name"
 msgstr "表示名"
 
-#: menu.py:236
+#: menu.py:592
+msgid "Display name: {name}"
+msgstr "表示名: {name}"
+
+#: menu.py:219
 msgid "Drive"
 msgstr "ドライブ"
 
-#: menu.py:381
+#: menu.py:383
 msgid "Drive Optimize"
 msgstr "ドライブの最適化"
 
-#: menu.py:241
-msgid "Eject Selected"
-msgstr "選択項目を取り出し"
-
-#: __init__.py:104
+#: addonCore.py:126
 msgid "Empty Recycle Bin"
 msgstr "ごみ箱を空にする"
 
-#: menu.py:313
-#: menu.py:457
+#: addonCore.py:597
+msgid "Emptying Recycle Bin, please wait..."
+msgstr "ゴミ箱を空にしています。しばらくお待ちください..."
+
+#: addonCore.py:97
+msgid "Enable Search Web Results"
+msgstr "Web検索結果を有効にする"
+
+#: menu.py:308
+#: menu.py:475
+#: menu.py:673
 msgid "Enable Selected"
 msgstr "選択項目を有効化"
 
-#: __init__.py:80
+#: addonCore.py:94
 msgid "Enable User Account Control"
 msgstr "ユーザーアカウント制御を有効化"
 
-#: menu.py:351
-#: utils.py:542
-#: utils.py:559
-#: utils.py:576
-#: utils.py:589
+#: menu.py:477
+#: menu.py:675
+msgid "Enable all"
+msgstr "すべて有効"
+
+#: menu.py:347
+#: utils.py:578
+#: utils.py:595
+#: utils.py:612
+#: utils.py:625
 msgid "Enabled"
 msgstr "有効"
 
-#: __init__.py:93
+#: addonCore.py:113
 msgid "Environment Variables"
 msgstr "環境変数"
 
-#: menu.py:271
-#: menu.py:280
-#: menu.py:348
-#: menu.py:358
-#: menu.py:363
-#: menu.py:373
-#: menu.py:417
-#: menu.py:432
-#: menu.py:494
-#: menu.py:501
-#: menu.py:506
-#: menu.py:513
+#: menu.py:344
+#: menu.py:354
+#: menu.py:359
+#: menu.py:369
+#: menu.py:420
+#: menu.py:436
+#: menu.py:583
+#: menu.py:604
+#: menu.py:609
 msgid "Error"
 msgstr "エラー"
 
-#: sys_monitor.py:342
+#: sys_monitor.py:288
 msgid "Excellent"
 msgstr "非常に良い"
 
-#: cmd_tools.py:46
+#: cmd_tools.py:123
+#: cmd_tools.py:686
 msgid "Exception occurred: {error}"
 msgstr "例外が発生しました: {error}"
 
-#: __init__.py:310
+#: cmd_tools.py:517
+#: cmd_tools.py:521
+msgid "Failed to back up Open With associations."
+msgstr "「プログラムから開く」の関連付けのバックアップに失敗しました。"
+
+#: addonCore.py:576
 msgid "Failed to clean temporary files."
 msgstr "一時ファイルのクリーンアップに失敗しました。"
 
-#: __init__.py:384
+#: addonCore.py:673
 msgid "Failed to clean: {errorMsg}"
 msgstr "クリーンアップに失敗しました: {errorMsg}"
 
-#: __init__.py:341
+#: addonCore.py:630
 msgid "Failed to clear RAM cache."
 msgstr "RAMキャッシュのクリアに失敗しました。"
 
-#: __init__.py:319
+#: addonCore.py:593
 msgid "Failed to clear Run history."
 msgstr "ファイル名を指定して実行の履歴のクリアに失敗しました。"
 
-#: kill_dialog.py:170
+#: kill_dialog.py:171
 msgid "Failed to close window."
 msgstr "ウィンドウの閉じるに失敗しました。"
 
-#: __init__.py:164
+#: addonCore.py:312
 msgid "Failed to connect internet."
 msgstr "インターネットへの接続に失敗しました。"
 
-#: menu.py:373
+#: menu.py:369
 msgid "Failed to disable item."
 msgstr "項目の無効化に失敗しました。"
 
-#: menu.py:501
-msgid "Failed to disable service: {}"
-msgstr "サービスの無効化に失敗しました: {}"
-
-#: __init__.py:148
+#: addonCore.py:295
 msgid "Failed to disconnect internet."
 msgstr "インターネットからの切断に失敗しました。"
 
-#: menu.py:280
+#: addonCore.py:379
+#: menu.py:272
 msgid "Failed to eject {drive}."
 msgstr "{drive}の取り出しに失敗しました。"
 
-#: utils.py:477
-#: utils.py:480
+#: utils.py:513
+#: utils.py:516
 msgid "Failed to empty recycle bin."
 msgstr "ごみ箱の空にするに失敗しました。"
 
-#: menu.py:358
+#: menu.py:354
 msgid "Failed to enable item."
 msgstr "項目の有効化に失敗しました。"
 
-#: menu.py:513
-msgid "Failed to enable service: {}"
-msgstr "サービスの有効化に失敗しました: {}"
-
-#: __init__.py:184
+#: addonCore.py:332
 msgid "Failed to restart Windows Audio Services."
 msgstr "Windowsオーディオサービスの再起動に失敗しました。"
 
-#: __init__.py:238
+#: addonCore.py:479
 msgid "Failed to restart Windows Explorer."
 msgstr "Windowsエクスプローラーの再起動に失敗しました。"
 
-#: __init__.py:198
+#: addonCore.py:389
 msgid "Failed to restart to BIOS. Your system may not support this feature via Windows."
 msgstr "BIOSへの再起動に失敗しました。お使いのシステムはWindows経由でのこの機能をサポートしていない可能性があります。"
 
-#: __init__.py:301
+#: cmd_tools.py:555
+#: cmd_tools.py:559
+msgid "Failed to restore Open With associations."
+msgstr "「プログラムから開く」の関連付けの復元に失敗しました。"
+
+#: addonCore.py:559
 msgid "Failed to start system cleanup."
 msgstr "システムクリーンアップの開始に失敗しました。"
 
-#: kill_dialog.py:193
+#: audio_device.py:215
+msgid "Failed to switch audio device."
+msgstr "オーディオデバイスの切り替えに失敗しました。"
+
+#: kill_dialog.py:194
 msgid "Failed to terminate process. Insufficient privileges."
 msgstr "プロセスの終了に失敗しました。権限が不足しています。"
 
-#: utils.py:128
+#: utils.py:160
 msgid "Failed to toggle Bluetooth."
 msgstr "Bluetoothの切り替えに失敗しました。"
 
-#: __init__.py:211
+#: addonCore.py:415
 msgid "Failed to toggle UAC."
 msgstr "UACの切り替えに失敗しました。"
 
-#: sys_monitor.py:346
+#: addonCore.py:422
+msgid "Failed to toggle search web results."
+msgstr "Web検索結果の切り替えに失敗しました。"
+
+#: sys_monitor.py:292
 msgid "Fair"
 msgstr "普通"
 
-#: __init__.py:475
+#: addonCore.py:764
 msgid "File Explorer Options"
 msgstr "ファイルエクスプローラーのオプション"
 
-#: __init__.py:89
+#: addonCore.py:109
 msgid "Folder Option"
 msgstr "フォルダーオプション"
 
-#: __init__.py:475
+#: addonCore.py:764
 msgid "Folder Options"
 msgstr "フォルダーオプション"
 
-#: sys_monitor.py:238
+#: sys_monitor.py:250
 msgid "Fully Charged"
 msgstr "完全に充電済み"
 
-#: sys_monitor.py:344
+#: sys_monitor.py:290
 msgid "Good"
 msgstr "良い"
 
-#: menu.py:352
-#: menu.py:367
-#: menu.py:425
+#: menu.py:348
+#: menu.py:363
 msgid "Info"
 msgstr "情報"
 
-#: __init__.py:161
+#: addonCore.py:175
+msgid "Installed packages report will open when complete."
+msgstr "インストール済みパッケージのレポートは完了時に開きます。"
+
+#: addonCore.py:309
 msgid "Internet connected."
 msgstr "インターネットに接続しました。"
 
-#: __init__.py:145
+#: addonCore.py:292
 msgid "Internet disconnected."
 msgstr "インターネットから切断しました。"
 
-#: menu.py:367
+#: menu.py:363
 msgid "Item already disabled."
 msgstr "項目は既に無効です。"
 
-#: menu.py:352
+#: menu.py:348
 msgid "Item already enabled."
 msgstr "項目は既に有効です。"
 
-#: __init__.py:84
-#: __init__.py:630
-#: kill_dialog.py:56
+#: addonCore.py:103
+#: kill_dialog.py:57
 msgid "Kill Not Responding Apps"
 msgstr "応答しないアプリを強制終了"
 
-#: kill_dialog.py:215
+#: addonCore.py:942
+msgid "Kill Not Responding Apps (single tap) or Safely Remove USB (double tap)"
+msgstr "応答なしアプリの強制終了（1回タップ）またはUSBの安全な取り外し（2回タップ）"
+
+#: kill_dialog.py:216
 msgid "Kill Process"
 msgstr "プロセスを強制終了"
 
-#: menu.py:237
+#: menu.py:220
 msgid "Label"
 msgstr "ラベル"
 
-#: menu.py:119
+#: addonCore.py:150
+msgid "List Installed Packages (winget list)"
+msgstr "インストール済みパッケージの一覧 (winget list)"
+
+#: menu.py:511
+msgid "Loading services, please wait..."
+msgstr "サービスを読み込んでいます。しばらくお待ちください..."
+
+#: menu.py:197
 msgid "Loading system information..."
 msgstr "システム情報を読み込み中..."
 
-#: menu.py:309
+#: menu.py:304
 msgid "Location"
 msgstr "場所"
 
-#: sys_monitor.py:240
+#: sys_monitor.py:252
 msgid "Low"
 msgstr "低い"
 
-#: __init__.py:92
-#: menu.py:440
+#: addonCore.py:115
+msgid "Maintenance Tools"
+msgstr "メンテナンスツール"
+
+#: addonCore.py:112
+#: menu.py:450
 msgid "Manage Services"
 msgstr "サービスの管理"
 
-#: utils.py:689
+#: utils.py:846
 msgid "Manual"
 msgstr "手動"
 
-#: __init__.py:97
+#: addonCore.py:119
 msgid "Microsoft Windows Malicious Software Removal Tool"
 msgstr "Microsoft Windows 悪意のあるソフトウェアの削除ツール"
 
-#: menu.py:306
+#: menu.py:301
 msgid "Name"
 msgstr "名前"
 
-#: menu.py:266
-msgid "No USB drives found"
-msgstr "USBドライブが見つかりません"
+#: utils.py:735
+msgid "Needed by Windows troubleshooters, including the audio one"
+msgstr "オーディオ関連を含むWindowsのトラブルシューティングツールに必要です"
 
-#: __init__.py:225
+#: utils.py:748
+msgid "Needed for Xbox controllers, including the Adaptive Controller"
+msgstr "アダプティブコントローラーを含むXboxコントローラーに必要です"
+
+#: utils.py:729
+msgid "Needed for printing, including braille embossers"
+msgstr "点字プリンター（エンボス加工機）を含む印刷に必要です"
+
+#: utils.py:769
+msgid "Needed for scanners and cameras, including scanning documents for OCR"
+msgstr "OCR用の文書スキャンを含むスキャナーとカメラに必要です"
+
+#: utils.py:767
+msgid "Needed for smart card sign-in and some banking cards"
+msgstr "スマートカードのサインインや一部の銀行のカードに必要です"
+
+#: utils.py:750
+msgid "Needed for touch keyboard, handwriting and voice typing"
+msgstr "タッチキーボード、手書き入力、音声入力に必要です"
+
+#: addonCore.py:239
+msgid "No Open With backups found"
+msgstr "「プログラムから開く」のバックアップが見つかりません"
+
+#: addonCore.py:371
+msgid "No USB drives found."
+msgstr "USBドライブが見つかりません。"
+
+#: addonCore.py:457
 msgid "No Wi-Fi network is currently connected."
 msgstr "現在接続されているWi-Fiネットワークはありません。"
 
-#: __init__.py:138
+#: addonCore.py:284
 msgid "No active network adapter found."
 msgstr "アクティブなネットワークアダプターが見つかりません。"
 
-#: menu.py:156
+#: cmd_tools.py:647
+msgid "No changeable services were selected."
+msgstr "変更対象のサービスが選択されていません。"
+
+#: menu.py:201
 msgid "No data available"
 msgstr "データがありません"
 
-#: __init__.py:155
+#: menu.py:599
+msgid "No description available."
+msgstr "説明はありません。"
+
+#: addonCore.py:302
 msgid "No disabled network adapter found."
 msgstr "無効なネットワークアダプターが見つかりません。"
 
-#: menu.py:348
-#: menu.py:363
+#: menu.py:344
+#: menu.py:359
 msgid "No item selected."
 msgstr "項目が選択されていません。"
 
-#: kill_dialog.py:149
+#: kill_dialog.py:150
 msgid "No window selected."
 msgstr "ウィンドウが選択されていません。"
 
-#: sys_monitor.py:402
-#: sys_monitor.py:417
+#: sys_monitor.py:397
+#: sys_monitor.py:412
 msgid "Not Activated"
 msgstr "アクティブ化されていません"
 
-#: __init__.py:91
+#: utils.py:884
+msgid "Not installed"
+msgstr "未インストール"
+
+#: utils.py:985
+msgid "Nothing to change - the selected services are already in that state."
+msgstr "変更する項目はありません。選択されたサービスはすでにその状態になっています。"
+
+#: audio_device.py:193
+msgid "Only one playback device is available."
+msgstr "利用可能な再生デバイスは1つのみです。"
+
+#: addonCore.py:111
 msgid "Open Services"
 msgstr "サービスを開く"
 
-#: menu.py:430
+#: addonCore.py:231
+msgid "Open With associations backed up successfully. Note: this restores reliably only on this same Windows installation and user account, not after a Windows reinstall."
+msgstr "「プログラムから開く」の関連付けが正常にバックアップされました。注意: これはWindowsの再インストール後ではなく、同じWindowsのインストール環境とユーザーアカウントでのみ確実に復元されます。"
+
+#: addonCore.py:263
+msgid "Open With associations restored. Restart Windows Explorer or sign out and back in for the change to take effect."
+msgstr "「プログラムから開く」の関連付けが復元されました。変更を有効にするには、エクスプローラーを再起動するか、サインアウトして再度サインインしてください。"
+
+#: menu.py:434
 msgid "Optimization completed."
 msgstr "最適化が完了しました。"
 
-#: menu.py:432
+#: menu.py:436
 msgid "Optimization failed: {}"
 msgstr "最適化に失敗しました: {}"
 
-#: menu.py:392
+#: menu.py:394
 msgid "Optimize Selected"
 msgstr "選択項目を最適化"
 
-#: __init__.py:98
+#: addonCore.py:120
 msgid "Optimize and defragment drive"
 msgstr "ドライブの最適化とデフラグ"
 
-#: menu.py:425
+#: menu.py:429
 msgid "Optimizing drive, please wait..."
 msgstr "ドライブを最適化中です。お待ちください..."
 
-#: __init__.py:114
+#: utils.py:871
+msgid "Other"
+msgstr "その他"
+
+#: addonCore.py:165
+msgid "Package upgrade report will open when complete."
+msgstr "完了時にパッケージのアップグレードレポートが開きます。"
+
+#: addonCore.py:137
 msgid "Power Diagnostic (Battery Report)"
 msgstr "電源診断（バッテリーレポート）"
 
-#: __init__.py:381
+#: addonCore.py:670
 msgid "Prefetch and recent files cleaned. {count} items removed."
 msgstr "Prefetchと最近使ったファイルをクリーンアップしました。{count}個の項目を削除しました。"
 
-#: kill_dialog.py:186
+#: kill_dialog.py:187
 msgid "Process terminated."
 msgstr "プロセスを終了しました。"
 
-#: __init__.py:87
+#: addonCore.py:106
 msgid "Programs and Features"
 msgstr "プログラムと機能"
 
-#: __init__.py:338
+#: addonCore.py:88
+msgid "Quick Switch Audio Device"
+msgstr "オーディオデバイスのクイック切り替え"
+
+#: addonCore.py:627
 msgid "RAM cache is already clean."
 msgstr "RAMキャッシュは既にクリアされています。"
 
-#: utils.py:474
+#: utils.py:510
 msgid "Recycle bin emptied. {count} items removed."
 msgstr "ごみ箱を空にしました。{count}個の項目を削除しました。"
 
-#: utils.py:468
+#: utils.py:504
 msgid "Recycle bin is already empty."
 msgstr "ごみ箱は既に空です。"
 
-#: menu.py:458
+#: menu.py:478
+#: menu.py:677
 msgid "Refresh"
 msgstr "更新"
 
-#: __init__.py:95
+#: addonCore.py:116
 msgid "Regedit"
 msgstr "レジストリエディター"
 
-#: __init__.py:74
+#: addonCore.py:87
 msgid "Restart Windows Audio Service"
 msgstr "Windowsオーディオサービスを再起動"
 
-#: __init__.py:85
+#: addonCore.py:104
 msgid "Restart Windows Explorer"
 msgstr "Windowsエクスプローラーを再起動"
 
-#: __init__.py:82
+#: addonCore.py:101
 msgid "Restart to BIOS/UEFI Settings"
 msgstr "BIOS/UEFI設定に再起動"
 
-#: __init__.py:178
+#: addonCore.py:326
 msgid "Restarting Audio Services, please wait..."
 msgstr "オーディオサービスを再起動中です。お待ちください..."
 
-#: __init__.py:192
+#: addonCore.py:466
+msgid "Restarting Windows Explorer, please wait..."
+msgstr "Windowsエクスプローラーを再起動しています。お待ちください..."
+
+#: addonCore.py:383
 msgid "Restarting to BIOS/UEFI, please wait..."
 msgstr "BIOS/UEFIに再起動中です。お待ちください..."
 
-#: __init__.py:112
+#: addonCore.py:140
+msgid "Restore Open With"
+msgstr "「プログラムから開く」の復元"
+
+#: addonCore.py:253
+msgid "Restoring Open With associations, please wait..."
+msgstr "「プログラムから開く」の関連付けを復元しています。お待ちください..."
+
+#: addonCore.py:135
 msgid "Run Chkdsk on C:"
 msgstr "C:でChkdskを実行"
 
-#: __init__.py:94
+#: addonCore.py:114
 msgid "Run Cmd"
 msgstr "Cmdを実行"
 
-#: __init__.py:110
+#: addonCore.py:132
 msgid "Run DISM"
 msgstr "DISMを実行"
 
-#: __init__.py:113
+#: addonCore.py:136
 msgid "Run Disk Cleanup"
 msgstr "ディスククリーンアップを実行"
 
-#: __init__.py:111
+#: addonCore.py:134
 msgid "Run SFC Scannow"
 msgstr "SFC Scannowを実行"
 
-#: utils.py:694
+#: addonCore.py:152
+msgid "Run Windows Defender Full Scan"
+msgstr "Windows Defenderのフルスキャンを実行"
+
+#: utils.py:867
 msgid "Running"
 msgstr "実行中"
 
-#: __init__.py:244
+#: addonCore.py:486
 msgid "SFC Scannow report will open when complete."
 msgstr "完了するとSFC Scannowレポートが開きます。"
 
-#: __init__.py:73
-#: menu.py:228
+#: menu.py:524
+msgid "Safe"
+msgstr "安全"
+
+#: addonCore.py:86
+#: menu.py:211
 msgid "Safely Remove USB"
 msgstr "USBを安全に取り外し"
 
-#: menu.py:271
-msgid "Select a USB drive first."
-msgstr "最初にUSBドライブを選択してください。"
+#: menu.py:470
+msgid "Safety"
+msgstr "安全性"
 
-#: menu.py:417
+#: addonCore.py:427
+msgid "Search web results disabled. Restarting Explorer to apply changes..."
+msgstr "Web検索結果が無効になりました。変更を適用するためエクスプローラーを再起動しています..."
+
+#: addonCore.py:429
+msgid "Search web results enabled. Restarting Explorer to apply changes..."
+msgstr "Web検索結果が有効になりました。変更を適用するためエクスプローラーを再起動しています..."
+
+#: menu.py:420
 msgid "Select a drive first."
 msgstr "最初にドライブを選択してください。"
 
-#: menu.py:494
-#: menu.py:506
+#: menu.py:583
+#: menu.py:604
 msgid "Select a service first."
 msgstr "最初にサービスを選択してください。"
 
-#: menu.py:449
-msgid "Service Name"
-msgstr "サービス名"
+#: menu.py:679
+msgid "Service Actions"
+msgstr "サービスのアクション"
 
-#: __init__.py:614
+#: menu.py:588
+#: menu.py:600
+msgid "Service Details"
+msgstr "サービスの詳細"
+
+#: menu.py:591
+msgid "Service name: {name}"
+msgstr "サービス名: {name}"
+
+#: addonCore.py:926
 msgid "Show Absolute Windows menu (single tap) or System Monitor (double tap)"
 msgstr "Absolute Windowsメニューを表示（シングルタップ）またはシステムモニターを表示（ダブルタップ）"
 
-#: __init__.py:71
+#: addonCore.py:84
 msgid "Show Wi-Fi Password"
 msgstr "Wi-Fiパスワードを表示"
 
-#: __init__.py:88
+#: menu.py:676
+msgid "Show service details"
+msgstr "サービスの詳細を表示"
+
+#: menu.py:617
+msgid ""
+"Some selected services are marked Caution:\n"
+"{details}\n"
+"\n"
+"Disable the selected services anyway?"
+msgstr ""
+"選択されたサービスの一部に「注意」がマークされています:\n"
+"{details}\n"
+"\n"
+"それでも選択されたサービスを無効にしますか？"
+
+#: addonCore.py:108
 msgid "Sound setting"
 msgstr "サウンド設定"
 
-#: __init__.py:90
-#: menu.py:295
+#: addonCore.py:110
+#: menu.py:290
 msgid "Startup Manager"
 msgstr "スタートアップマネージャー"
 
-#: menu.py:451
+#: menu.py:468
 msgid "Startup Type"
 msgstr "スタートアップの種類"
 
-#: menu.py:308
-#: menu.py:452
+#: menu.py:593
+msgid "Startup type: {value}"
+msgstr "スタートアップの種類: {value}"
+
+#: menu.py:303
+#: menu.py:469
 msgid "Status"
 msgstr "状態"
 
-#: utils.py:696
+#: menu.py:594
+msgid "Status: {value}"
+msgstr "状態: {value}"
+
+#: utils.py:869
+#: utils.py:908
 msgid "Stopped"
 msgstr "停止済み"
 
-#: menu.py:277
-#: menu.py:430
+#: menu.py:434
 msgid "Success"
 msgstr "成功"
 
-#: menu.py:101
-msgid "System Monitor"
-msgstr "システムモニター"
+#: addonCore.py:345
+msgid "Switched to {device}."
+msgstr "{device}に切り替えました。"
 
-#: __init__.py:63
+#: menu.py:204
+msgid "System Information"
+msgstr "システム情報"
+
+#: addonCore.py:76
 msgid "System Tray"
 msgstr "システムトレイ"
 
-#: __init__.py:298
+#: addonCore.py:556
 msgid "System cleanup started."
 msgstr "システムクリーンアップを開始しました。"
 
-#: __init__.py:307
+#: addonCore.py:573
 msgid "Temporary files cleaned. {count} items removed."
 msgstr "一時ファイルをクリーンアップしました。{count}個の項目を削除しました。"
 
-#: __init__.py:222
+#: addonCore.py:454
 msgid "The Wi-Fi network '{ssid}' is open (no password)."
 msgstr "Wi-Fiネットワーク '{ssid}' はオープンです（パスワードなし）。"
 
-#: __init__.py:70
+#: cmd_tools.py:546
+msgid "The selected backup file no longer exists."
+msgstr "選択されたバックアップファイルはもう存在しません。"
+
+#: menu.py:609
+msgid "The selected services are not installed on this system."
+msgstr "選択されたサービスはこのシステムにインストールされていません。"
+
+#: cmd_tools.py:683
+msgid "The service change took too long to finish."
+msgstr "サービスの変更処理がタイムアウトしました。"
+
+#: addonCore.py:83
 msgid "Toggle Bluetooth"
 msgstr "Bluetoothを切り替え"
 
-#: menu.py:307
+#: menu.py:302
 msgid "Type"
 msgstr "種類"
 
-#: utils.py:89
+#: addonCore.py:205
+msgid "URL cache clearing started."
+msgstr "URLキャッシュのクリアを開始しました。"
+
+#: utils.py:91
 msgid "USB Drive"
 msgstr "USBドライブ"
 
-#: menu.py:277
+#: addonCore.py:376
+#: menu.py:264
 msgid "USB drive {drive} ejected safely."
 msgstr "USBドライブ {drive} を安全に取り出しました。"
 
-#: sys_monitor.py:241
+#: utils.py:849
 msgid "Unknown"
 msgstr "不明"
 
-#: __init__.py:208
-msgid "User Account Control toggled."
-msgstr "ユーザーアカウント制御を切り替えました。"
+#: audio_device.py:164
+msgid "Unknown Device"
+msgstr "不明なデバイス"
 
-#: cmd_tools.py:41
+#: addonCore.py:149
+msgid "Update All Packages (winget upgrade)"
+msgstr "すべてのパッケージをアップデート (winget upgrade)"
+
+#: addonCore.py:412
+msgid "User Account Control changed. Restart Windows for the change to take effect."
+msgstr "ユーザー アカウント制御が変更されました。変更を有効にするにはWindowsを再起動してください。"
+
+#: cmd_tools.py:99
+#: cmd_tools.py:671
 msgid "User cancelled the UAC elevation prompt."
 msgstr "ユーザーがUAC昇格プロンプトをキャンセルしました。"
 
-#: sys_monitor.py:350
+#: sys_monitor.py:295
 msgid "Very Weak"
 msgstr "非常に弱い"
 
-#: sys_monitor.py:348
+#: addonCore.py:107
+msgid "Volume Mixer"
+msgstr "音量ミキサー"
+
+#: sys_monitor.py:294
 msgid "Weak"
 msgstr "弱い"
 
-#: __init__.py:219
+#: addonCore.py:451
 msgid "Wi-Fi password for {ssid} copied to clipboard."
 msgstr "{ssid} のWi-Fiパスワードをクリップボードにコピーしました。"
 
-#: kill_dialog.py:164
+#: kill_dialog.py:165
 msgid "Window closed."
 msgstr "ウィンドウを閉じました。"
 
-#: __init__.py:181
+#: addonCore.py:329
 msgid "Windows Audio Services restarted successfully."
 msgstr "Windowsオーディオサービスを正常に再起動しました。"
 
-#: __init__.py:96
+#: addonCore.py:117
+# keep-identical
 msgid "Windows Defender"
 msgstr "Windows Defender"
 
-#: __init__.py:235
+#: addonCore.py:118
+msgid "Windows Defender Full Scan Low"
+msgstr "Windows Defender 完全スキャン（低優先度）"
+
+#: addonCore.py:863
+msgid "Windows Defender Full Scan started at low priority."
+msgstr "Windows Defender の完全スキャンを低優先度で開始しました。"
+
+#: addonCore.py:195
+msgid "Windows Defender full scan started."
+msgstr "Windows Defender の完全スキャンを開始しました。"
+
+#: addonCore.py:476
 msgid "Windows Explorer has been restarted."
 msgstr "Windowsエクスプローラーを再起動しました。"
 
-#: __init__.py:316
+#: addonCore.py:590
 msgid "Windows Run history cleared. {count} items removed."
 msgstr "Windowsのファイル名を指定して実行の履歴をクリアしました。{count}個の項目を削除しました。"
 
-#: sys_monitor.py:430
+#: addonCore.py:185
+msgid "Windows Search database defragmentation started."
+msgstr "Windows 検索データベースの最適化を開始しました。"
+
+#: sys_monitor.py:425
+# keep-identical
 msgid "Windows Server {}"
 msgstr "Windows Server {}"
 
-#: sys_monitor.py:193
-#: sys_monitor.py:206
+#: sys_monitor.py:227
 msgid "{:.1F} MB/s down, {:.1F} MB/s up"
 msgstr "{:.1F} MB/s ダウンロード、{:.1F} MB/s アップロード"
 
-#: sys_monitor.py:166
-#: sys_monitor.py:178
+#: sys_monitor.py:224
 msgid "{:.1F} MB/s read, {:.1F} MB/s write"
 msgstr "{:.1F} MB/s 読み取り、{:.1F} MB/s 書き込み"
 
-#: sys_monitor.py:96
-#: sys_monitor.py:108
+#: sys_monitor.py:135
 msgid "{:.2F} GB of {:.2F} GB used ({:.1F}%)"
 msgstr "{:.2F} GB中 {:.2F} GB使用済み ({:.1F}%)"
 
-#: sys_monitor.py:432
+#: menu.py:645
+msgid "{changed} changed, {failed} failed: {names}"
+msgstr "{changed} 件変更、{failed} 件失敗: {names}"
+
+#: menu.py:649
+msgid "{changed} services changed."
+msgstr "{changed} 件のサービスが変更されました。"
+
+#: menu.py:534
+msgid "{count} services listed."
+msgstr "{count} 件のサービスが一覧表示されています。"
+
+#: menu.py:587
+msgid "{name} is not installed on this system."
+msgstr "{name} はこのシステムにインストールされていません。"
+
+#: sys_monitor.py:427
 msgid "{} ({} bit) build {}"
 msgstr "{} ({}ビット) ビルド {}"
 
-#: sys_monitor.py:271
-#: sys_monitor.py:299
+#: sys_monitor.py:268
 msgid "{} day{}"
 msgstr "{}日{}"
 
-#: sys_monitor.py:273
-#: sys_monitor.py:301
+#: sys_monitor.py:270
 msgid "{} hour{}"
 msgstr "{}時間{}"
 
-#: sys_monitor.py:275
-#: sys_monitor.py:303
+#: sys_monitor.py:272
 msgid "{} minute{}"
 msgstr "{}分{}"
 
-#: sys_monitor.py:378
-#: sys_monitor.py:385
-msgid "{} process{}"
-msgstr "{}プロセス{}"
-
-#: sys_monitor.py:277
-#: sys_monitor.py:305
+#: sys_monitor.py:274
 msgid "{} second{}"
 msgstr "{}秒{}"
 
-#: sys_monitor.py:133
-#: sys_monitor.py:149
+#: sys_monitor.py:166
 msgid "{} {:.1F} GB of {:.1F} GB used ({:.0F}%)"
 msgstr "{} {:.1F} GB中 {:.1F} GB使用済み ({:.0F}%)"
 
-#: sys_monitor.py:67
-#: sys_monitor.py:73
+#: sys_monitor.py:121
 msgid "{}%"
 msgstr "{}%"
 
-#: sys_monitor.py:242
+#: sys_monitor.py:253
 msgid "{}% ({})"
 msgstr "{}% ({})"

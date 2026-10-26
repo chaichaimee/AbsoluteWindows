@@ -18,7 +18,7 @@ import addonHandler
 addonHandler.initTranslation()
 try:
 	_ = addonHandler.getTranslation()
-except:
+except Exception:
 	def _(x): return x
 
 SHERB_NOCONFIRMATION = 0x00000001
@@ -269,9 +269,20 @@ def isUACEnabled():
 		return True
 
 def _setUACRegistry(value):
-	cmd = f'reg add "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System" /v EnableLUA /t REG_DWORD /d {value} /f'
+	# Bug fix: lpFile below is already "reg.exe" (fully qualified), so
+	# lpParameters must be just reg's own arguments - it must NOT repeat "reg"
+	# as the first word. The previous version built cmd starting with "reg add
+	# ...", which ShellExecuteW passed straight through as
+	# `reg.exe reg add ...`; reg.exe treats "reg" as an invalid operation and
+	# exits immediately with an error, which is why every UAC toggle attempt
+	# failed near-instantly regardless of UAC's actual current state. Also now
+	# uses the fully-qualified reg.exe path rather than relying on PATH
+	# resolution in the elevated process, consistent with the other cmd_tools
+	# batches after the powershell "not recognized" finding.
+	regExePath = os.path.join(os.environ.get('SystemRoot', 'C:\\Windows'), 'System32', 'reg.exe')
+	cmd = f'add "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System" /v EnableLUA /t REG_DWORD /d {value} /f'
 	try:
-		result = ctypes.windll.shell32.ShellExecuteW(None, "runas", "reg.exe", cmd, None, 0)
+		result = ctypes.windll.shell32.ShellExecuteW(None, "runas", regExePath, cmd, None, 0)
 		if result <= 32:
 			log.error(f"Failed to launch reg.exe: {result}")
 			return False
@@ -288,6 +299,37 @@ def disableUAC():
 
 def enableUAC():
 	return _setUACRegistry(1)
+
+def isSearchWebResultsDisabled():
+	"""Returns True if Windows Search's "search the web" results are disabled
+	via the per-user BingSearchEnabled value, False if enabled - including
+	when the value is absent, since Windows treats a missing value as
+	enabled by default."""
+	try:
+		key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Microsoft\Windows\CurrentVersion\Search", 0, winreg.KEY_READ)
+		value, _regType = winreg.QueryValueEx(key, "BingSearchEnabled")
+		winreg.CloseKey(key)
+		return value == 0
+	except FileNotFoundError:
+		return False
+	except OSError as e:
+		log.warning(f"Could not read Search Web Results registry: {e}, assuming enabled")
+		return False
+
+def toggleSearchWebResults():
+	"""Flips the per-user BingSearchEnabled value under
+	HKCU\\...\\CurrentVersion\\Search. No elevation is required - this is the
+	current user's own registry hive. Returns (success, isDisabledAfterToggle)."""
+	currentlyDisabled = isSearchWebResultsDisabled()
+	newValue = 1 if currentlyDisabled else 0
+	try:
+		key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Microsoft\Windows\CurrentVersion\Search", 0, winreg.KEY_SET_VALUE)
+		winreg.SetValueEx(key, "BingSearchEnabled", 0, winreg.REG_DWORD, newValue)
+		winreg.CloseKey(key)
+	except OSError as e:
+		log.error(f"Failed to toggle Search Web Results: {e}")
+		return False, currentlyDisabled
+	return True, (newValue == 0)
 
 def cleanTempFolders():
 	totalRemoved = 0
@@ -663,67 +705,288 @@ def optimize_drive(drive):
 		log.error(f"Optimize drive error: {e}")
 		return False, str(e)
 
-def get_suggested_services():
-	suggested = [
-		"SysMain", "WSearch", "XboxGipSvc", "XboxNetApiSvc", "XblAuthManager",
-		"DiagTrack", "dmwappushservice", "lfsvc", "MapsBroker", "PcaSvc",
-		"WMPNetworkSvc", "RemoteRegistry", "Fax", "TabletInputService"
-	]
-	services = []
-	for svc in suggested:
-		try:
-			out = subprocess.check_output(f'sc query {svc}', shell=True, text=True, stderr=subprocess.DEVNULL, timeout=3)
-			start_type = "Unknown"
-			status = "Unknown"
-			for line in out.splitlines():
-				if "START_TYPE" in line:
-					if "DISABLED" in line:
-						start_type = _("Disabled")
-					elif "DEMAND_START" in line:
-						start_type = _("Manual")
-					elif "AUTO_START" in line:
-						start_type = _("Automatic")
-				if "STATE" in line:
-					if "RUNNING" in line:
-						status = _("Running")
-					elif "STOPPED" in line:
-						status = _("Stopped")
-			display = svc
-			try:
-				out2 = subprocess.check_output(f'sc qdescription {svc}', shell=True, text=True, timeout=3)
-				for line in out2.splitlines():
-					if "DESCRIPTION:" in line:
-						display = line.split(":",1)[1].strip()
-						break
-			except:
-				pass
-			services.append({
-				'name': svc,
-				'display_name': display,
-				'start_type': start_type,
-				'status': status
-			})
-		except:
+# ------------------------------------------------------------
+# Manage Services catalog
+#
+# safety: "safe"    - no known effect on speech, audio, Braille or other
+#                     accessibility use; included in "Disable all".
+#         "caution" - can affect something an assistive-technology user may rely
+#                     on (printing/embossers, Start-menu search, troubleshooters,
+#                     touch/voice input, security updates...). Never touched by
+#                     "Disable all"; only changed when selected explicitly, after
+#                     a warning.
+# enableType: start type used by "Enable" when no original value was recorded for
+#             the service. Best-effort Windows 10/11 defaults, not verified on
+#             every build - any service this tool disables has its real start
+#             type recorded first and restored exactly instead.
+# Services that do not exist on the machine are simply left out of the list.
+# The audio stack (Audiosrv, AudioEndpointBuilder, MMCSS), Themes (high contrast),
+# TextInputManagementService and the Bluetooth services are deliberately NOT here,
+# and cmd_tools refuses to change them even if asked.
+# ------------------------------------------------------------
+SERVICE_CATALOG = [
+	{"name": "Spooler", "safety": "caution", "enableType": "auto",
+		"note": _("Needed for printing, including braille embossers")},
+	{"name": "WSearch", "safety": "caution", "enableType": "delayed-auto",
+		"note": _("Disabling slows Start menu and File Explorer search")},
+	{"name": "wuauserv", "safety": "caution", "enableType": "demand",
+		"note": _("Disabling stops Windows security updates")},
+	{"name": "DPS", "safety": "caution", "enableType": "auto",
+		"note": _("Needed by Windows troubleshooters, including the audio one")},
+	{"name": "SysMain", "safety": "safe", "enableType": "auto", "note": ""},
+	{"name": "DiagTrack", "safety": "safe", "enableType": "auto", "note": ""},
+	{"name": "dmwappushservice", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "lfsvc", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "MapsBroker", "safety": "safe", "enableType": "delayed-auto", "note": ""},
+	{"name": "PcaSvc", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "WMPNetworkSvc", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "RemoteRegistry", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "XboxNetApiSvc", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "XblAuthManager", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "XblGameSave", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "XboxGipSvc", "safety": "caution", "enableType": "demand",
+		"note": _("Needed for Xbox controllers, including the Adaptive Controller")},
+	{"name": "TabletInputService", "safety": "caution", "enableType": "demand",
+		"note": _("Needed for touch keyboard, handwriting and voice typing")},
+	{"name": "Fax", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "WerSvc", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "DoSvc", "safety": "safe", "enableType": "delayed-auto", "note": ""},
+	{"name": "diagnosticshub.standardcollector.service", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "PhoneSvc", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "RetailDemo", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "icssvc", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "WpcMonSvc", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "SEMgrSvc", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "WalletService", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "wisvc", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "AJRouter", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "WebClient", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "TapiSrv", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "SmsRouter", "safety": "safe", "enableType": "demand", "note": ""},
+	{"name": "SCardSvr", "safety": "caution", "enableType": "demand",
+		"note": _("Needed for smart card sign-in and some banking cards")},
+	{"name": "stisvc", "safety": "caution", "enableType": "auto",
+		"note": _("Needed for scanners and cameras, including scanning documents for OCR")},
+]
+
+# Windows' own display names, used only to label a catalog service that is not
+# installed on this machine (installed ones take the name straight from the system).
+_SERVICE_TITLES = {
+	"Spooler": "Print Spooler",
+	"WSearch": "Windows Search",
+	"wuauserv": "Windows Update",
+	"DPS": "Diagnostic Policy Service",
+	"SysMain": "SysMain",
+	"DiagTrack": "Connected User Experiences and Telemetry",
+	"dmwappushservice": "Device Management Wireless Application Protocol (WAP) Push message Routing Service",
+	"lfsvc": "Geolocation Service",
+	"MapsBroker": "Downloaded Maps Manager",
+	"PcaSvc": "Program Compatibility Assistant Service",
+	"WMPNetworkSvc": "Windows Media Player Network Sharing Service",
+	"RemoteRegistry": "Remote Registry",
+	"XboxNetApiSvc": "Xbox Live Networking Service",
+	"XblAuthManager": "Xbox Live Auth Manager",
+	"XblGameSave": "Xbox Live Game Save",
+	"XboxGipSvc": "Xbox Accessory Management Service",
+	"TabletInputService": "Touch Keyboard and Handwriting Panel Service",
+	"Fax": "Fax",
+	"WerSvc": "Windows Error Reporting Service",
+	"DoSvc": "Delivery Optimization",
+	"diagnosticshub.standardcollector.service": "Microsoft (R) Diagnostics Hub Standard Collector Service",
+	"PhoneSvc": "Phone Service",
+	"RetailDemo": "Retail Demo Service",
+	"icssvc": "Windows Mobile Hotspot Service",
+	"WpcMonSvc": "Parental Controls",
+	"SEMgrSvc": "Payments and NFC/SE Manager",
+	"WalletService": "WalletService",
+	"wisvc": "Windows Insider Service",
+	"AJRouter": "AllJoyn Router Service",
+	"WebClient": "WebClient",
+	"TapiSrv": "Telephony",
+	"SmsRouter": "Microsoft Windows SMS Router Service",
+	"SCardSvr": "Smart Card",
+	"stisvc": "Windows Image Acquisition (WIA)",
+}
+
+_SC_EXE = os.path.join(os.environ.get("SystemRoot", r"C:\Windows"), "System32", "sc.exe")
+
+
+def _run_sc(args, timeout=5):
+	"""Run sc.exe (fully qualified, no shell) and return its stdout, or "" when the
+	service is missing or the call fails."""
+	try:
+		result = subprocess.run(
+			[_SC_EXE] + args, capture_output=True, text=True, timeout=timeout,
+			creationflags=subprocess.CREATE_NO_WINDOW
+		)
+	except (subprocess.TimeoutExpired, OSError) as e:
+		log.debug(f"sc {args} failed: {e}")
+		return ""
+	if result.returncode != 0:
+		return ""
+	return result.stdout
+
+
+def _parse_start_type(qcOutput):
+	for line in qcOutput.splitlines():
+		if "START_TYPE" not in line:
 			continue
+		if "DISABLED" in line:
+			return "disabled"
+		if "DEMAND_START" in line:
+			return "demand"
+		if "AUTO_START" in line:
+			return "delayed-auto" if "DELAYED" in line else "auto"
+	return "unknown"
+
+
+def _start_type_label(startTypeKey):
+	return {
+		"disabled": _("Disabled"),
+		"demand": _("Manual"),
+		"auto": _("Automatic"),
+		"delayed-auto": _("Automatic (Delayed Start)"),
+	}.get(startTypeKey, _("Unknown"))
+
+
+def get_service_states():
+	"""Return the catalog entries that exist on this machine, with live start type,
+	run state, real display name and description. The start type comes from
+	"sc qc" - the previous version read it from "sc query", which never prints
+	START_TYPE, so every service showed "Unknown". Runs several sc.exe processes,
+	so call it from a background thread, never NVDA's main thread."""
+	runStates = {}
+	allOutput = _run_sc(["query", "type=", "service", "state=", "all"], timeout=15)
+	currentName = None
+	for line in allOutput.splitlines():
+		line = line.strip()
+		if line.startswith("SERVICE_NAME:"):
+			currentName = line.split(":", 1)[1].strip().lower()
+		elif line.startswith("STATE") and currentName:
+			if "RUNNING" in line:
+				runStates[currentName] = _("Running")
+			elif "STOPPED" in line:
+				runStates[currentName] = _("Stopped")
+			else:
+				runStates[currentName] = _("Other")
+
+	services = []
+	for entry in SERVICE_CATALOG:
+		name = entry["name"]
+		qcOutput = _run_sc(["qc", name])
+		if not qcOutput:
+			log.debug(f"Service {name} not found on this system, listing it as not installed")
+			services.append({
+				"name": name,
+				"display_name": _SERVICE_TITLES.get(name, name),
+				"description": "",
+				"start_type_key": "missing",
+				"start_type": _("Not installed"),
+				"status": "",
+				"safety": entry["safety"],
+				"note": entry["note"],
+				"enable_type": entry["enableType"],
+			})
+			continue
+		displayName = name
+		for line in qcOutput.splitlines():
+			if "DISPLAY_NAME" in line:
+				displayName = line.split(":", 1)[1].strip() or name
+				break
+		description = ""
+		for line in _run_sc(["qdescription", name]).splitlines():
+			if "DESCRIPTION:" in line:
+				description = line.split(":", 1)[1].strip()
+				break
+		startTypeKey = _parse_start_type(qcOutput)
+		services.append({
+			"name": name,
+			"display_name": displayName,
+			"description": description,
+			"start_type_key": startTypeKey,
+			"start_type": _start_type_label(startTypeKey),
+			"status": runStates.get(name.lower(), _("Stopped")),
+			"safety": entry["safety"],
+			"note": entry["note"],
+			"enable_type": entry["enableType"],
+		})
+	services.sort(key=lambda svc: (svc["display_name"].casefold(), svc["name"].casefold()))
 	return services
 
-def disable_service(service_name):
-	try:
-		subprocess.run(f'sc stop {service_name}', shell=True, check=False, timeout=10)
-		subprocess.run(f'sc config {service_name} start= disabled', shell=True, check=True, timeout=5)
-		return True, ""
-	except subprocess.CalledProcessError as e:
-		log.error(f"Failed to disable service {service_name}: {e}")
-		return False, str(e)
 
-def enable_service(service_name):
+def _service_state_path(configDir):
+	return os.path.join(configDir, "services_state.json")
+
+
+def load_service_state(configDir):
+	"""Original start types recorded before this tool disabled a service. Falls back
+	to the rolling backup copy if the main file is unreadable."""
+	import json
+	statePath = _service_state_path(configDir)
+	for candidate in (statePath, statePath + ".bak"):
+		try:
+			with open(candidate, "r", encoding="utf-8") as f:
+				data = json.load(f)
+			if isinstance(data, dict):
+				return data
+		except FileNotFoundError:
+			continue
+		except (OSError, ValueError) as e:
+			log.warning(f"Could not read service state file {candidate}: {e}")
+	return {}
+
+
+def save_service_state(configDir, state):
+	"""Atomic write (temp file + fsync + backup + os.replace) so a crash mid-write
+	cannot leave a truncated state file."""
+	import json
+	statePath = _service_state_path(configDir)
+	tempPath = statePath + ".tmp"
 	try:
-		subprocess.run(f'sc config {service_name} start= delayed-auto', shell=True, check=True, timeout=5)
-		subprocess.run(f'sc start {service_name}', shell=True, check=False, timeout=10)
-		return True, ""
-	except subprocess.CalledProcessError as e:
-		log.error(f"Failed to enable service {service_name}: {e}")
-		return False, str(e)
+		with open(tempPath, "w", encoding="utf-8") as f:
+			json.dump(state, f, indent=1)
+			f.flush()
+			os.fsync(f.fileno())
+		if os.path.exists(statePath):
+			shutil.copy2(statePath, statePath + ".bak")
+		os.replace(tempPath, statePath)
+		return True
+	except OSError as e:
+		log.error(f"Could not save service state file: {e}")
+		return False
+
+
+def apply_service_action(configDir, services, action):
+	"""Disable or enable the given service dicts (from get_service_states).
+	"disable" records each service's current start type first, so "enable" can put
+	back exactly what was there instead of guessing. Services already in the target
+	state are skipped. Blocking (elevated batch + UAC prompt): call from a
+	background thread only. Returns (ok, payload): payload is a
+	{serviceName: True/False} dict on success, or an error message string."""
+	from . import cmd_tools
+	state = load_service_state(configDir)
+	changes = []
+	for svc in services:
+		name = svc["name"]
+		if svc["start_type_key"] == "missing":
+			continue
+		if action == "disable":
+			if svc["start_type_key"] == "disabled":
+				continue
+			if svc["start_type_key"] != "unknown":
+				state[name] = svc["start_type_key"]
+			changes.append({"name": name, "action": "disable"})
+		else:
+			if svc["start_type_key"] != "disabled":
+				continue
+			startType = state.get(name) or svc["enable_type"]
+			changes.append({"name": name, "action": "enable", "startType": startType})
+	if not changes:
+		return False, _("Nothing to change - the selected services are already in that state.")
+	if action == "disable":
+		save_service_state(configDir, state)
+	return cmd_tools.run_service_changes(configDir, changes)
+
 
 def open_services_mmc():
 	try:
@@ -764,3 +1027,23 @@ def clean_prefetch_recent():
 	except Exception as e:
 		log.error(f"Error cleaning prefetch/recent: {e}")
 		return False, str(e)
+
+
+def list_open_with_backups(config_dir):
+	"""Return (folderDisplayName, regFilePath) tuples for each saved Open With
+	association backup (a FileExts registry export - see cmd_tools.py), most
+	recently created first."""
+	backupsRoot = os.path.join(config_dir, "openWith")
+	results = []
+	try:
+		if not os.path.isdir(backupsRoot):
+			return results
+		for entryName in os.listdir(backupsRoot):
+			entryPath = os.path.join(backupsRoot, entryName)
+			regPath = os.path.join(entryPath, "FileExtsBackup.reg")
+			if os.path.isfile(regPath):
+				results.append((entryName, regPath))
+		results.sort(key=lambda pair: os.path.getmtime(pair[1]), reverse=True)
+	except OSError as e:
+		log.error(f"Failed to list Open With backups: {e}")
+	return results

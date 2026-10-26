@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AbsoluteWindows 2026.7.0\n"
+"Project-Id-Version: AbsoluteWindows 2026.11.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-06-25 16:16+0700\n"
+"POT-Creation-Date: 2026-10-26 17:06+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Indonesian\n"
@@ -10,783 +10,1111 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: DevOn Addon\n"
+"X-Generator: ChaiBot Addon\n"
 
-#: kill_dialog.py:76
+#: kill_dialog.py:77
 msgid "&Kill Process of Selected Window"
 msgstr "&Hentikan Proses Jendela yang Dipilih"
 
-#: sys_monitor.py:280
-#: sys_monitor.py:308
+#: sys_monitor.py:277
 msgid "<1 minute"
 msgstr "<1 menit"
 
-#: sys_monitor.py:313
-#: sys_monitor.py:389
-#: sys_monitor.py:435
+#: sys_monitor.py:280
+#: sys_monitor.py:384
+#: sys_monitor.py:430
 msgid "??"
 msgstr "??"
 
-#: sys_monitor.py:77
-#: sys_monitor.py:112
+#: sys_monitor.py:119
+#: sys_monitor.py:123
+#: sys_monitor.py:137
+#: sys_monitor.py:471
+#: sys_monitor.py:472
 msgid "??%"
 msgstr "??%"
 
-#: menu.py:22
+#: menu.py:193
 msgid "AbsoluteWindows"
 msgstr "AbsoluteWindows"
 
-#: sys_monitor.py:400
-#: sys_monitor.py:415
+#: sys_monitor.py:395
+#: sys_monitor.py:410
 msgid "Activated"
 msgstr "Diaktifkan"
 
-#: utils.py:691
+#: menu.py:625
+msgid "Applying changes. A Windows permission prompt may appear."
+msgstr "Menerapkan perubahan. Prompt izin Windows mungkin akan muncul."
+
+#: utils.py:847
 msgid "Automatic"
 msgstr "Otomatis"
 
-#: __init__.py:280
+#: utils.py:848
+msgid "Automatic (Delayed Start)"
+msgstr "Otomatis (Mulai Tertunda)"
+
+#: addonCore.py:221
+msgid "Backing up Open With associations, please wait..."
+msgstr "Mencadangkan asosiasi Buka Dengan, harap tunggu..."
+
+#: addonCore.py:139
+msgid "Backup Open With"
+msgstr "Cadangkan Buka Dengan"
+
+#: addonCore.py:536
 msgid "Battery report will open in your browser."
 msgstr "Laporan baterai akan terbuka di peramban Anda."
 
-#: utils.py:123
+#: utils.py:155
 msgid "Bluetooth turned off."
 msgstr "Bluetooth dimatikan."
 
-#: utils.py:124
+#: utils.py:156
 msgid "Bluetooth turned on."
 msgstr "Bluetooth dinyalakan."
 
-#: kill_dialog.py:156
+#: kill_dialog.py:157
 msgid "Cannot kill system process: {}"
 msgstr "Tidak dapat menghentikan proses sistem: {}"
 
-#: kill_dialog.py:176
+#: kill_dialog.py:177
 msgid "Cannot open process. Access denied."
 msgstr "Tidak dapat membuka proses. Akses ditolak."
 
-#: sys_monitor.py:236
-#: sys_monitor.py:237
+#: menu.py:524
+msgid "Caution"
+msgstr "Perhatian"
+
+#: menu.py:597
+msgid "Caution: {note}"
+msgstr "Perhatian: {note}"
+
+#: sys_monitor.py:250
 msgid "Charging"
 msgstr "Mengisi daya"
 
-#: __init__.py:115
+#: addonCore.py:138
 msgid "Check Disk Status"
 msgstr "Periksa Status Disk"
 
-#: __init__.py:262
-msgid "Chkdsk report will open when complete."
-msgstr "Laporan Chkdsk akan terbuka setelah selesai."
+#: addonCore.py:516
+msgid "Chkdsk report will open when complete. On the system drive this normally only schedules a check for the next restart rather than running it immediately - that is expected."
+msgstr "Laporan Chkdsk akan terbuka setelah selesai. Pada diska sistem, tindakan ini biasanya hanya menjadwalkan pemeriksaan untuk mulai ulang berikutnya alih-alih langsung menjalankannya - hal tersebut wajar."
 
-#: __init__.py:100
+#: addonCore.py:122
 msgid "Clean Prefetch & Recent"
 msgstr "Bersihkan Prefetch & Terbaru"
 
-#: __init__.py:101
+#: addonCore.py:123
 msgid "Clean System files"
 msgstr "Bersihkan file sistem"
 
-#: __init__.py:102
+#: addonCore.py:124
 msgid "Clean Temp"
 msgstr "Bersihkan Temp"
 
-#: __init__.py:103
+#: addonCore.py:125
 msgid "Clean Windows Run History"
 msgstr "Bersihkan Riwayat Jalankan Windows"
 
-#: __init__.py:105
+#: addonCore.py:563
+msgid "Cleaning temporary files, please wait..."
+msgstr "Membersihkan berkas sementara, harap tunggu..."
+
+#: addonCore.py:127
 msgid "Clear Ram"
 msgstr "Kosongkan RAM"
 
-#: __init__.py:335
+#: addonCore.py:153
+msgid "Clear URL Cache"
+msgstr "Bersihkan Singgahan URL"
+
+#: addonCore.py:624
 msgid "Cleared {:.1f} MB of RAM cache."
 msgstr "{:.1f} MB cache RAM dibersihkan."
 
-#: kill_dialog.py:77
-#: menu.py:242
-#: menu.py:315
-#: menu.py:393
-#: menu.py:459
+#: addonCore.py:613
+msgid "Clearing RAM cache, please wait..."
+msgstr "Membersihkan singgahan RAM, harap tunggu..."
+
+#: addonCore.py:580
+msgid "Clearing Windows Run history, please wait..."
+msgstr "Membersihkan riwayat Jalankan Windows, harap tunggu..."
+
+#: kill_dialog.py:78
+#: menu.py:310
+#: menu.py:395
+#: menu.py:479
 msgid "Close"
 msgstr "Tutup"
 
-#: __init__.py:68
+#: menu.py:621
+msgid "Confirm"
+msgstr "Konfirmasi"
+
+#: addonCore.py:81
 msgid "Connect Internet"
 msgstr "Sambungkan Internet"
 
-#: sys_monitor.py:217
+#: sys_monitor.py:234
+#: sys_monitor.py:485
 msgid "Connected"
 msgstr "Terhubung"
 
-#: __init__.py:86
+#: addonCore.py:105
 msgid "Control Panel"
 msgstr "Panel Kontrol"
 
-#: utils.py:125
+#: cmd_tools.py:508
+msgid "Could not create the backup folder."
+msgstr "Tidak dapat membuat folder cadangan."
+
+#: utils.py:157
 msgid "Could not find or change Bluetooth status."
 msgstr "Tidak dapat menemukan atau mengubah status Bluetooth."
 
-#: __init__.py:577
+#: addonCore.py:876
 msgid "Could not open Control Panel."
 msgstr "Tidak dapat membuka Panel Kontrol."
 
-#: __init__.py:449
+#: addonCore.py:738
 msgid "Could not open Disk Cleanup."
 msgstr "Tidak dapat membuka Pembersihan Disk."
 
-#: __init__.py:394
+#: addonCore.py:683
 msgid "Could not open Environment Variables."
 msgstr "Tidak dapat membuka Variabel Lingkungan."
 
-#: __init__.py:470
+#: addonCore.py:759
 msgid "Could not open Folder Options."
 msgstr "Tidak dapat membuka Opsi Folder."
 
-#: __init__.py:410
+#: addonCore.py:699
 msgid "Could not open Malicious Software Removal Tool."
 msgstr "Tidak dapat membuka Alat Penghapus Perangkat Lunak Berbahaya."
 
-#: __init__.py:360
+#: addonCore.py:649
 msgid "Could not open Optimize Drives."
 msgstr "Tidak dapat membuka Optimalkan Drive."
 
-#: __init__.py:587
+#: addonCore.py:886
 msgid "Could not open Programs and Features."
 msgstr "Tidak dapat membuka Program dan Fitur."
 
-#: __init__.py:459
+#: addonCore.py:748
 msgid "Could not open Registry Editor."
 msgstr "Tidak dapat membuka Editor Registri."
 
-#: __init__.py:374
+#: addonCore.py:663
 msgid "Could not open Services."
 msgstr "Tidak dapat membuka Layanan."
 
-#: __init__.py:597
+#: addonCore.py:909
 msgid "Could not open Sound Settings."
 msgstr "Tidak dapat membuka Pengaturan Suara."
 
-#: __init__.py:567
+#: addonCore.py:899
+msgid "Could not open Volume Mixer."
+msgstr "Tidak dapat membuka Pengatur Volume."
+
+#: addonCore.py:856
 msgid "Could not open Windows Defender."
 msgstr "Tidak dapat membuka Windows Defender."
 
-#: kill_dialog.py:225
+#: kill_dialog.py:226
 msgid "Could not open kill dialog. See log for details."
 msgstr "Tidak dapat membuka dialog hentikan. Lihat log untuk detail."
 
-#: __init__.py:253
+#: cmd_tools.py:672
+msgid "Could not start the elevated service change. Error code: {code}"
+msgstr "Tidak dapat memulai perubahan layanan yang ditingkatkan. Kode galat: {code}"
+
+#: cmd_tools.py:676
+msgid "Could not track the elevated service change."
+msgstr "Tidak dapat melacak perubahan layanan yang ditingkatkan."
+
+#: addonCore.py:133
+msgid "DISM Get International Settings"
+msgstr "Ambil Pengaturan Internasional DISM"
+
+#: addonCore.py:506
+msgid "DISM international settings report will open when complete."
+msgstr "Laporan pengaturan internasional DISM akan terbuka setelah selesai."
+
+#: addonCore.py:496
 msgid "DISM report will open when complete."
 msgstr "Laporan DISM akan terbuka setelah selesai."
 
-#: menu.py:314
-#: menu.py:456
+#: addonCore.py:151
+msgid "Defragment Windows Search Database"
+msgstr "Defragmentasi Basis Data Pencarian Windows"
+
+#: addonCore.py:99
+msgid "Disable Search Web Results"
+msgstr "Nonaktifkan Hasil Web Pencarian"
+
+#: menu.py:309
+#: menu.py:474
+#: menu.py:672
 msgid "Disable Selected"
 msgstr "Nonaktifkan yang Dipilih"
 
-#: __init__.py:78
+#: addonCore.py:92
 msgid "Disable User Account Control"
 msgstr "Nonaktifkan Kontrol Akun Pengguna"
 
-#: menu.py:366
-#: utils.py:687
+#: menu.py:476
+#: menu.py:674
+msgid "Disable all"
+msgstr "Nonaktifkan semua"
+
+#: menu.py:614
+msgid "Disable {count} services rated Safe? Services marked Caution are not included. A Windows permission prompt will appear."
+msgstr "Nonaktifkan {count} layanan yang dinilai Aman? Layanan yang ditandai Perhatian tidak disertakan. Prompt izin Windows akan muncul."
+
+#: menu.py:362
+#: utils.py:845
 msgid "Disabled"
 msgstr "Dinonaktifkan"
 
-#: sys_monitor.py:239
+#: utils.py:731
+msgid "Disabling slows Start menu and File Explorer search"
+msgstr "Menonaktifkan akan memperlambat pencarian menu Mulai dan File Explorer"
+
+#: utils.py:733
+msgid "Disabling stops Windows security updates"
+msgstr "Menonaktifkan menghentikan pembaruan keamanan Windows"
+
+#: sys_monitor.py:252
 msgid "Discharging"
 msgstr "Menguras daya"
 
-#: __init__.py:66
+#: addonCore.py:79
 msgid "Disconnect Internet"
 msgstr "Putuskan Internet"
 
-#: sys_monitor.py:220
+#: sys_monitor.py:235
+#: sys_monitor.py:485
 msgid "Disconnected"
 msgstr "Terputus"
 
-#: __init__.py:99
+#: addonCore.py:121
 msgid "Disk Cleanup"
 msgstr "Pembersihan Disk"
 
-#: __init__.py:271
+#: addonCore.py:526
 msgid "Disk Cleanup report will open when complete."
 msgstr "Laporan Pembersihan Disk akan terbuka setelah selesai."
 
-#: __init__.py:289
+#: addonCore.py:546
 msgid "Disk status report will open when complete."
 msgstr "Laporan status disk akan terbuka setelah selesai."
 
-#: menu.py:450
+#: menu.py:467
 msgid "Display Name"
 msgstr "Nama Tampilan"
 
-#: menu.py:236
+#: menu.py:592
+msgid "Display name: {name}"
+msgstr "Nama tampilan: {name}"
+
+#: menu.py:219
+# keep-identical
 msgid "Drive"
 msgstr "Drive"
 
-#: menu.py:381
+#: menu.py:383
 msgid "Drive Optimize"
 msgstr "Optimalkan Drive"
 
-#: menu.py:241
-msgid "Eject Selected"
-msgstr "Keluarkan yang Dipilih"
-
-#: __init__.py:104
+#: addonCore.py:126
 msgid "Empty Recycle Bin"
 msgstr "Kosongkan Tempat Sampah"
 
-#: menu.py:313
-#: menu.py:457
+#: addonCore.py:597
+msgid "Emptying Recycle Bin, please wait..."
+msgstr "Mengosongkan Kotak Sampah, harap tunggu..."
+
+#: addonCore.py:97
+msgid "Enable Search Web Results"
+msgstr "Aktifkan Hasil Pencarian Web"
+
+#: menu.py:308
+#: menu.py:475
+#: menu.py:673
 msgid "Enable Selected"
 msgstr "Aktifkan yang Dipilih"
 
-#: __init__.py:80
+#: addonCore.py:94
 msgid "Enable User Account Control"
 msgstr "Aktifkan Kontrol Akun Pengguna"
 
-#: menu.py:351
-#: utils.py:542
-#: utils.py:559
-#: utils.py:576
-#: utils.py:589
+#: menu.py:477
+#: menu.py:675
+msgid "Enable all"
+msgstr "Aktifkan semua"
+
+#: menu.py:347
+#: utils.py:578
+#: utils.py:595
+#: utils.py:612
+#: utils.py:625
 msgid "Enabled"
 msgstr "Diaktifkan"
 
-#: __init__.py:93
+#: addonCore.py:113
 msgid "Environment Variables"
 msgstr "Variabel Lingkungan"
 
-#: menu.py:271
-#: menu.py:280
-#: menu.py:348
-#: menu.py:358
-#: menu.py:363
-#: menu.py:373
-#: menu.py:417
-#: menu.py:432
-#: menu.py:494
-#: menu.py:501
-#: menu.py:506
-#: menu.py:513
+#: menu.py:344
+#: menu.py:354
+#: menu.py:359
+#: menu.py:369
+#: menu.py:420
+#: menu.py:436
+#: menu.py:583
+#: menu.py:604
+#: menu.py:609
 msgid "Error"
 msgstr "Kesalahan"
 
-#: sys_monitor.py:342
+#: sys_monitor.py:288
 msgid "Excellent"
 msgstr "Sangat Baik"
 
-#: cmd_tools.py:46
+#: cmd_tools.py:123
+#: cmd_tools.py:686
 msgid "Exception occurred: {error}"
 msgstr "Terjadi pengecualian: {error}"
 
-#: __init__.py:310
+#: cmd_tools.py:517
+#: cmd_tools.py:521
+msgid "Failed to back up Open With associations."
+msgstr "Gagal mencadangkan asosiasi Buka Dengan."
+
+#: addonCore.py:576
 msgid "Failed to clean temporary files."
 msgstr "Gagal membersihkan file sementara."
 
-#: __init__.py:384
+#: addonCore.py:673
 msgid "Failed to clean: {errorMsg}"
 msgstr "Gagal membersihkan: {errorMsg}"
 
-#: __init__.py:341
+#: addonCore.py:630
 msgid "Failed to clear RAM cache."
 msgstr "Gagal mengosongkan cache RAM."
 
-#: __init__.py:319
+#: addonCore.py:593
 msgid "Failed to clear Run history."
 msgstr "Gagal menghapus riwayat Jalankan."
 
-#: kill_dialog.py:170
+#: kill_dialog.py:171
 msgid "Failed to close window."
 msgstr "Gagal menutup jendela."
 
-#: __init__.py:164
+#: addonCore.py:312
 msgid "Failed to connect internet."
 msgstr "Gagal menghubungkan internet."
 
-#: menu.py:373
+#: menu.py:369
 msgid "Failed to disable item."
 msgstr "Gagal menonaktifkan item."
 
-#: menu.py:501
-msgid "Failed to disable service: {}"
-msgstr "Gagal menonaktifkan layanan: {}"
-
-#: __init__.py:148
+#: addonCore.py:295
 msgid "Failed to disconnect internet."
 msgstr "Gagal memutuskan internet."
 
-#: menu.py:280
+#: addonCore.py:379
+#: menu.py:272
 msgid "Failed to eject {drive}."
 msgstr "Gagal mengeluarkan {drive}."
 
-#: utils.py:477
-#: utils.py:480
+#: utils.py:513
+#: utils.py:516
 msgid "Failed to empty recycle bin."
 msgstr "Gagal mengosongkan tempat sampah."
 
-#: menu.py:358
+#: menu.py:354
 msgid "Failed to enable item."
 msgstr "Gagal mengaktifkan item."
 
-#: menu.py:513
-msgid "Failed to enable service: {}"
-msgstr "Gagal mengaktifkan layanan: {}"
-
-#: __init__.py:184
+#: addonCore.py:332
 msgid "Failed to restart Windows Audio Services."
 msgstr "Gagal memulai ulang Layanan Audio Windows."
 
-#: __init__.py:238
+#: addonCore.py:479
 msgid "Failed to restart Windows Explorer."
 msgstr "Gagal memulai ulang Windows Explorer."
 
-#: __init__.py:198
+#: addonCore.py:389
 msgid "Failed to restart to BIOS. Your system may not support this feature via Windows."
 msgstr "Gagal memulai ulang ke BIOS. Sistem Anda mungkin tidak mendukung fitur ini melalui Windows."
 
-#: __init__.py:301
+#: cmd_tools.py:555
+#: cmd_tools.py:559
+msgid "Failed to restore Open With associations."
+msgstr "Gagal memulihkan asosiasi Buka Dengan."
+
+#: addonCore.py:559
 msgid "Failed to start system cleanup."
 msgstr "Gagal memulai pembersihan sistem."
 
-#: kill_dialog.py:193
+#: audio_device.py:215
+msgid "Failed to switch audio device."
+msgstr "Gagal beralih perangkat audio."
+
+#: kill_dialog.py:194
 msgid "Failed to terminate process. Insufficient privileges."
 msgstr "Gagal menghentikan proses. Hak istimewa tidak mencukupi."
 
-#: utils.py:128
+#: utils.py:160
 msgid "Failed to toggle Bluetooth."
 msgstr "Gagal mengalihkan Bluetooth."
 
-#: __init__.py:211
+#: addonCore.py:415
 msgid "Failed to toggle UAC."
 msgstr "Gagal mengalihkan UAC."
 
-#: sys_monitor.py:346
+#: addonCore.py:422
+msgid "Failed to toggle search web results."
+msgstr "Gagal mengubah status hasil pencarian web."
+
+#: sys_monitor.py:292
 msgid "Fair"
 msgstr "Sedang"
 
-#: __init__.py:475
+#: addonCore.py:764
 msgid "File Explorer Options"
 msgstr "Opsi File Explorer"
 
-#: __init__.py:89
+#: addonCore.py:109
 msgid "Folder Option"
 msgstr "Opsi Folder"
 
-#: __init__.py:475
+#: addonCore.py:764
 msgid "Folder Options"
 msgstr "Opsi Folder"
 
-#: sys_monitor.py:238
+#: sys_monitor.py:250
 msgid "Fully Charged"
 msgstr "Terisi Penuh"
 
-#: sys_monitor.py:344
+#: sys_monitor.py:290
 msgid "Good"
 msgstr "Baik"
 
-#: menu.py:352
-#: menu.py:367
-#: menu.py:425
+#: menu.py:348
+#: menu.py:363
+# keep-identical
 msgid "Info"
 msgstr "Info"
 
-#: __init__.py:161
+#: addonCore.py:175
+msgid "Installed packages report will open when complete."
+msgstr "Laporan paket yang terinstal akan dibuka jika sudah selesai."
+
+#: addonCore.py:309
 msgid "Internet connected."
 msgstr "Internet terhubung."
 
-#: __init__.py:145
+#: addonCore.py:292
 msgid "Internet disconnected."
 msgstr "Internet terputus."
 
-#: menu.py:367
+#: menu.py:363
 msgid "Item already disabled."
 msgstr "Item sudah dinonaktifkan."
 
-#: menu.py:352
+#: menu.py:348
 msgid "Item already enabled."
 msgstr "Item sudah diaktifkan."
 
-#: __init__.py:84
-#: __init__.py:630
-#: kill_dialog.py:56
+#: addonCore.py:103
+#: kill_dialog.py:57
 msgid "Kill Not Responding Apps"
 msgstr "Hentikan Aplikasi yang Tidak Merespons"
 
-#: kill_dialog.py:215
+#: addonCore.py:942
+msgid "Kill Not Responding Apps (single tap) or Safely Remove USB (double tap)"
+msgstr "Paksa Tutup Aplikasi Tidak Merespons (ketuk sekali) atau Lepaskan USB dengan Aman (ketuk dua kali)"
+
+#: kill_dialog.py:216
 msgid "Kill Process"
 msgstr "Hentikan Proses"
 
-#: menu.py:237
+#: menu.py:220
+# keep-identical
 msgid "Label"
 msgstr "Label"
 
-#: menu.py:119
+#: addonCore.py:150
+msgid "List Installed Packages (winget list)"
+msgstr "Daftar Paket Terinstal (winget list)"
+
+#: menu.py:511
+msgid "Loading services, please wait..."
+msgstr "Memuat layanan, harap tunggu..."
+
+#: menu.py:197
 msgid "Loading system information..."
 msgstr "Memuat informasi sistem..."
 
-#: menu.py:309
+#: menu.py:304
 msgid "Location"
 msgstr "Lokasi"
 
-#: sys_monitor.py:240
+#: sys_monitor.py:252
 msgid "Low"
 msgstr "Rendah"
 
-#: __init__.py:92
-#: menu.py:440
+#: addonCore.py:115
+msgid "Maintenance Tools"
+msgstr "Alat Pemeliharaan"
+
+#: addonCore.py:112
+#: menu.py:450
 msgid "Manage Services"
 msgstr "Kelola Layanan"
 
-#: utils.py:689
+#: utils.py:846
+# keep-identical
 msgid "Manual"
 msgstr "Manual"
 
-#: __init__.py:97
+#: addonCore.py:119
 msgid "Microsoft Windows Malicious Software Removal Tool"
 msgstr "Alat Penghapus Perangkat Lunak Berbahaya Microsoft Windows"
 
-#: menu.py:306
+#: menu.py:301
 msgid "Name"
 msgstr "Nama"
 
-#: menu.py:266
-msgid "No USB drives found"
-msgstr "Tidak ditemukan drive USB"
+#: utils.py:735
+msgid "Needed by Windows troubleshooters, including the audio one"
+msgstr "Diperlukan oleh pemecah masalah Windows, termasuk pemecah masalah audio"
 
-#: __init__.py:225
+#: utils.py:748
+msgid "Needed for Xbox controllers, including the Adaptive Controller"
+msgstr "Diperlukan untuk pengontrol Xbox, termasuk Adaptive Controller"
+
+#: utils.py:729
+msgid "Needed for printing, including braille embossers"
+msgstr "Diperlukan untuk pencetakan, termasuk mesin cetak braille"
+
+#: utils.py:769
+msgid "Needed for scanners and cameras, including scanning documents for OCR"
+msgstr "Diperlukan untuk pemindai dan kamera, termasuk memindai dokumen untuk OCR"
+
+#: utils.py:767
+msgid "Needed for smart card sign-in and some banking cards"
+msgstr "Diperlukan untuk masuk kartu pintar dan beberapa kartu perbankan"
+
+#: utils.py:750
+msgid "Needed for touch keyboard, handwriting and voice typing"
+msgstr "Diperlukan untuk keyboard sentuh, tulisan tangan, dan pengetikan suara"
+
+#: addonCore.py:239
+msgid "No Open With backups found"
+msgstr "Tidak ada cadangan Buka Dengan yang ditemukan"
+
+#: addonCore.py:371
+msgid "No USB drives found."
+msgstr "Tidak ada drive USB yang ditemukan."
+
+#: addonCore.py:457
 msgid "No Wi-Fi network is currently connected."
 msgstr "Saat ini tidak ada jaringan Wi-Fi yang terhubung."
 
-#: __init__.py:138
+#: addonCore.py:284
 msgid "No active network adapter found."
 msgstr "Tidak ditemukan adaptor jaringan yang aktif."
 
-#: menu.py:156
+#: cmd_tools.py:647
+msgid "No changeable services were selected."
+msgstr "Tidak ada layanan yang dapat diubah yang dipilih."
+
+#: menu.py:201
 msgid "No data available"
 msgstr "Tidak ada data tersedia"
 
-#: __init__.py:155
+#: menu.py:599
+msgid "No description available."
+msgstr "Tidak ada deskripsi yang tersedia."
+
+#: addonCore.py:302
 msgid "No disabled network adapter found."
 msgstr "Tidak ditemukan adaptor jaringan yang dinonaktifkan."
 
-#: menu.py:348
-#: menu.py:363
+#: menu.py:344
+#: menu.py:359
 msgid "No item selected."
 msgstr "Tidak ada item yang dipilih."
 
-#: kill_dialog.py:149
+#: kill_dialog.py:150
 msgid "No window selected."
 msgstr "Tidak ada jendela yang dipilih."
 
-#: sys_monitor.py:402
-#: sys_monitor.py:417
+#: sys_monitor.py:397
+#: sys_monitor.py:412
 msgid "Not Activated"
 msgstr "Tidak Diaktifkan"
 
-#: __init__.py:91
+#: utils.py:884
+msgid "Not installed"
+msgstr "Belum dipasang"
+
+#: utils.py:985
+msgid "Nothing to change - the selected services are already in that state."
+msgstr "Tidak ada yang perlu diubah - layanan yang dipilih sudah berada dalam status tersebut."
+
+#: audio_device.py:193
+msgid "Only one playback device is available."
+msgstr "Hanya satu perangkat pemutaran yang tersedia."
+
+#: addonCore.py:111
 msgid "Open Services"
 msgstr "Buka Layanan"
 
-#: menu.py:430
+#: addonCore.py:231
+msgid "Open With associations backed up successfully. Note: this restores reliably only on this same Windows installation and user account, not after a Windows reinstall."
+msgstr "Asosiasi Buka Dengan berhasil dicadangkan. Catatan: ini hanya pulih dengan andal pada instalasi Windows dan akun pengguna yang sama ini, bukan setelah instal ulang Windows."
+
+#: addonCore.py:263
+msgid "Open With associations restored. Restart Windows Explorer or sign out and back in for the change to take effect."
+msgstr "Asosiasi Buka Dengan dipulihkan. Mulai ulang Windows Explorer atau keluar dan masuk kembali agar perubahan diterapkan."
+
+#: menu.py:434
 msgid "Optimization completed."
 msgstr "Optimasi selesai."
 
-#: menu.py:432
+#: menu.py:436
 msgid "Optimization failed: {}"
 msgstr "Optimasi gagal: {}"
 
-#: menu.py:392
+#: menu.py:394
 msgid "Optimize Selected"
 msgstr "Optimalkan yang Dipilih"
 
-#: __init__.py:98
+#: addonCore.py:120
 msgid "Optimize and defragment drive"
 msgstr "Optimalkan dan defragmentasi drive"
 
-#: menu.py:425
+#: menu.py:429
 msgid "Optimizing drive, please wait..."
 msgstr "Mengoptimalkan drive, harap tunggu..."
 
-#: __init__.py:114
+#: utils.py:871
+msgid "Other"
+msgstr "Lainnya"
+
+#: addonCore.py:165
+msgid "Package upgrade report will open when complete."
+msgstr "Laporan peningkatan paket akan terbuka saat selesai."
+
+#: addonCore.py:137
 msgid "Power Diagnostic (Battery Report)"
 msgstr "Diagnostik Daya (Laporan Baterai)"
 
-#: __init__.py:381
+#: addonCore.py:670
 msgid "Prefetch and recent files cleaned. {count} items removed."
 msgstr "File Prefetch dan terbaru dibersihkan. {count} item dihapus."
 
-#: kill_dialog.py:186
+#: kill_dialog.py:187
 msgid "Process terminated."
 msgstr "Proses dihentikan."
 
-#: __init__.py:87
+#: addonCore.py:106
 msgid "Programs and Features"
 msgstr "Program dan Fitur"
 
-#: __init__.py:338
+#: addonCore.py:88
+msgid "Quick Switch Audio Device"
+msgstr "Alihkan Cepat Perangkat Audio"
+
+#: addonCore.py:627
 msgid "RAM cache is already clean."
 msgstr "Cache RAM sudah bersih."
 
-#: utils.py:474
+#: utils.py:510
 msgid "Recycle bin emptied. {count} items removed."
 msgstr "Tempat sampah dikosongkan. {count} item dihapus."
 
-#: utils.py:468
+#: utils.py:504
 msgid "Recycle bin is already empty."
 msgstr "Tempat sampah sudah kosong."
 
-#: menu.py:458
+#: menu.py:478
+#: menu.py:677
 msgid "Refresh"
 msgstr "Segarkan"
 
-#: __init__.py:95
+#: addonCore.py:116
 msgid "Regedit"
 msgstr "Editor Registri"
 
-#: __init__.py:74
+#: addonCore.py:87
 msgid "Restart Windows Audio Service"
 msgstr "Mulai Ulang Layanan Audio Windows"
 
-#: __init__.py:85
+#: addonCore.py:104
 msgid "Restart Windows Explorer"
 msgstr "Mulai Ulang Windows Explorer"
 
-#: __init__.py:82
+#: addonCore.py:101
 msgid "Restart to BIOS/UEFI Settings"
 msgstr "Mulai Ulang ke Pengaturan BIOS/UEFI"
 
-#: __init__.py:178
+#: addonCore.py:326
 msgid "Restarting Audio Services, please wait..."
 msgstr "Memulai ulang Layanan Audio, harap tunggu..."
 
-#: __init__.py:192
+#: addonCore.py:466
+msgid "Restarting Windows Explorer, please wait..."
+msgstr "Memulai ulang Windows Explorer, harap tunggu..."
+
+#: addonCore.py:383
 msgid "Restarting to BIOS/UEFI, please wait..."
 msgstr "Memulai ulang ke BIOS/UEFI, harap tunggu..."
 
-#: __init__.py:112
+#: addonCore.py:140
+msgid "Restore Open With"
+msgstr "Pulihkan Buka Dengan"
+
+#: addonCore.py:253
+msgid "Restoring Open With associations, please wait..."
+msgstr "Memulihkan asosiasi Buka Dengan, mohon tunggu..."
+
+#: addonCore.py:135
 msgid "Run Chkdsk on C:"
 msgstr "Jalankan Chkdsk pada C:"
 
-#: __init__.py:94
+#: addonCore.py:114
 msgid "Run Cmd"
 msgstr "Jalankan Cmd"
 
-#: __init__.py:110
+#: addonCore.py:132
 msgid "Run DISM"
 msgstr "Jalankan DISM"
 
-#: __init__.py:113
+#: addonCore.py:136
 msgid "Run Disk Cleanup"
 msgstr "Jalankan Pembersihan Disk"
 
-#: __init__.py:111
+#: addonCore.py:134
 msgid "Run SFC Scannow"
 msgstr "Jalankan SFC Scannow"
 
-#: utils.py:694
+#: addonCore.py:152
+msgid "Run Windows Defender Full Scan"
+msgstr "Jalankan Pemindaian Penuh Windows Defender"
+
+#: utils.py:867
 msgid "Running"
 msgstr "Berjalan"
 
-#: __init__.py:244
+#: addonCore.py:486
 msgid "SFC Scannow report will open when complete."
 msgstr "Laporan SFC Scannow akan terbuka setelah selesai."
 
-#: __init__.py:73
-#: menu.py:228
+#: menu.py:524
+msgid "Safe"
+msgstr "Aman"
+
+#: addonCore.py:86
+#: menu.py:211
 msgid "Safely Remove USB"
 msgstr "Keluarkan USB dengan Aman"
 
-#: menu.py:271
-msgid "Select a USB drive first."
-msgstr "Pilih drive USB terlebih dahulu."
+#: menu.py:470
+msgid "Safety"
+msgstr "Keamanan"
 
-#: menu.py:417
+#: addonCore.py:427
+msgid "Search web results disabled. Restarting Explorer to apply changes..."
+msgstr "Hasil pencarian web dinonaktifkan. Memulai ulang Explorer untuk menerapkan perubahan..."
+
+#: addonCore.py:429
+msgid "Search web results enabled. Restarting Explorer to apply changes..."
+msgstr "Hasil pencarian web diaktifkan. Memulai ulang Explorer untuk menerapkan perubahan..."
+
+#: menu.py:420
 msgid "Select a drive first."
 msgstr "Pilih drive terlebih dahulu."
 
-#: menu.py:494
-#: menu.py:506
+#: menu.py:583
+#: menu.py:604
 msgid "Select a service first."
 msgstr "Pilih layanan terlebih dahulu."
 
-#: menu.py:449
-msgid "Service Name"
-msgstr "Nama Layanan"
+#: menu.py:679
+msgid "Service Actions"
+msgstr "Tindakan Layanan"
 
-#: __init__.py:614
+#: menu.py:588
+#: menu.py:600
+msgid "Service Details"
+msgstr "Detail Layanan"
+
+#: menu.py:591
+msgid "Service name: {name}"
+msgstr "Nama layanan: {name}"
+
+#: addonCore.py:926
 msgid "Show Absolute Windows menu (single tap) or System Monitor (double tap)"
 msgstr "Tampilkan menu Absolute Windows (satu ketukan) atau Monitor Sistem (dua ketukan)"
 
-#: __init__.py:71
+#: addonCore.py:84
 msgid "Show Wi-Fi Password"
 msgstr "Tampilkan Kata Sandi Wi-Fi"
 
-#: __init__.py:88
+#: menu.py:676
+msgid "Show service details"
+msgstr "Tampilkan detail layanan"
+
+#: menu.py:617
+msgid ""
+"Some selected services are marked Caution:\n"
+"{details}\n"
+"\n"
+"Disable the selected services anyway?"
+msgstr ""
+"Beberapa layanan yang dipilih ditandai Perhatian:\n"
+"{details}\n"
+"\n"
+"Tetap nonaktifkan layanan yang dipilih?"
+
+#: addonCore.py:108
 msgid "Sound setting"
 msgstr "Pengaturan Suara"
 
-#: __init__.py:90
-#: menu.py:295
+#: addonCore.py:110
+#: menu.py:290
 msgid "Startup Manager"
 msgstr "Manajer Startup"
 
-#: menu.py:451
+#: menu.py:468
 msgid "Startup Type"
 msgstr "Jenis Startup"
 
-#: menu.py:308
-#: menu.py:452
+#: menu.py:593
+msgid "Startup type: {value}"
+msgstr "Jenis mulai: {value}"
+
+#: menu.py:303
+#: menu.py:469
+# keep-identical
 msgid "Status"
 msgstr "Status"
 
-#: utils.py:696
+#: menu.py:594
+# keep-identical
+msgid "Status: {value}"
+msgstr "Status: {value}"
+
+#: utils.py:869
+#: utils.py:908
 msgid "Stopped"
 msgstr "Berhenti"
 
-#: menu.py:277
-#: menu.py:430
+#: menu.py:434
 msgid "Success"
 msgstr "Berhasil"
 
-#: menu.py:101
-msgid "System Monitor"
-msgstr "Monitor Sistem"
+#: addonCore.py:345
+msgid "Switched to {device}."
+msgstr "Beralih ke {device}."
 
-#: __init__.py:63
+#: menu.py:204
+msgid "System Information"
+msgstr "Informasi Sistem"
+
+#: addonCore.py:76
 msgid "System Tray"
 msgstr "Baki Sistem"
 
-#: __init__.py:298
+#: addonCore.py:556
 msgid "System cleanup started."
 msgstr "Pembersihan sistem dimulai."
 
-#: __init__.py:307
+#: addonCore.py:573
 msgid "Temporary files cleaned. {count} items removed."
 msgstr "File sementara dibersihkan. {count} item dihapus."
 
-#: __init__.py:222
+#: addonCore.py:454
 msgid "The Wi-Fi network '{ssid}' is open (no password)."
 msgstr "Jaringan Wi-Fi '{ssid}' terbuka (tanpa kata sandi)."
 
-#: __init__.py:70
+#: cmd_tools.py:546
+msgid "The selected backup file no longer exists."
+msgstr "File cadangan yang dipilih tidak lagi ada."
+
+#: menu.py:609
+msgid "The selected services are not installed on this system."
+msgstr "Layanan yang dipilih tidak terpasang pada sistem ini."
+
+#: cmd_tools.py:683
+msgid "The service change took too long to finish."
+msgstr "Perubahan layanan membutuhkan waktu terlalu lama untuk selesai."
+
+#: addonCore.py:83
 msgid "Toggle Bluetooth"
 msgstr "Alihkan Bluetooth"
 
-#: menu.py:307
+#: menu.py:302
 msgid "Type"
 msgstr "Tipe"
 
-#: utils.py:89
+#: addonCore.py:205
+msgid "URL cache clearing started."
+msgstr "Pembersihan cache URL dimulai."
+
+#: utils.py:91
 msgid "USB Drive"
 msgstr "Drive USB"
 
-#: menu.py:277
+#: addonCore.py:376
+#: menu.py:264
 msgid "USB drive {drive} ejected safely."
 msgstr "Drive USB {drive} dikeluarkan dengan aman."
 
-#: sys_monitor.py:241
+#: utils.py:849
 msgid "Unknown"
 msgstr "Tidak Diketahui"
 
-#: __init__.py:208
-msgid "User Account Control toggled."
-msgstr "Kontrol Akun Pengguna dialihkan."
+#: audio_device.py:164
+msgid "Unknown Device"
+msgstr "Perangkat Tidak Dikenal"
 
-#: cmd_tools.py:41
+#: addonCore.py:149
+msgid "Update All Packages (winget upgrade)"
+msgstr "Perbarui Semua Paket (peningkatan winget)"
+
+#: addonCore.py:412
+msgid "User Account Control changed. Restart Windows for the change to take effect."
+msgstr "Kontrol Akun Pengguna telah berubah. Mulai ulang Windows agar perubahan diterapkan."
+
+#: cmd_tools.py:99
+#: cmd_tools.py:671
 msgid "User cancelled the UAC elevation prompt."
 msgstr "Pengguna membatalkan permintaan peningkatan UAC."
 
-#: sys_monitor.py:350
+#: sys_monitor.py:295
 msgid "Very Weak"
 msgstr "Sangat Lemah"
 
-#: sys_monitor.py:348
+#: addonCore.py:107
+msgid "Volume Mixer"
+msgstr "Pengeras Suara"
+
+#: sys_monitor.py:294
 msgid "Weak"
 msgstr "Lemah"
 
-#: __init__.py:219
+#: addonCore.py:451
 msgid "Wi-Fi password for {ssid} copied to clipboard."
 msgstr "Kata sandi Wi-Fi untuk {ssid} disalin ke papan klip."
 
-#: kill_dialog.py:164
+#: kill_dialog.py:165
 msgid "Window closed."
 msgstr "Jendela ditutup."
 
-#: __init__.py:181
+#: addonCore.py:329
 msgid "Windows Audio Services restarted successfully."
 msgstr "Layanan Audio Windows berhasil dimulai ulang."
 
-#: __init__.py:96
+#: addonCore.py:117
+# keep-identical
 msgid "Windows Defender"
 msgstr "Windows Defender"
 
-#: __init__.py:235
+#: addonCore.py:118
+msgid "Windows Defender Full Scan Low"
+msgstr "Pemindaian Penuh Windows Defender Rendah"
+
+#: addonCore.py:863
+msgid "Windows Defender Full Scan started at low priority."
+msgstr "Pemindaian Penuh Windows Defender dimulai pada prioritas rendah."
+
+#: addonCore.py:195
+msgid "Windows Defender full scan started."
+msgstr "Pemindaian penuh Windows Defender dimulai."
+
+#: addonCore.py:476
 msgid "Windows Explorer has been restarted."
 msgstr "Windows Explorer telah dimulai ulang."
 
-#: __init__.py:316
+#: addonCore.py:590
 msgid "Windows Run history cleared. {count} items removed."
 msgstr "Riwayat Jalankan Windows dibersihkan. {count} item dihapus."
 
-#: sys_monitor.py:430
+#: addonCore.py:185
+msgid "Windows Search database defragmentation started."
+msgstr "Defragmentasi database Pencarian Windows dimulai."
+
+#: sys_monitor.py:425
+# keep-identical
 msgid "Windows Server {}"
 msgstr "Windows Server {}"
 
-#: sys_monitor.py:193
-#: sys_monitor.py:206
+#: sys_monitor.py:227
 msgid "{:.1F} MB/s down, {:.1F} MB/s up"
 msgstr "{:.1F} MB/s unduh, {:.1F} MB/s unggah"
 
-#: sys_monitor.py:166
-#: sys_monitor.py:178
+#: sys_monitor.py:224
 msgid "{:.1F} MB/s read, {:.1F} MB/s write"
 msgstr "{:.1F} MB/s baca, {:.1F} MB/s tulis"
 
-#: sys_monitor.py:96
-#: sys_monitor.py:108
+#: sys_monitor.py:135
 msgid "{:.2F} GB of {:.2F} GB used ({:.1F}%)"
 msgstr "{:.2F} GB dari {:.2F} GB digunakan ({:.1F}%)"
 
-#: sys_monitor.py:432
+#: menu.py:645
+msgid "{changed} changed, {failed} failed: {names}"
+msgstr "{changed} diubah, {failed} gagal: {names}"
+
+#: menu.py:649
+msgid "{changed} services changed."
+msgstr "{changed} layanan diubah."
+
+#: menu.py:534
+msgid "{count} services listed."
+msgstr "{count} layanan terdaftar."
+
+#: menu.py:587
+msgid "{name} is not installed on this system."
+msgstr "{name} tidak terinstal di sistem ini."
+
+#: sys_monitor.py:427
+# keep-identical
 msgid "{} ({} bit) build {}"
 msgstr "{} ({} bit) build {}"
 
-#: sys_monitor.py:271
-#: sys_monitor.py:299
+#: sys_monitor.py:268
 msgid "{} day{}"
 msgstr "{} hari{}"
 
-#: sys_monitor.py:273
-#: sys_monitor.py:301
+#: sys_monitor.py:270
 msgid "{} hour{}"
 msgstr "{} jam{}"
 
-#: sys_monitor.py:275
-#: sys_monitor.py:303
+#: sys_monitor.py:272
 msgid "{} minute{}"
 msgstr "{} menit{}"
 
-#: sys_monitor.py:378
-#: sys_monitor.py:385
-msgid "{} process{}"
-msgstr "{} proses{}"
-
-#: sys_monitor.py:277
-#: sys_monitor.py:305
+#: sys_monitor.py:274
 msgid "{} second{}"
 msgstr "{} detik{}"
 
-#: sys_monitor.py:133
-#: sys_monitor.py:149
+#: sys_monitor.py:166
 msgid "{} {:.1F} GB of {:.1F} GB used ({:.0F}%)"
 msgstr "{} {:.1F} GB dari {:.1F} GB digunakan ({:.0F}%)"
 
-#: sys_monitor.py:67
-#: sys_monitor.py:73
+#: sys_monitor.py:121
 msgid "{}%"
 msgstr "{}%"
 
-#: sys_monitor.py:242
+#: sys_monitor.py:253
 msgid "{}% ({})"
 msgstr "{}% ({})"
